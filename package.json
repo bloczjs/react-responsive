@@ -1,16 +1,9 @@
 {
   "name": "react-only",
   "version": "0.1.0",
-  "description": "",
+  "description": "🔍 <Only /> displays some contents for a specific screen size",
   "main": "lib/index.js",
-  "scripts": {
-    "build": "babel src --out-dir lib",
-    "build:watch": "nodemon --watch src -e js --exec yarn build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ayc0/react-only.git"
-  },
+  "repository": "git@github.com:Ayc0/react-only.git",
   "keywords": [
     "react",
     "css",
@@ -19,10 +12,13 @@
   ],
   "author": "Ayc0",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Ayc0/react-only/issues"
+  "bugs": "https://github.com/Ayc0/react-only/issues",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "build:watch": "nodemon --watch src -e js --exec yarn build"
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.2",
