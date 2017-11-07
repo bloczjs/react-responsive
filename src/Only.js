@@ -3,7 +3,7 @@
 import { PureComponent } from 'react';
 
 import debounce from './debounce';
-import breakpoints from './breakpoints';
+import BreakpointsProvider from './BreakpointsProvider';
 
 const union = (intervalA, intervalB) => [
   Math.min(intervalA[0], intervalB[0]),
@@ -12,13 +12,13 @@ const union = (intervalA, intervalB) => [
 
 const computeInterval = (props) => {
   let interval = [Infinity, 0];
-  Object.keys(breakpoints).forEach((media) => {
+  Object.keys(BreakpointsProvider.breakpoints).forEach((media) => {
     if (props[media]) {
-      interval = union(interval, breakpoints[media]);
+      interval = union(interval, BreakpointsProvider.breakpoints[media]);
     } else if (props[`${media}Up`]) {
-      interval = union(interval, [breakpoints[media][0], Infinity]);
+      interval = union(interval, [BreakpointsProvider.breakpoints[media][0], Infinity]);
     } else if (props[`${media}Down`]) {
-      interval = union(interval, [0, breakpoints[media][1]]);
+      interval = union(interval, [0, BreakpointsProvider.breakpoints[media][1]]);
     }
   });
   return interval;
