@@ -1,8 +1,6 @@
 import BreakpointsProvider from './BreakpointsProvider';
 
 const toCSS = (points) => {
-  console.log(Object.keys(BreakpointsProvider));
-  console.log(BreakpointsProvider.breakpoints);
   if (
     !BreakpointsProvider ||
     !BreakpointsProvider.breakpoints ||
