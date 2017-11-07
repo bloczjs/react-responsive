@@ -1,6 +1,15 @@
 import BreakpointsProvider from './BreakpointsProvider';
 
 const toCSS = (points) => {
+  console.log(Object.keys(BreakpointsProvider));
+  console.log(BreakpointsProvider.breakpoints);
+  if (
+    !BreakpointsProvider ||
+    !BreakpointsProvider.breakpoints ||
+    Object.keys(BreakpointsProvider.breakpoints).length === 0
+  ) {
+    return '';
+  }
   if (typeof points !== 'object') {
     throw new Error('Invalid breakpoints, should be an object');
   }
