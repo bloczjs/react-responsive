@@ -1,6 +1,6 @@
 {
   "name": "react-only",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/Ayc0/react-only.git"
   },
-  "keywords": ["react", "css", "media-queries", "bootstrap"],
+  "keywords": [
+    "react",
+    "css",
+    "media-queries",
+    "bootstrap"
+  ],
   "author": "Ayc0",
   "license": "MIT",
   "bugs": {
