@@ -1,14 +1,12 @@
 # React-Only
 
-[![build status][build-badge]][build-href]
-[![dependencies status][deps-badge]][deps-href]
-[![npm version][npm-badge]][npm-href]
+## What is React-Only
 
-## What is React-Only?
+React-only is inspired by the `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (or `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): only display a certain content for a precise screen size.
 
-At the beginning, react-only comes from `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (or `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): only display a certain content for a precise screen size.
+Allows you to display component only for particular screen sizes.
 
-## How to use?
+## How to use
 
 ### Default breakpoints
 
@@ -48,7 +46,7 @@ const App = () => (
 
 ### BreakpointsProvider
 
-`BreakpointsProvider` is here to define the values of every breakpoints.
+`BreakpointsProvider` defines the values of every breakpoints.
 
 By default, the breakpoints are:
 
@@ -90,4 +88,46 @@ const App = () => (
 );
 ```
 
-WARNING: This overrides completely the default breakpoints, in this example, the other breakpoints `xs`, `md`, `lg` and `xl`  are no longer defined!
+**Warning**: This **overrides completely** the default breakpoints, in this example, the other breakpoints `xs`, `md`, `lg` and `xl` **are no longer defined!**
+
+## toCSS()
+
+You can also use this library to set media-query in CSS-in-JS:
+
+```javascript
+import { toCSS } from 'react-only';
+
+const style = toCSS({ xs: { width: '10px' }, lg: { width: '100px'}});
+> style: {
+            "width": "10px",
+            "@media (min-width: 992px)": {
+              "width": "100px"
+            }
+          }
+```
+
+**Warning: the following code does't work**
+
+```javascript
+import React from 'react';
+import { BreakpointsProvider, toCSS } from 'react-only';
+
+const App = () => (
+  <BreakpointsProvider>
+    <p style={toCSS({ xs: { width: '10px' }, lg: { width: '100px' } })}>Lorem Ipsum</p>
+  </BreakpointsProvider>
+);
+```
+
+`toCSS` is binded to the `Provider` so when `toCSS` is called, the breakpoints aren't defined yet, use in componentDidUpdate or in an event, etc. but not directly after the rendering of the Provider.
+
+### [Styletron](https://github.com/rtsao/styletron)
+
+`toCSS` can also be used with [styletron](https://github.com/rtsao/styletron):
+
+```javascript
+const App = styled('div', () => ({
+  ...toCSS({ xs: { width: '10px' }, lg: { width: '100px'}})
+}));
+```
+
