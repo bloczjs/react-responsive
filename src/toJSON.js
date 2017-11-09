@@ -1,6 +1,6 @@
 import BreakpointsProvider from './BreakpointsProvider';
 
-const toCSS = (points) => {
+const toJSON = (points) => {
   if (
     !BreakpointsProvider ||
     !BreakpointsProvider.breakpoints ||
@@ -24,10 +24,14 @@ const toCSS = (points) => {
         css[cssParam] = points[point][cssParam];
       });
     } else {
-      css[`@media (min-width: ${BreakpointsProvider.breakpoints[point][0]}px)`] = points[point];
+      css[
+        `@media (min-width: ${BreakpointsProvider.breakpoints[point][0]}${BreakpointsProvider
+          .breakpoints[point][2]})`
+      ] =
+        points[point];
     }
   });
   return css;
 };
 
-export default toCSS;
+export default toJSON;

@@ -125,14 +125,14 @@ const App = () => (
 
 **Note:** If you use breakpoints AND matchMedia, the component will be displayed if one of the breakpoints is matched **OR** if the media query is fulfilled.
 
-### toCSS()
+### toJSON()
 
 You can also use this library to set media-query in CSS-in-JS:
 
 ```javascript
-import { toCSS } from 'react-only';
+import { toJSON } from 'react-only';
 
-const style = toCSS({ xs: { width: '10px' }, lg: { width: '100px'}});
+const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
 > style: {
             "width": "10px",
             "@media (min-width: 992px)": {
@@ -145,24 +145,24 @@ const style = toCSS({ xs: { width: '10px' }, lg: { width: '100px'}});
 
 ```javascript
 import React from 'react';
-import { BreakpointsProvider, toCSS } from 'react-only';
+import { BreakpointsProvider, toJSON } from 'react-only';
 
 const App = () => (
   <BreakpointsProvider>
-    <p style={toCSS({ xs: { width: '10px' }, lg: { width: '100px' } })}>Lorem Ipsum</p>
+    <p style={toJSON({ xs: { width: '10px' }, lg: { width: '100px' } })}>Lorem Ipsum</p>
   </BreakpointsProvider>
 );
 ```
 
-`toCSS` is binded to the `Provider` so when `toCSS` is called, the breakpoints aren't defined yet, use in componentDidUpdate or in an event, etc. but not directly after the rendering of the Provider.
+`toJSON` is binded to the `Provider` so when `toJSON` is called, the breakpoints aren't defined yet, use in componentDidUpdate or in an event, etc. but not directly after the rendering of the Provider.
 
 #### [Styletron](https://github.com/rtsao/styletron)
 
-`toCSS` can also be used with [styletron](https://github.com/rtsao/styletron):
+`toJSON` can also be used with [styletron](https://github.com/rtsao/styletron):
 
 ```javascript
 const App = styled('div', () => ({
-  ...toCSS({ xs: { width: '10px' }, lg: { width: '100px'}})
+  ...toJSON({ xs: { width: '10px' }, lg: { width: '100px'}})
 }));
 ```
 
