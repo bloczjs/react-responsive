@@ -90,7 +90,42 @@ const App = () => (
 
 **Warning**: This **overrides completely** the default breakpoints, in this example, the other breakpoints `xs`, `md`, `lg` and `xl` **are no longer defined!**
 
-## toCSS()
+### Units
+
+```javascript
+import React from 'react';
+import Only, { BreakpointsProvider } from 'react-only';
+
+const App = () => (
+  <BreakpointsProvider additionalBreakpoints={{ pxPoint: [263, 863, 'px'], emPoint: [20, 40, 'em']  }}>
+    <Only pxPoint>Visible on every device from "263px" to "863px"</Only>
+    <Only emPoint>Visible on every device from "20em" to "40em"</Only>
+  </BreakpointsProvider>
+);
+```
+
+Every CSS units are supported.
+
+The default unit is `px`.
+
+### Match Media Queries
+
+For more advanced media queries, the prop `matchMedia` can be set to any regular query supported by [window.matchMedia](https://developer.mozilla.org/fr/docs/Web/API/Window/matchMedia).
+
+```javascript
+import React from 'react';
+import Only from 'react-only';
+
+const App = () => (
+  <Only matchMedia="(min-device-width: 500px) and (orientation: landscape)">Visible on every device from "263px" to "863px"</Only>
+);
+```
+
+[More infos about CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+
+**Note:** If you use breakpoints AND matchMedia, the component will be displayed if one of the breakpoints is matched **OR** if the media query is fulfilled.
+
+### toCSS()
 
 You can also use this library to set media-query in CSS-in-JS:
 
@@ -121,7 +156,7 @@ const App = () => (
 
 `toCSS` is binded to the `Provider` so when `toCSS` is called, the breakpoints aren't defined yet, use in componentDidUpdate or in an event, etc. but not directly after the rendering of the Provider.
 
-### [Styletron](https://github.com/rtsao/styletron)
+#### [Styletron](https://github.com/rtsao/styletron)
 
 `toCSS` can also be used with [styletron](https://github.com/rtsao/styletron):
 
@@ -130,4 +165,8 @@ const App = styled('div', () => ({
   ...toCSS({ xs: { width: '10px' }, lg: { width: '100px'}})
 }));
 ```
+
+#### [Styled-components](https://www.styled-components.com/)
+
+For now, there is no supports for [styled-components](https://www.styled-components.com/), but it will be integrated in the future.
 
