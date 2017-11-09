@@ -175,7 +175,7 @@ If a `BreakpointsProvider` is already defined:
 
 ```javascript
 import React from 'react';
-import {  toJSON } from 'react-only';
+import { toJSON } from 'react-only';
 
 const App = () => (
   <p style={toJSON({ xs: { width: '10px' }, lg: { width: '100px' } })}>Lorem Ipsum</p>
