@@ -4,16 +4,16 @@
 1. [Default breakpoints](#default-breakpoints)
 2. [Additional `Up` and `Down`](#additional-Up-and-down)
 3. [BreakpointsProvider](#breakpointsprovider)
-  1. [Add more breakpoints](#add-more-breakpoints)
-  2. [Change default breakpoints](#change-default-breakpoints)
+   1. [Add more breakpoints](#add-more-breakpoints)
+   2. [Change default breakpoints](#change-default-breakpoints)
 4. [Units](#units)
 5. [Match Media Queries](#match-media-queries)
 6. [toJSON](#tojson)
 7. [toCSS](#tocss)
 8. [CSS-in-JS](#css-in-js)
-  1. [Inline style](#inline-style)
-  2. [Styled-components](#styled-components)
-  3. [Styletron](#styletron)
+   1. [Inline style](#inline-style)
+   2. [Styled-components](#styled-components)
+   3. [Styletron](#styletron)
 
 ## What is React-Only
 
