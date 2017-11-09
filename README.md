@@ -1,5 +1,20 @@
 # React-Only
 
+## Table of Contents
+1. [Default breakpoints](#default-breakpoints)
+2. [Additional `Up` and `Down`](#additional-Up-and-down)
+3. [BreakpointsProvider](#breakpointsprovider)
+  1. [Add more breakpoints](#add-more-breakpoints)
+  2. [Change default breakpoints](#change-default-breakpoints)
+4. [Units](#units)
+5. [Match Media Queries](#match-media-queries)
+6. [toJSON](#tojson)
+7. [toCSS](#tocss)
+8. [CSS-in-JS](#css-in-js)
+  1. [Inline style](#inline-style)
+  2. [Styled-components](#styled-components)
+  3. [Styletron](#styletron)
+
 ## What is React-Only
 
 React-only is inspired by the `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (or `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): only display a certain content for a precise screen size.
@@ -125,7 +140,7 @@ const App = () => (
 
 **Note:** If you use breakpoints AND matchMedia, the component will be displayed if one of the breakpoints is matched **OR** if the media query is fulfilled.
 
-### toJSON()
+### toJSON
 
 You can also use this library to set media-query in CSS-in-JS:
 
@@ -139,6 +154,32 @@ const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
               "width": "100px"
             }
           }
+```
+
+### toCSS
+
+`toCSS` is a wrapper for `toJSON` but instead of displaying a JS object, it displays a valid CSS string:
+
+```javascript
+import { toCSS } from 'react-only';
+
+const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
+> style: 'width: 10px;@media (min-width: 992px) {width: 100px;:hover {background-color: red;}}'
+```
+
+### CSS-in-JS
+
+#### Inline style
+
+If a `BreakpointsProvider` is already defined:
+
+```javascript
+import React from 'react';
+import {  toJSON } from 'react-only';
+
+const App = () => (
+  <p style={toJSON({ xs: { width: '10px' }, lg: { width: '100px' } })}>Lorem Ipsum</p>
+);
 ```
 
 **Warning: the following code does't work**
@@ -156,17 +197,6 @@ const App = () => (
 
 `toJSON` is binded to the `Provider` so when `toJSON` is called, the breakpoints aren't defined yet, use in componentDidUpdate or in an event, etc. but not directly after the rendering of the Provider.
 
-### toCSS()
-
-`toCSS` is a wrapper for `toJSON` but instead of displaying a JS object, it displays a valid CSS string:
-
-```javascript
-import { toCSS } from 'react-only';
-
-const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
-> style: 'width: 10px;@media (min-width: 992px) {width: 100px;:hover {background-color: red;}}'
-```
-
 #### [Styled-components](https://www.styled-components.com/)
 
 ```javascript
@@ -176,8 +206,6 @@ const App = styled.div`
 ```
 
 #### [Styletron](https://github.com/rtsao/styletron)
-
-`toJSON` can also be used with [styletron](https://github.com/rtsao/styletron):
 
 ```javascript
 const App = styled('div', () => ({
