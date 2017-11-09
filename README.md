@@ -117,7 +117,7 @@ import React from 'react';
 import Only from 'react-only';
 
 const App = () => (
-  <Only matchMedia="(min-device-width: 500px) and (orientation: landscape)">Visible on every device from "263px" to "863px"</Only>
+  <Only matchMedia="(min-device-width: 500px) and (orientation: landscape)">Visible on every device bigger than "500px" and in landscape mode</Only>
 );
 ```
 
