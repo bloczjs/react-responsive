@@ -3,49 +3,68 @@
 import { PureComponent } from 'react';
 
 import debounce from './debounce';
-import union from './union';
 import BreakpointsProvider from './BreakpointsProvider';
 
-const computeInterval = (props) => {
-  let interval = [Infinity, 0];
-  Object.keys(BreakpointsProvider.breakpoints).forEach((media) => {
-    if (props[media]) {
-      interval = union(interval, BreakpointsProvider.breakpoints[media]);
-    } else if (props[`${media}Up`]) {
-      interval = union(interval, [BreakpointsProvider.breakpoints[media][0], Infinity]);
-    } else if (props[`${media}Down`]) {
-      interval = union(interval, [0, BreakpointsProvider.breakpoints[media][1]]);
-    }
-  });
-  return interval;
+const fromIntervalToMedia = (interval) => {
+  const out = [];
+  if (interval[0] !== 0) {
+    out.push(`(min-width:${interval[0]}${interval[2]})`);
+  }
+  if (interval[1] !== Infinity) {
+    out.push(`(max-width:${interval[1]}${interval[2]})`);
+  }
+  if (out.length === 0) {
+    return '';
+  }
+  return out.join(' and ');
 };
 
 class Only extends PureComponent {
   state = { show: false };
 
   componentDidMount() {
-    window.addEventListener('resize', this.updateMediaQuery);
-    this.updateInterval();
+    // window.addEventListener('resize', this.updateMediaQuery);
+    this.updateInterval(this.props);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.updateInterval(nextProps);
+    if (this.mediaQueryList) {
+      this.mediaQueryList.removeListener(this.updateMediaQuery);
+      this.mediaQueryList = null;
+    }
+    this.updateMediaQuery(nextProps);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateMediaQuery);
+    if (this.mediaQueryList) {
+      this.mediaQueryList.removeListener(this.updateMediaQuery);
+      this.mediaQueryList = null;
+    }
   }
 
+  mediaQueryList = null;
+
   updateInterval = (props = null) => {
-    const { children, ...medium } = props || this.props;
-    this.interval = computeInterval(medium);
-    this.updateMediaQuery();
+    const { children, matchMedia, ...breakpoints } = props;
+    const filteredBreakpoints = Object.keys(breakpoints)
+      .map(breakpoint =>
+        breakpoints[breakpoint] &&
+          BreakpointsProvider.breakpoints[breakpoint] &&
+          BreakpointsProvider.breakpoints[breakpoint])
+      .filter(Boolean);
+    const mediaQuery = [
+      ...filteredBreakpoints.map(interval => fromIntervalToMedia(interval)),
+      matchMedia,
+    ]
+      .filter(Boolean)
+      .join(',');
+    this.mediaQueryList = window.matchMedia(mediaQuery);
+    this.mediaQueryList.addListener(this.updateMediaQuery);
   };
 
-  updateMediaQuery = debounce(() => {
+  updateMediaQuery = debounce((event) => {
     this.setState((prevState) => {
-      const windowWidth = window.innerWidth;
-      const show = windowWidth >= this.interval[0] && windowWidth <= this.interval[1];
+      const show = event.matches;
       if (show === prevState.show) {
         return null;
       }
@@ -59,21 +78,7 @@ class Only extends PureComponent {
 }
 
 Only.defaultProps = {
-  xs: false,
-  sm: false,
-  md: false,
-  lg: false,
-  xl: false,
-  xsUp: false,
-  smUp: false,
-  mdUp: false,
-  lgUp: false,
-  xlUp: false,
-  xsDown: false,
-  smDown: false,
-  mdDown: false,
-  lgDown: false,
-  xlDown: false,
+  matchMedia: '',
   children: () => null,
 };
 
