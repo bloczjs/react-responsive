@@ -2,7 +2,7 @@
 
 ## Table of Contents
 1. [Default breakpoints](#default-breakpoints)
-2. [Additional `Up` and `Down`](#additional-Up-and-down)
+2. [Additional `Up` and `Down`](#additional-up-and-down)
 3. [BreakpointsProvider](#breakpointsprovider)
    1. [Add more breakpoints](#add-more-breakpoints)
    2. [Change default breakpoints](#change-default-breakpoints)
@@ -10,7 +10,7 @@
 5. [Match Media Queries](#match-media-queries)
 6. [toJSON](#tojson)
 7. [toCSS](#tocss)
-8. [CSS-in-JS](#css-in-js)
+8. [CSS in JS](#css-in-js)
    1. [Inline style](#inline-style)
    2. [Styled-components](#styled-components)
    3. [Styletron](#styletron)
@@ -167,7 +167,7 @@ const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
 > style: 'width: 10px;@media (min-width: 992px) {width: 100px;:hover {background-color: red;}}'
 ```
 
-### CSS-in-JS
+### CSS in JS
 
 #### Inline style
 
