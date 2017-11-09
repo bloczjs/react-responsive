@@ -156,6 +156,25 @@ const App = () => (
 
 `toJSON` is binded to the `Provider` so when `toJSON` is called, the breakpoints aren't defined yet, use in componentDidUpdate or in an event, etc. but not directly after the rendering of the Provider.
 
+### toCSS()
+
+`toCSS` is a wrapper for `toJSON` but instead of displaying a JS object, it displays a valid CSS string:
+
+```javascript
+import { toCSS } from 'react-only';
+
+const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
+> style: 'width: 10px;@media (min-width: 992px) {width: 100px;:hover {background-color: red;}}'
+```
+
+#### [Styled-components](https://www.styled-components.com/)
+
+```javascript
+const App = styled.div`
+  ${toCSS({ xs: { width: '10px' }, lg: { width: '100px'}})}
+`;
+```
+
 #### [Styletron](https://github.com/rtsao/styletron)
 
 `toJSON` can also be used with [styletron](https://github.com/rtsao/styletron):
@@ -165,8 +184,3 @@ const App = styled('div', () => ({
   ...toJSON({ xs: { width: '10px' }, lg: { width: '100px'}})
 }));
 ```
-
-#### [Styled-components](https://www.styled-components.com/)
-
-For now, there is no supports for [styled-components](https://www.styled-components.com/), but it will be integrated in the future.
-
