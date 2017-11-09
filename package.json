@@ -1,11 +1,16 @@
 {
   "name": "react-only",
   "version": "0.2.2",
-  "description":
-    "🔍 <Only /> displays some contents for a specific screen size",
+  "description": "🔍 <Only /> displays some contents for a specific screen size",
   "main": "lib/index.js",
   "repository": "git@github.com:Ayc0/react-only.git",
-  "keywords": ["react", "css", "media-queries", "bootstrap", "responsive"],
+  "keywords": [
+    "react",
+    "css",
+    "media-queries",
+    "bootstrap",
+    "responsive"
+  ],
   "author": "Ayc0",
   "license": "MIT",
   "bugs": "https://github.com/Ayc0/react-only/issues",
@@ -22,6 +27,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-minify": "^0.2.0",
     "babel-preset-react": "^6.24.1",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",

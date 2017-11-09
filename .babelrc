@@ -4,5 +4,5 @@
     "transform-class-properties",
     "transform-object-rest-spread"
   ],
-  "presets": ["flow", "react", "es2015"]
+  "presets": ["flow", "react", "es2015", "minify"]
 }
