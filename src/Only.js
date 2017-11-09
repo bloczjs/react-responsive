@@ -3,12 +3,8 @@
 import { PureComponent } from 'react';
 
 import debounce from './debounce';
+import union from './union';
 import BreakpointsProvider from './BreakpointsProvider';
-
-const union = (intervalA, intervalB) => [
-  Math.min(intervalA[0], intervalB[0]),
-  Math.max(intervalA[1], intervalB[1]),
-];
 
 const computeInterval = (props) => {
   let interval = [Infinity, 0];
