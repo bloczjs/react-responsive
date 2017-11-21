@@ -1,5 +1,8 @@
 node_modules/
+yarn.lock
 src/
 .babelrc
 .eslintrc
 *.log
+README.md
+LICENSE
