@@ -1,4 +1,5 @@
 import BreakpointsProvider from './BreakpointsProvider';
+import fromBreakpointToMedia from './fromBreakpointToMedia';
 
 const toJSON = (points) => {
   if (
@@ -11,7 +12,7 @@ const toJSON = (points) => {
   if (typeof points !== 'object') {
     throw new Error('Invalid breakpoints, should be an object');
   }
-  const css = {};
+  let css = {};
   Object.keys(points).forEach((point) => {
     if (!Object.keys(BreakpointsProvider.breakpoints).includes(point)) {
       throw new Error(`${point} is not a valid breakpoint\nValid breakpoints are: ${Object.keys(BreakpointsProvider.breakpoints)}`);
@@ -19,16 +20,11 @@ const toJSON = (points) => {
     if (typeof points[point] !== 'object') {
       throw new Error('Invalid CSS-in-JS, should be an object');
     }
-    if (BreakpointsProvider.breakpoints[point][0] === 0) {
-      Object.keys(points[point]).forEach((cssParam) => {
-        css[cssParam] = points[point][cssParam];
-      });
+    const a = fromBreakpointToMedia(BreakpointsProvider.breakpoints[point]);
+    if (a) {
+      css[a] = points[point];
     } else {
-      css[
-        `@media (min-width: ${BreakpointsProvider.breakpoints[point][0]}${BreakpointsProvider
-          .breakpoints[point][2]})`
-      ] =
-        points[point];
+      css = { ...css, ...points[point] };
     }
   });
   return css;

@@ -4,20 +4,7 @@ import { PureComponent } from 'react';
 
 import debounce from './debounce';
 import BreakpointsProvider from './BreakpointsProvider';
-
-const fromIntervalToMedia = (interval) => {
-  const out = [];
-  if (interval[0] !== 0) {
-    out.push(`(min-width:${interval[0]}${interval[2]})`);
-  }
-  if (interval[1] !== Infinity) {
-    out.push(`(max-width:${interval[1]}${interval[2]})`);
-  }
-  if (out.length === 0) {
-    return '';
-  }
-  return out.join(' and ');
-};
+import fromBreakpointToMedia from './fromBreakpointToMedia';
 
 class Only extends PureComponent {
   constructor(props) {
@@ -57,7 +44,7 @@ class Only extends PureComponent {
           BreakpointsProvider.breakpoints[breakpoint])
       .filter(Boolean);
     const mediaQuery = [
-      ...filteredBreakpoints.map(interval => fromIntervalToMedia(interval)),
+      ...filteredBreakpoints.map(breakpoint => fromBreakpointToMedia(breakpoint)),
       matchMedia,
     ]
       .filter(Boolean)
