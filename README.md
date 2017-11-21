@@ -170,32 +170,7 @@ const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
 ### CSS in JS
 
 #### Inline style
-
-If a `BreakpointsProvider` is already defined:
-
-```javascript
-import React from 'react';
-import { toJSON } from 'react-only';
-
-const App = () => (
-  <p style={toJSON({ xs: { width: '10px' }, lg: { width: '100px' } })}>Lorem Ipsum</p>
-);
-```
-
-**Warning: the following code does't work**
-
-```javascript
-import React from 'react';
-import { BreakpointsProvider, toJSON } from 'react-only';
-
-const App = () => (
-  <BreakpointsProvider>
-    <p style={toJSON({ xs: { width: '10px' }, lg: { width: '100px' } })}>Lorem Ipsum</p>
-  </BreakpointsProvider>
-);
-```
-
-`toJSON` is binded to the `Provider` so when `toJSON` is called, the breakpoints aren't defined yet, use in componentDidUpdate or in an event, etc. but not directly after the rendering of the Provider.
+React-Only shouldn't be used with inline styles because they don't support media queries. But you can still use React-Only with CSS-in-JS libraries like:
 
 #### [Styled-components](https://www.styled-components.com/)
 
