@@ -35,6 +35,8 @@ export default (obj) => {
     const max = Math.max(supposedMin, supposedMax);
     const unit = supposedUnit && listOfSupportedUnits.includes(supposedUnit) ? supposedUnit : 'px';
     outObj[breakpointName] = [min, max, unit];
+    outObj[`${breakpointName}Up`] = [min, Infinity, unit];
+    outObj[`${breakpointName}Down`] = [0, max, unit];
   });
   return outObj;
 };
