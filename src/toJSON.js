@@ -20,9 +20,9 @@ const toJSON = (points) => {
     if (typeof points[point] !== 'object') {
       throw new Error('Invalid CSS-in-JS, should be an object');
     }
-    const a = fromBreakpointToMedia(BreakpointsProvider.breakpoints[point]);
-    if (a) {
-      css[a] = points[point];
+    const mediaQuery = fromBreakpointToMedia(BreakpointsProvider.breakpoints[point]);
+    if (mediaQuery) {
+      css[`@media ${mediaQuery}`] = points[point];
     } else {
       css = { ...css, ...points[point] };
     }
