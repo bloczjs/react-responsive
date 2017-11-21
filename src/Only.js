@@ -20,11 +20,17 @@ const fromIntervalToMedia = (interval) => {
 };
 
 class Only extends PureComponent {
-  state = { show: false };
+  constructor(props) {
+    super(props);
+
+    this.state = { show: false };
+    this.mediaQueryList = null;
+
+    this.updateInterval(props);
+  }
 
   componentDidMount() {
-    // window.addEventListener('resize', this.updateMediaQuery);
-    this.updateInterval(this.props);
+    this.updateMediaQuery(this.mediaQueryList);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -41,8 +47,6 @@ class Only extends PureComponent {
       this.mediaQueryList = null;
     }
   }
-
-  mediaQueryList = null;
 
   updateInterval = (props = null) => {
     const { children, matchMedia, ...breakpoints } = props;
