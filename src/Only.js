@@ -2,7 +2,7 @@
 
 import { PureComponent } from 'react';
 
-import debounce from './debounce';
+import throttle from './throttle';
 import BreakpointsProvider from './BreakpointsProvider';
 import fromBreakpointToMedia from './fromBreakpointToMedia';
 
@@ -53,7 +53,7 @@ class Only extends PureComponent {
     this.mediaQueryList.addListener(this.updateMediaQuery);
   };
 
-  updateMediaQuery = debounce((event) => {
+  updateMediaQuery = throttle((event) => {
     this.setState((prevState) => {
       const show = event.matches;
       if (show === prevState.show) {
