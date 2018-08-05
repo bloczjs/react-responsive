@@ -25,7 +25,7 @@ class Only extends PureComponent {
       this.mediaQueryList.removeListener(this.updateMediaQuery);
       this.mediaQueryList = null;
     }
-    this.updateMediaQuery(nextProps);
+    this.updateInterval(nextProps);
   }
 
   componentWillUnmount() {
@@ -36,9 +36,7 @@ class Only extends PureComponent {
   }
 
   updateInterval = (props = null) => {
-    const {
-      children, matchMedia, as, on,
-    } = props;
+    const { matchMedia, on } = props;
     const filteredBreakpoints = on
       .split(' ')
       .map(breakpoint =>
@@ -55,7 +53,7 @@ class Only extends PureComponent {
     this.mediaQueryList.addListener(this.updateMediaQuery);
   };
 
-  updateMediaQuery = throttle((event) => {
+  _updateMediaQuery = (event) => {
     this.setState((prevState) => {
       const show = event.matches;
       if (show === prevState.show) {
@@ -63,7 +61,9 @@ class Only extends PureComponent {
       }
       return { show };
     });
-  }, 50);
+  };
+
+  updateMediaQuery = throttle(this._updateMediaQuery, 50);
 
   render() {
     if (!this.state.show) {
