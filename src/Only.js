@@ -1,5 +1,4 @@
-/* global window */
-
+// eslint-disable-next-line
 import { PureComponent, createElement } from 'react';
 
 import throttle from './throttle';

@@ -20,7 +20,6 @@
     "prepublish": "rm -rf lib && yarn build"
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
-  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.2",
