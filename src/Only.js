@@ -1,6 +1,6 @@
 /* global window */
 
-import { PureComponent } from 'react';
+import { PureComponent, createElement } from 'react';
 
 import throttle from './throttle';
 import BreakpointsProvider from './BreakpointsProvider';
@@ -42,7 +42,7 @@ class Only extends PureComponent {
     const filteredBreakpoints = on
       .split(' ')
       .map(breakpoint =>
-          BreakpointsProvider.breakpoints[breakpoint] &&
+        BreakpointsProvider.breakpoints[breakpoint] &&
           BreakpointsProvider.breakpoints[breakpoint])
       .filter(Boolean);
     const mediaQuery = [
@@ -66,7 +66,13 @@ class Only extends PureComponent {
   }, 50);
 
   render() {
-    return this.state.show && this.props.children;
+    if (!this.state.show) {
+      return null;
+    }
+    const {
+      matchMedia, as, on, ...props
+    } = this.props;
+    return as ? createElement(as, props) : this.props.children;
   }
 }
 

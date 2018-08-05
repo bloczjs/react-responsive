@@ -4,14 +4,15 @@
 
 1.  [Default breakpoints](#default-breakpoints)
 2.  [Additional `Up` and `Down`](#additional-up-and-down)
-3.  [BreakpointsProvider](#breakpointsprovider)
+3.  [Render as component](#render-as-component)
+4.  [BreakpointsProvider](#breakpointsprovider)
     1.  [Add more breakpoints](#add-more-breakpoints)
     2.  [Change default breakpoints](#change-default-breakpoints)
-4.  [Units](#units)
-5.  [Match Media Queries](#match-media-queries)
-6.  [toJSON](#tojson)
-7.  [toCSS](#tocss)
-8.  [CSS in JS](#css-in-js)
+5.  [Units](#units)
+6.  [Match Media Queries](#match-media-queries)
+7.  [toJSON](#tojson)
+8.  [toCSS](#tocss)
+9.  [CSS in JS](#css-in-js)
     1.  [Inline style](#inline-style)
     2.  [Styled-components](#styled-components)
     3.  [Styletron](#styletron)
@@ -59,6 +60,79 @@ const App = () => (
   </BreakpointsProvider>
 );
 ```
+
+### Render as component
+
+If you want the `Only` components to render as another component, you can use the `as` props:
+
+```javascript
+import React from "react";
+import Only, { BreakpointsProvider } from "react-only";
+
+const App = () => (
+  <BreakpointsProvider>
+    <ul>
+      <Only as="li" on="xs">
+        Only visible for extra small devices (portrait phones)
+      </Only>
+      <Only as="li" on="sm">
+        Only visible for small devices (landscape phones)
+      </Only>
+      <Only as="li" on="md">
+        Only visible for medium devices (tablets)
+      </Only>
+      <Only as="li" on="lg">
+        Only visible for large devices (desktops)
+      </Only>
+      <Only as="li" on="xl">
+        Only visible for extra large devices (large desktops)
+      </Only>
+      <Only as="li" on="sm xl">
+        Only visible for small AND extra large devices
+      </Only>
+    </ul>
+  </BreakpointsProvider>
+);
+```
+
+The `as` props can take any DOM tag string (`div`, `ul`, `li`, ...) or any React component:
+
+```javascript
+import React from "react";
+import Only, { BreakpointsProvider } from "react-only";
+
+const Custom = ({ title, children }) => (
+  <React.Fragment>
+    <h3>{title}</h3>
+    <p>{children}</p>
+  </React.Fragment>
+);
+
+const App = () => (
+  <BreakpointsProvider>
+    <Only as={Custom} title="xs" on="xs">
+      Only visible for extra small devices (portrait phones)
+    </Only>
+    <Only as={Custom} title="sm" on="sm">
+      Only visible for small devices (landscape phones)
+    </Only>
+    <Only as={Custom} title="md" on="md">
+      Only visible for medium devices (tablets)
+    </Only>
+    <Only as={Custom} title="lg" on="lg">
+      Only visible for large devices (desktops)
+    </Only>
+    <Only as={Custom} title="xl" on="xl">
+      Only visible for extra large devices (large desktops)
+    </Only>
+    <Only as={Custom} title="sm xl" on="sm xl">
+      Only visible for small AND extra large devices
+    </Only>
+  </BreakpointsProvider>
+);
+```
+
+Note that any props except for `matchMedia`, `as` and `on` will be forwarded to the `as` props.
 
 ### BreakpointsProvider
 
