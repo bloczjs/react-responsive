@@ -6,3 +6,4 @@ src/
 *.log
 README.md
 LICENSE
+test/
