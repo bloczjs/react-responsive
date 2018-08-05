@@ -1,10 +1,16 @@
 {
   "name": "react-only",
-  "version": "0.4.11",
+  "version": "0.5.0",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "main": "lib/index.js",
   "repository": "git@github.com:Ayc0/react-only.git",
-  "keywords": ["react", "css", "media-queries", "bootstrap", "responsive"],
+  "keywords": [
+    "react",
+    "css",
+    "media-queries",
+    "bootstrap",
+    "responsive"
+  ],
   "author": "Ayc0",
   "license": "MIT",
   "bugs": "https://github.com/Ayc0/react-only/issues",
