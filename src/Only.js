@@ -70,9 +70,9 @@ class Only extends PureComponent {
       return null;
     }
     const {
-      matchMedia, as, on, ...props
+      matchMedia, as, on, children, ...props
     } = this.props;
-    return as ? createElement(as, props) : this.props.children;
+    return as ? createElement(as, props, children) : children;
   }
 }
 
