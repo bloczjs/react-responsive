@@ -36,10 +36,12 @@ class Only extends PureComponent {
   }
 
   updateInterval = (props = null) => {
-    const { children, matchMedia, ...breakpoints } = props;
-    const filteredBreakpoints = Object.keys(breakpoints)
+    const {
+      children, matchMedia, as, on,
+    } = props;
+    const filteredBreakpoints = on
+      .split(' ')
       .map(breakpoint =>
-        breakpoints[breakpoint] &&
           BreakpointsProvider.breakpoints[breakpoint] &&
           BreakpointsProvider.breakpoints[breakpoint])
       .filter(Boolean);
@@ -71,6 +73,7 @@ class Only extends PureComponent {
 Only.defaultProps = {
   matchMedia: '',
   children: () => null,
+  on: '',
 };
 
 export default Only;

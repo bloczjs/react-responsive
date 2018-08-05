@@ -1,19 +1,20 @@
 # React-Only
 
 ## Table of Contents
-1. [Default breakpoints](#default-breakpoints)
-2. [Additional `Up` and `Down`](#additional-up-and-down)
-3. [BreakpointsProvider](#breakpointsprovider)
-   1. [Add more breakpoints](#add-more-breakpoints)
-   2. [Change default breakpoints](#change-default-breakpoints)
-4. [Units](#units)
-5. [Match Media Queries](#match-media-queries)
-6. [toJSON](#tojson)
-7. [toCSS](#tocss)
-8. [CSS in JS](#css-in-js)
-   1. [Inline style](#inline-style)
-   2. [Styled-components](#styled-components)
-   3. [Styletron](#styletron)
+
+1.  [Default breakpoints](#default-breakpoints)
+2.  [Additional `Up` and `Down`](#additional-up-and-down)
+3.  [BreakpointsProvider](#breakpointsprovider)
+    1.  [Add more breakpoints](#add-more-breakpoints)
+    2.  [Change default breakpoints](#change-default-breakpoints)
+4.  [Units](#units)
+5.  [Match Media Queries](#match-media-queries)
+6.  [toJSON](#tojson)
+7.  [toCSS](#tocss)
+8.  [CSS in JS](#css-in-js)
+    1.  [Inline style](#inline-style)
+    2.  [Styled-components](#styled-components)
+    3.  [Styletron](#styletron)
 
 ## What is React-Only
 
@@ -28,17 +29,17 @@ Allows you to display component only for particular screen sizes.
 React-Only is based on the classic bootstrap breakpoints: `xs`, `sm`, `md`, `lg` and `xl`.
 
 ```javascript
-import React from 'react';
-import Only, { BreakpointsProvider } from 'react-only';
+import React from "react";
+import Only, { BreakpointsProvider } from "react-only";
 
 const App = () => (
   <BreakpointsProvider>
-    <Only xs>Only visible for extra small devices (portrait phones)</Only>
-    <Only sm>Only visible for small devices (landscape phones)</Only>
-    <Only md>Only visible for medium devices (tablets)</Only>
-    <Only lg>Only visible for large devices (desktops)</Only>
-    <Only xl>Only visible for extra large devices (large desktops)</Only>
-    <Only sm xl>Only visible for small AND extra large devices</Only>
+    <Only on="xs">Only visible for extra small devices (portrait phones)</Only>
+    <Only on="sm">Only visible for small devices (landscape phones)</Only>
+    <Only on="md">Only visible for medium devices (tablets)</Only>
+    <Only on="lg">Only visible for large devices (desktops)</Only>
+    <Only on="xl">Only visible for extra large devices (large desktops)</Only>
+    <Only on="sm xl">Only visible for small AND extra large devices</Only>
   </BreakpointsProvider>
 );
 ```
@@ -48,13 +49,13 @@ const App = () => (
 In addition to the regular breakpoints, you have another api defined `{breakpoint}Up` and `{breakpoint}Down`:
 
 ```javascript
-import React from 'react';
-import Only, { BreakpointsProvider } from 'react-only';
+import React from "react";
+import Only, { BreakpointsProvider } from "react-only";
 
 const App = () => (
   <BreakpointsProvider>
-    <Only smUp>Visible on every device bigger or egal than "small"</Only>
-    <Only mdDown>Visible on every device smaller or egal than "medium"</Only>
+    <Only on="smUp">Visible on every device bigger or egal than "small"</Only>
+    <Only on="mdDown">Visible on every device smaller or egal than "medium"</Only>
   </BreakpointsProvider>
 );
 ```
@@ -65,25 +66,25 @@ const App = () => (
 
 By default, the breakpoints are:
 
-| Breakpoint | From   | To       |
-|------------|-------:|---------:|
-| xs         | 0px    | 576px    |
-| sm         | 576px  | 768px    |
-| md         | 768px  | 992px    |
-| lg         | 992px  | 1200px   |
+| Breakpoint |   From |       To |
+| ---------- | -----: | -------: |
+| xs         |    0px |    576px |
+| sm         |  576px |    768px |
+| md         |  768px |    992px |
+| lg         |  992px |   1200px |
 | xl         | 1200px | Infinity |
 
 #### Add more breakpoints
 
 ```javascript
-import React from 'react';
-import Only, { BreakpointsProvider } from 'react-only';
+import React from "react";
+import Only, { BreakpointsProvider } from "react-only";
 
 const App = () => (
   <BreakpointsProvider additionalBreakpoints={{ customBrkPts: [263, 863] }}>
-    <Only customBrkPts>Visible on every device from "263px" to "863px"</Only>
-    <Only customBrkPtsUp>Visible on every device bigger than "263px"</Only>
-    <Only customBrkPtsDown>Visible on every device smaller than "863px"</Only>
+    <Only on="customBrkPts">Visible on every device from "263px" to "863px"</Only>
+    <Only on="customBrkPtsUp">Visible on every device bigger than "263px"</Only>
+    <Only on="customBrkPtsDown">Visible on every device smaller than "863px"</Only>
   </BreakpointsProvider>
 );
 ```
@@ -91,14 +92,14 @@ const App = () => (
 #### Change default breakpoints
 
 ```javascript
-import React from 'react';
-import Only, { BreakpointsProvider } from 'react-only';
+import React from "react";
+import Only, { BreakpointsProvider } from "react-only";
 
 const App = () => (
   <BreakpointsProvider breakpoints={{ sm: [263, 863] }}>
-    <Only sm>Visible on every device from "263px" to "863px"</Only>
-    <Only smUp>Visible on every device bigger than "263px"</Only>
-    <Only smDown>Visible on every device smaller than "863px"</Only>
+    <Only on="sm">Visible on every device from "263px" to "863px"</Only>
+    <Only on="smUp">Visible on every device bigger than "263px"</Only>
+    <Only on="smDown">Visible on every device smaller than "863px"</Only>
   </BreakpointsProvider>
 );
 ```
@@ -108,13 +109,13 @@ const App = () => (
 ### Units
 
 ```javascript
-import React from 'react';
-import Only, { BreakpointsProvider } from 'react-only';
+import React from "react";
+import Only, { BreakpointsProvider } from "react-only";
 
 const App = () => (
-  <BreakpointsProvider additionalBreakpoints={{ pxPoint: [263, 863, 'px'], emPoint: [20, 40, 'em']  }}>
-    <Only pxPoint>Visible on every device from "263px" to "863px"</Only>
-    <Only emPoint>Visible on every device from "20em" to "40em"</Only>
+  <BreakpointsProvider additionalBreakpoints={{ pxPoint: [263, 863, "px"], emPoint: [20, 40, "em"] }}>
+    <Only on="pxPoint">Visible on every device from "263px" to "863px"</Only>
+    <Only on="emPoint">Visible on every device from "20em" to "40em"</Only>
   </BreakpointsProvider>
 );
 ```
@@ -128,11 +129,13 @@ The default unit is `px`.
 For more advanced media queries, the prop `matchMedia` can be set to any regular query supported by [window.matchMedia](https://developer.mozilla.org/fr/docs/Web/API/Window/matchMedia).
 
 ```javascript
-import React from 'react';
-import Only from 'react-only';
+import React from "react";
+import Only from "react-only";
 
 const App = () => (
-  <Only matchMedia="(min-device-width: 500px) and (orientation: landscape)">Visible on every device bigger than "500px" and in landscape mode</Only>
+  <Only matchMedia="(min-device-width: 500px) and (orientation: landscape)">
+    Visible on every device bigger than "500px" and in landscape mode
+  </Only>
 );
 ```
 
@@ -149,11 +152,11 @@ import { toJSON } from 'react-only';
 
 const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
 > style: {
-            "width": "10px",
-            "@media (min-width: 992px)": {
-              "width": "100px"
-            }
-          }
+  "width": "10px",
+  "@media (min-width: 992px)": {
+    "width": "100px"
+  }
+}
 ```
 
 ### toCSS
@@ -170,20 +173,21 @@ const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
 ### CSS in JS
 
 #### Inline style
+
 React-Only shouldn't be used with inline styles because they don't support media queries. But you can still use React-Only with CSS-in-JS libraries like:
 
 #### [Styled-components](https://www.styled-components.com/)
 
 ```javascript
 const App = styled.div`
-  ${toCSS({ xs: { width: '10px' }, lg: { width: '100px'}})}
+  ${toCSS({ xs: { width: "10px" }, lg: { width: "100px" } })};
 `;
 ```
 
 #### [Styletron](https://github.com/rtsao/styletron)
 
 ```javascript
-const App = styled('div', () => ({
-  ...toJSON({ xs: { width: '10px' }, lg: { width: '100px'}})
+const App = styled("div", () => ({
+  ...toJSON({ xs: { width: "10px" }, lg: { width: "100px" } })
 }));
 ```
