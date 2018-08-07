@@ -1,10 +1,11 @@
 {
   "name": "react-only",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
-  "source": "lib/index.js",
-  "umd:main": "lib/index.umd.js",
-  "main": "lib/index.js",
+  "source": "tmp/index.js",
+  "umd:main": "lib/react-only.umd.js",
+  "module": "lib/react-only.es.js",
+  "main": "lib/react-only.js",
   "repository": "git@github.com:Ayc0/react-only.git",
   "keywords": [
     "react",
@@ -17,9 +18,9 @@
   "license": "MIT",
   "bugs": "https://github.com/Ayc0/react-only/issues",
   "scripts": {
-    "build": "yarn -s build:cjs && yarn -s build:umd",
-    "build:cjs": "babel src --out-dir lib",
-    "build:umd": "microbundle --name $npm_package_name -f umd",
+    "build": "yarn -s build:tmp && yarn -s build:min && rm -rf tmp",
+    "build:tmp": "babel src --out-dir tmp",
+    "build:min": "microbundle --name $npm_package_name",
     "build:watch": "nodemon --watch src -e js --exec yarn -s build",
     "prepublishOnly": "rm -rf lib && yarn -s build"
   },
@@ -39,7 +40,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "flow-bin": "^0.59.0",
-    "microbundle": "^0.6.0",
+    "microbundle": "^0.4.4",
     "nodemon": "^1.12.1"
   },
   "peerDependencies": {

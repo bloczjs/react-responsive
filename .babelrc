@@ -1,8 +1,4 @@
 {
-  "plugins": [
-    "syntax-flow",
-    "transform-class-properties",
-    "transform-object-rest-spread"
-  ],
-  "presets": ["flow", "react", "es2015", "minify"]
+  "plugins": ["transform-class-properties", "transform-object-rest-spread"],
+  "presets": ["react"]
 }

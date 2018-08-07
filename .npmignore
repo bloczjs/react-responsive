@@ -7,3 +7,7 @@ src/
 README.md
 LICENSE
 test/
+.DS_Store
+tmp/
+.eslintignore
+.gitignore

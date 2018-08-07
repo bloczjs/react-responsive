@@ -1,9 +1,9 @@
 // eslint-disable-next-line
-import { Component } from 'react';
+import { PureComponent } from 'react';
 
 import sanitize from './sanitize';
 
-class BreakpointsProvider extends Component {
+class BreakpointsProvider extends PureComponent {
   static breakpoints = {};
 
   constructor(props) {
