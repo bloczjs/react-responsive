@@ -224,8 +224,8 @@ You can also use this library to set media-query in CSS-in-JS:
 ```javascript
 import { toJSON } from 'react-only';
 
-const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
-> style: {
+toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
+> {
   "width": "10px",
   "@media (min-width: 992px)": {
     "width": "100px"
@@ -240,8 +240,8 @@ const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
 ```javascript
 import { toCSS } from 'react-only';
 
-const style = toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
-> style: 'width: 10px;@media (min-width: 992px) {width: 100px;:hover {background-color: red;}}'
+toCSS({ xs: { width: '10px' }, lg: { width: '100px'}});
+> 'width: 10px;@media (min-width: 992px) {width: 100px;:hover {background-color: red;}}'
 ```
 
 ### CSS in JS
