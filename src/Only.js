@@ -2,8 +2,7 @@
 import { PureComponent, createElement } from 'react';
 
 import throttle from './throttle';
-import BreakpointsProvider from './BreakpointsProvider';
-import fromBreakpointToMedia from './fromBreakpointToMedia';
+import toMediaQuery from './toMediaQuery';
 
 class Only extends PureComponent {
   constructor(props) {
@@ -34,20 +33,8 @@ class Only extends PureComponent {
     }
   }
 
-  updateInterval = (props = null) => {
-    const { matchMedia, on } = props;
-    const filteredBreakpoints = on
-      .split(' ')
-      .map(breakpoint =>
-        BreakpointsProvider.breakpoints[breakpoint] &&
-          BreakpointsProvider.breakpoints[breakpoint])
-      .filter(Boolean);
-    const mediaQuery = [
-      ...filteredBreakpoints.map(breakpoint => fromBreakpointToMedia(breakpoint)),
-      matchMedia,
-    ]
-      .filter(Boolean)
-      .join(',');
+  updateInterval = ({ matchMedia, on }) => {
+    const mediaQuery = toMediaQuery(on, matchMedia);
     this.mediaQueryList = window.matchMedia(mediaQuery);
     this.mediaQueryList.addListener(this.updateMediaQuery);
   };

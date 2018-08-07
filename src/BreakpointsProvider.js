@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { Component } from 'react';
 
 import sanitize from './sanitize';

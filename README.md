@@ -16,6 +16,7 @@
     1.  [Inline style](#inline-style)
     2.  [Styled-components](#styled-components)
     3.  [Styletron](#styletron)
+10. [toMediaQuery](#tomediaquery)
 
 ## What is React-Only
 
@@ -264,4 +265,15 @@ const App = styled.div`
 const App = styled("div", () => ({
   ...toJSON({ xs: { width: "10px" }, lg: { width: "100px" } })
 }));
+```
+
+### toMediaQuery
+
+```javascript
+toMediaQuery("md xs");
+> "(min-width:768px) and (max-width:992px),(max-width:576px)";
+
+// Example
+window.matchMedia(toMediaQuery("md xs")).matches;
+> true
 ```
