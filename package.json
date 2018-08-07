@@ -21,7 +21,7 @@
     "build:cjs": "babel src --out-dir lib",
     "build:umd": "microbundle --name $npm_package_name -f umd",
     "build:watch": "nodemon --watch src -e js --exec yarn -s build",
-    "prepublish": "rm -rf lib && yarn -s build"
+    "prepublishOnly": "rm -rf lib && yarn -s build"
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
   "devDependencies": {
