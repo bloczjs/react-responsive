@@ -1,7 +1,9 @@
 {
   "name": "react-only",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
+  "source": "lib/index.js",
+  "umd:main": "lib/index.umd.js",
   "main": "lib/index.js",
   "repository": "git@github.com:Ayc0/react-only.git",
   "keywords": [
@@ -15,9 +17,11 @@
   "license": "MIT",
   "bugs": "https://github.com/Ayc0/react-only/issues",
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "build:watch": "nodemon --watch src -e js --exec yarn build",
-    "prepublish": "rm -rf lib && yarn build"
+    "build": "yarn -s build:cjs && yarn -s build:umd",
+    "build:cjs": "babel src --out-dir lib",
+    "build:umd": "microbundle --name $npm_package_name -f umd",
+    "build:watch": "nodemon --watch src -e js --exec yarn -s build",
+    "prepublish": "rm -rf lib && yarn -s build"
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
   "devDependencies": {
@@ -35,6 +39,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "flow-bin": "^0.59.0",
+    "microbundle": "^0.6.0",
     "nodemon": "^1.12.1"
   },
   "peerDependencies": {
