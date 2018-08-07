@@ -3,8 +3,16 @@ import { PureComponent } from 'react';
 
 import sanitize from './sanitize';
 
+const defaultBreakpoints = {
+  xs: [0, 576, 'px'], // Extra small devices (portrait phones)
+  sm: [576, 768, 'px'], // Small devices (landscape phones)
+  md: [768, 992, 'px'], // Medium devices (tablets)
+  lg: [992, 1200, 'px'], // Large devices (desktops)
+  xl: [1200, Infinity, 'px'], // Extra large devices (large desktops)
+};
+
 class BreakpointsProvider extends PureComponent {
-  static breakpoints = {};
+  static breakpoints = defaultBreakpoints;
 
   constructor(props) {
     super(props);
@@ -20,13 +28,7 @@ class BreakpointsProvider extends PureComponent {
 }
 
 BreakpointsProvider.defaultProps = {
-  breakpoints: {
-    xs: [0, 576, 'px'], // Extra small devices (portrait phones)
-    sm: [576, 768, 'px'], // Small devices (landscape phones)
-    md: [768, 992, 'px'], // Medium devices (tablets)
-    lg: [992, 1200, 'px'], // Large devices (desktops)
-    xl: [1200, Infinity, 'px'], // Extra large devices (large desktops)
-  },
+  breakpoints: defaultBreakpoints,
   additionalBreakpoints: {},
   children: () => {},
 };
