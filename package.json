@@ -18,10 +18,12 @@
   "license": "MIT",
   "bugs": "https://github.com/Ayc0/react-only/issues",
   "scripts": {
-    "build": "yarn -s build:tmp && yarn -s build:min && rm -rf tmp",
+    "build:watch": "nodemon --watch src -e js --exec \"yarn -s build:dev\"",
+    "build": "yarn -s build:tmp && yarn -s build:microbundle && yarn -s rename:react && rm -rf tmp",
+    "build:dev": "yarn -s build:tmp && yarn -s build:microbundle --compress false",
     "build:tmp": "babel src --out-dir tmp",
-    "build:min": "microbundle --name $npm_package_name && sed -i -- 's/t.react/t.React/g' $npm_package_umd_main",
-    "build:watch": "nodemon --watch src -e js --exec yarn -s build",
+    "build:microbundle": "microbundle --name $npm_package_name",
+    "rename:react": "sed -i -- 's/t.react/t.React/g' $npm_package_umd_main && rm -f $npm_package_umd_main--",
     "prepublishOnly": "rm -rf lib && yarn -s build"
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
