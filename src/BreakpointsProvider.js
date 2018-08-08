@@ -22,6 +22,7 @@ class BreakpointsProvider extends PureComponent {
 
     BreakpointsProvider.breakpoints = Object.assign(breakpoints, additionalBreakpoints);
   }
+
   render() {
     return this.props.children;
   }

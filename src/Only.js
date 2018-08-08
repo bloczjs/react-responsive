@@ -49,6 +49,7 @@ class Only extends PureComponent {
     });
   };
 
+  // eslint-disable-next-line
   updateMediaQuery = throttle(this._updateMediaQuery, 50);
 
   render() {
