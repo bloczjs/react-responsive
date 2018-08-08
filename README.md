@@ -5,12 +5,12 @@
 1.  [`Only`](#only)
     1.  [Default breakpoints](#default-breakpoints)
     2.  [Additional `Up` and `Down`](#additional-up-and-down)
-    3.  [Render as component](#render-as-component)
+    3.  [Match Media Queries](#match-media-queries)
+    4.  [Render as component](#render-as-component)
 2.  [`BreakpointsProvider`](#breakpointsprovider)
     1.  [Add more breakpoints](#add-more-breakpoints)
     2.  [Change default breakpoints](#change-default-breakpoints)
     3.  [Units](#units)
-    4.  [Match Media Queries](#match-media-queries)
 3.  [`toJSON`](#tojson)
 4.  [`toCSS`](#tocss)
 5.  [`CSS in JS`](#css-in-js)
@@ -74,6 +74,25 @@ const App = () => (
   </React.Fragment>
 );
 ```
+
+#### Match Media Queries
+
+For more advanced media queries, the prop `matchMedia` can be set to any regular query supported by [window.matchMedia](https://developer.mozilla.org/fr/docs/Web/API/Window/matchMedia).
+
+```javascript
+import React from "react";
+import Only from "react-only";
+
+const App = () => (
+  <Only matchMedia="(min-device-width: 500px) and (orientation: landscape)">
+    Visible on every device bigger than "500px" and in landscape mode
+  </Only>
+);
+```
+
+[More infos about CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+
+**Note:** If you use breakpoints AND matchMedia, the component will be displayed if one of the breakpoints is matched **OR** if the media query is fulfilled.
 
 #### Render as component
 
@@ -202,25 +221,6 @@ Every CSS units are supported.
 
 The default unit is `px`.
 
-#### Match Media Queries
-
-For more advanced media queries, the prop `matchMedia` can be set to any regular query supported by [window.matchMedia](https://developer.mozilla.org/fr/docs/Web/API/Window/matchMedia).
-
-```javascript
-import React from "react";
-import Only from "react-only";
-
-const App = () => (
-  <Only matchMedia="(min-device-width: 500px) and (orientation: landscape)">
-    Visible on every device bigger than "500px" and in landscape mode
-  </Only>
-);
-```
-
-[More infos about CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-
-**Note:** If you use breakpoints AND matchMedia, the component will be displayed if one of the breakpoints is matched **OR** if the media query is fulfilled.
-
 ### toJSON
 
 You can also use this library to set media-query in CSS-in-JS:
@@ -257,6 +257,8 @@ React-Only shouldn't be used with inline styles because they don't support media
 #### [Styled-components](https://www.styled-components.com/)
 
 ```javascript
+import { toCSS } from "react-only";
+
 const App = styled.div`
   ${toCSS({ xs: { width: "10px" }, lg: { width: "100px" } })};
 `;
@@ -265,6 +267,8 @@ const App = styled.div`
 #### [Styletron](https://github.com/rtsao/styletron)
 
 ```javascript
+import { toJSON } from "react-only";
+
 const App = styled("div", () => ({
   ...toJSON({ xs: { width: "10px" }, lg: { width: "100px" } })
 }));
@@ -273,6 +277,8 @@ const App = styled("div", () => ({
 ### toMediaQuery
 
 ```javascript
+import { toMediaQuery } from "react-only";
+
 toMediaQuery("md xs");
 > "(min-width:768px) and (max-width:992px),(max-width:576px)";
 
