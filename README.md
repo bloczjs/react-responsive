@@ -7,17 +7,18 @@
     2.  [Additional `Up` and `Down`](#additional-up-and-down)
     3.  [Match Media Queries](#match-media-queries)
     4.  [Render as component](#render-as-component)
-2.  [`BreakpointsProvider`](#breakpointsprovider)
+2.  [`Match`](#match)
+3.  [`BreakpointsProvider`](#breakpointsprovider)
     1.  [Add more breakpoints](#add-more-breakpoints)
     2.  [Change default breakpoints](#change-default-breakpoints)
     3.  [Units](#units)
-3.  [`toJSON`](#tojson)
-4.  [`toCSS`](#tocss)
-5.  [`CSS in JS`](#css-in-js)
+4.  [`toJSON`](#tojson)
+5.  [`toCSS`](#tocss)
+6.  [CSS in JS](#css-in-js)
     1.  [Inline style](#inline-style)
     2.  [Styled-components](#styled-components)
     3.  [Styletron](#styletron)
-6.  [`toMediaQuery`](#tomediaquery)
+7.  [`toMediaQuery`](#tomediaquery)
 
 ## What is React-Only
 
@@ -27,7 +28,7 @@ Allows you to display component only for particular screen sizes.
 
 ## How to use
 
-### Only
+### `Only`
 
 #### Default breakpoints
 
@@ -165,7 +166,36 @@ const App = () => (
 
 Note that any props except for `matchMedia`, `as` and `on` will be forwarded to the `as` props.
 
-### BreakpointsProvider
+### `Match`
+
+The `Match` will look into every props of its children (and event nested children) to detect `only` and `matchMedia` props. If one of those is found, it will wrap this component inside a `Only` component will match `only` with `on` and `matchMedia` to itself.
+
+```javascript
+import React from "react";
+import Only from "react-only";
+
+const App = () => (
+  <Match>
+    <div only="xs">xs</div>
+    <div only="sm">sm</div>
+    <div only="md">md</div>
+    <div only="lg">lg</div>
+    <div only="xl">xl</div>
+    <div>
+      <div>
+        <div>
+          <div only="smDown">nested smDown</div>
+        </div>
+      </div>
+    </div>
+    <div matchMedia="(min-width:768px) and (max-width:992px),(max-width:576px)">
+      (min-width:768px) and (max-width:992px),(max-width:576px)
+    </div>
+  </Match>
+);
+```
+
+### `BreakpointsProvider`
 
 `BreakpointsProvider` defines the values of every breakpoints.
 
@@ -221,7 +251,7 @@ Every CSS units are supported.
 
 The default unit is `px`.
 
-### toJSON
+### `toJSON`
 
 You can also use this library to set media-query in CSS-in-JS:
 
@@ -237,7 +267,7 @@ toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
 }
 ```
 
-### toCSS
+### `toCSS`
 
 `toCSS` is a wrapper for `toJSON` but instead of displaying a JS object, it displays a valid CSS string:
 
@@ -274,7 +304,7 @@ const App = styled("div", () => ({
 }));
 ```
 
-### toMediaQuery
+### `toMediaQuery`
 
 ```javascript
 import { toMediaQuery } from "react-only";
