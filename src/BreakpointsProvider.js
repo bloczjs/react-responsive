@@ -12,7 +12,7 @@ const defaultBreakpoints = {
 };
 
 class BreakpointsProvider extends PureComponent {
-  static breakpoints = defaultBreakpoints;
+  static breakpoints = sanitize(defaultBreakpoints);
 
   constructor(props) {
     super(props);
