@@ -1,4 +1,9 @@
-# React-Only
+# React-Only [![stability][0]][1]
+
+[![npm version][2]][3]
+[![downloads][4]][5]
+[![js-standard-style][6]][7]
+[![speed][8]][9]
 
 ## Table of Contents
 
@@ -316,3 +321,14 @@ toMediaQuery("md xs");
 window.matchMedia(toMediaQuery("md xs")).matches;
 > true
 ```
+
+[0]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
+[1]: https://nodejs.org/api/documentation.html#documentation_stability_index
+[2]: https://img.shields.io/npm/v/react-only.svg?style=flat-square
+[3]: https://npmjs.org/package/react-only
+[4]: http://img.shields.io/npm/dm/react-only.svg?style=flat-square
+[5]: https://npmjs.org/package/react-only
+[6]: https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg?style=flat-square
+[7]: https://github.com/airbnb/javascript
+[8]: https://img.shields.io/badge/speed-blazingly%20fast-orange.svg?style=flat-square
+[9]: https://twitter.com/acdlite/status/974390255393505280
