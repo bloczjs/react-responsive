@@ -1,9 +1,16 @@
-# React-Only [![stability][0]][1]
+# React-Only
+
+<center>
 
 [![npm version][2]][3]
 [![downloads][4]][5]
 [![js-standard-style][6]][7]
+
+[![gzipped size][10]][11]
+[![stability][0]][1]
 [![speed][8]][9]
+
+</center>
 
 ## Table of Contents
 
@@ -332,3 +339,5 @@ window.matchMedia(toMediaQuery("md xs")).matches;
 [7]: https://github.com/airbnb/javascript
 [8]: https://img.shields.io/badge/speed-blazingly%20fast-orange.svg?style=flat-square
 [9]: https://twitter.com/acdlite/status/974390255393505280
+[10]: http://img.badgesize.io/https://unpkg.com/react-only/lib/react-only.js?compression=gzip&style=flat-square
+[11]: https://unpkg.com/react-only/lib/
