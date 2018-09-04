@@ -272,11 +272,13 @@ import { toJSON } from 'react-only';
 
 toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
 > {
-  "width": "10px",
-  "@media (min-width: 992px)": {
-    "width": "100px"
+    "@media (max-width:576px)": {
+      "width": "10px"
+    },
+    "@media (min-width:992px) and (max-width:1200px)": {
+      "width": "100px"
+    }
   }
-}
 ```
 
 ### `toCSS`
