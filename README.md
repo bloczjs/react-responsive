@@ -289,7 +289,7 @@ toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
 import { toCSS } from 'react-only';
 
 toCSS({ xs: { width: '10px' }, lg: { width: '100px'}});
-> 'width: 10px;@media (min-width: 992px) {width: 100px;:hover {background-color: red;}}'
+> '@media (max-width:576px) {width: 10…(max-width:1200px) {width: 100px;}'
 ```
 
 ### CSS in JS
