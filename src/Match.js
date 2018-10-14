@@ -4,7 +4,7 @@ import React from 'react';
 import Only from './Only';
 
 const parseChildren = (element) => {
-  if (!element.props) {
+  if (!element || !element.props) {
     return element;
   }
   const children = element.props.children

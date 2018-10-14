@@ -4,6 +4,7 @@ import { Match } from "react-only";
 
 export default () => (
   <Match>
+    {null}
     <div only="xs">xs</div>
     <div only="sm">sm</div>
     <div only="md">md</div>
