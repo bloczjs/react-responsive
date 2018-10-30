@@ -1,13 +1,20 @@
 {
-  "presets": ["react"],
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "pragma": "h"
+      }
+    ]
+  ],
   "plugins": [
-    "transform-class-properties",
-    "transform-object-rest-spread",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
     [
       "module-resolver",
       {
         "alias": {
-          "react": "../react"
+          "react": "./react"
         }
       }
     ]

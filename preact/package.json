@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn -s build:babel && yarn -s build:microbundle && rm -rf babel",
-    "move:babel": "mv ../.babelrc ../.babelrc.tmp && mv ./.babelrc ../",
-    "build:babel": "yarn -s move:babel && ../node_modules/.bin/babel ../src --out-dir babel && yarn -s remove:babel",
-    "remove:babel": "mv ../.babelrc ./ && mv ../.babelrc.tmp ../.babelrc",
+    "move:babel": "mkdir -p ./tmp && cp -r ../src/* ./src/* ./tmp",
+    "build:babel": "yarn -s move:babel && ../node_modules/.bin/babel ./tmp --out-dir babel && yarn -s remove:babel",
+    "remove:babel": "rm -rf tmp",
     "build:microbundle": "../node_modules/.bin/microbundle --name \"react-only/preact\""
   },
   "peerDependencies": {
