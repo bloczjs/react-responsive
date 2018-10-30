@@ -59,7 +59,7 @@ class Only extends PureComponent {
     const {
       matchMedia, as, on, children, ...props
     } = this.props;
-    return as ? createElement(as, props, children) : createElement(Fragment, null, children);
+    return createElement(as || Fragment, as ? props : null, children);
   }
 }
 

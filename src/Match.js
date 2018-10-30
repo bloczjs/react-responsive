@@ -22,4 +22,10 @@ const parseChildren = (element) => {
   );
 };
 
-export default ({ children }) => React.Children.map(children, parseChildren);
+export default ({ children, as, ...props }) => {
+  const computedChildren = React.Children.map(children, parseChildren);
+  if (as) {
+    return React.createElement(as, props, computedChildren);
+  }
+  return computedChildren;
+};

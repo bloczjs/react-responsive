@@ -6416,7 +6416,7 @@ react-error-overlay@^4.0.0:
   integrity sha512-FlsPxavEyMuR6TjVbSSywovXSEyOg6ZDj5+Z8nbsRl9EkOzAhEIcS+GLoQDC5fz/t9suhUXWmUrOBrgeUvrMxw==
 
 "react-only@file:../..":
-  version "0.6.7"
+  version "0.7.2"
 
 react-scripts@1.1.4:
   version "1.1.4"

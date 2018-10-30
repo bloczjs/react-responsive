@@ -21,9 +21,10 @@ const parseChildren = (vNode) => {
   );
 };
 
-export default ({ children }) => {
+export default ({ children, as, ...props }) => {
   if (!children) {
     return null;
   }
-  return <Fragment>{children.map(parseChildren)}</Fragment>;
+  const renderedComp = as || Fragment;
+  return h(renderedComp, as ? props : null, children.map(parseChildren));
 };
