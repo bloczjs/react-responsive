@@ -1,8 +1,8 @@
 {
   "name": "react-only",
-  "version": "0.6.7",
+  "version": "0.7.0",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
-  "source": "tmp/index.js",
+  "source": "babel/index.js",
   "umd:main": "lib/react-only.umd.js",
   "module": "lib/react-only.es.js",
   "main": "lib/react-only.js",
@@ -19,17 +19,18 @@
   "bugs": "https://github.com/Ayc0/react-only/issues",
   "scripts": {
     "build:watch": "nodemon --watch src -e js --exec \"yarn -s build:dev\"",
-    "build": "yarn -s build:tmp && yarn -s build:microbundle && yarn -s rename:react && rm -rf tmp",
-    "build:dev": "yarn -s build:tmp && yarn -s build:microbundle --compress false",
-    "build:tmp": "babel src --out-dir tmp",
-    "build:microbundle": "microbundle --name $npm_package_name",
-    "rename:react": "sed -i -- 's/t.react/t.React/g' $npm_package_umd_main && rm -f $npm_package_umd_main--",
-    "prepublishOnly": "rm -rf lib && yarn -s build"
+    "build:all": "yarn -s build && cd preact && yarn -s build && cd ..",
+    "build": "yarn -s build:babel && yarn -s build:microbundle && rm -rf babel",
+    "build:dev": "yarn -s build:babel && yarn -s build:microbundle --compress false",
+    "build:babel": "babel src --out-dir babel",
+    "build:microbundle": "microbundle --name $npm_package_name --globals react=React",
+    "prepublishOnly": "rm -rf lib && yarn -s build:all"
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.2",
+    "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
@@ -38,8 +39,8 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
-    "microbundle": "^0.6.0",
-    "nodemon": "^1.12.1"
+    "microbundle": "^0.7.0",
+    "nodemon": "^1.18.5"
   },
   "peerDependencies": {
     "react": "^16.0.0"

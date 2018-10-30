@@ -1,0 +1,18 @@
+{
+  "version": "0.6.7",
+  "source": "babel/index.js",
+  "umd:main": "../lib/react-only-preact.umd.js",
+  "module": "../lib/react-only-preact.es.js",
+  "main": "../lib/react-only-preact.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn -s build:babel && yarn -s build:microbundle && rm -rf babel",
+    "move:babel": "mv ../.babelrc ../.babelrc.tmp && mv ./.babelrc ../",
+    "build:babel": "yarn -s move:babel && ../node_modules/.bin/babel ../src --out-dir babel && yarn -s remove:babel",
+    "remove:babel": "mv ../.babelrc ./ && mv ../.babelrc.tmp ../.babelrc",
+    "build:microbundle": "../node_modules/.bin/microbundle --name \"react-only/preact\""
+  },
+  "peerDependencies": {
+    "preact": "^8.3.1"
+  }
+}
