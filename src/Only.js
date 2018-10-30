@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { PureComponent, createElement } from 'react';
+import { PureComponent, createElement, Fragment } from 'react';
 
 import throttle from './throttle';
 import toMediaQuery from './toMediaQuery';
@@ -59,7 +59,7 @@ class Only extends PureComponent {
     const {
       matchMedia, as, on, children, ...props
     } = this.props;
-    return as ? createElement(as, props, children) : children;
+    return as ? createElement(as, props, children) : createElement(Fragment, null, children);
   }
 }
 

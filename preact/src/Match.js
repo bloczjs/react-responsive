@@ -1,10 +1,10 @@
 // eslint-disable-next-line
-import { h, Fragment } from "preact";
+import { h, Fragment } from 'preact';
 
 // eslint-disable-next-line
-import Only from "./Only";
+import Only from './Only';
 
-const parseChildren = vNode => {
+const parseChildren = (vNode) => {
   if (!vNode || !vNode.attributes) {
     return vNode;
   }
@@ -15,7 +15,7 @@ const parseChildren = vNode => {
     return clone;
   }
   return (
-    <Only on={only || ""} matchMedia={matchMedia || ""}>
+    <Only on={only || ''} matchMedia={matchMedia || ''}>
       {clone}
     </Only>
   );
