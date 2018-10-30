@@ -5,5 +5,3 @@ lib/
 .DS_Store
 tmp/
 babel/
-.eslintignore
-.npmignore
