@@ -1,5 +1,5 @@
-import React from 'react';
-import Only from 'react-only';
+import React from "react";
+import Only from "react-only";
 
 export default () => (
   <ul>

@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "test-preact",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn -s dev",
+    "build": "preact build",
+    "serve": "preact build && preact serve",
+    "dev": "preact watch",
+    "lint": "eslint src",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "preact-cli": "^2.1.0"
+  },
+  "dependencies": {
+    "preact": "^8.2.6",
+    "react-only": "file:../.."
+  }
+}

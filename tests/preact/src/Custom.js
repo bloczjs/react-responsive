@@ -1,15 +1,15 @@
-import React from 'react';
-import Only from 'react-only';
+import { h, Fragment } from 'preact';
+import Only from 'react-only/preact';
 
 const Custom = ({ title, children }) => (
-  <React.Fragment>
+  <Fragment>
     <h3>{title}</h3>
     <p>{children}</p>
-  </React.Fragment>
+  </Fragment>
 );
 
 export default () => (
-  <React.Fragment>
+  <Fragment>
     <Only as={Custom} title="xs" on="xs">
       Only visible for extra small devices (portrait phones)
     </Only>
@@ -28,5 +28,5 @@ export default () => (
     <Only as={Custom} title="sm xl" on="sm xl">
       Only visible for small AND extra large devices
     </Only>
-  </React.Fragment>
+  </Fragment>
 );
