@@ -33,8 +33,8 @@ class Only extends PureComponent {
     }
   }
 
-  updateInterval = ({ matchMedia, on }) => {
-    const mediaQuery = toMediaQuery(on, matchMedia);
+  updateInterval = ({ matchMedia, on, strict }) => {
+    const mediaQuery = toMediaQuery(on, matchMedia, strict);
     this.mediaQueryList = window.matchMedia(mediaQuery);
     this.mediaQueryList.addListener(this.updateMediaQuery);
   };
@@ -57,7 +57,7 @@ class Only extends PureComponent {
       return null;
     }
     const {
-      matchMedia, as, on, children, ...props
+      matchMedia, as, on, children, strict, ...props
     } = this.props;
     return createElement(as || Fragment, as ? props : null, children);
   }
@@ -66,6 +66,7 @@ class Only extends PureComponent {
 Only.defaultProps = {
   matchMedia: '',
   children: () => null,
+  strict: false,
   on: '',
 };
 

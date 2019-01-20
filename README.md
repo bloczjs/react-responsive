@@ -19,6 +19,7 @@
     2.  [Additional `Up` and `Down`](#additional-up-and-down)
     3.  [Match Media Queries](#match-media-queries)
     4.  [Render as component](#render-as-component)
+    5.  [Strict mode](#strict-mode)
 2.  [`Match`](#match)
 3.  [`BreakpointsProvider`](#breakpointsprovider)
     1.  [Add more breakpoints](#add-more-breakpoints)
@@ -179,9 +180,29 @@ const App = () => (
 
 Note that any props except for `matchMedia`, `as` and `on` will be forwarded to the `as` props.
 
+#### Strict mode
+
+When `strict` is set in the props, the margins are offset by 1 px:
+
+```javascript
+import React from "react";
+import Only from "react-only";
+
+const App = () => (
+  <React.Fragment>
+    <Only on="xs">
+      Only visible for range: [576px, 768px]
+    </Only>
+    <Only on="xs" strict>
+      Only visible for range: [577px, 767px]
+    </Only>
+  </React.Fragment>
+);
+```
+
 ### `Match`
 
-The `Match` will look into every props of its children (and event nested children) to detect `only` and `matchMedia` props. If one of those is found, it will wrap this component inside a `Only` component will match `only` with `on` and `matchMedia` to itself.
+The `Match` will look into every props of its children (and event nested children) to detect `only`, `matchMedia` and `strict` props. If one of those is found, it will wrap this component inside a `Only` component will match `only` with `on` and `matchMedia` and `strict` to theirself.
 
 ```javascript
 import React from "react";
@@ -192,7 +213,7 @@ const App = () => (
     <div only="xs">xs</div>
     <div only="sm">sm</div>
     <div only="md">md</div>
-    <div only="lg">lg</div>
+    <div only="lg" strict>strict lg</div>
     <div only="xl">xl</div>
     <div>
       <div>

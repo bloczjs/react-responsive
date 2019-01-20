@@ -9,13 +9,15 @@ const parseChildren = (vNode) => {
     return vNode;
   }
   const children = vNode.children ? vNode.children.map(parseChildren) : null;
-  const { only, matchMedia, ...attributes } = vNode.attributes;
+  const {
+    only, matchMedia, strict, ...attributes
+  } = vNode.attributes;
   const clone = h(vNode.nodeName, attributes, children);
   if (!only && !matchMedia) {
     return clone;
   }
   return (
-    <Only on={only || ''} matchMedia={matchMedia || ''}>
+    <Only on={only || ''} matchMedia={matchMedia || ''} strict={strict}>
       {clone}
     </Only>
   );
