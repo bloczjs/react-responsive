@@ -3,6 +3,9 @@ import { PureComponent, createElement, Fragment } from 'react';
 
 import throttle from './throttle';
 import toMediaQuery from './toMediaQuery';
+import matchMediaNode from './matchMediaNode';
+
+const globalMatchMedia = typeof window !== "undefined" ? window.matchMedia : matchMediaNode;
 
 class Only extends PureComponent {
   constructor(props) {
@@ -35,7 +38,7 @@ class Only extends PureComponent {
 
   updateInterval = ({ matchMedia, on, strict }) => {
     const mediaQuery = toMediaQuery(on, matchMedia, strict);
-    this.mediaQueryList = window.matchMedia(mediaQuery);
+    this.mediaQueryList = globalMatchMedia(mediaQuery);
     this.mediaQueryList.addListener(this.updateMediaQuery);
   };
 
