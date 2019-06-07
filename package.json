@@ -1,6 +1,6 @@
 {
   "name": "react-only",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "source": "src/index.ts",
   "umd:main": "lib/react-only.umd.js",
@@ -25,7 +25,7 @@
     "build": "yarn -s build:microbundle",
     "build:dev": "yarn -s build:microbundle --compress false",
     "build:microbundle": "microbundle --name $npm_package_name --globals react=React",
-    "prepublishOnly": "rm -rf lib && yarn -s build:all"
+    "prepublishOnly": "rm -rf lib && yarn -s build"
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
   "devDependencies": {
