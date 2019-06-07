@@ -50,7 +50,7 @@ React-Only is based on the classic bootstrap breakpoints: `xs`, `sm`, `md`, `lg`
 
 ```javascript
 import React from "react";
-import Only from "react-only";
+import { Only } from "react-only";
 
 const App = () => (
   <React.Fragment>
@@ -80,7 +80,7 @@ In addition to the regular breakpoints, you have another api defined `{breakpoin
 
 ```javascript
 import React from "react";
-import Only from "react-only";
+import { Only } from "react-only";
 
 const App = () => (
   <React.Fragment>
@@ -98,7 +98,7 @@ For more advanced media queries, the prop `matchMedia` can be set to any regular
 
 ```javascript
 import React from "react";
-import Only from "react-only";
+import { Only } from "react-only";
 
 const App = () => (
   <Only matchMedia="(min-device-width: 500px) and (orientation: landscape)">
@@ -117,7 +117,7 @@ If you want the `Only` components to render as another component, you can use th
 
 ```javascript
 import React from "react";
-import Only from "react-only";
+import { Only } from "react-only";
 
 const App = () => (
   <ul>
@@ -147,7 +147,7 @@ The `as` props can take any DOM tag string (`div`, `ul`, `li`, ...) or any React
 
 ```javascript
 import React from "react";
-import Only from "react-only";
+import { Only } from "react-only";
 
 const Custom = ({ title, children }) => (
   <React.Fragment>
@@ -188,7 +188,7 @@ When `strict` is set in the props, the margins are offset by 1 px:
 
 ```javascript
 import React from "react";
-import Only from "react-only";
+import { Only } from "react-only";
 
 const App = () => (
   <React.Fragment>
@@ -206,7 +206,7 @@ The `Match` will look into every props of its children (and event nested childre
 
 ```javascript
 import React from "react";
-import Only, { Match } from "react-only";
+import { Only, Match } from "react-only";
 
 const App = () => (
   <Match>
@@ -235,7 +235,7 @@ You can also render the `Match` component as another one:
 
 ```javascript
 import React from "react";
-import Only, { Match } from "react-only";
+import { Only, Match } from "react-only";
 
 const App = () => (
   <Match as="ul">
@@ -248,6 +248,39 @@ const App = () => (
 );
 ```
 
+### `useOnly`
+
+`useOnly` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given breakpoint or media query matches the current viewport.
+
+```javascript
+import React from "react";
+import { useOnly } from "react-only";
+
+const App = () => {
+  const matchXl = useOnly("xl");
+  const matchMdDown = useOnly("mdDown");
+  const matchCustomMediaQuery = useOnly(
+    undefined,
+    "(min-width:768px) and (max-width:992px),(max-width:576px)"
+  );
+  const matchMdStrict = useOnly("md", undefined, true);
+  return (
+    <ul>
+      {matchXl && <li>Visible on every "large" device</li>}
+      {matchMdDown && (
+        <li>Visible on every device smaller or egal than "medium"</li>
+      )}
+      {matchCustomMediaQuery && (
+        <li>
+          Visible at (min-width:768px) and (max-width:992px),(max-width:576px)
+        </li>
+      )}
+      {matchMdStrict && <li>Visible on every strict "medium" device</li>}
+    </ul>
+  );
+};
+```
+
 ### `BreakpointsProvider`
 
 `BreakpointsProvider` defines the values of every breakpoints.
@@ -258,7 +291,7 @@ Use it to inject or modify the breakpoints (only use one `BreakpointsProvider` p
 
 ```javascript
 import React from "react";
-import Only, { BreakpointsProvider } from "react-only";
+import { Only, BreakpointsProvider } from "react-only";
 
 const App = () => (
   <BreakpointsProvider additionalBreakpoints={{ customBrkPts: [263, 863] }}>
@@ -277,7 +310,7 @@ const App = () => (
 
 ```javascript
 import React from "react";
-import Only, { BreakpointsProvider } from "react-only";
+import { Only, BreakpointsProvider } from "react-only";
 
 const App = () => (
   <BreakpointsProvider breakpoints={{ sm: [263, 863] }}>
@@ -294,7 +327,7 @@ const App = () => (
 
 ```javascript
 import React from "react";
-import Only, { BreakpointsProvider } from "react-only";
+import { Only, BreakpointsProvider } from "react-only";
 
 const App = () => (
   <BreakpointsProvider
@@ -387,7 +420,8 @@ There is a full support of `react-only` for [preact](https://preactjs.com/):
 
 ```javascript
 import { h } from "preact";
-import Only, {
+import {
+  Only,
   Match,
   BreakpointsProvider,
   toJSON,
