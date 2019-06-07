@@ -1,15 +1,25 @@
 node_modules/
-yarn.lock
-src/
+
+# Misc
+.vscode
+*.log
+.DS_Store
 .babelrc
 .eslintrc
-*.log
-README.md
-LICENSE
-test/
-tests/
-.DS_Store
-tmp/
-babel/
 .eslintignore
 .gitignore
+
+# Build
+lib/
+tmp/
+babel/
+
+# Cache
+.cache/
+cache/
+*_cache_*/
+
+# Source
+src/
+test/
+tests/

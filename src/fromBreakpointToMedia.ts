@@ -1,4 +1,6 @@
-export default (breakpoint, strict = false) => {
+import { Breakpoint } from "./sanitize";
+
+export default (breakpoint: Breakpoint, strict: boolean = false) => {
   const out = [];
   let str;
   if (breakpoint[0] !== 0) {
@@ -16,7 +18,7 @@ export default (breakpoint, strict = false) => {
     out.push(`(max-width:${str})`);
   }
   if (out.length === 0) {
-    return '';
+    return "";
   }
-  return out.join(' and ');
+  return out.join(" and ");
 };

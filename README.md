@@ -85,7 +85,9 @@ import Only from "react-only";
 const App = () => (
   <React.Fragment>
     <Only on="smUp">Visible on every device bigger or egal than "small"</Only>
-    <Only on="mdDown">Visible on every device smaller or egal than "medium"</Only>
+    <Only on="mdDown">
+      Visible on every device smaller or egal than "medium"
+    </Only>
   </React.Fragment>
 );
 ```
@@ -190,9 +192,7 @@ import Only from "react-only";
 
 const App = () => (
   <React.Fragment>
-    <Only on="xs">
-      Only visible for range: [576px, 768px]
-    </Only>
+    <Only on="xs">Only visible for range: [576px, 768px]</Only>
     <Only on="xs" strict>
       Only visible for range: [577px, 767px]
     </Only>
@@ -213,7 +213,9 @@ const App = () => (
     <div only="xs">xs</div>
     <div only="sm">sm</div>
     <div only="md">md</div>
-    <div only="lg" strict>strict lg</div>
+    <div only="lg" strict>
+      strict lg
+    </div>
     <div only="xl">xl</div>
     <div>
       <div>
@@ -260,9 +262,13 @@ import Only, { BreakpointsProvider } from "react-only";
 
 const App = () => (
   <BreakpointsProvider additionalBreakpoints={{ customBrkPts: [263, 863] }}>
-    <Only on="customBrkPts">Visible on every device from "263px" to "863px"</Only>
+    <Only on="customBrkPts">
+      Visible on every device from "263px" to "863px"
+    </Only>
     <Only on="customBrkPtsUp">Visible on every device bigger than "263px"</Only>
-    <Only on="customBrkPtsDown">Visible on every device smaller than "863px"</Only>
+    <Only on="customBrkPtsDown">
+      Visible on every device smaller than "863px"
+    </Only>
   </BreakpointsProvider>
 );
 ```
@@ -291,7 +297,12 @@ import React from "react";
 import Only, { BreakpointsProvider } from "react-only";
 
 const App = () => (
-  <BreakpointsProvider additionalBreakpoints={{ pxPoint: [263, 863, "px"], emPoint: [20, 40, "em"] }}>
+  <BreakpointsProvider
+    additionalBreakpoints={{
+      pxPoint: [263, 863, "px"],
+      emPoint: [20, 40, "em"]
+    }}
+  >
     <Only on="pxPoint">Visible on every device from "263px" to "863px"</Only>
     <Only on="emPoint">Visible on every device from "20em" to "40em"</Only>
   </BreakpointsProvider>
@@ -328,7 +339,7 @@ toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
 import { toCSS } from 'react-only';
 
 toCSS({ xs: { width: '10px' }, lg: { width: '100px'}});
-> '@media (max-width:576px) {width: 10…(max-width:1200px) {width: 100px;}'
+> '@media (max-width:576px) {width: 10px;} @media(max-width:1200px) {width: 100px;}'
 ```
 
 ### CSS in JS
@@ -375,8 +386,14 @@ window.matchMedia(toMediaQuery("md xs")).matches;
 There is a full support of `react-only` for [preact](https://preactjs.com/):
 
 ```javascript
-import { h } from 'preact';
-import Only, { Match, BreakpointsProvider, toJSON, toCSS, toMediaQuery } from 'react-only/preact';
+import { h } from "preact";
+import Only, {
+  Match,
+  BreakpointsProvider,
+  toJSON,
+  toCSS,
+  toMediaQuery
+} from "react-only/preact";
 
 const App = () => (
   <BreakpointsProvider additionalBreakpoints={{ customBrkPts: [263, 863] }}>

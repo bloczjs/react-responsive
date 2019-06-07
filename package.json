@@ -1,11 +1,12 @@
 {
   "name": "react-only",
-  "version": "0.8.3",
+  "version": "1.0.0",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
-  "source": "babel/index.js",
+  "source": "src/index.ts",
   "umd:main": "lib/react-only.umd.js",
   "module": "lib/react-only.es.js",
   "main": "lib/react-only.js",
+  "types": "lib/index.d.ts",
   "repository": "git@github.com:Ayc0/react-only.git",
   "keywords": [
     "react",
@@ -21,30 +22,25 @@
     "build:watch": "nodemon --watch src -e js --exec \"yarn -s build:dev\"",
     "build:all": "yarn -s build && yarn build:preact",
     "build:preact": "cd preact && yarn -s build && cd ..",
-    "build": "yarn build:babel && yarn -s build:microbundle && rm -rf babel",
-    "build:dev": "yarn build:babel && yarn -s build:microbundle --compress false",
-    "build:babel": "babel src --out-dir babel",
+    "build": "yarn -s build:microbundle",
+    "build:dev": "yarn -s build:microbundle --compress false",
     "build:microbundle": "microbundle --name $npm_package_name --globals react=React",
     "prepublishOnly": "rm -rf lib && yarn -s build:all"
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-module-resolver": "^3.1.1",
-    "eslint": "^5.8.0",
+    "@types/react": "^16.8.19",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "microbundle": "^0.7.0",
-    "nodemon": "^1.18.5"
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "microbundle": "^0.11.0",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.1"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.8.0"
   }
 }
