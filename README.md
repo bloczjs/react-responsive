@@ -69,10 +69,10 @@ By default, the breakpoints are:
 
 | Breakpoint |   From |       To |
 | ---------- | -----: | -------: |
-| xs         |    0px |    576px |
-| sm         |  576px |    768px |
-| md         |  768px |    992px |
-| lg         |  992px |   1200px |
+| xs         |    0px |    575px |
+| sm         |  576px |    767px |
+| md         |  768px |    991px |
+| lg         |  992px |   1199px |
 | xl         | 1200px | Infinity |
 
 #### Additional `Up` and `Down`
