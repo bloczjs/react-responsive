@@ -3,10 +3,10 @@ import * as React from "react";
 import sanitize, { units, Breakpoints } from "./sanitize";
 
 const defaultBreakpoints: Breakpoints = {
-  xs: [0, 576, units.px], // Extra small devices (portrait phones)
-  sm: [576, 768, units.px], // Small devices (landscape phones)
-  md: [768, 992, units.px], // Medium devices (tablets)
-  lg: [992, 1200, units.px], // Large devices (desktops)
+  xs: [0, 575, units.px], // Extra small devices (portrait phones)
+  sm: [576, 767, units.px], // Small devices (landscape phones)
+  md: [768, 991, units.px], // Medium devices (tablets)
+  lg: [992, 1199, units.px], // Large devices (desktops)
   xl: [1200, Infinity, units.px] // Extra large devices (large desktops)
 };
 
@@ -32,10 +32,10 @@ class BreakpointsProvider extends React.PureComponent<
     const breakpoints = sanitize(props.breakpoints);
     const additionalBreakpoints = sanitize(props.additionalBreakpoints);
 
-    BreakpointsProvider.breakpoints = Object.assign(
-      breakpoints,
-      additionalBreakpoints
-    );
+    BreakpointsProvider.breakpoints = {
+      ...breakpoints,
+      ...additionalBreakpoints
+    };
   }
 
   render() {
