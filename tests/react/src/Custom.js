@@ -1,5 +1,5 @@
 import React from "react";
-import Only from "react-only";
+import { Only } from "react-only";
 
 const Custom = ({ title, children }) => (
   <React.Fragment>
