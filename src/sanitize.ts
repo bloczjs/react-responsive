@@ -1,40 +1,39 @@
-export enum units {
-  em = "em",
-  ex = "ex",
-  "%" = "%",
-  px = "px",
-  cm = "cm",
-  mm = "mm",
-  in = "in",
-  pt = "pt",
-  pc = "pc",
-  ch = "ch",
-  rem = "rem",
-  vh = "vh",
-  vw = "vw",
-  vmin = "vmin",
-  vmax = "vmax"
-}
+export type Units =
+  | "em"
+  | "ex"
+  | "%"
+  | "px"
+  | "cm"
+  | "mm"
+  | "in"
+  | "pt"
+  | "pc"
+  | "ch"
+  | "rem"
+  | "vh"
+  | "vw"
+  | "vmin"
+  | "vmax";
 
-const listOfSupportedUnits = [
-  units.em,
-  units.ex,
-  units["%"],
-  units.px,
-  units.cm,
-  units.mm,
-  units.in,
-  units.pt,
-  units.pc,
-  units.ch,
-  units.rem,
-  units.vh,
-  units.vw,
-  units.vmin,
-  units.vmax
+const listOfSupportedUnits: Units[] = [
+  "em",
+  "ex",
+  "%",
+  "px",
+  "cm",
+  "mm",
+  "in",
+  "pt",
+  "pc",
+  "ch",
+  "rem",
+  "vh",
+  "vw",
+  "vmin",
+  "vmax"
 ];
 
-export type Breakpoint = [number, number, units];
+export type Breakpoint = [number, number, Units];
 
 export interface Breakpoints {
   [key: string]: Breakpoint;
@@ -59,10 +58,10 @@ export default (obj: Breakpoints) => {
     }
     const min = Math.min(supposedMin, supposedMax);
     const max = Math.max(supposedMin, supposedMax);
-    const unit =
+    const unit: Units =
       supposedUnit && listOfSupportedUnits.includes(supposedUnit)
         ? supposedUnit
-        : units.px;
+        : "px";
     outObj[breakpointName] = [min, max, unit];
     outObj[`${breakpointName}Up`] = [min, Infinity, unit];
     outObj[`${breakpointName}Down`] = [0, max, unit];
