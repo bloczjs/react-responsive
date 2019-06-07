@@ -33,7 +33,6 @@
     2.  [Styled-components](#styled-components)
     3.  [Styletron](#styletron)
 8.  [`toMediaQuery`](#tomediaquery)
-9.  [Preact](#preact)
 
 ## What is React-Only
 
@@ -413,32 +412,6 @@ toMediaQuery("md xs");
 // Example
 window.matchMedia(toMediaQuery("md xs")).matches;
 > true
-```
-
-### Preact
-
-There is a full support of `react-only` for [preact](https://preactjs.com/):
-
-```javascript
-import { h } from "preact";
-import {
-  Only,
-  Match,
-  BreakpointsProvider,
-  toJSON,
-  toCSS,
-  toMediaQuery
-} from "react-only/preact";
-
-const App = () => (
-  <BreakpointsProvider additionalBreakpoints={{ customBrkPts: [263, 863] }}>
-    <Only on="customBrkPts">Works</Only>
-    <Match as="ul">
-      <li only="md">md</li>
-      <li only="sm">sm</li>
-    </Match>
-  </BreakpointsProvider>
-);
 ```
 
 [0]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
