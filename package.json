@@ -1,6 +1,6 @@
 {
   "name": "react-only",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "source": "src/index.ts",
   "umd:main": "lib/react-only.umd.js",
