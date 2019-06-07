@@ -1,18 +1,21 @@
 {
+  "name": "preact-only",
   "version": "0.8.0",
-  "source": "babel/index.js",
+  "source": "src/index.ts",
   "umd:main": "../lib/react-only-preact.umd.js",
   "module": "../lib/react-only-preact.es.js",
   "main": "../lib/react-only-preact.js",
   "license": "MIT",
   "scripts": {
-    "build": "yarn -s build:babel && yarn -s build:microbundle && rm -rf babel",
-    "move:babel": "mkdir -p ./tmp && cp -r ../src/* ./src/* ./tmp",
-    "build:babel": "yarn -s move:babel && ../node_modules/.bin/babel ./tmp --out-dir babel && yarn -s remove:babel",
-    "remove:babel": "rm -rf tmp",
+    "build": "yarn -s move:tmp && yarn -s build:microbundle && yarn -s remove:tmp",
+    "move:tmp": "mkdir -p ./tmp && ncp ../src/* ./tmp & ncp ./src/* ./tmp",
+    "remove:tmp": "rm -rf tmp",
     "build:microbundle": "../node_modules/.bin/microbundle --name \"react-only/preact\""
   },
   "peerDependencies": {
     "preact": "^8.3.1"
+  },
+  "devDependencies": {
+    "ncp": "^2.0.0"
   }
 }
