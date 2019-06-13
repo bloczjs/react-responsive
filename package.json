@@ -16,7 +16,7 @@
   "homepage": "https://github.com/Ayc0/react-only#readme",
   "scripts": {
     "build": "node_modules/.bin/pack build",
-    "prepublishOnly": "yarn -s build"
+    "deploy": "node_modules/.bin/pack publish"
   },
   "@pika/pack": {
     "pipeline": [
