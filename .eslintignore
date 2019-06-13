@@ -1,5 +1,16 @@
-lib/
 node_modules/
+
+# Misc
+.vscode
+*.log
+.DS_Store
+
+# Build
+lib/
 tmp/
 babel/
-tests/
+pkg/
+
+.cache/
+cache/
+*_cache_*/
