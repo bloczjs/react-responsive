@@ -1,6 +1,6 @@
 {
   "name": "react-only",
-  "version": "1.0.3",
+  "version": "1.0.4-0",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "repository": "git@github.com:Ayc0/react-only.git",
   "keywords": [
