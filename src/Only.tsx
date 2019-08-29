@@ -3,11 +3,11 @@ import * as React from "react";
 import { useOnly } from "./useOnly";
 
 export interface OnlyProps {
+  [key: string]: any;
   strict?: boolean;
   matchMedia?: string;
   on?: string;
   as?: string | React.ComponentType;
-  [key: string]: any;
 }
 
 export const Only: React.FunctionComponent<OnlyProps> = ({

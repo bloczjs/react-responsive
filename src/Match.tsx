@@ -42,9 +42,9 @@ const parseChildren: ParseChildren = element => {
 };
 
 interface MatchProps {
+  [key: string]: any;
   children: Element | Element[] | null;
   as?: string;
-  [key: string]: any;
 }
 
 export const Match: React.FunctionComponent<MatchProps> = ({
@@ -52,7 +52,6 @@ export const Match: React.FunctionComponent<MatchProps> = ({
   as,
   ...props
 }) => {
-  // @ts-ignore
   const computedChildren = React.Children.map(children, parseChildren);
   if (as) {
     return React.createElement(as, props, computedChildren);

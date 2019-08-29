@@ -2,7 +2,7 @@ import { Breakpoint } from "./sanitize";
 
 export const fromBreakpointToMedia = (
   breakpoint: Breakpoint,
-  strict: boolean = false
+  strict = false
 ) => {
   const out = [];
   let str;
