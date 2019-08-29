@@ -1,4 +1,7 @@
 import React from "react";
-import { toMediaQuery } from "react-only";
+import { toMediaQuery, BreakpointsContext } from "react-only";
 
-export default () => <p>{toMediaQuery("md xs")}</p>;
+export default () => {
+  const breakpoints = React.useContext(BreakpointsContext);
+  return <p>{toMediaQuery(breakpoints)("md xs")}</p>;
+};
