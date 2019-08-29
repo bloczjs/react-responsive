@@ -1,4 +1,4 @@
-export { BreakpointsProvider } from "./BreakpointsContext";
+export { BreakpointsProvider, BreakpointsContext } from "./BreakpointsContext";
 export { toJSON } from "./toJSON";
 export { toCSS } from "./toCSS";
 export { toMediaQuery } from "./toMediaQuery";
