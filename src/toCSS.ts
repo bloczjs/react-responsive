@@ -1,4 +1,5 @@
-import toJSON, { Points, CSSinJS } from "./toJSON";
+import { toJSON, Points, CSSinJS } from "./toJSON";
+import { Breakpoints } from "./sanitize";
 
 const toDash = (string: string) =>
   string.replace(/([A-Z])/g, char => `-${char.toLowerCase()}`);
@@ -14,4 +15,7 @@ const stringify = (cssObject: CSSinJS) => {
   return array.join("");
 };
 
-export default (points: Points) => stringify(toJSON(points));
+export const toCSS = (breakpoints: Breakpoints) => {
+  const JSONBuilder = toJSON(breakpoints);
+  return (points: Points) => stringify(JSONBuilder(points));
+};

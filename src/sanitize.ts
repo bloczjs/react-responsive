@@ -39,7 +39,7 @@ export interface Breakpoints {
   [key: string]: Breakpoint;
 }
 
-export default (obj: Breakpoints) => {
+export const sanitize = (obj: Breakpoints) => {
   const outObj: Breakpoints = {};
   Object.keys(obj).forEach(breakpointName => {
     const breakpoint = obj[breakpointName];

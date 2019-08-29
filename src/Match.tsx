@@ -1,12 +1,12 @@
 import * as React from "react";
 
-import Only from "./Only";
+import { Only } from "./Only";
 
 interface ChildProps {
+  [key: string]: any;
   strict?: boolean;
   matchMedia?: string;
   only?: string;
-  [key: string]: any;
 }
 
 type Element = React.ReactElement<
@@ -47,7 +47,7 @@ interface MatchProps {
   [key: string]: any;
 }
 
-const Match: React.FunctionComponent<MatchProps> = ({
+export const Match: React.FunctionComponent<MatchProps> = ({
   children,
   as,
   ...props
@@ -61,5 +61,3 @@ const Match: React.FunctionComponent<MatchProps> = ({
 };
 
 Match.displayName = "Match";
-
-export default Match;

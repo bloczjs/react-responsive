@@ -8171,7 +8171,7 @@ react-is@^16.8.1, react-is@^16.8.4:
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
 "react-only@file:../..":
-  version "1.0.0"
+  version "1.0.4-0"
 
 react-scripts@3.0.1:
   version "3.0.1"

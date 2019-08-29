@@ -1,5 +1,5 @@
-import BreakpointsProvider from "./BreakpointsProvider";
-import fromBreakpointToMedia from "./fromBreakpointToMedia";
+import { Breakpoints } from "./sanitize";
+import { fromBreakpointToMedia } from "./fromBreakpointToMedia";
 
 export type Point = {
   [key: string]: string;
@@ -11,12 +11,8 @@ export type Points = {
 
 export type CSSinJS = Points;
 
-const toJSON = (points: Points) => {
-  if (
-    !BreakpointsProvider ||
-    !BreakpointsProvider.breakpoints ||
-    Object.keys(BreakpointsProvider.breakpoints).length === 0
-  ) {
+export const toJSON = (breakpoints: Breakpoints) => (points: Points) => {
+  if (!breakpoints || Object.keys(breakpoints).length === 0) {
     throw new Error("You don't have any breakpoints defined");
   }
   if (typeof points !== "object") {
@@ -24,10 +20,10 @@ const toJSON = (points: Points) => {
   }
   let css: CSSinJS = {};
   Object.keys(points).forEach(point => {
-    if (!Object.keys(BreakpointsProvider.breakpoints).includes(point)) {
+    if (!Object.keys(breakpoints).includes(point)) {
       throw new Error(
         `${point} is not a valid breakpoint\nValid breakpoints are: ${Object.keys(
-          BreakpointsProvider.breakpoints
+          breakpoints
         )}`
       );
     }
@@ -35,9 +31,7 @@ const toJSON = (points: Points) => {
     if (typeof cssInJs === "string") {
       throw new Error("Invalid CSS-in-JS, should be an object");
     }
-    const mediaQuery = fromBreakpointToMedia(
-      BreakpointsProvider.breakpoints[point]
-    );
+    const mediaQuery = fromBreakpointToMedia(breakpoints[point]);
     if (mediaQuery) {
       css[`@media ${mediaQuery}`] = cssInJs;
     } else {
@@ -46,5 +40,3 @@ const toJSON = (points: Points) => {
   });
   return css;
 };
-
-export default toJSON;

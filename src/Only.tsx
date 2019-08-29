@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import useOnly from "./useOnly";
+import { useOnly } from "./useOnly";
 
 export interface OnlyProps {
   strict?: boolean;
@@ -10,7 +10,7 @@ export interface OnlyProps {
   [key: string]: any;
 }
 
-const Only: React.FunctionComponent<OnlyProps> = ({
+export const Only: React.FunctionComponent<OnlyProps> = ({
   matchMedia,
   on,
   strict,
@@ -27,5 +27,3 @@ const Only: React.FunctionComponent<OnlyProps> = ({
 };
 
 Only.displayName = "Only";
-
-export default Only;

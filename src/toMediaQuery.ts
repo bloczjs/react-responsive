@@ -1,14 +1,14 @@
-import BreakpointsProvider from "./BreakpointsProvider";
-import fromBreakpointToMedia from "./fromBreakpointToMedia";
+import { Breakpoints } from "./sanitize";
+import { fromBreakpointToMedia } from "./fromBreakpointToMedia";
 
-export default (
-  breakpoints: string = "",
+export const toMediaQuery = (breakpoints: Breakpoints) => (
+  on: string = "",
   extraMediaQuery: string = "",
   strict?: boolean
 ) => {
-  const filteredBreakpoints = breakpoints
+  const filteredBreakpoints = on
     .split(" ")
-    .map(breakpoint => BreakpointsProvider.breakpoints[breakpoint])
+    .map(breakpoint => breakpoints[breakpoint])
     .filter(Boolean);
   const mediaQuery = [
     ...filteredBreakpoints.map(breakpoint =>

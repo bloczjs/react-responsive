@@ -2,6 +2,11 @@
   "name": "react-only",
   "version": "1.0.4-0",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
+  "source": "src/index.ts",
+  "main": "lib/react-only.js",
+  "unpkg": "lib/react-only.umd.js",
+  "module": "lib/react-only.es.js",
+  "types": "lib/index.d.ts",
   "repository": "git@github.com:Ayc0/react-only.git",
   "keywords": [
     "react",
@@ -13,44 +18,26 @@
   "author": "Ayc0",
   "license": "MIT",
   "bugs": "https://github.com/Ayc0/react-only/issues",
-  "homepage": "https://github.com/Ayc0/react-only#readme",
   "scripts": {
-    "build": "node_modules/.bin/pack build",
-    "deploy": "node_modules/.bin/pack publish"
+    "build:watch": "nodemon --watch src -e js --exec \"yarn -s build:dev\"",
+    "build": "yarn -s build:microbundle",
+    "build:dev": "yarn -s build:microbundle --compress false",
+    "build:microbundle": "microbundle --name $npm_package_name --globals react=React",
+    "prepublishOnly": "rm -rf lib && yarn -s build"
   },
-  "@pika/pack": {
-    "pipeline": [
-      [
-        "@pika/plugin-ts-standard-pkg",
-        {
-          "exclude": [
-            "node_modules/**/*",
-            "tests/**/*",
-            "preact/**/*"
-          ]
-        }
-      ],
-      [
-        "@pika/plugin-build-web"
-      ],
-      [
-        "pika-plugin-unpkg-field"
-      ]
-    ]
-  },
+  "homepage": "https://github.com/Ayc0/react-only#readme",
   "devDependencies": {
-    "@pika/pack": "^0.3.7",
-    "@pika/plugin-build-web": "^0.4.0",
-    "@pika/plugin-ts-standard-pkg": "^0.4.0",
-    "@types/react": "^16.8.19",
-    "@typescript-eslint/parser": "^1.9.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
-    "pika-plugin-unpkg-field": "^1.1.0",
-    "typescript": "^3.5.1"
+    "@types/react": "^16.9.2",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "microbundle": "^0.11.0",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.6.2"
   },
   "peerDependencies": {
     "react": "^16.8.0"
