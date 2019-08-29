@@ -5,6 +5,7 @@
     "allowJs": false,
     "declaration": true,
     "jsx": "react",
+    "jsxFactory": "React.createElement",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,

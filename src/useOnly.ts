@@ -1,42 +1,42 @@
 import * as React from "react";
 
-import useDebounce from "./useDebounce";
+import { useDebouncedValue } from "./useDebouncedValue";
+import { BreakpointsContext } from "./BreakpointsContext";
 
-import toMediaQuery from "./toMediaQuery";
-import matchMediaNode from "./matchMediaNode";
+import { toMediaQuery } from "./toMediaQuery";
+import matchMedia from "./matchMediaPonyfill";
 
-const globalMatchMedia =
-  typeof window !== "undefined" ? window.matchMedia : matchMediaNode;
-
-const useOnly = (on?: string, matchMedia?: string, strict?: boolean) => {
+export const useOnly = (on?: string, media?: string, strict?: boolean) => {
   const [isShown, setIsShown] = React.useState<boolean>(false);
-  const mediaQueryListRef = React.useRef<null | MediaQueryList>(null);
 
-  React.useEffect(
-    () => {
-      const mediaQuery = toMediaQuery(on, matchMedia, strict);
-      // @ts-ignore
-      const updateMediaQuery: EventListener = (evt: MediaQueryListEvent) => {
-        const show = evt.matches;
-        setIsShown(show);
-      };
-      const thisMatchMedia = globalMatchMedia(mediaQuery);
-      if (thisMatchMedia.matches) {
-        setIsShown(true);
-      } else {
-        setIsShown(false);
-      }
-      thisMatchMedia.addListener(updateMediaQuery);
-      mediaQueryListRef.current = thisMatchMedia;
-      return () => {
-        thisMatchMedia.removeListener(updateMediaQuery);
-      };
-    },
-    [matchMedia, on, strict]
-  );
-  const debouncedIsShown = useDebounce(isShown, 200);
+  const breakpoints = React.useContext(BreakpointsContext);
+  const mediaQueryBuilder = React.useMemo(() => toMediaQuery(breakpoints), [
+    breakpoints
+  ]);
+
+  const mediaQuery = React.useMemo(() => mediaQueryBuilder(on, media, strict), [
+    mediaQueryBuilder,
+    on,
+    media,
+    strict
+  ]);
+
+  const mediaQueryListRef = React.useRef<null | MediaQueryList>(null);
+  React.useEffect(() => {
+    const updateMediaQuery = (evt: MediaQueryListEvent) => {
+      const show = evt.matches;
+      setIsShown(show);
+    };
+    const currentMatchMedia = matchMedia(mediaQuery);
+    setIsShown(currentMatchMedia.matches);
+    currentMatchMedia.addEventListener("change", updateMediaQuery);
+    mediaQueryListRef.current = currentMatchMedia;
+    return () => {
+      currentMatchMedia.removeEventListener("change", updateMediaQuery);
+    };
+  }, [mediaQuery]);
+
+  const debouncedIsShown = useDebouncedValue(isShown, 200);
 
   return debouncedIsShown;
 };
-
-export default useOnly;

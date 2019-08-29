@@ -1,12 +1,12 @@
 import * as React from "react";
 
-import Only from "./Only";
+import { Only } from "./Only";
 
 interface ChildProps {
+  [key: string]: any;
   strict?: boolean;
   matchMedia?: string;
   only?: string;
-  [key: string]: any;
 }
 
 type Element = React.ReactElement<
@@ -42,17 +42,16 @@ const parseChildren: ParseChildren = element => {
 };
 
 interface MatchProps {
+  [key: string]: any;
   children: Element | Element[] | null;
   as?: string;
-  [key: string]: any;
 }
 
-const Match: React.FunctionComponent<MatchProps> = ({
+export const Match: React.FunctionComponent<MatchProps> = ({
   children,
   as,
   ...props
 }) => {
-  // @ts-ignore
   const computedChildren = React.Children.map(children, parseChildren);
   if (as) {
     return React.createElement(as, props, computedChildren);
@@ -61,5 +60,3 @@ const Match: React.FunctionComponent<MatchProps> = ({
 };
 
 Match.displayName = "Match";
-
-export default Match;

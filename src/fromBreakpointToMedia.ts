@@ -1,6 +1,9 @@
 import { Breakpoint } from "./sanitize";
 
-export default (breakpoint: Breakpoint, strict: boolean = false) => {
+export const fromBreakpointToMedia = (
+  breakpoint: Breakpoint,
+  strict = false
+) => {
   const out = [];
   let str;
   if (breakpoint[0] !== 0) {
