@@ -8,6 +8,7 @@ node_modules/
 .eslintrc
 .eslintignore
 .gitignore
+CHANGELOG.md
 
 # Build
 tmp/
