@@ -9,6 +9,7 @@ node_modules/
 .eslintignore
 .gitignore
 CHANGELOG.md
+tsconfig.json
 
 # Build
 tmp/
