@@ -3,19 +3,19 @@ import * as React from "react";
 import { useDebouncedValue } from "./useDebouncedValue";
 import { BreakpointsContext } from "./BreakpointsContext";
 
-import { toMediaQuery } from "./toMediaQuery";
+import { mediaQueryBuilder } from "./mediaQueryBuilder";
 import matchMedia from "./matchMediaPonyfill";
 
 export const useOnly = (on?: string, media?: string, strict?: boolean) => {
   const [isShown, setIsShown] = React.useState<boolean>(false);
 
   const breakpoints = React.useContext(BreakpointsContext);
-  const mediaQueryBuilder = React.useMemo(() => toMediaQuery(breakpoints), [
+  const toMediaQuery = React.useMemo(() => mediaQueryBuilder(breakpoints), [
     breakpoints
   ]);
 
-  const mediaQuery = React.useMemo(() => mediaQueryBuilder(on, media, strict), [
-    mediaQueryBuilder,
+  const mediaQuery = React.useMemo(() => toMediaQuery(on, media, strict), [
+    toMediaQuery,
     on,
     media,
     strict

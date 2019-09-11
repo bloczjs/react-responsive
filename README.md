@@ -26,13 +26,6 @@
     1.  [Add more breakpoints](#add-more-breakpoints)
     2.  [Change default breakpoints](#change-default-breakpoints)
     3.  [Units](#units)
-5.  [`toJSON`](#tojson)
-6.  [`toCSS`](#tocss)
-7.  [CSS in JS](#css-in-js)
-    1.  [Inline style](#inline-style)
-    2.  [Styled-components](#styled-components)
-    3.  [Styletron](#styletron)
-8.  [`toMediaQuery`](#tomediaquery)
 
 ## What is React-Only
 
@@ -345,74 +338,6 @@ const App = () => (
 Every CSS units are supported.
 
 The default unit is `px`.
-
-### `toJSON`
-
-You can also use this library to set media-query in CSS-in-JS:
-
-```javascript
-import { toJSON } from 'react-only';
-
-toJSON({ xs: { width: '10px' }, lg: { width: '100px'}});
-> {
-    "@media (max-width:576px)": {
-      "width": "10px"
-    },
-    "@media (min-width:992px) and (max-width:1200px)": {
-      "width": "100px"
-    }
-  }
-```
-
-### `toCSS`
-
-`toCSS` is a wrapper for `toJSON` but instead of displaying a JS object, it displays a valid CSS string:
-
-```javascript
-import { toCSS } from 'react-only';
-
-toCSS({ xs: { width: '10px' }, lg: { width: '100px'}});
-> '@media (max-width:576px) {width: 10px;} @media(max-width:1200px) {width: 100px;}'
-```
-
-### CSS in JS
-
-#### Inline style
-
-React-Only shouldn't be used with inline styles because they don't support media queries. But you can still use React-Only with CSS-in-JS libraries like:
-
-#### [Styled-components](https://www.styled-components.com/)
-
-```javascript
-import { toCSS } from "react-only";
-
-const App = styled.div`
-  ${toCSS({ xs: { width: "10px" }, lg: { width: "100px" } })};
-`;
-```
-
-#### [Styletron](https://github.com/rtsao/styletron)
-
-```javascript
-import { toJSON } from "react-only";
-
-const App = styled("div", () => ({
-  ...toJSON({ xs: { width: "10px" }, lg: { width: "100px" } })
-}));
-```
-
-### `toMediaQuery`
-
-```javascript
-import { toMediaQuery } from "react-only";
-
-toMediaQuery("md xs");
-> "(min-width:768px) and (max-width:992px),(max-width:576px)";
-
-// Example
-window.matchMedia(toMediaQuery("md xs")).matches;
-> true
-```
 
 [0]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
 [1]: https://nodejs.org/api/documentation.html#documentation_stability_index
