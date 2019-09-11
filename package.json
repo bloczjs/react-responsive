@@ -1,6 +1,6 @@
 {
   "name": "react-only",
-  "version": "2.0.0-beta-1",
+  "version": "2.0.0-beta-2",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "source": "src/index.ts",
   "main": "lib/react-only.js",
