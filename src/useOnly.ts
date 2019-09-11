@@ -22,7 +22,8 @@ export const useOnly = (on?: string, media?: string, strict?: boolean) => {
   ]);
 
   const mediaQueryListRef = React.useRef<null | MediaQueryList>(null);
-  React.useEffect(() => {
+
+  React.useLayoutEffect(() => {
     const updateMediaQuery = (evt: MediaQueryListEvent) => {
       const show = evt.matches;
       setIsShown(show);
