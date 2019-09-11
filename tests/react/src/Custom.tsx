@@ -1,15 +1,20 @@
 import React from "react";
 import { Only } from "react-only";
 
-const Custom = ({ title, children }) => (
-  <React.Fragment>
+interface CustomProps {
+  title: string;
+}
+
+const Custom: React.FunctionComponent<CustomProps> = ({ title, children }) => (
+  <>
     <h3>{title}</h3>
     <p>{children}</p>
-  </React.Fragment>
+  </>
 );
 
 export default () => (
-  <React.Fragment>
+  <>
+    <h2>Custom component</h2>
     <Only as={Custom} title="xs" on="xs">
       Only visible for extra small devices (portrait phones)
     </Only>
@@ -28,5 +33,5 @@ export default () => (
     <Only as={Custom} title="sm xl" on="sm xl">
       Only visible for small AND extra large devices
     </Only>
-  </React.Fragment>
+  </>
 );

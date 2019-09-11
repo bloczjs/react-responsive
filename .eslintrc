@@ -20,7 +20,10 @@
     }
   },
   "rules": {
-    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".tsx", ".jsx"] }
+    ],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-angle-bracket-type-assertion": "off"
   }

@@ -1,8 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Match } from "react-only";
 
 export default () => (
-  <Fragment>
+  <>
+    <h2>{"<Match>"}</h2>
     <Match>
       {null}
       <div only="xs">xs</div>
@@ -25,5 +26,5 @@ export default () => (
       <li only="mdUp">mdUp</li>
       <li only="smDown">smDown</li>
     </Match>
-  </Fragment>
+  </>
 );
