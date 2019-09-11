@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import { useDebouncedValue } from "./useDebouncedValue";
 import { BreakpointsContext } from "./BreakpointsContext";
 
 import { mediaQueryBuilder } from "./mediaQueryBuilder";
@@ -23,7 +22,7 @@ export const useOnly = (on?: string, media?: string, strict?: boolean) => {
 
   const mediaQueryListRef = React.useRef<null | MediaQueryList>(null);
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     const updateMediaQuery = (evt: MediaQueryListEvent) => {
       const show = evt.matches;
       setIsShown(show);
@@ -37,7 +36,5 @@ export const useOnly = (on?: string, media?: string, strict?: boolean) => {
     };
   }, [mediaQuery]);
 
-  const debouncedIsShown = useDebouncedValue(isShown, 200);
-
-  return debouncedIsShown;
+  return isShown;
 };
