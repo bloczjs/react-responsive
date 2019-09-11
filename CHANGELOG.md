@@ -6,6 +6,10 @@
 
 - Use React's context
 - Drop Preact support
+- Remove `toCSS`, `toJSON` and `toMediaQuery`
+
+<details>
+  <summary>See detailed changelog</summary>
 
 #### 2.0.0
 
@@ -35,6 +39,8 @@
 
 </details>
 
+</details>
+
 ## v1
 
 ### 1.0
@@ -43,7 +49,7 @@
 - Add `useOnly` hook
 
 <details>
-  <summary>See content</summary>
+  <summary>See detailed changelog</summary>
 
 #### 1.0.3
 
@@ -72,7 +78,7 @@
 - Add strict mode
 
 <details>
-  <summary>See content</summary>
+  <summary>See detailed changelog</summary>
 
 #### 0.8.3
 
@@ -90,7 +96,7 @@
 - Add support for Parcel
 
 <details>
-  <summary>See content</summary>
+  <summary>See detailed changelog</summary>
 
 #### 0.7.3
 
@@ -116,7 +122,7 @@
 - Add `<Match>` component
 
 <details>
-  <summary>See content</summary>
+  <summary>See detailed changelog</summary>
 
 #### 0.6.7
 
