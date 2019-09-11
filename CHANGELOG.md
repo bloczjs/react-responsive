@@ -2,7 +2,12 @@
 
 ## v2
 
-### 2.0.0
+### 2.0
+
+- Use React's context
+- Drop Preact support
+
+#### 2.0.0
 
 - Remove Preact support (won't be an issue with Preact X)
 - Use and expose `BreakpointsContext` instead of a class to store breakpoints
@@ -32,22 +37,27 @@
 
 ## v1
 
+### 1.0
+
+- Upgrade to TypeScript
+- Add `useOnly` hook
+
 <details>
   <summary>See content</summary>
 
-### 1.0.3
+#### 1.0.3
 
 - Create and expose a union type `Units` instead of an enum for the available css units
 
-### 1.0.2
+#### 1.0.2
 
 - Change npmignore and change README
 
-### 1.0.1
+#### 1.0.1
 
 - Avoid overlapping breakpoints in defaults
 
-### 1.0.0
+#### 1.0.0
 
 - Add `useOnly` hook
 - Change internals to use `useOnly`
@@ -57,54 +67,76 @@
 
 ## v0
 
+### 0.8
+
+- Add strict mode
+
 <details>
   <summary>See content</summary>
 
-### 0.8.3
+#### 0.8.3
 
 - Support for matchMedia on node
 - Change tests for strict mode
 
-### 0.8.0
+#### 0.8.0
 
 - Add strict mode
 
-### 0.7.3
+</details>
+
+### 0.7
+
+- Add support for Parcel
+
+<details>
+  <summary>See content</summary>
+
+#### 0.7.3
 
 - Add prop `as` in `<Match>`
 
-### 0.7.2
+#### 0.7.2
 
 - Add support for Fragments (when the prop `as` isn't set on `<Only>`) for Preact
 
-### 0.7.1
+#### 0.7.1
 
 - Change build system
 - Add support for `<Match>` for Parcel
 
-### 0.7.0
+#### 0.7.0
 
 - Add support for Parcel
 
-### 0.6.7
+</details>
+
+### 0.6
+
+- Add `<Match>` component
+
+<details>
+  <summary>See content</summary>
+
+#### 0.6.7
 
 - Fix bug when `null` was a child of `<Match>`
 
-### 0.6.6
+#### 0.6.6
 
 - Fix in README `toCSS`, `toJSON`
 - Add badges in README
 
-### 0.6.5
+#### 0.6.5
 
 - Add `<Match>` component
 
-### Older
+</details>
+
+#### Older
 
 - Add `<Only>` component
-- Add `<BreakpointsProvider>`
+- Add `<BreakpointsProvider>` component
 - Add `toCSS`
 - Add `toJSON`
 - Add `toMediaQuery`
-
-</details>
