@@ -15,8 +15,8 @@ export const BreakpointsContext = React.createContext<Breakpoints>(
 );
 
 interface BreakpointsProviderProps {
-  breakpoints: Breakpoints;
-  additionalBreakpoints: Breakpoints;
+  breakpoints?: Breakpoints;
+  additionalBreakpoints?: Breakpoints;
 }
 
 export const BreakpointsProvider: React.FunctionComponent<
