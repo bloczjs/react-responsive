@@ -29,10 +29,10 @@ export const useOnly = (on?: string, media?: string, strict?: boolean) => {
     };
     const currentMatchMedia = matchMedia(mediaQuery);
     setIsShown(currentMatchMedia.matches);
-    currentMatchMedia.addEventListener("change", updateMediaQuery);
+    currentMatchMedia.addListener(updateMediaQuery);
     mediaQueryListRef.current = currentMatchMedia;
     return () => {
-      currentMatchMedia.removeEventListener("change", updateMediaQuery);
+      currentMatchMedia.removeListener(updateMediaQuery);
     };
   }, [mediaQuery]);
 
