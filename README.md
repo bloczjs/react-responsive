@@ -33,6 +33,8 @@ React-only is inspired by the `.visible` classes from [bootstrap 4](https://getb
 
 Allows you to display component only for particular screen sizes.
 
+[See changelog](https://github.com/Ayc0/react-only/blob/master/CHANGELOG.md)
+
 ## How to use
 
 ### `Only`

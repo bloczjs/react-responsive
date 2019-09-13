@@ -11,6 +11,10 @@
 <details>
   <summary>See detailed changelog</summary>
 
+#### 2.0.1
+
+- revert back to `addListener` instead of `addEventListener` on `matchMedia` for better browser supports
+
 #### 2.0.0
 
 - Remove Preact support (won't be an issue with Preact X)
