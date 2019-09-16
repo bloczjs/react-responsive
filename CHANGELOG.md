@@ -17,10 +17,11 @@
 
 #### 2.0.0
 
-- Remove Preact support (won't be an issue with Preact X)
+- Remove Preact support (won't be an issue with Preact X) **BREAKING CHANGE**
 - Use and expose `BreakpointsContext` instead of a class to store breakpoints
-- Remove `toCSS`, `toJSON` and `toMediaQuery`
+- Remove `toCSS`, `toJSON` and `toMediaQuery` **BREAKING CHANGE**
 - Stop debouncing `isShown` because as it's a boolean, React isn't re-rendering if the same value is re-set
+- `Only` accepts other props when the prop `as` is used **type fix**
 
 <details>
   <summary>Betas</summary>
@@ -33,13 +34,13 @@
 #### 2.0.0-beta-1
 
 - Use `useLayoutEffect` in `useOnly` to reduce the delay before changing the DOM
-- Remove `toCSS`, `toJSON` and `toMediaQuery`
+- Remove `toCSS`, `toJSON` and `toMediaQuery` **BREAKING CHANGE**
 
 #### 2.0.0-beta
 
-- Remove Preact support (won't be an issue with Preact X)
+- Remove Preact support (won't be an issue with Preact X) **BREAKING CHANGE**
 - Use and expose `BreakpointsContext` instead of a class to store breakpoints
-- Change API of `toCSS`, `toJSON` and `toMediaQuery` (need to provide the breakpoints)
+- Change API of `toCSS`, `toJSON` and `toMediaQuery` (need to provide the breakpoints) **BREAKING CHANGE**
 
 </details>
 
@@ -65,7 +66,7 @@
 
 #### 1.0.1
 
-- Avoid overlapping breakpoints in defaults
+- Avoid overlapping breakpoints in defaults **BREAKING CHANGE**
 
 #### 1.0.0
 
