@@ -6,7 +6,7 @@ import { mediaQueryBuilder } from "./mediaQueryBuilder";
 import matchMedia from "./matchMediaPonyfill";
 
 export const useOnly = (on?: string, media?: string, strict?: boolean) => {
-  const [isShown, setIsShown] = React.useState<boolean>(false);
+  const [isShown, setIsShown] = React.useState<boolean | undefined>(undefined);
 
   const breakpoints = React.useContext(BreakpointsContext);
   const toMediaQuery = React.useMemo(() => mediaQueryBuilder(breakpoints), [
