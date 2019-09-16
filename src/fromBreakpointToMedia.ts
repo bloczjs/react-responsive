@@ -4,24 +4,27 @@ export const fromBreakpointToMedia = (
   breakpoint: Breakpoint,
   strict = false
 ) => {
-  const out = [];
+  const mediaList: string[] = [];
+  const [minValue, maxValue, unit] = breakpoint;
   let str;
-  if (breakpoint[0] !== 0) {
-    str = `${breakpoint[0]}${breakpoint[2]}`;
+
+  // Min value
+  if (minValue !== 0) {
+    str = `${minValue}${unit}`;
     if (strict) {
       str = `calc(${str} + 1px)`;
     }
-    out.push(`(min-width:${str})`);
+    mediaList.push(`(min-width:${str})`);
   }
-  if (breakpoint[1] !== Infinity) {
-    str = `${breakpoint[1]}${breakpoint[2]}`;
+
+  // Max value
+  if (maxValue !== Infinity) {
+    str = `${maxValue}${unit}`;
     if (strict) {
       str = `calc(${str} - 1px)`;
     }
-    out.push(`(max-width:${str})`);
+    mediaList.push(`(max-width:${str})`);
   }
-  if (out.length === 0) {
-    return "";
-  }
-  return out.join(" and ");
+
+  return mediaList.join(" and ");
 };
