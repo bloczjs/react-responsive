@@ -13,26 +13,20 @@ export const useOnly = (on?: string, media?: string, strict?: boolean) => {
     breakpoints
   ]);
 
-  const mediaQuery = React.useMemo(() => toMediaQuery(on, media, strict), [
-    toMediaQuery,
-    on,
-    media,
-    strict
-  ]);
-
-  const mediaQueryListRef = React.useRef<null | MediaQueryList>(null);
+  const mediaQuery: string = React.useMemo(
+    () => toMediaQuery(on, media, strict),
+    [toMediaQuery, on, media, strict]
+  );
 
   React.useEffect(() => {
-    const updateMediaQuery = (evt: MediaQueryListEvent) => {
-      const show = evt.matches;
-      setIsShown(show);
-    };
     const currentMatchMedia = matchMedia(mediaQuery);
     setIsShown(currentMatchMedia.matches);
-    currentMatchMedia.addListener(updateMediaQuery);
-    mediaQueryListRef.current = currentMatchMedia;
+    const listener = (event: MediaQueryListEvent) => {
+      setIsShown(event.matches);
+    };
+    currentMatchMedia.addListener(listener);
     return () => {
-      currentMatchMedia.removeListener(updateMediaQuery);
+      currentMatchMedia.removeListener(listener);
     };
   }, [mediaQuery]);
 
