@@ -11,7 +11,7 @@ const defaultBreakpoints: Breakpoints = {
 };
 
 export const BreakpointsContext = React.createContext<Breakpoints>(
-  defaultBreakpoints
+  sanitize(defaultBreakpoints)
 );
 
 interface BreakpointsProviderProps {
@@ -26,13 +26,10 @@ export const BreakpointsProvider: React.FunctionComponent<
   additionalBreakpoints = {},
   children
 }) => {
-  const usedBreakpoints = {
-    ...sanitize(breakpoints),
-    ...sanitize(additionalBreakpoints)
-  };
-
   return (
-    <BreakpointsContext.Provider value={usedBreakpoints}>
+    <BreakpointsContext.Provider
+      value={sanitize({ ...breakpoints, ...additionalBreakpoints })}
+    >
       {children}
     </BreakpointsContext.Provider>
   );
