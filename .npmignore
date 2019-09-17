@@ -2,6 +2,7 @@ node_modules/
 
 # Misc
 .vscode
+.github
 *.log
 .DS_Store
 .babelrc
