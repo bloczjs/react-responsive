@@ -2,6 +2,19 @@
 
 ## v2
 
+### 2.1
+
+- `useOnly` returns `undefined` before being initialized
+
+<details>
+  <summary>See detailed changelog</summary>
+
+#### 2.1.0
+
+- `useOnly` returns `undefined` before being initialized (no changes in `Only` and `Match`)
+
+</details>
+
 ### 2.0
 
 - Use React's context

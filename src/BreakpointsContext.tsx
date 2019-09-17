@@ -30,6 +30,7 @@ export const BreakpointsProvider: React.FunctionComponent<
     ...sanitize(breakpoints),
     ...sanitize(additionalBreakpoints)
   };
+
   return (
     <BreakpointsContext.Provider value={usedBreakpoints}>
       {children}

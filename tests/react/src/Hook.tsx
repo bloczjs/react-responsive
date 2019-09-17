@@ -2,6 +2,17 @@ import React from "react";
 
 import { useOnly } from "react-only";
 
+const toString = (value: boolean | undefined) => {
+  switch (value) {
+    case true:
+      return "true";
+    case false:
+      return "false";
+    case undefined:
+      return "undefined";
+  }
+};
+
 const Hook = () => {
   const isXs = useOnly("xs");
   const isSm = useOnly("sm");
@@ -19,31 +30,31 @@ const Hook = () => {
       <h2>useOnly()</h2>
       <p>
         <b>isXs: </b>
-        <code>{isXs ? "true" : "false"}</code>
+        <code>{toString(isXs)}</code>
       </p>
       <p>
         <b>isSm: </b>
-        <code>{isSm ? "true" : "false"}</code>
+        <code>{toString(isSm)}</code>
       </p>
       <p>
         <b>isMd: </b>
-        <code>{isMd ? "true" : "false"}</code>
+        <code>{toString(isMd)}</code>
       </p>
       <p>
         <b>isLg: </b>
-        <code>{isLg ? "true" : "false"}</code>
+        <code>{toString(isLg)}</code>
       </p>
       <p>
         <b>isXl: </b>
-        <code>{isXl ? "true" : "false"}</code>
+        <code>{toString(isXl)}</code>
       </p>
       <p>
         <b>isSmUp: </b>
-        <code>{isSmUp ? "true" : "false"}</code>
+        <code>{toString(isSmUp)}</code>
       </p>
       <p>
         <b>(min-width:768px) and (max-width:992px),(max-width:576px): </b>
-        <code>{isMedia ? "true" : "false"}</code>
+        <code>{toString(isMedia)}</code>
       </p>
     </>
   );
