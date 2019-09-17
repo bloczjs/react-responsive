@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`browser test 1`] = `
+"<Only>
+Only visible for extra small devices (portrait phones)
+Only visible for large or less (strict [0, 1200px[)
+Custom component
+xs
+
+Only visible for extra small devices (portrait phones)
+
+<Match>
+xs
+nested smDown
+(min-width:768px) and (max-width:992px),(max-width:576px)
+smDown
+useOnly()
+
+isXs: true
+
+isXsDown: true
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: true
+
+isSmUp: false
+
+isMd: false
+
+isMdDown: true
+
+isMdUp: false
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true"
+`;
+
+exports[`browser test 2`] = `
+"<Only>
+Only visible for small devices (landscape phones)
+Only visible for small AND extra large devices
+Only visible for small and more (strict ]576px, Infinity[)
+Only visible for large or less (strict [0, 1200px[)
+Custom component
+sm
+
+Only visible for small devices (landscape phones)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+sm
+nested smDown
+smDown
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: true
+
+isSmDown: true
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: true
+
+isMdUp: false
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false"
+`;
+
+exports[`browser test 3`] = `
+"<Only>
+Only visible for medium devices (tablets)
+Only visible for small and more (strict ]576px, Infinity[)
+Only visible for medium (strict ]768px, 992px[)
+Only visible for large or less (strict [0, 1200px[)
+Custom component
+md
+
+Only visible for medium devices (tablets)
+
+<Match>
+md
+(min-width:768px) and (max-width:992px),(max-width:576px)
+mdUp
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true"
+`;
+
+exports[`browser test 4`] = `
+"<Only>
+Only visible for large devices (desktops)
+Only visible for small and more (strict ]576px, Infinity[)
+Only visible for large or less (strict [0, 1200px[)
+Custom component
+lg
+
+Only visible for large devices (desktops)
+
+<Match>
+lg
+mdUp
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false"
+`;
+
+exports[`browser test 5`] = `
+"<Only>
+Only visible for extra large devices (large desktops)
+Only visible for small AND extra large devices
+Only visible for small and more (strict ]576px, Infinity[)
+Custom component
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+xl
+mdUp
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false"
+`;
