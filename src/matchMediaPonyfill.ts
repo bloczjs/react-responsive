@@ -9,4 +9,5 @@ const matchMedia: typeof window.matchMedia = () => ({
   removeListener: () => {}
 });
 
-export default window.matchMedia || matchMedia;
+export default (typeof window !== "undefined" && window.matchMedia) ||
+  matchMedia;

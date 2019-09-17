@@ -9,6 +9,10 @@
 <details>
   <summary>See detailed changelog</summary>
 
+#### 2.1.1
+
+- avoid crashing when `window` is not defined
+
 #### 2.1.0
 
 - `useOnly` returns `undefined` before being initialized (no changes in `Only` and `Match`)
