@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 import List from "./List";
 import Custom from "./Custom";
@@ -18,4 +17,4 @@ const App = (
   </React.Fragment>
 );
 
-ReactDOM.render(App, document.getElementById("root"));
+export default App;

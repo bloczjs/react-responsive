@@ -10,6 +10,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "ssr": "ts-node --project ./tsconfig.json src/ssr.ts",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0"
+    "@types/react-dom": "^16.9.0",
+    "ts-node": "^8.4.1"
   }
 }
