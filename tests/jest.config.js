@@ -3,5 +3,6 @@ module.exports = {
   preset: "jest-puppeteer",
   transform: {
     "^.+\\.[jt]sx?$": "ts-jest"
-  }
+  },
+  moduleDirectories: ["<rootDir>/node_modules"]
 };
