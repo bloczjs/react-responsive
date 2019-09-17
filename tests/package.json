@@ -5,12 +5,12 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-only": "file:../..",
+    "react-only": "file:..",
     "react-scripts": "3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "ssr": "ts-node --project ./tsconfig.json src/ssr.ts",
+    "ssr": "ts-node src/__tests__/ssr.ts",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -28,8 +28,11 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1"
   }
 }
