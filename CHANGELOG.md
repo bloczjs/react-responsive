@@ -9,6 +9,10 @@
 <details>
   <summary>See detailed changelog</summary>
 
+#### 2.1.2
+
+- fix non-valid breakpoints
+
 #### 2.1.1
 
 - avoid crashing when `window` is not defined
