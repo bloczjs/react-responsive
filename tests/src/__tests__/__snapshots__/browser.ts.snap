@@ -46,7 +46,9 @@ isXlDown: true
 
 isXlUp: false
 
-(min-width:768px) and (max-width:992px),(max-width:576px): true"
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong media query: undefined"
 `;
 
 exports[`browser test 2`] = `
@@ -100,7 +102,9 @@ isXlDown: true
 
 isXlUp: false
 
-(min-width:768px) and (max-width:992px),(max-width:576px): false"
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong media query: undefined"
 `;
 
 exports[`browser test 3`] = `
@@ -150,7 +154,9 @@ isXlDown: true
 
 isXlUp: false
 
-(min-width:768px) and (max-width:992px),(max-width:576px): true"
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong media query: undefined"
 `;
 
 exports[`browser test 4`] = `
@@ -198,7 +204,9 @@ isXlDown: true
 
 isXlUp: false
 
-(min-width:768px) and (max-width:992px),(max-width:576px): false"
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong media query: undefined"
 `;
 
 exports[`browser test 5`] = `
@@ -250,5 +258,7 @@ isXlDown: true
 
 isXlUp: true
 
-(min-width:768px) and (max-width:992px),(max-width:576px): false"
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong media query: undefined"
 `;

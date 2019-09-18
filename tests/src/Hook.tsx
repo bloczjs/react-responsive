@@ -33,6 +33,7 @@ const Hook = () => {
     undefined,
     "(min-width:768px) and (max-width:992px),(max-width:576px)"
   );
+  const isWrong = useOnly("wrong");
 
   return (
     <>
@@ -100,6 +101,10 @@ const Hook = () => {
       <p>
         <b>(min-width:768px) and (max-width:992px),(max-width:576px): </b>
         <code>{toString(isMedia)}</code>
+      </p>
+      <p>
+        <b>wrong media query: </b>
+        <code>{toString(isWrong)}</code>
       </p>
     </>
   );
