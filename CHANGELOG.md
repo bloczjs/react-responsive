@@ -5,9 +5,14 @@
 ### 2.1
 
 - `useOnly` returns `undefined` before being initialized
+- fix bugs
 
 <details>
   <summary>See detailed changelog</summary>
+
+#### 2.1.3
+
+- re-use `useLayoutEffect` to reduce delay between initialization and true values
 
 #### 2.1.2
 

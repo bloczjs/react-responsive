@@ -18,7 +18,7 @@ export const useOnly = (on?: string, media?: string, strict?: boolean) => {
     [toMediaQuery, on, media, strict]
   );
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     if (!mediaQuery) {
       return;
     }
