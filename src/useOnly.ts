@@ -19,6 +19,9 @@ export const useOnly = (on?: string, media?: string, strict?: boolean) => {
   );
 
   React.useEffect(() => {
+    if (!mediaQuery) {
+      return;
+    }
     const currentMatchMedia = matchMedia(mediaQuery);
     setIsShown(currentMatchMedia.matches);
     const listener = (event: MediaQueryListEvent) => {

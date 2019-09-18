@@ -26,5 +26,5 @@ export const fromBreakpointToMedia = (
     mediaList.push(`(max-width:${str})`);
   }
 
-  return mediaList.join(" and ");
+  return " " + mediaList.join(" and ");
 };
