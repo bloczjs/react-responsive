@@ -1,4 +1,4 @@
-# React-Only
+# react-only
 
 <center>
 
@@ -12,36 +12,34 @@
 
 </center>
 
-## Table of Contents
+`react-only` is inspired by the `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (or `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): only display a certain content for a precise screen size.
 
-1.  [`Only`](#only)
-    1.  [Default breakpoints](#default-breakpoints)
-    2.  [Additional `Up` and `Down`](#additional-up-and-down)
-    3.  [Match Media Queries](#match-media-queries)
-    4.  [Render as component](#render-as-component)
-    5.  [Strict mode](#strict-mode)
-2.  [`Match`](#match)
-3.  [`useOnly`](#useOnly)
-4.  [`BreakpointsProvider`](#breakpointsprovider)
-    1.  [Add more breakpoints](#add-more-breakpoints)
-    2.  [Change default breakpoints](#change-default-breakpoints)
-    3.  [Units](#units)
+It allows you to display component only for particular screen sizes.
 
-## What is React-Only
-
-React-only is inspired by the `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (or `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): only display a certain content for a precise screen size.
-
-Allows you to display component only for particular screen sizes.
+If you need a responsive layout and adaptive components, `react-only` is here for you!
 
 [See changelog](https://github.com/Ayc0/react-only/blob/master/CHANGELOG.md)
 
 ## How to use
 
-### `Only`
+1.  [`<Only>`](#only)
+    1.  [Default breakpoints](#default-breakpoints)
+    2.  [Additional `Up` and `Down`](#additional-up-and-down)
+    3.  [Match Media Queries](#match-media-queries)
+    4.  [Render as component](#render-as-component)
+    5.  [Strict mode](#strict-mode)
+2.  [`<Match>`](#match)
+3.  [`useOnly()`](#useOnly)
+4.  [`<BreakpointsProvider>`](#breakpointsprovider)
+    1.  [Add more breakpoints](#add-more-breakpoints)
+    2.  [Change default breakpoints](#change-default-breakpoints)
+    3.  [Units](#units)
+
+### `<Only>`
 
 #### Default breakpoints
 
-React-Only is based on the classic bootstrap breakpoints: `xs`, `sm`, `md`, `lg` and `xl`.
+`react-only` is based on the classic bootstrap breakpoints: `xs`, `sm`, `md`, `lg` and `xl`.
 
 ```javascript
 import React from "react";
@@ -49,12 +47,24 @@ import { Only } from "react-only";
 
 const App = () => (
   <React.Fragment>
-    <Only on="xs">Only visible for extra small devices (portrait phones)</Only>
-    <Only on="sm">Only visible for small devices (landscape phones)</Only>
-    <Only on="md">Only visible for medium devices (tablets)</Only>
-    <Only on="lg">Only visible for large devices (desktops)</Only>
-    <Only on="xl">Only visible for extra large devices (large desktops)</Only>
-    <Only on="sm xl">Only visible for small AND extra large devices</Only>
+    <Only on="xs">
+      Only visible for extra small devices (portrait phones)
+    </Only>
+    <Only on="sm">
+      Only visible for small devices (landscape phones)
+    </Only>
+    <Only on="md">
+      Only visible for medium devices (tablets)
+    </Only>
+    <Only on="lg">
+      Only visible for large devices (desktops)
+    </Only>
+    <Only on="xl">
+      Only visible for extra large devices (large desktops)
+    </Only>
+    <Only on="sm xl">
+      Only visible for small AND extra large devices
+    </Only>
   </React.Fragment>
 );
 ```
@@ -200,7 +210,7 @@ const App = () => (
 );
 ```
 
-### `Match`
+### `<Match>`
 
 The `Match` will look into every props of its children (and event nested children) to detect `only`, `matchMedia` and `strict` props. If one of those is found, it will wrap this component inside a `Only` component will match `only` with `on` and `matchMedia` and `strict` to theirself.
 
@@ -225,7 +235,9 @@ const App = () => (
       </div>
     </div>
     <div matchMedia="(min-width:768px) and (max-width:992px),(max-width:576px)">
-      (min-width:768px) and (max-width:992px),(max-width:576px)
+      {
+        "(min-width:768px) and (max-width:992px),(max-width:576px)"
+      }
     </div>
   </Match>
 );
@@ -248,7 +260,7 @@ const App = () => (
 );
 ```
 
-### `useOnly`
+### `useOnly()`
 
 `useOnly` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given breakpoint or media query matches the current viewport.
 
@@ -287,7 +299,7 @@ const App = () => {
 };
 ```
 
-### `BreakpointsProvider`
+### `<BreakpointsProvider>`
 
 `BreakpointsProvider` defines the values of every breakpoints.
 
@@ -300,11 +312,15 @@ import React from "react";
 import { Only, BreakpointsProvider } from "react-only";
 
 const App = () => (
-  <BreakpointsProvider additionalBreakpoints={{ customBrkPts: [263, 863] }}>
+  <BreakpointsProvider
+    additionalBreakpoints={{ customBrkPts: [263, 863] }}
+  >
     <Only on="customBrkPts">
       Visible on every device from "263px" to "863px"
     </Only>
-    <Only on="customBrkPtsUp">Visible on every device bigger than "263px"</Only>
+    <Only on="customBrkPtsUp">
+      Visible on every device bigger than "263px"
+    </Only>
     <Only on="customBrkPtsDown">
       Visible on every device smaller than "863px"
     </Only>

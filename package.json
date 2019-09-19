@@ -9,10 +9,11 @@
   "types": "lib/index.d.ts",
   "repository": "git@github.com:Ayc0/react-only.git",
   "keywords": [
-    "react",
+    "adaptive",
+    "breakpoint",
     "css",
-    "media-queries",
-    "bootstrap",
+    "media-query",
+    "react",
     "responsive"
   ],
   "author": "Ayc0",
