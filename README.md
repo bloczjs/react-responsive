@@ -37,6 +37,7 @@ If you need a responsive layout and adaptive components, `react-only` is here fo
     1.  [Add more breakpoints](#add-more-breakpoints)
     2.  [Change default breakpoints](#change-default-breakpoints)
     3.  [Units](#units)
+5.  [Comparison to other libraries](#comparison-to-other-libraries)
 
 ### `<Only>`
 
@@ -428,6 +429,15 @@ const App = () => (
 Every CSS units are supported.
 
 The default unit is `px`.
+
+### Comparison to other libraries
+
+| Lib                                                                                        | Breakpoints | Custom breakpoints | Media query | `resize` event | hooks | SSR support |
+| ------------------------------------------------------------------------------------------ | ----------: | -----------------: | ----------: | -------------: | ----: | ----------: |
+| [react-only](https://www.npmjs.com/package/react-only)                                     |          ✅ |                 ✅ |          ✅ |             ❌ |    ✅ |           🏗 |
+| [react-responsive](https://www.npmjs.com/package/react-responsive)                         |          ❌ |                 ❌ |          ✅ |             ❌ |    ✅ |          ✅ |
+| [react-breakpoints](https://www.npmjs.com/package/react-breakpoints)                       |          ✅ |                 ✅ |          ❌ |             ✅ |    ❌ |          ✅ |
+| [react-responsive-breakpoints](https://www.npmjs.com/package/react-responsive-breakpoints) |          ✅ |                 ❌ |          ❌ |             ✅ |    ❌ |          ❌ |
 
 [0]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
 [1]: https://nodejs.org/api/documentation.html#documentation_stability_index
