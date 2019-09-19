@@ -6,8 +6,7 @@ const matchMedia: typeof window.matchMedia = () => ({
   removeEventListener: () => {},
   dispatchEvent: () => true,
   addListener: () => {},
-  removeListener: () => {}
+  removeListener: () => {},
 });
 
-export default (typeof window !== "undefined" && window.matchMedia) ||
-  matchMedia;
+export default (typeof window !== "undefined" && window.matchMedia) || matchMedia;

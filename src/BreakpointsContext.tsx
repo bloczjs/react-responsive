@@ -7,28 +7,27 @@ const defaultBreakpoints: Breakpoints = {
   sm: [576, 767, "px"], // Small devices (landscape phones)
   md: [768, 991, "px"], // Medium devices (tablets)
   lg: [992, 1199, "px"], // Large devices (desktops)
-  xl: [1200, Infinity, "px"] // Extra large devices (large desktops)
+  xl: [1200, Infinity, "px"], // Extra large devices (large desktops)
 };
 
-export const BreakpointsContext = React.createContext<Breakpoints>(
-  sanitize(defaultBreakpoints)
-);
+export const BreakpointsContext = React.createContext<Breakpoints>(sanitize(defaultBreakpoints));
 
 interface BreakpointsProviderProps {
   breakpoints?: Breakpoints;
   additionalBreakpoints?: Breakpoints;
 }
 
-export const BreakpointsProvider: React.FunctionComponent<
-  BreakpointsProviderProps
-> = ({
+export const BreakpointsProvider: React.FunctionComponent<BreakpointsProviderProps> = ({
   breakpoints = defaultBreakpoints,
   additionalBreakpoints = {},
-  children
+  children,
 }) => {
   return (
     <BreakpointsContext.Provider
-      value={sanitize({ ...breakpoints, ...additionalBreakpoints })}
+      value={sanitize({
+        ...breakpoints,
+        ...additionalBreakpoints,
+      })}
     >
       {children}
     </BreakpointsContext.Provider>

@@ -1,9 +1,6 @@
 import { Breakpoint } from "./sanitize";
 
-export const fromBreakpointToMedia = (
-  breakpoint: Breakpoint,
-  strict = false
-) => {
+export const fromBreakpointToMedia = (breakpoint: Breakpoint, strict = false) => {
   const mediaList: string[] = [];
   const [minValue, maxValue, unit] = breakpoint;
   let str;

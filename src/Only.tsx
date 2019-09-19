@@ -22,11 +22,7 @@ export function Only<OtherProps = {}>({
   if (!isShown) {
     return null;
   }
-  return React.createElement(
-    as || React.Fragment,
-    as ? (props as OtherProps) : undefined,
-    children
-  );
+  return React.createElement(as || React.Fragment, as ? (props as OtherProps) : undefined, children);
 }
 
 Only.displayName = "Only";

@@ -79,7 +79,9 @@ import { Only } from "react-only";
 
 const App = () => (
   <React.Fragment>
-    <Only on="smUp">Visible on every device bigger or egal than "small"</Only>
+    <Only on="smUp">
+      Visible on every device bigger or egal than "small"
+    </Only>
     <Only on="mdDown">
       Visible on every device smaller or egal than "medium"
     </Only>
@@ -97,7 +99,8 @@ import { Only } from "react-only";
 
 const App = () => (
   <Only matchMedia="(min-device-width: 500px) and (orientation: landscape)">
-    Visible on every device bigger than "500px" and in landscape mode
+    Visible on every device bigger than "500px" and in
+    landscape mode
   </Only>
 );
 ```
@@ -187,7 +190,9 @@ import { Only } from "react-only";
 
 const App = () => (
   <React.Fragment>
-    <Only on="xs">Only visible for range: [576px, 768px]</Only>
+    <Only on="xs">
+      Only visible for range: [576px, 768px]
+    </Only>
     <Only on="xs" strict>
       Only visible for range: [577px, 767px]
     </Only>
@@ -256,21 +261,27 @@ const App = () => {
   const matchMdDown = useOnly("mdDown");
   const matchCustomMediaQuery = useOnly(
     undefined,
-    "(min-width:768px) and (max-width:992px),(max-width:576px)"
+    "(min-width:768px) and (max-width:992px),(max-width:576px)",
   );
   const matchMdStrict = useOnly("md", undefined, true);
   return (
     <ul>
       {matchXl && <li>Visible on every "large" device</li>}
       {matchMdDown && (
-        <li>Visible on every device smaller or egal than "medium"</li>
+        <li>
+          Visible on every device smaller or egal than
+          "medium"
+        </li>
       )}
       {matchCustomMediaQuery && (
         <li>
-          Visible at (min-width:768px) and (max-width:992px),(max-width:576px)
+          Visible at (min-width:768px) and
+          (max-width:992px),(max-width:576px)
         </li>
       )}
-      {matchMdStrict && <li>Visible on every strict "medium" device</li>}
+      {matchMdStrict && (
+        <li>Visible on every strict "medium" device</li>
+      )}
     </ul>
   );
 };
@@ -309,9 +320,15 @@ import { Only, BreakpointsProvider } from "react-only";
 
 const App = () => (
   <BreakpointsProvider breakpoints={{ sm: [263, 863] }}>
-    <Only on="sm">Visible on every device from "263px" to "863px"</Only>
-    <Only on="smUp">Visible on every device bigger than "263px"</Only>
-    <Only on="smDown">Visible on every device smaller than "863px"</Only>
+    <Only on="sm">
+      Visible on every device from "263px" to "863px"
+    </Only>
+    <Only on="smUp">
+      Visible on every device bigger than "263px"
+    </Only>
+    <Only on="smDown">
+      Visible on every device smaller than "863px"
+    </Only>
   </BreakpointsProvider>
 );
 ```
@@ -328,11 +345,15 @@ const App = () => (
   <BreakpointsProvider
     additionalBreakpoints={{
       pxPoint: [263, 863, "px"],
-      emPoint: [20, 40, "em"]
+      emPoint: [20, 40, "em"],
     }}
   >
-    <Only on="pxPoint">Visible on every device from "263px" to "863px"</Only>
-    <Only on="emPoint">Visible on every device from "20em" to "40em"</Only>
+    <Only on="pxPoint">
+      Visible on every device from "263px" to "863px"
+    </Only>
+    <Only on="emPoint">
+      Visible on every device from "20em" to "40em"
+    </Only>
   </BreakpointsProvider>
 );
 ```

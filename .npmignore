@@ -8,6 +8,7 @@ node_modules/
 .babelrc
 .eslintrc
 .eslintignore
+.prettierrc
 .gitignore
 CHANGELOG.md
 tsconfig.json

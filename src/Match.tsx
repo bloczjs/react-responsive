@@ -9,10 +9,7 @@ interface ChildProps {
   only?: string;
 }
 
-type Element = React.ReactElement<
-  ChildProps,
-  string | React.ComponentType
-> | null;
+type Element = React.ReactElement<ChildProps, string | React.ComponentType> | null;
 
 type ParseChildren = (element: Element) => Element;
 
@@ -25,10 +22,7 @@ const parseChildren: ParseChildren = element => {
   if (!_children) {
     return null;
   }
-  const children: Element[] = React.Children.map<Element, Element>(
-    _children,
-    parseChildren
-  );
+  const children: Element[] = React.Children.map<Element, Element>(_children, parseChildren);
   const { only, matchMedia, strict, ...props } = element.props;
   const clone = React.createElement(element.type, props, children);
   if (!only && !matchMedia) {
@@ -47,11 +41,7 @@ interface MatchProps {
   as?: string;
 }
 
-export const Match: React.FunctionComponent<MatchProps> = ({
-  children,
-  as,
-  ...props
-}) => {
+export const Match: React.FunctionComponent<MatchProps> = ({ children, as, ...props }) => {
   const computedChildren = React.Children.map(children, parseChildren);
   if (as) {
     return React.createElement(as, props, computedChildren);

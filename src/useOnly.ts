@@ -9,14 +9,9 @@ export const useOnly = (on?: string, media?: string, strict?: boolean) => {
   const [isShown, setIsShown] = React.useState<boolean | undefined>(undefined);
 
   const breakpoints = React.useContext(BreakpointsContext);
-  const toMediaQuery = React.useMemo(() => mediaQueryBuilder(breakpoints), [
-    breakpoints
-  ]);
+  const toMediaQuery = React.useMemo(() => mediaQueryBuilder(breakpoints), [breakpoints]);
 
-  const mediaQuery: string = React.useMemo(
-    () => toMediaQuery(on, media, strict),
-    [toMediaQuery, on, media, strict]
-  );
+  const mediaQuery: string = React.useMemo(() => toMediaQuery(on, media, strict), [toMediaQuery, on, media, strict]);
 
   React.useLayoutEffect(() => {
     if (!mediaQuery) {
