@@ -2,14 +2,13 @@ import * as React from "react";
 
 import { Only } from "./Only";
 
-interface ChildProps {
-  [key: string]: any;
+export interface MatchChildProps {
   strict?: boolean;
   matchMedia?: string;
   only?: string;
 }
 
-type Element = React.ReactElement<ChildProps, string | React.ComponentType> | null;
+type Element = React.ReactElement<MatchChildProps & any, string | React.ComponentType<MatchChildProps & any>> | null;
 
 type ParseChildren = (element: Element) => Element;
 

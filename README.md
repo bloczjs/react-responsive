@@ -29,6 +29,9 @@ If you need a responsive layout and adaptive components, `react-only` is here fo
     4.  [Render as component](#render-as-component)
     5.  [Strict mode](#strict-mode)
 2.  [`<Match>`](#match)
+    1.  [`only` and `matchMedia` props](#only-and-matchmedia-props)
+    2.  [Use a custom component in Match](#use-a-custom-component-in-match)
+    3.  [TypeScript support](#typescript-support)
 3.  [`useOnly()`](#useOnly)
 4.  [`<BreakpointsProvider>`](#breakpointsprovider)
     1.  [Add more breakpoints](#add-more-breakpoints)
@@ -212,6 +215,8 @@ const App = () => (
 
 ### `<Match>`
 
+### `only` and `matchMedia` props
+
 The `Match` will look into every props of its children (and event nested children) to detect `only`, `matchMedia` and `strict` props. If one of those is found, it will wrap this component inside a `Only` component will match `only` with `on` and `matchMedia` and `strict` to theirself.
 
 ```javascript
@@ -243,6 +248,8 @@ const App = () => (
 );
 ```
 
+### Use a custom component in Match
+
 You can also render the `Match` component as another one:
 
 ```javascript
@@ -256,6 +263,50 @@ const App = () => (
     <li only="md">md</li>
     <li only="lg">lg</li>
     <li only="xl">xl</li>
+  </Match>
+);
+```
+
+### TypeScript support
+
+⚠️ There is currently no full TypeScript support for the `Match` component,
+for now you can only use components as children and not DOM elements:
+
+```tsx
+import * as React from "react";
+import { Match, MatchChildProps } from "react-only";
+
+interface CustomProps extends MatchChildProps {
+  title: string;
+}
+
+const Custom: React.FunctionComponent<CustomProps> = ({
+  title,
+  children,
+}) => (
+  <React.Fragment>
+    <h3>{title}</h3>
+    <p>{children}</p>
+  </React.Fragment>
+);
+
+const App = () => (
+  <Match>
+    <Custom only="xs" title="xs">
+      xs
+    </Custom>
+    <Custom only="sm" title="sm">
+      sm
+    </Custom>
+    <Custom only="md" title="md">
+      md
+    </Custom>
+    <Custom only="lg" title="lg">
+      lg
+    </Custom>
+    <Custom only="xl" title="xl">
+      xl
+    </Custom>
   </Match>
 );
 ```
