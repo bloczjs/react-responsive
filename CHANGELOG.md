@@ -6,9 +6,14 @@
 
 - `useOnly` returns `undefined` before being initialized
 - fix bugs
+- expose `MatchChildProps`
 
 <details>
   <summary>See detailed changelog</summary>
+
+#### 2.1.4
+
+- expose `MatchChildProps`
 
 #### 2.1.3
 
