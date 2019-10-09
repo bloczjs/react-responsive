@@ -14,31 +14,40 @@ const toString = (value: boolean | undefined) => {
 };
 
 const Hook = () => {
-  const isXs = useOnly("xs");
-  const isSm = useOnly("sm");
-  const isMd = useOnly("md");
-  const isLg = useOnly("lg");
-  const isXl = useOnly("xl");
-  const isXsUp = useOnly("xsUp");
-  const isSmUp = useOnly("smUp");
-  const isMdUp = useOnly("mdUp");
-  const isLgUp = useOnly("lgUp");
-  const isXlUp = useOnly("xlUp");
-  const isXsDown = useOnly("xsDown");
-  const isSmDown = useOnly("smDown");
-  const isMdDown = useOnly("mdDown");
-  const isLgDown = useOnly("lgDown");
-  const isXlDown = useOnly("xlDown");
-  const isMedia = useOnly(
-    undefined,
-    "(min-width:768px) and (max-width:992px),(max-width:576px)"
-  );
-  const isWrong = useOnly("wrong");
+  // const isXs = useOnly("xs");
+  // const isSm = useOnly("sm");
+  // const isMd = useOnly("md");
+  // const isLg = useOnly("lg");
+  // const isXl = useOnly("xl");
+  // const isXsUp = useOnly("xsUp");
+  // const isSmUp = useOnly("smUp");
+  // const isMdUp = useOnly("mdUp");
+  // const isLgUp = useOnly("lgUp");
+  // const isXlUp = useOnly("xlUp");
+  // const isXsDown = useOnly("xsDown");
+  // const isSmDown = useOnly("smDown");
+  // const isMdDown = useOnly("mdDown");
+  // const isLgDown = useOnly("lgDown");
+  // const isXlDown = useOnly("xlDown");
+  const isMobile = useOnly("mobile");
+  const isTablet = useOnly("tablet");
+  const isComputer = useOnly("computer");
+  const isMobileUp = useOnly("mobileUp");
+  const isTabletUp = useOnly("tabletUp");
+  const isComputerUp = useOnly("computerUp");
+  const isMobileDown = useOnly("mobileDown");
+  const isTabletDown = useOnly("tabletDown");
+  const isComputerDown = useOnly("computerDown");
+  // const isMedia = useOnly(
+  //   undefined,
+  //   "(min-width:768px) and (max-width:992px),(max-width:576px)",
+  // );
+  // const isWrong = useOnly("wrong");
 
   return (
     <>
       <h2>useOnly()</h2>
-      <p>
+      {/* <p>
         <b>isXs: </b>
         <code>{toString(isXs)}</code>
       </p>
@@ -97,15 +106,54 @@ const Hook = () => {
       <p>
         <b>isXlUp: </b>
         <code>{toString(isXlUp)}</code>
+      </p> */}
+      <p>
+        <b>isMobile: </b>
+        <code>{toString(isMobile)}</code>
       </p>
       <p>
-        <b>(min-width:768px) and (max-width:992px),(max-width:576px): </b>
+        <b>isMobileDown: </b>
+        <code>{toString(isMobileDown)}</code>
+      </p>
+      <p>
+        <b>isMobileUp: </b>
+        <code>{toString(isMobileUp)}</code>
+      </p>
+      <p>
+        <b>isTablet: </b>
+        <code>{toString(isTablet)}</code>
+      </p>
+      <p>
+        <b>isTabletDown: </b>
+        <code>{toString(isTabletDown)}</code>
+      </p>
+      <p>
+        <b>isTabletUp: </b>
+        <code>{toString(isTabletUp)}</code>
+      </p>
+      <p>
+        <b>isComputer: </b>
+        <code>{toString(isComputer)}</code>
+      </p>
+      <p>
+        <b>isComputerDown: </b>
+        <code>{toString(isComputerDown)}</code>
+      </p>
+      <p>
+        <b>isComputerUp: </b>
+        <code>{toString(isComputerUp)}</code>
+      </p>
+      {/* <p>
+        <b>
+          (min-width:768px) and
+          (max-width:992px),(max-width:576px):{" "}
+        </b>
         <code>{toString(isMedia)}</code>
       </p>
       <p>
         <b>wrong media query: </b>
         <code>{toString(isWrong)}</code>
-      </p>
+      </p> */}
     </>
   );
 };
