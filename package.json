@@ -7,6 +7,7 @@
   "umd:main": "lib/react-only.umd.js",
   "module": "lib/react-only.modern.js",
   "types": "lib/index.d.ts",
+  "sideEffects": false,
   "repository": "git@github.com:Ayc0/react-only.git",
   "keywords": [
     "adaptive",
