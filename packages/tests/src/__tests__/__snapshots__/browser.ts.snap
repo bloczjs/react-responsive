@@ -53,7 +53,27 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong media query: undefined"
+wrong media query: undefined
+
+useOnly() with heights
+
+isThin: true
+
+isThinDown: true
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: true
+
+isNormalUp: false
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false"
 `;
 
 exports[`browser test 2`] = `
@@ -114,7 +134,27 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong media query: undefined"
+wrong media query: undefined
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false"
 `;
 
 exports[`browser test 3`] = `
@@ -171,7 +211,27 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong media query: undefined"
+wrong media query: undefined
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false"
 `;
 
 exports[`browser test 4`] = `
@@ -226,7 +286,27 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong media query: undefined"
+wrong media query: undefined
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false"
 `;
 
 exports[`browser test 5`] = `
@@ -285,5 +365,25 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong media query: undefined"
+wrong media query: undefined
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true"
 `;
