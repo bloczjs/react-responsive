@@ -2,6 +2,21 @@
 
 ## v2
 
+### 2.2
+
+- change 3rd option in breakpoint to be an `option` instead of just the unit
+
+<details>
+  <summary>See detailed changelog</summary>
+
+#### 2.2.0
+
+- the 3rd option of every breakpoint is instead of a unit string, a string representing the unit or an object with two keys:
+  - `unit` as before (`"px", "em", ...`)
+  - `direction` `"width"` or `"height"`
+
+</details>
+
 ### 2.1
 
 - `useOnly` returns `undefined` before being initialized

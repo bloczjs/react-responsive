@@ -1,48 +1,25 @@
 {
-  "name": "react-only",
-  "version": "2.1.4",
-  "description": "🔍 <Only /> displays some contents for a specific screen size",
-  "source": "src/index.ts",
-  "main": "lib/react-only.js",
-  "umd:main": "lib/react-only.umd.js",
-  "module": "lib/react-only.modern.js",
-  "types": "lib/index.d.ts",
-  "sideEffects": false,
-  "repository": "git@github.com:Ayc0/react-only.git",
-  "keywords": [
-    "adaptive",
-    "breakpoint",
-    "css",
-    "media-query",
-    "react",
-    "responsive"
-  ],
+  "name": "react-only-main",
+  "private": true,
+  "version": "0.0.0",
   "author": "Ayc0",
   "license": "MIT",
-  "bugs": "https://github.com/Ayc0/react-only/issues",
-  "scripts": {
-    "build": "yarn -s build:microbundle",
-    "build:dev": "yarn -s build:microbundle --compress false",
-    "build:microbundle": "microbundle --name $npm_package_name --globals react=React",
-    "prepublishOnly": "rm -rf lib && yarn -s build"
-  },
-  "homepage": "https://github.com/Ayc0/react-only#readme",
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "@types/react": "^16.8.0",
-    "@typescript-eslint/eslint-plugin": "2.3.0",
-    "@typescript-eslint/parser": "2.3.0",
-    "eslint": "6.4.0",
+    "@typescript-eslint/eslint-plugin": "1.x",
+    "@typescript-eslint/parser": "1.x",
+    "babel-eslint": "10.x",
+    "eslint": "6.8.0",
     "eslint-config-prettier": "6.3.0",
     "eslint-config-react-app": "5.0.1",
+    "eslint-plugin-flowtype": "3.x",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.3",
-    "eslint-plugin-react-hooks": "2.0.1",
-    "microbundle": "0.12.0-next.6",
+    "eslint-plugin-react-hooks": "1.x",
     "prettier": "1.18.2",
     "typescript": "3.6.3"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0"
   }
 }

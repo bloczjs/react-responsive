@@ -1,4 +1,5 @@
 import React from "react";
+import { BreakpointsProvider } from "react-only";
 
 import List from "./List";
 import Custom from "./Custom";
@@ -8,7 +9,13 @@ import Hook from "./Hook";
 import Height from "./Height";
 
 const App = (
-  <React.Fragment>
+  <BreakpointsProvider
+    additionalBreakpoints={{
+      thin: [0, 499.9, { direction: "height" }],
+      normal: [500, 899.9, { direction: "height" }],
+      big: [900, Infinity, { direction: "height" }],
+    }}
+  >
     <List />
     <hr />
     <Custom />
@@ -20,7 +27,7 @@ const App = (
     <Hook />
     <hr />
     <Height />
-  </React.Fragment>
+  </BreakpointsProvider>
 );
 
 export default App;
