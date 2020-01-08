@@ -5,6 +5,7 @@ import Custom from "./Custom";
 import Match from "./Match";
 import CustomMatch from "./CustomMatch";
 import Hook from "./Hook";
+import Height from "./Height";
 
 const App = (
   <React.Fragment>
@@ -17,6 +18,8 @@ const App = (
     <CustomMatch />
     <hr />
     <Hook />
+    <hr />
+    <Height />
   </React.Fragment>
 );
 
