@@ -39,7 +39,7 @@ export interface ExposedBreakpoints {
   [key: string]: ExposedBreakpoint;
 }
 
-export type Breakpoint = [number, number, Units];
+export type Breakpoint = [number, number, Units, "width" | "height"];
 
 export interface Breakpoints {
   [key: string]: Breakpoint;
@@ -67,9 +67,9 @@ export const sanitize = (inBreakpoints: ExposedBreakpoints) => {
     const max = Math.max(supposedMin, supposedMax);
     const unit: Units = supposedUnit && listOfSupportedUnits.includes(supposedUnit) ? supposedUnit : "px";
 
-    breakpoints[breakpointName] = [min, max, unit];
-    breakpoints[`${breakpointName}Up`] = [min, Infinity, unit];
-    breakpoints[`${breakpointName}Down`] = [0, max, unit];
+    breakpoints[breakpointName] = [min, max, unit, "width"];
+    breakpoints[`${breakpointName}Up`] = [min, Infinity, unit, "width"];
+    breakpoints[`${breakpointName}Down`] = [0, max, unit, "width"];
 
     return breakpoints;
   }, {});
