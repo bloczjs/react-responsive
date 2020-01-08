@@ -33,13 +33,19 @@ const listOfSupportedUnits: Units[] = [
   "vmax",
 ];
 
+export type ExposedBreakpoint = [number, number] | [number, number, Units];
+
+export interface ExposedBreakpoints {
+  [key: string]: ExposedBreakpoint;
+}
+
 export type Breakpoint = [number, number, Units];
 
 export interface Breakpoints {
   [key: string]: Breakpoint;
 }
 
-export const sanitize = (inBreakpoints: Breakpoints) => {
+export const sanitize = (inBreakpoints: ExposedBreakpoints) => {
   return Object.keys(inBreakpoints).reduce<Breakpoints>((breakpoints, breakpointName) => {
     const breakpoint = inBreakpoints[breakpointName];
 
