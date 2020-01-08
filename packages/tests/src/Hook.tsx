@@ -31,7 +31,7 @@ const Hook = () => {
   const isXlDown = useOnly("xlDown");
   const isMedia = useOnly(
     undefined,
-    "(min-width:768px) and (max-width:992px),(max-width:576px)"
+    "(min-width:768px) and (max-width:992px),(max-width:576px)",
   );
   const isWrong = useOnly("wrong");
 
@@ -99,7 +99,10 @@ const Hook = () => {
         <code>{toString(isXlUp)}</code>
       </p>
       <p>
-        <b>(min-width:768px) and (max-width:992px),(max-width:576px): </b>
+        <b>
+          (min-width:768px) and
+          (max-width:992px),(max-width:576px):{" "}
+        </b>
         <code>{toString(isMedia)}</code>
       </p>
       <p>

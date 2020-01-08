@@ -16,15 +16,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install and build package
+      - name: Install packages
         run: |
           yarn install
+      - name: Build package
+        run: |
           yarn build
-      - name: Install dependencies for tests
-        run: |
-          yarn install
-        working-directory: ./tests
+        working-directory: ./packages/react-only
       - name: Run tests
         run: |
           yarn test
-        working-directory: ./tests
+        working-directory: ./packages/tests

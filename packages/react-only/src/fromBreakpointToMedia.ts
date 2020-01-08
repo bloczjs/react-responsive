@@ -2,7 +2,7 @@ import { Breakpoint } from "./sanitize";
 
 export const fromBreakpointToMedia = (breakpoint: Breakpoint, strict = false) => {
   const mediaList: string[] = [];
-  const [minValue, maxValue, unit] = breakpoint;
+  const [minValue, maxValue, unit, direction] = breakpoint;
   let str;
 
   // Min value
@@ -11,7 +11,7 @@ export const fromBreakpointToMedia = (breakpoint: Breakpoint, strict = false) =>
     if (strict) {
       str = `calc(${str} + 1px)`;
     }
-    mediaList.push(`(min-width:${str})`);
+    mediaList.push(`(min-${direction}:${str})`);
   }
 
   // Max value
@@ -20,7 +20,7 @@ export const fromBreakpointToMedia = (breakpoint: Breakpoint, strict = false) =>
     if (strict) {
       str = `calc(${str} - 1px)`;
     }
-    mediaList.push(`(max-width:${str})`);
+    mediaList.push(`(max-${direction}:${str})`);
   }
 
   return " " + mediaList.join(" and ");

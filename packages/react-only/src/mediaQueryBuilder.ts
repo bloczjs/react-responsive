@@ -7,7 +7,6 @@ export const mediaQueryBuilder = (breakpoints: Breakpoints) => (on = "", extraMe
     return "";
   }
   const rawBreakpointNames = on.split(" ");
-  const isUniqBreakpoint = rawBreakpointNames.length === 1;
   const filteredBreakpoints = rawBreakpointNames.map(breakpointName => breakpoints[breakpointName]).filter(Boolean);
   const mediaQuery = [
     ...filteredBreakpoints.map(breakpoint => fromBreakpointToMedia(breakpoint, strict)),
@@ -16,6 +15,7 @@ export const mediaQueryBuilder = (breakpoints: Breakpoints) => (on = "", extraMe
     .filter(Boolean)
     .join(",");
   if (!mediaQuery) {
+    const isUniqBreakpoint = rawBreakpointNames.length === 1;
     console.error(
       `"${rawBreakpointNames.join('", "')}" ${isUniqBreakpoint ? "is" : "are"}n't ${
         isUniqBreakpoint ? "a " : ""

@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { sanitize, Breakpoints } from "./sanitize";
+import { sanitize, ExposedBreakpoints, Breakpoints } from "./sanitize";
 
-const defaultBreakpoints: Breakpoints = {
+const defaultBreakpoints: ExposedBreakpoints = {
   xs: [0, 575, "px"], // Extra small devices (portrait phones)
   sm: [576, 767, "px"], // Small devices (landscape phones)
   md: [768, 991, "px"], // Medium devices (tablets)
@@ -13,8 +13,8 @@ const defaultBreakpoints: Breakpoints = {
 export const BreakpointsContext = React.createContext<Breakpoints>(sanitize(defaultBreakpoints));
 
 interface BreakpointsProviderProps {
-  breakpoints?: Breakpoints;
-  additionalBreakpoints?: Breakpoints;
+  breakpoints?: ExposedBreakpoints;
+  additionalBreakpoints?: ExposedBreakpoints;
 }
 
 export const BreakpointsProvider: React.FunctionComponent<BreakpointsProviderProps> = ({
