@@ -419,12 +419,14 @@ The default unit is `px`.
 
 ### Comparison to other libraries
 
-| Lib                                                                                        | Breakpoints | Custom breakpoints | Media query | `resize` event | hooks | SSR support |
-| ------------------------------------------------------------------------------------------ | ----------: | -----------------: | ----------: | -------------: | ----: | ----------: |
-| [react-only](https://www.npmjs.com/package/react-only)                                     |          ✅ |                 ✅ |          ✅ |             ❌ |    ✅ |           🏗 |
-| [react-responsive](https://www.npmjs.com/package/react-responsive)                         |          ❌ |                 ❌ |          ✅ |             ❌ |    ✅ |          ✅ |
-| [react-breakpoints](https://www.npmjs.com/package/react-breakpoints)                       |          ✅ |                 ✅ |          ❌ |             ✅ |    ❌ |          ✅ |
-| [react-responsive-breakpoints](https://www.npmjs.com/package/react-responsive-breakpoints) |          ✅ |                 ❌ |          ❌ |             ✅ |    ❌ |          ❌ |
+| Lib                                                                                        | Breakpoints | Custom breakpoints | Media query | `resize` event' | hooks | SSR support |
+| ------------------------------------------------------------------------------------------ | ----------: | -----------------: | ----------: | --------------: | ----: | ----------: |
+| [react-only](https://www.npmjs.com/package/react-only)                                     |          ✅ |                 ✅ |          ✅ |              ❌ |    ✅ |          ✅ |
+| [react-responsive](https://www.npmjs.com/package/react-responsive)                         |          ❌ |                 ❌ |          ✅ |              ❌ |    ✅ |          ✅ |
+| [react-breakpoints](https://www.npmjs.com/package/react-breakpoints)                       |          ✅ |                 ✅ |          ❌ |              ✅ |    ❌ |          ✅ |
+| [react-responsive-breakpoints](https://www.npmjs.com/package/react-responsive-breakpoints) |          ✅ |                 ❌ |          ❌ |              ✅ |    ❌ |          ❌ |
+
+': `resize` event means that the library is built around `window.addEventListener('resize', callback)` and not `matchMedia.addListener(callback)`
 
 ### `matchMedia` polyfill
 
