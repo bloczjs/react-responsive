@@ -1,6 +1,6 @@
 import "../App";
 
-import { sizes } from "./sizes";
+import { sizes } from "./sizes.util";
 
 const sleep = (ms: number) =>
   new Promise(res => setTimeout(res, ms));

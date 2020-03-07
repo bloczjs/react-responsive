@@ -7,7 +7,7 @@ import { render, act } from "@testing-library/react";
 import "mock-match-media/polyfill";
 
 import { setMedia } from "mock-match-media";
-import { sizes } from "./sizes";
+import { sizes } from "./sizes.util";
 
 import App from "../App";
 
