@@ -27,11 +27,13 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "9.5.0",
     "@types/jest": "^24.0.18",
     "@types/jest-environment-puppeteer": "^4.3.1",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "jest-puppeteer": "^4.3.0",
+    "mock-match-media": "0.1.4",
     "puppeteer": "^1.20.0",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1"

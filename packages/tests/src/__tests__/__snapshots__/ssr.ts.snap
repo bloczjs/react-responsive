@@ -1,200 +1,1277 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render in SSR 1`] = `
+"<Only>
+
+Only visible for extra small devices (portrait phones)
+
+Custom component
+
+xs
+
+Only visible for extra small devices (portrait phones)
+
+<Match>
+
+xs
+
+nested smDown
+
+(min-width:768px) and (max-width:992px),(max-width:576px)
+
+smDown
+
+Custom component used as Match's children
+
+xs
+
+xs
+
+useOnly()
+
+isXs: true
+
+isXsDown: true
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: true
+
+isSmUp: false
+
+isMd: false
+
+isMdDown: true
+
+isMdUp: false
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: true
+
+isThinDown: true
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: true
+
+isNormalUp: false
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
 "
-<h2>&lt;Only&gt;</h2>
+`;
 
-<ul></ul>
+exports[`Should render in SSR 2`] = `
+"<Only>
 
-<hr/>
+Only visible for small devices (landscape phones)
 
-<h2>Custom component</h2>
+Only visible for small AND extra large devices
 
-<hr/>
+Custom component
 
-<h2>&lt;Match&gt;</h2>
+sm
 
-<div>
-<div>
-<div></div>
-</div>
-</div>
+Only visible for small devices (landscape phones)
 
-<ul></ul>
+sm xl
 
-<hr/>
+Only visible for small AND extra large devices
 
-<h2>Custom component used as Match&#x27;s children</h2>
+<Match>
 
-<hr/>
+sm
 
-<h2>useOnly()</h2>
+nested smDown
 
-<p>
-<b>isXs: </b>
+smDown
 
-<code>undefined</code>
-</p>
+Custom component used as Match's children
 
-<p>
-<b>isXsDown: </b>
+sm
 
-<code>undefined</code>
-</p>
+sm
 
-<p>
-<b>isXsUp: </b>
+useOnly()
 
-<code>undefined</code>
-</p>
+isXs: false
 
-<p>
-<b>isSm: </b>
+isXsDown: false
 
-<code>undefined</code>
-</p>
+isXsUp: true
 
-<p>
-<b>isSmDown: </b>
+isSm: true
 
-<code>undefined</code>
-</p>
+isSmDown: true
 
-<p>
-<b>isSmUp: </b>
+isSmUp: true
 
-<code>undefined</code>
-</p>
+isMd: false
 
-<p>
-<b>isMd: </b>
+isMdDown: true
 
-<code>undefined</code>
-</p>
+isMdUp: false
 
-<p>
-<b>isMdDown: </b>
+isLg: false
 
-<code>undefined</code>
-</p>
+isLgDown: true
 
-<p>
-<b>isMdUp: </b>
+isLgUp: false
 
-<code>undefined</code>
-</p>
+isXl: false
 
-<p>
-<b>isLg: </b>
+isXlDown: true
 
-<code>undefined</code>
-</p>
+isXlUp: false
 
-<p>
-<b>isLgDown: </b>
+(min-width:768px) and (max-width:992px),(max-width:576px): false
 
-<code>undefined</code>
-</p>
+wrong breakpoint: undefined
 
-<p>
-<b>isLgUp: </b>
+wrong media query: false
 
-<code>undefined</code>
-</p>
+useOnly() with heights
 
-<p>
-<b>isXl: </b>
+isThin: false
 
-<code>undefined</code>
-</p>
+isThinDown: false
 
-<p>
-<b>isXlDown: </b>
+isThinUp: true
 
-<code>undefined</code>
-</p>
+isNormal: true
 
-<p>
-<b>isXlUp: </b>
+isNormalDown: true
 
-<code>undefined</code>
-</p>
+isNormalUp: true
 
-<p>
-<b>(min-width:768px) and (max-width:992px),(max-width:576px):
-<!-- --> </b>
+isBig: false
 
-<code>undefined</code>
-</p>
+isBigDown: true
 
-<p>
-<b>wrong breakpoint: </b>
+isBigUp: false
 
-<code>undefined</code>
-</p>
+<Only>
 
-<p>
-<b>wrong media query: </b>
+Only visible for small devices (landscape phones)
 
-<code>undefined</code>
-</p>
+Only visible for small AND extra large devices
 
-<hr/>
+Custom component
 
-<h2>useOnly() with heights</h2>
+sm
 
-<p>
-<b>isThin: </b>
+Only visible for small devices (landscape phones)
 
-<code>undefined</code>
-</p>
+sm xl
 
-<p>
-<b>isThinDown: </b>
+Only visible for small AND extra large devices
 
-<code>undefined</code>
-</p>
+<Match>
 
-<p>
-<b>isThinUp: </b>
+sm
 
-<code>undefined</code>
-</p>
+nested smDown
 
-<p>
-<b>isNormal: </b>
+smDown
 
-<code>undefined</code>
-</p>
+Custom component used as Match's children
 
-<p>
-<b>isNormalDown: </b>
+sm
 
-<code>undefined</code>
-</p>
+sm
 
-<p>
-<b>isNormalUp: </b>
+useOnly()
 
-<code>undefined</code>
-</p>
+isXs: false
 
-<p>
-<b>isBig: </b>
+isXsDown: false
 
-<code>undefined</code>
-</p>
+isXsUp: true
 
-<p>
-<b>isBigDown: </b>
+isSm: true
 
-<code>undefined</code>
-</p>
+isSmDown: true
 
-<p>
-<b>isBigUp: </b>
+isSmUp: true
 
-<code>undefined</code>
-</p>
+isMd: false
+
+isMdDown: true
+
+isMdUp: false
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+"
+`;
+
+exports[`Should render in SSR 3`] = `
+"<Only>
+
+Only visible for medium devices (tablets)
+
+Custom component
+
+md
+
+Only visible for medium devices (tablets)
+
+<Match>
+
+md
+
+(min-width:768px) and (max-width:992px),(max-width:576px)
+
+mdUp
+
+Custom component used as Match's children
+
+md
+
+md
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for medium devices (tablets)
+
+Custom component
+
+md
+
+Only visible for medium devices (tablets)
+
+<Match>
+
+md
+
+(min-width:768px) and (max-width:992px),(max-width:576px)
+
+mdUp
+
+Custom component used as Match's children
+
+md
+
+md
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for medium devices (tablets)
+
+Custom component
+
+md
+
+Only visible for medium devices (tablets)
+
+<Match>
+
+md
+
+(min-width:768px) and (max-width:992px),(max-width:576px)
+
+mdUp
+
+Custom component used as Match's children
+
+md
+
+md
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+"
+`;
+
+exports[`Should render in SSR 4`] = `
+"<Only>
+
+Only visible for large devices (desktops)
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+<Match>
+
+lg
+
+mdUp
+
+Custom component used as Match's children
+
+lg
+
+lg
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for large devices (desktops)
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+<Match>
+
+lg
+
+mdUp
+
+Custom component used as Match's children
+
+lg
+
+lg
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for large devices (desktops)
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+<Match>
+
+lg
+
+mdUp
+
+Custom component used as Match's children
+
+lg
+
+lg
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for large devices (desktops)
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+<Match>
+
+lg
+
+mdUp
+
+Custom component used as Match's children
+
+lg
+
+lg
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+"
+`;
+
+exports[`Should render in SSR 5`] = `
+"<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+
+xl
+
+mdUp
+
+Custom component used as Match's children
+
+xl
+
+xl
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+
+xl
+
+mdUp
+
+Custom component used as Match's children
+
+xl
+
+xl
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+
+xl
+
+mdUp
+
+Custom component used as Match's children
+
+xl
+
+xl
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+
+xl
+
+mdUp
+
+Custom component used as Match's children
+
+xl
+
+xl
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+
+xl
+
+mdUp
+
+Custom component used as Match's children
+
+xl
+
+xl
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
 "
 `;

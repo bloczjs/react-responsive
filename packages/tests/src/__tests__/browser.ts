@@ -8,9 +8,10 @@ const sleep = (ms: number) =>
 const getText = async () => {
   await sleep(50); // ensure that the hooks have time to update
   return (
-    (await page.$eval(
-      "body",
-      el => (el as HTMLElement).innerText,
+    (await page.$eval("body", el =>
+      (el as HTMLElement).innerText
+        .replace(/\n/g, "\n\n")
+        .replace(/\n\n+/g, "\n\n"),
     )) || ""
   );
 };
