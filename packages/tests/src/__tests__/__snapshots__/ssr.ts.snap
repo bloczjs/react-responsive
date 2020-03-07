@@ -1,3 +1,200 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render in SSR 1`] = `"<h2>&lt;Only&gt;</h2><ul></ul><hr/><h2>Custom component</h2><hr/><h2>&lt;Match&gt;</h2><div><div><div></div></div></div><ul></ul><hr/><h2>Custom component used as Match&#x27;s children</h2><hr/><h2>useOnly()</h2><p><b>isXs: </b><code>undefined</code></p><p><b>isXsDown: </b><code>undefined</code></p><p><b>isXsUp: </b><code>undefined</code></p><p><b>isSm: </b><code>undefined</code></p><p><b>isSmDown: </b><code>undefined</code></p><p><b>isSmUp: </b><code>undefined</code></p><p><b>isMd: </b><code>undefined</code></p><p><b>isMdDown: </b><code>undefined</code></p><p><b>isMdUp: </b><code>undefined</code></p><p><b>isLg: </b><code>undefined</code></p><p><b>isLgDown: </b><code>undefined</code></p><p><b>isLgUp: </b><code>undefined</code></p><p><b>isXl: </b><code>undefined</code></p><p><b>isXlDown: </b><code>undefined</code></p><p><b>isXlUp: </b><code>undefined</code></p><p><b>(min-width:768px) and (max-width:992px),(max-width:576px):<!-- --> </b><code>undefined</code></p><p><b>wrong media query: </b><code>undefined</code></p><hr/><h2>useOnly() with heights</h2><p><b>isThin: </b><code>undefined</code></p><p><b>isThinDown: </b><code>undefined</code></p><p><b>isThinUp: </b><code>undefined</code></p><p><b>isNormal: </b><code>undefined</code></p><p><b>isNormalDown: </b><code>undefined</code></p><p><b>isNormalUp: </b><code>undefined</code></p><p><b>isBig: </b><code>undefined</code></p><p><b>isBigDown: </b><code>undefined</code></p><p><b>isBigUp: </b><code>undefined</code></p>"`;
+exports[`Should render in SSR 1`] = `
+"
+<h2>&lt;Only&gt;</h2>
+
+<ul></ul>
+
+<hr/>
+
+<h2>Custom component</h2>
+
+<hr/>
+
+<h2>&lt;Match&gt;</h2>
+
+<div>
+<div>
+<div></div>
+</div>
+</div>
+
+<ul></ul>
+
+<hr/>
+
+<h2>Custom component used as Match&#x27;s children</h2>
+
+<hr/>
+
+<h2>useOnly()</h2>
+
+<p>
+<b>isXs: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isXsDown: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isXsUp: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isSm: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isSmDown: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isSmUp: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isMd: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isMdDown: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isMdUp: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isLg: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isLgDown: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isLgUp: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isXl: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isXlDown: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isXlUp: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>(min-width:768px) and (max-width:992px),(max-width:576px):
+<!-- --> </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>wrong breakpoint: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>wrong media query: </b>
+
+<code>undefined</code>
+</p>
+
+<hr/>
+
+<h2>useOnly() with heights</h2>
+
+<p>
+<b>isThin: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isThinDown: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isThinUp: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isNormal: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isNormalDown: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isNormalUp: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isBig: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isBigDown: </b>
+
+<code>undefined</code>
+</p>
+
+<p>
+<b>isBigUp: </b>
+
+<code>undefined</code>
+</p>
+"
+`;

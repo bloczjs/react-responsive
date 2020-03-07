@@ -1,17 +1,15 @@
 import { Breakpoints } from "./sanitize";
 import { fromBreakpointToMedia } from "./fromBreakpointToMedia";
 
-export const mediaQueryBuilder = (breakpoints: Breakpoints) => (on = "", extraMediaQuery = "", strict?: boolean) => {
-  if (!on && !extraMediaQuery) {
+export const mediaQueryBuilder = (breakpoints: Breakpoints) => (on = "", strict?: boolean) => {
+  if (!on) {
     console.error("You have to set either the breakpoints of the media query");
     return "";
   }
   const rawBreakpointNames = on.split(" ");
   const filteredBreakpoints = rawBreakpointNames.map(breakpointName => breakpoints[breakpointName]).filter(Boolean);
-  const mediaQuery = [
-    ...filteredBreakpoints.map(breakpoint => fromBreakpointToMedia(breakpoint, strict)),
-    extraMediaQuery,
-  ]
+  const mediaQuery = filteredBreakpoints
+    .map(breakpoint => fromBreakpointToMedia(breakpoint, strict))
     .filter(Boolean)
     .join(",");
   if (!mediaQuery) {

@@ -53,7 +53,9 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong media query: undefined
+wrong breakpoint: undefined
+
+wrong media query: false
 
 useOnly() with heights
 
@@ -134,7 +136,9 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong media query: undefined
+wrong breakpoint: undefined
+
+wrong media query: false
 
 useOnly() with heights
 
@@ -211,7 +215,9 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong media query: undefined
+wrong breakpoint: undefined
+
+wrong media query: false
 
 useOnly() with heights
 
@@ -286,7 +292,9 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong media query: undefined
+wrong breakpoint: undefined
+
+wrong media query: false
 
 useOnly() with heights
 
@@ -365,7 +373,9 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong media query: undefined
+wrong breakpoint: undefined
+
+wrong media query: false
 
 useOnly() with heights
 
