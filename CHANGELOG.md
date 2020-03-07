@@ -7,9 +7,14 @@
 - remove polyfill for matchMedia **minor breaking change**
 - add `useQuery`
 - drop `media` in `useOnly` **BREAKING CHANGE**
+- use Node 13 `exports` field
 
 <details>
   <summary>See detailed changelog</summary>
+
+#### 2.3.1
+
+- Use Node 13 conditional exports: https://nodejs.org/api/esm.html#esm_conditional_exports
 
 #### 2.3.0
 

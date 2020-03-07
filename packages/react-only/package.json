@@ -1,13 +1,19 @@
 {
   "name": "react-only",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "source": "src/index.ts",
+  "sideEffects": false,
   "main": "lib/react-only.js",
   "umd:main": "lib/react-only.umd.js",
   "module": "lib/react-only.modern.js",
   "types": "lib/index.d.ts",
-  "sideEffects": false,
+  "exports": {
+    "require": "./dist/react-only.js",
+    "import": "./dist/react-only.modern.js",
+    "browser": "./dist/react-only.modern.js",
+    "umd": "./dist/react-only.umd.js"
+  },
   "repository": "git@github.com:Ayc0/react-only.git",
   "keywords": [
     "adaptive",
