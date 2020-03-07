@@ -446,7 +446,7 @@ And if you need an example with `Jest`, `@testing-library/react`, `React` and `r
 [3]: https://npmjs.org/package/react-only
 [4]: http://img.shields.io/npm/dm/react-only.svg?style=flat-square
 [5]: https://npmjs.org/package/react-only
-[6]: https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg?style=flat-square
+[6]: https://img.shields.io/badge/code%20style-prettier-brightgreen.svg?style=flat-square
 [7]: https://github.com/airbnb/javascript
 [8]: https://img.shields.io/badge/speed-blazingly%20fast-orange.svg?style=flat-square
 [9]: https://twitter.com/acdlite/status/974390255393505280
