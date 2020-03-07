@@ -2,6 +2,38 @@
 
 ## v2
 
+### 2.3
+
+- remove polyfill for matchMedia **minor breaking change**
+- add `useQuery`
+- drop `media` in `useOnly` **BREAKING CHANGE**
+
+<details>
+  <summary>See detailed changelog</summary>
+
+#### 2.3.0
+
+- remove polyfill for matchMedia (it should be define by the users) **minor breaking change**
+- add new hook `useQuery` and use it internally in `Only` for the prop `matchMedia`
+- drop `query` in `useOnly` **BREAKING CHANGE**
+  - as there is a new hook `useQuery` that deals with media queries, the 2nd argument of `useOnly` was redundant
+  - new signature:
+    - before: `useOnly = (on?: string, media?: string, strict?: boolean) => boolean | undefined`
+    - after: `useOnly = (on?: string, strict?: boolean) => boolean | undefined`
+  - as `on` and `media` were join with a `or`, you can still mimic the previous behavior by doing:
+    - before:
+      ```js
+      const isVisible = useOnly(on, media, strict);
+      ```
+    - after:
+      ```js
+      const a = useOnly(on, strict);
+      const b = useQuery(media);
+      const isVisible = a || b;
+      ```
+
+</details>
+
 ### 2.2
 
 - change 3rd option in breakpoint to be an `option` instead of just the unit
