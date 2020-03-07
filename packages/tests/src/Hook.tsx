@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useOnly } from "react-only";
+import { useOnly, useQuery } from "react-only";
 
 const toString = (value: boolean | undefined) => {
   switch (value) {
@@ -29,11 +29,11 @@ const Hook = () => {
   const isMdDown = useOnly("mdDown");
   const isLgDown = useOnly("lgDown");
   const isXlDown = useOnly("xlDown");
-  const isMedia = useOnly(
-    undefined,
+  const isMedia = useQuery(
     "(min-width:768px) and (max-width:992px),(max-width:576px)",
   );
-  const isWrong = useOnly("wrong");
+  const isWrongBreakpoint = useOnly("wrong");
+  const isWrongMedia = useQuery("wrong");
 
   return (
     <>
@@ -106,8 +106,12 @@ const Hook = () => {
         <code>{toString(isMedia)}</code>
       </p>
       <p>
+        <b>wrong breakpoint: </b>
+        <code>{toString(isWrongBreakpoint)}</code>
+      </p>
+      <p>
         <b>wrong media query: </b>
-        <code>{toString(isWrong)}</code>
+        <code>{toString(isWrongMedia)}</code>
       </p>
     </>
   );
