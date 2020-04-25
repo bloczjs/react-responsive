@@ -19,7 +19,8 @@ export default () => (
         </div>
       </div>
       <div matchMedia="(min-width:768px) and (max-width:992px),(max-width:576px)">
-        (min-width:768px) and (max-width:992px),(max-width:576px)
+        (min-width:768px) and
+        (max-width:992px),(max-width:576px)
       </div>
     </Match>
     <Match as="ul">

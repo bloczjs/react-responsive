@@ -5,7 +5,10 @@ interface CustomProps {
   title: string;
 }
 
-const Custom: React.FunctionComponent<CustomProps> = ({ title, children }) => (
+const Custom: React.FunctionComponent<CustomProps> = ({
+  title,
+  children,
+}) => (
   <>
     <h3>{title}</h3>
     <p>{children}</p>

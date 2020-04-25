@@ -7,9 +7,9 @@ export const mediaQueryBuilder = (breakpoints: Breakpoints) => (on = "", strict?
     return "";
   }
   const rawBreakpointNames = on.split(" ");
-  const filteredBreakpoints = rawBreakpointNames.map(breakpointName => breakpoints[breakpointName]).filter(Boolean);
+  const filteredBreakpoints = rawBreakpointNames.map((breakpointName) => breakpoints[breakpointName]).filter(Boolean);
   const mediaQuery = filteredBreakpoints
-    .map(breakpoint => fromBreakpointToMedia(breakpoint, strict))
+    .map((breakpoint) => fromBreakpointToMedia(breakpoint, strict))
     .filter(Boolean)
     .join(",");
   if (!mediaQuery) {
