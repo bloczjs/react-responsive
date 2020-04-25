@@ -10,9 +10,7 @@ export interface MatchChildProps {
 
 type Element = React.ReactElement<MatchChildProps & any, string | React.ComponentType<MatchChildProps & any>> | null;
 
-type ParseChildren = (element: Element) => Element;
-
-const parseChildren: ParseChildren = element => {
+const parseChildren = (element: Element): Element => {
   if (!element || !element.props) {
     return element;
   }
@@ -21,7 +19,7 @@ const parseChildren: ParseChildren = element => {
   if (!_children) {
     return null;
   }
-  const children: Element[] = React.Children.map<Element, Element>(_children, parseChildren);
+  const children = React.Children.map(_children, parseChildren);
   const { only, matchMedia, strict, ...props } = element.props;
   const clone = React.createElement(element.type, props, children);
   if (!only && !matchMedia) {

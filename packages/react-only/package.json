@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
   "devDependencies": {
-    "@types/react": "^16.8.0",
+    "@types/react": "^16.9.34",
     "microbundle": "0.12.0-next.6"
   },
   "peerDependencies": {
