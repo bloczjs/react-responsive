@@ -27,3 +27,6 @@ jobs:
         run: |
           yarn test
         working-directory: ./packages/tests
+      - name: Check linting + types
+        run: |
+          yarn lint
