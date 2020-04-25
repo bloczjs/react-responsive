@@ -16,7 +16,7 @@ const inline = new Set(["</b>", "</span>"]);
 const prettify = (input: string) =>
   input
     .replace(/<[^/>]*>/g, ``) // opening tag
-    .replace(/<\/[^>]*>/g, match =>
+    .replace(/<\/[^>]*>/g, (match) =>
       inline.has(match) ? ` ` : `\n\n`,
     ) // closing tag
     .replace(/\n\n+/g, "\n\n")
@@ -25,7 +25,7 @@ const prettify = (input: string) =>
     .replace(/&gt;/g, ">");
 
 const wait = (ms: number) =>
-  new Promise(res => setTimeout(res, ms));
+  new Promise((res) => setTimeout(res, ms));
 
 it("Should render in SSR", async () => {
   for (const size of sizes) {
