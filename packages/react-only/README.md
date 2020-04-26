@@ -28,13 +28,13 @@ If you need a responsive layout and adaptive components, `react-only` is here fo
     3.  [Match Media Queries](#match-media-queries)
     4.  [Render as component](#render-as-component)
     5.  [Strict mode](#strict-mode)
-2.  [`<Match>`](#match)
+2.  [`Hooks`](#hooks)
+    1.  [`useOnly()`](#useonly)
+    2.  [`useQuery()`](#usequery)
+3.  [`<Match>`](#match)
     1.  [`only` and `matchMedia` props](#only-and-matchmedia-props)
     2.  [Use a custom component in Match](#use-a-custom-component-in-match)
     3.  [TypeScript support](#typescript-support)
-3.  [`Hooks`](#hooks)
-    1.  [`useOnly()`](#useonly)
-    2.  [`useQuery()`](#usequery)
 4.  [`<BreakpointsProvider>`](#breakpointsprovider)
     1.  [Add more breakpoints](#add-more-breakpoints)
     2.  [Change default breakpoints](#change-default-breakpoints)
@@ -199,99 +199,6 @@ const App = () => (
 );
 ```
 
-### `<Match>`
-
-### `only` and `matchMedia` props
-
-The `Match` will look into every props of its children (and event nested children) to detect `only`, `matchMedia` and `strict` props. If one of those is found, it will wrap this component inside a `Only` component will match `only` with `on` and `matchMedia` and `strict` to theirself.
-
-```javascript
-import React from "react";
-import { Only, Match } from "react-only";
-
-const App = () => (
-  <Match>
-    <div only="xs">xs</div>
-    <div only="sm">sm</div>
-    <div only="md">md</div>
-    <div only="lg" strict>
-      strict lg
-    </div>
-    <div only="xl">xl</div>
-    <div>
-      <div>
-        <div>
-          <div only="smDown">nested smDown</div>
-        </div>
-      </div>
-    </div>
-    <div matchMedia="(min-width:768px) and (max-width:992px),(max-width:576px)">
-      {"(min-width:768px) and (max-width:992px),(max-width:576px)"}
-    </div>
-  </Match>
-);
-```
-
-### Use a custom component in Match
-
-You can also render the `Match` component as another one:
-
-```javascript
-import React from "react";
-import { Only, Match } from "react-only";
-
-const App = () => (
-  <Match as="ul">
-    <li only="xs">xs</li>
-    <li only="sm">sm</li>
-    <li only="md">md</li>
-    <li only="lg">lg</li>
-    <li only="xl">xl</li>
-  </Match>
-);
-```
-
-### TypeScript support
-
-⚠️ There is currently no full TypeScript support for the `Match` component,
-for now you can only use components as children and not DOM elements:
-
-```tsx
-import * as React from "react";
-import { Match, MatchChildProps } from "react-only";
-
-interface CustomProps extends MatchChildProps {
-  title: string;
-}
-
-const Custom: React.FunctionComponent<CustomProps> = ({ title, children }) => (
-  <React.Fragment>
-    <h3>{title}</h3>
-    <p>{children}</p>
-  </React.Fragment>
-);
-
-const App = () => (
-  <Match>
-    <Custom only="xs" title="xs">
-      xs
-    </Custom>
-    <Custom only="sm" title="sm">
-      sm
-    </Custom>
-    <Custom only="md" title="md">
-      md
-    </Custom>
-    <Custom only="lg" title="lg">
-      lg
-    </Custom>
-    <Custom only="xl" title="xl">
-      xl
-    </Custom>
-  </Match>
-);
-```
-
 ### Hooks
 
 #### `useOnly()`
@@ -328,6 +235,102 @@ const App = () => {
   const matchMediaQuery = useQuery("(min-width:768px) and (max-width:992px),(max-width:576px)");
   return <ul>{matchMediaQuery && <li>Visible at (min-width:768px) and (max-width:992px),(max-width:576px)</li>}</ul>;
 };
+```
+
+### `<Match>`
+
+#### `only` and `matchMedia` props
+
+The `Match` will look into every props of its children (and event nested children) to detect `only`, `matchMedia` and `strict` props. If one of those is found, it will wrap this component inside a `Only` component will match `only` with `on` and `matchMedia` and `strict` to theirself.
+
+```javascript
+import React from "react";
+import { Only, Match } from "react-only";
+
+const App = () => (
+  <Match>
+    <div only="xs">xs</div>
+    <div only="sm">sm</div>
+    <div only="md">md</div>
+    <div only="lg" strict>
+      strict lg
+    </div>
+    <div only="xl">xl</div>
+    <div>
+      <div>
+        <div>
+          <div only="smDown">nested smDown</div>
+        </div>
+      </div>
+    </div>
+    <div matchMedia="(min-width:768px) and (max-width:992px),(max-width:576px)">
+      {"(min-width:768px) and (max-width:992px),(max-width:576px)"}
+    </div>
+  </Match>
+);
+```
+
+#### Use a custom component in Match
+
+You can also render the `Match` component as another one:
+
+```javascript
+import React from "react";
+import { Only, Match } from "react-only";
+
+const App = () => (
+  <Match as="ul">
+    <li only="xs">xs</li>
+    <li only="sm">sm</li>
+    <li only="md">md</li>
+    <li only="lg">lg</li>
+    <li only="xl">xl</li>
+  </Match>
+);
+```
+
+#### TypeScript support
+
+**This library is fully written in TypeScript.**
+
+⚠️ But there is currently no full TypeScript support for the `Match` component when it is used **with DOM elements**.
+For now you can only use `Match` with custom components as children:
+
+```tsx
+import * as React from "react";
+import { Match, MatchChildProps } from "react-only";
+
+// MatchChildProps includes the props `only` and `matchMedia`
+interface CustomProps extends MatchChildProps {
+  title: string;
+}
+
+const Custom: React.FunctionComponent<CustomProps> = ({ title, children }) => (
+  <React.Fragment>
+    <h3>{title}</h3>
+    <p>{children}</p>
+  </React.Fragment>
+);
+
+const App = () => (
+  <Match>
+    <Custom only="xs" title="xs">
+      xs
+    </Custom>
+    <Custom only="sm" title="sm">
+      sm
+    </Custom>
+    <Custom only="md" title="md">
+      md
+    </Custom>
+    <Custom only="lg" title="lg">
+      lg
+    </Custom>
+    <Custom only="xl" title="xl">
+      xl
+    </Custom>
+  </Match>
+);
 ```
 
 ### `<BreakpointsProvider>`
