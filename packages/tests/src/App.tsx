@@ -1,10 +1,10 @@
-import React from "react";
+import * as React from "react";
 import { BreakpointsProvider } from "react-only";
 
 import List from "./List";
 import Custom from "./Custom";
 import Match from "./Match";
-import CustomMatch from "./CustomMatch";
+import CustomMatch from "./MatchCustom";
 import Hook from "./Hook";
 import Height from "./Height";
 
