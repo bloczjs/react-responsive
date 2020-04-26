@@ -41,6 +41,7 @@ If you need a responsive layout and adaptive components, `react-only` is here fo
     3.  [Units](#units)
 5.  [Comparison to other libraries](#comparison-to-other-libraries)
 6.  [`matchMedia` polyfill](#matchmedia-polyfill)
+7.  [FAQ](#faq)
 
 ### `<Only>`
 
@@ -439,6 +440,10 @@ If you are on want to use matchMedia on browser that don’t support it, I’d r
 If you want to mock `matchMedia` on Node to execute tests for instance, you can use [`mock-match-media`](https://github.com/Ayc0/mock-match-media/).
 
 And if you need an example with `Jest`, `@testing-library/react`, `React` and `react-only`, you can take a look at [these tests](https://github.com/Ayc0/react-only/blob/master/packages/tests/src/__tests__/ssr.ts).
+
+### FAQ
+
+For other questions, please take a look at our [FAQ document](https://github.com/Ayc0/react-only/blob/master/FAQ.md).
 
 [0]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
 [1]: https://nodejs.org/api/documentation.html#documentation_stability_index
