@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { Match } from "react-only";
 
 export default () => (

@@ -49,7 +49,7 @@ export interface ExposedBreakpoints {
 export type Breakpoint = [number, number, Units, Directions];
 
 export interface Breakpoints {
-  [key: string]: Breakpoint;
+  [breakpoint: string]: Breakpoint;
 }
 
 export const sanitize = (inBreakpoints: ExposedBreakpoints) => {

@@ -28,19 +28,23 @@ If you need a responsive layout and adaptive components, `react-only` is here fo
     3.  [Match Media Queries](#match-media-queries)
     4.  [Render as component](#render-as-component)
     5.  [Strict mode](#strict-mode)
-2.  [`<Match>`](#match)
+2.  [`Hooks`](#hooks)
+    1.  [`useOnly()`](#useonly)
+    2.  [`useQuery()`](#usequery)
+3.  [`<Match>`](#match)
     1.  [`only` and `matchMedia` props](#only-and-matchmedia-props)
     2.  [Use a custom component in Match](#use-a-custom-component-in-match)
     3.  [TypeScript support](#typescript-support)
-3.  [`Hooks`](#hooks)
-    1.  [`useOnly()`](#useonly)
-    2.  [`useQuery()`](#usequery)
 4.  [`<BreakpointsProvider>`](#breakpointsprovider)
     1.  [Add more breakpoints](#add-more-breakpoints)
     2.  [Change default breakpoints](#change-default-breakpoints)
     3.  [Units](#units)
-5.  [Comparison to other libraries](#comparison-to-other-libraries)
-6.  [`matchMedia` polyfill](#matchmedia-polyfill)
+5.  [CSS in JS](#css-in-js)
+    1.  [`toJSON`](#tojson)
+    2.  [`toCSS`](#tocss)
+6.  [Comparison to other libraries](#comparison-to-other-libraries)
+7.  [`matchMedia` polyfill](#matchmedia-polyfill)
+8.  [FAQ](#faq)
 
 ### `<Only>`
 
@@ -198,99 +202,6 @@ const App = () => (
 );
 ```
 
-### `<Match>`
-
-### `only` and `matchMedia` props
-
-The `Match` will look into every props of its children (and event nested children) to detect `only`, `matchMedia` and `strict` props. If one of those is found, it will wrap this component inside a `Only` component will match `only` with `on` and `matchMedia` and `strict` to theirself.
-
-```javascript
-import React from "react";
-import { Only, Match } from "react-only";
-
-const App = () => (
-  <Match>
-    <div only="xs">xs</div>
-    <div only="sm">sm</div>
-    <div only="md">md</div>
-    <div only="lg" strict>
-      strict lg
-    </div>
-    <div only="xl">xl</div>
-    <div>
-      <div>
-        <div>
-          <div only="smDown">nested smDown</div>
-        </div>
-      </div>
-    </div>
-    <div matchMedia="(min-width:768px) and (max-width:992px),(max-width:576px)">
-      {"(min-width:768px) and (max-width:992px),(max-width:576px)"}
-    </div>
-  </Match>
-);
-```
-
-### Use a custom component in Match
-
-You can also render the `Match` component as another one:
-
-```javascript
-import React from "react";
-import { Only, Match } from "react-only";
-
-const App = () => (
-  <Match as="ul">
-    <li only="xs">xs</li>
-    <li only="sm">sm</li>
-    <li only="md">md</li>
-    <li only="lg">lg</li>
-    <li only="xl">xl</li>
-  </Match>
-);
-```
-
-### TypeScript support
-
-⚠️ There is currently no full TypeScript support for the `Match` component,
-for now you can only use components as children and not DOM elements:
-
-```tsx
-import * as React from "react";
-import { Match, MatchChildProps } from "react-only";
-
-interface CustomProps extends MatchChildProps {
-  title: string;
-}
-
-const Custom: React.FunctionComponent<CustomProps> = ({ title, children }) => (
-  <React.Fragment>
-    <h3>{title}</h3>
-    <p>{children}</p>
-  </React.Fragment>
-);
-
-const App = () => (
-  <Match>
-    <Custom only="xs" title="xs">
-      xs
-    </Custom>
-    <Custom only="sm" title="sm">
-      sm
-    </Custom>
-    <Custom only="md" title="md">
-      md
-    </Custom>
-    <Custom only="lg" title="lg">
-      lg
-    </Custom>
-    <Custom only="xl" title="xl">
-      xl
-    </Custom>
-  </Match>
-);
-```
-
 ### Hooks
 
 #### `useOnly()`
@@ -327,6 +238,102 @@ const App = () => {
   const matchMediaQuery = useQuery("(min-width:768px) and (max-width:992px),(max-width:576px)");
   return <ul>{matchMediaQuery && <li>Visible at (min-width:768px) and (max-width:992px),(max-width:576px)</li>}</ul>;
 };
+```
+
+### `<Match>`
+
+#### `only` and `matchMedia` props
+
+The `Match` will look into every props of its children (and event nested children) to detect `only`, `matchMedia` and `strict` props. If one of those is found, it will wrap this component inside a `Only` component will match `only` with `on` and `matchMedia` and `strict` to theirself.
+
+```javascript
+import React from "react";
+import { Only, Match } from "react-only";
+
+const App = () => (
+  <Match>
+    <div only="xs">xs</div>
+    <div only="sm">sm</div>
+    <div only="md">md</div>
+    <div only="lg" strict>
+      strict lg
+    </div>
+    <div only="xl">xl</div>
+    <div>
+      <div>
+        <div>
+          <div only="smDown">nested smDown</div>
+        </div>
+      </div>
+    </div>
+    <div matchMedia="(min-width:768px) and (max-width:992px),(max-width:576px)">
+      {"(min-width:768px) and (max-width:992px),(max-width:576px)"}
+    </div>
+  </Match>
+);
+```
+
+#### Use a custom component in Match
+
+You can also render the `Match` component as another one:
+
+```javascript
+import React from "react";
+import { Only, Match } from "react-only";
+
+const App = () => (
+  <Match as="ul">
+    <li only="xs">xs</li>
+    <li only="sm">sm</li>
+    <li only="md">md</li>
+    <li only="lg">lg</li>
+    <li only="xl">xl</li>
+  </Match>
+);
+```
+
+#### TypeScript support
+
+**This library is fully written in TypeScript.**
+
+⚠️ But there is currently no full TypeScript support for the `Match` component when it is used **with DOM elements**.
+For now you can only use `Match` with custom components as children:
+
+```tsx
+import * as React from "react";
+import { Match, MatchChildProps } from "react-only";
+
+// MatchChildProps includes the props `only` and `matchMedia`
+interface CustomProps extends MatchChildProps {
+  title: string;
+}
+
+const Custom: React.FunctionComponent<CustomProps> = ({ title, children }) => (
+  <React.Fragment>
+    <h3>{title}</h3>
+    <p>{children}</p>
+  </React.Fragment>
+);
+
+const App = () => (
+  <Match>
+    <Custom only="xs" title="xs">
+      xs
+    </Custom>
+    <Custom only="sm" title="sm">
+      sm
+    </Custom>
+    <Custom only="md" title="md">
+      md
+    </Custom>
+    <Custom only="lg" title="lg">
+      lg
+    </Custom>
+    <Custom only="xl" title="xl">
+      xl
+    </Custom>
+  </Match>
+);
 ```
 
 ### `<BreakpointsProvider>`
@@ -417,16 +424,98 @@ Every CSS units are supported.
 
 The default unit is `px`.
 
+### CSS in JS
+
+`react-only` includes 2 utility functions `toJSON` and `toCSS` so that you can re-use `react-only` breakpoints as media queries for `css-in-js` libraries.
+
+#### `toJSON`
+
+Example with [`styletron`](https://github.com/styletron/styletron):
+
+```jsx
+import React from "react";
+import { toJSON as createToJSON, BreakpointsContext } from "react-only";
+import { styled } from "styletron-react";
+
+const styles = {
+  mdDown: {
+    color: "red",
+    ":hover": { color: "blue" },
+  },
+  lgUp: {
+    color: "green",
+  },
+};
+
+const Panel = styled("div", (props) => ({
+  ...props.$toJSON(styles),
+}));
+
+const App = () => {
+  const breakpoints = React.useContext(BreakpointsContext);
+  const toJSON = createToJSON(breakpoints);
+  // toJSON(styles) returns:
+  // {
+  //   "@media  (max-width:991px)": {
+  //     "color": "red",
+  //     ":hover": {
+  //       "color": "blue"
+  //     }
+  //   },
+  //   "@media  (min-width:992px)": {
+  //     "color": "green"
+  //   }
+  // }
+  return <Panel $toJSON={toJSON}>content</Panel>;
+};
+```
+
+#### `toCSS`
+
+Example with [`emotion`](https://emotion.sh):
+
+```jsx
+import React from "react";
+import { toCSS as createToCSS, BreakpointsContext } from "react-only";
+import { css } from "emotion";
+
+const styles = {
+  mdDown: {
+    color: "red",
+    ":hover": { color: "blue" },
+  },
+  lgUp: {
+    color: "green",
+  },
+};
+
+const App = () => {
+  const breakpoints = React.useContext(BreakpointsContext);
+  const toCSS = createToCSS(breakpoints);
+  // toCSS(styles) returns:
+  // `@media  (max-width:991px) {
+  //   color: red;
+  //   :hover {
+  //     color: blue;
+  //   }
+  // }
+  // @media  (min-width:992px) {
+  //   color: green;
+  // }`
+  return <div className={css(toCSS(styles))}>content</div>;
+};
+```
+
 ### Comparison to other libraries
 
-| Lib                                                                                        | Breakpoints | Custom breakpoints | Media query | `resize` event' | hooks | SSR support |
-| ------------------------------------------------------------------------------------------ | ----------: | -----------------: | ----------: | --------------: | ----: | ----------: |
-| [react-only](https://www.npmjs.com/package/react-only)                                     |          ✅ |                 ✅ |          ✅ |              ❌ |    ✅ |          ✅ |
-| [react-responsive](https://www.npmjs.com/package/react-responsive)                         |          ❌ |                 ❌ |          ✅ |              ❌ |    ✅ |          ✅ |
-| [react-breakpoints](https://www.npmjs.com/package/react-breakpoints)                       |          ✅ |                 ✅ |          ❌ |              ✅ |    ❌ |          ✅ |
-| [react-responsive-breakpoints](https://www.npmjs.com/package/react-responsive-breakpoints) |          ✅ |                 ❌ |          ❌ |              ✅ |    ❌ |          ❌ |
+| Lib                                                                                        | Breakpoints | Custom breakpoints | Media query | `matchMedia` listener' | hooks | SSR support |
+| ------------------------------------------------------------------------------------------ | ----------: | -----------------: | ----------: | ---------------------: | ----: | ----------: |
+| [react-only](https://www.npmjs.com/package/react-only)                                     |          ✅ |                 ✅ |          ✅ |                     ✅ |    ✅ |          ✅ |
+| [react-responsive](https://www.npmjs.com/package/react-responsive)                         |          ❌ |                 ❌ |          ✅ |                     ✅ |    ✅ |          ✅ |
+| [react-breakpoints](https://www.npmjs.com/package/react-breakpoints)                       |          ✅ |                 ✅ |          ❌ |                     ❌ |    ❌ |          ✅ |
+| [react-responsive-breakpoints](https://www.npmjs.com/package/react-responsive-breakpoints) |          ✅ |                 ❌ |          ❌ |                     ❌ |    ❌ |          ❌ |
 
-': `resize` event means that the library is built around `window.addEventListener('resize', callback)` and not `matchMedia.addListener(callback)`
+': `matchMedia` listener event means that the library is built around `matchMedia.addListener(callback)` and not `window.addEventListener('resize', callback)` (which is faster because the callback is only triggered when the media query's state changes and not at every resize).
 
 ### `matchMedia` polyfill
 
@@ -439,6 +528,10 @@ If you are on want to use matchMedia on browser that don’t support it, I’d r
 If you want to mock `matchMedia` on Node to execute tests for instance, you can use [`mock-match-media`](https://github.com/Ayc0/mock-match-media/).
 
 And if you need an example with `Jest`, `@testing-library/react`, `React` and `react-only`, you can take a look at [these tests](https://github.com/Ayc0/react-only/blob/master/packages/tests/src/__tests__/ssr.ts).
+
+### FAQ
+
+For other questions, please take a look at our [FAQ document](https://github.com/Ayc0/react-only/blob/master/FAQ.md).
 
 [0]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
 [1]: https://nodejs.org/api/documentation.html#documentation_stability_index

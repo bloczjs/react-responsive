@@ -85,6 +85,18 @@ isBigDown: true
 
 isBigUp: false
 
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
 "
 `;
 
@@ -177,6 +189,18 @@ isBigDown: true
 
 isBigUp: false
 
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
 <Only>
 
 Only visible for small devices (landscape phones)
@@ -265,6 +289,18 @@ isBigDown: true
 
 isBigUp: false
 
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
 "
 `;
 
@@ -351,87 +387,17 @@ isBigDown: true
 
 isBigUp: false
 
-<Only>
-
-Only visible for medium devices (tablets)
-
-Custom component
-
-md
-
-Only visible for medium devices (tablets)
-
-<Match>
-
-md
-
-(min-width:768px) and (max-width:992px),(max-width:576px)
-
-mdUp
-
-Custom component used as Match's children
-
-md
-
-md
-
-useOnly()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: true
-
-isMdDown: true
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: true
-
-isLgUp: false
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): true
-
-wrong breakpoint: undefined
-
-wrong media query: false
-
-useOnly() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
 
 <Only>
 
@@ -514,6 +480,112 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
+<Only>
+
+Only visible for medium devices (tablets)
+
+Custom component
+
+md
+
+Only visible for medium devices (tablets)
+
+<Match>
+
+md
+
+(min-width:768px) and (max-width:992px),(max-width:576px)
+
+mdUp
+
+Custom component used as Match's children
+
+md
+
+md
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
 
 "
 `;
@@ -599,85 +671,17 @@ isBigDown: true
 
 isBigUp: false
 
-<Only>
-
-Only visible for large devices (desktops)
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-<Match>
-
-lg
-
-mdUp
-
-Custom component used as Match's children
-
-lg
-
-lg
-
-useOnly()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: undefined
-
-wrong media query: false
-
-useOnly() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
 
 <Only>
 
@@ -759,6 +763,18 @@ isBigDown: true
 
 isBigUp: false
 
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
 <Only>
 
 Only visible for large devices (desktops)
@@ -838,6 +854,110 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
+<Only>
+
+Only visible for large devices (desktops)
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+<Match>
+
+lg
+
+mdUp
+
+Custom component used as Match's children
+
+lg
+
+lg
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
 
 "
 `;
@@ -929,91 +1049,17 @@ isBigDown: true
 
 isBigUp: true
 
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-<Match>
-
-xl
-
-mdUp
-
-Custom component used as Match's children
-
-xl
-
-xl
-
-useOnly()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: undefined
-
-wrong media query: false
-
-useOnly() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
 
 <Only>
 
@@ -1101,91 +1147,17 @@ isBigDown: true
 
 isBigUp: true
 
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-<Match>
-
-xl
-
-mdUp
-
-Custom component used as Match's children
-
-xl
-
-xl
-
-useOnly()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: undefined
-
-wrong media query: false
-
-useOnly() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
 
 <Only>
 
@@ -1272,6 +1244,214 @@ isBig: true
 isBigDown: true
 
 isBigUp: true
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+
+xl
+
+mdUp
+
+Custom component used as Match's children
+
+xl
+
+xl
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+
+xl
+
+mdUp
+
+Custom component used as Match's children
+
+xl
+
+xl
+
+useOnly()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: undefined
+
+wrong media query: false
+
+useOnly() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
 
 "
 `;

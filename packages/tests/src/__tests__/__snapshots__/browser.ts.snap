@@ -85,7 +85,29 @@ isBig: false
 
 isBigDown: true
 
-isBigUp: false"
+isBigUp: false
+
+{
+
+    \\"@media  (max-width:991px)\\": {
+
+        \\"color\\": \\"red\\",
+
+        \\":hover\\": {
+
+            \\"color\\": \\"blue\\"
+
+        }
+
+    },
+
+    \\"@media  (min-width:992px)\\": {
+
+        \\"color\\": \\"green\\"
+
+    }
+
+}"
 `;
 
 exports[`browser test 2`] = `
@@ -179,7 +201,29 @@ isBig: false
 
 isBigDown: true
 
-isBigUp: false"
+isBigUp: false
+
+{
+
+    \\"@media  (max-width:991px)\\": {
+
+        \\"color\\": \\"red\\",
+
+        \\":hover\\": {
+
+            \\"color\\": \\"blue\\"
+
+        }
+
+    },
+
+    \\"@media  (min-width:992px)\\": {
+
+        \\"color\\": \\"green\\"
+
+    }
+
+}"
 `;
 
 exports[`browser test 3`] = `
@@ -269,7 +313,29 @@ isBig: false
 
 isBigDown: true
 
-isBigUp: false"
+isBigUp: false
+
+{
+
+    \\"@media  (max-width:991px)\\": {
+
+        \\"color\\": \\"red\\",
+
+        \\":hover\\": {
+
+            \\"color\\": \\"blue\\"
+
+        }
+
+    },
+
+    \\"@media  (min-width:992px)\\": {
+
+        \\"color\\": \\"green\\"
+
+    }
+
+}"
 `;
 
 exports[`browser test 4`] = `
@@ -355,7 +421,29 @@ isBig: false
 
 isBigDown: true
 
-isBigUp: false"
+isBigUp: false
+
+{
+
+    \\"@media  (max-width:991px)\\": {
+
+        \\"color\\": \\"red\\",
+
+        \\":hover\\": {
+
+            \\"color\\": \\"blue\\"
+
+        }
+
+    },
+
+    \\"@media  (min-width:992px)\\": {
+
+        \\"color\\": \\"green\\"
+
+    }
+
+}"
 `;
 
 exports[`browser test 5`] = `
@@ -445,5 +533,27 @@ isBig: true
 
 isBigDown: true
 
-isBigUp: true"
+isBigUp: true
+
+{
+
+    \\"@media  (max-width:991px)\\": {
+
+        \\"color\\": \\"red\\",
+
+        \\":hover\\": {
+
+            \\"color\\": \\"blue\\"
+
+        }
+
+    },
+
+    \\"@media  (min-width:992px)\\": {
+
+        \\"color\\": \\"green\\"
+
+    }
+
+}"
 `;

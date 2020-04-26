@@ -3,7 +3,6 @@ import { fromBreakpointToMedia } from "./fromBreakpointToMedia";
 
 export const mediaQueryBuilder = (breakpoints: Breakpoints) => (on = "", strict?: boolean) => {
   if (!on) {
-    console.error("You have to set either the breakpoints of the media query");
     return "";
   }
   const rawBreakpointNames = on.split(" ");
