@@ -31,7 +31,7 @@
     "build:dev": "yarn -s build:microbundle --compress false",
     "build:microbundle": "microbundle --name $npm_package_name --globals react=React",
     "link:readme": "rm ../../README.md && ln -s packages/react-only/README.md ../..",
-    "prepublishOnly": "rm -rf lib && yarn -s build && yarn -s link:readme"
+    "prepublishOnly": "rm -rf lib && yarn -s build"
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
   "devDependencies": {
