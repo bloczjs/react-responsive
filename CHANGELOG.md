@@ -13,6 +13,10 @@
 <details>
   <summary>See detailed changelog</summary>
 
+#### 2.3.3
+
+- remove wrong dependency on `emotion`
+
 #### 2.3.2
 
 - add `toJSON` and `toCSS` for CSS-in-JS support
