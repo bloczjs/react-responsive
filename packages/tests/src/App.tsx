@@ -7,6 +7,7 @@ import Match from "./Match";
 import CustomMatch from "./MatchCustom";
 import Hook from "./Hook";
 import Height from "./Height";
+import CSSinJS from "./CSSinJS";
 
 const App = (
   <BreakpointsProvider
@@ -27,6 +28,8 @@ const App = (
     <Hook />
     <hr />
     <Height />
+    <hr />
+    <CSSinJS />
   </BreakpointsProvider>
 );
 
