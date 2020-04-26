@@ -8,9 +8,14 @@
 - add `useQuery`
 - drop `media` in `useOnly` **BREAKING CHANGE**
 - use Node 13 `exports` field
+- add `toJSON` and `toCSS` for CSS-in-JS support
 
 <details>
   <summary>See detailed changelog</summary>
+
+#### 2.3.2
+
+- add `toJSON` and `toCSS` for CSS-in-JS support
 
 #### 2.3.1
 
