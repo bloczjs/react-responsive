@@ -39,9 +39,12 @@ If you need a responsive layout and adaptive components, `react-only` is here fo
     1.  [Add more breakpoints](#add-more-breakpoints)
     2.  [Change default breakpoints](#change-default-breakpoints)
     3.  [Units](#units)
-5.  [Comparison to other libraries](#comparison-to-other-libraries)
-6.  [`matchMedia` polyfill](#matchmedia-polyfill)
-7.  [FAQ](#faq)
+5.  [CSS in JS](#css-in-js)
+    1.  [`toJSON`](#tojson)
+    2.  [`toCSS`](#tocss)
+6.  [Comparison to other libraries](#comparison-to-other-libraries)
+7.  [`matchMedia` polyfill](#matchmedia-polyfill)
+8.  [FAQ](#faq)
 
 ### `<Only>`
 
@@ -420,6 +423,88 @@ const App = () => (
 Every CSS units are supported.
 
 The default unit is `px`.
+
+### CSS in JS
+
+`react-only` includes 2 utility functions `toJSON` and `toCSS` so that you can re-use `react-only` breakpoints as media queries for `css-in-js` libraries.
+
+#### `toJSON`
+
+Example with [`styletron`](https://github.com/styletron/styletron):
+
+```jsx
+import React from "react";
+import { toJSON as createToJSON, BreakpointsContext } from "react-only";
+import { styled } from "styletron-react";
+
+const styles = {
+  mdDown: {
+    color: "red",
+    ":hover": { color: "blue" },
+  },
+  lgUp: {
+    color: "green",
+  },
+};
+
+const Panel = styled("div", (props) => ({
+  ...props.$toJSON(styles),
+}));
+
+const App = () => {
+  const breakpoints = React.useContext(BreakpointsContext);
+  const toJSON = createToJSON(breakpoints);
+  // toJSON(styles) returns:
+  // {
+  //   "@media  (max-width:991px)": {
+  //     "color": "red",
+  //     ":hover": {
+  //       "color": "blue"
+  //     }
+  //   },
+  //   "@media  (min-width:992px)": {
+  //     "color": "green"
+  //   }
+  // }
+  return <Panel $toJSON={toJSON}>content</Panel>;
+};
+```
+
+#### `toCSS`
+
+Example with [`emotion`](https://emotion.sh):
+
+```jsx
+import React from "react";
+import { toCSS as createToCSS, BreakpointsContext } from "react-only";
+import { css } from "emotion";
+
+const styles = {
+  mdDown: {
+    color: "red",
+    ":hover": { color: "blue" },
+  },
+  lgUp: {
+    color: "green",
+  },
+};
+
+const App = () => {
+  const breakpoints = React.useContext(BreakpointsContext);
+  const toCSS = createToCSS(breakpoints);
+  // toCSS(styles) returns:
+  // `@media  (max-width:991px) {
+  //   color: red;
+  //   :hover {
+  //     color: blue;
+  //   }
+  // }
+  // @media  (min-width:992px) {
+  //   color: green;
+  // }`
+  return <div className={css(toCSS(styles))}>content</div>;
+};
+```
 
 ### Comparison to other libraries
 
