@@ -447,7 +447,7 @@ const styles = {
   },
 };
 
-const Panel = styled("div", (props) => ({
+const Panel = styled("div", props => ({
   ...props.$toJSON(styles),
 }));
 
@@ -540,7 +540,7 @@ For other questions, please take a look at our [FAQ document](https://github.com
 [4]: http://img.shields.io/npm/dm/react-only.svg?style=flat-square
 [5]: https://npmjs.org/package/react-only
 [6]: https://img.shields.io/badge/code%20style-prettier-brightgreen.svg?style=flat-square
-[7]: https://github.com/airbnb/javascript
+[7]: https://prettier.io/
 [8]: https://img.shields.io/badge/speed-blazingly%20fast-orange.svg?style=flat-square
 [9]: https://twitter.com/acdlite/status/974390255393505280
 [10]: http://img.badgesize.io/https://unpkg.com/react-only/lib/react-only.js?compression=gzip&style=flat-square
