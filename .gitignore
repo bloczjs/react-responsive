@@ -21,3 +21,4 @@ pkg/
 .cache/
 cache/
 *_cache_*/
+.eslintcache
