@@ -1,5 +1,28 @@
 # Changelog
 
+## v3
+
+### 3.0
+
+- rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
+- `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid **BREAKING CHANGE**
+- Avoid sending a warning on react 17
+
+<details>
+  <summary>See detailed changelog</summary>
+
+#### 3.0.0
+
+- rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
+  - Those were renamed for 2 reasons:
+    1. `useOnly` isn’t really explicit
+    2. `useQuery` can be confused with react-query’s or apollo’s useQuery hooks
+- `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid. Instead it will directly use the correct value, and if the media query is invalid, it’ll return `false`. **BREAKING CHANGE**
+- Bump peerDependencies to allow for react 17
+- Drop support for node 10
+
+</details>
+
 ## v2
 
 ### 2.3
@@ -90,15 +113,15 @@
 
 #### 2.1.0
 
-- `useOnly` returns `undefined` before being initialized (no changes in `Only` and `Match`)
+- `useOnly` returns `undefined` before being initialized (no changes in `Only` and `Match`) **minor breaking change**
 
 </details>
 
 ### 2.0
 
 - Use React's context
-- Drop Preact support
-- Remove `toCSS`, `toJSON` and `toMediaQuery`
+- Drop Preact support **BREAKING CHANGE**
+- Remove `toCSS`, `toJSON` and `toMediaQuery` **BREAKING CHANGE**
 
 <details>
   <summary>See detailed changelog</summary>
@@ -109,7 +132,7 @@
 
 #### 2.0.0
 
-- Remove Preact support (won't be an issue with Preact X) **BREAKING CHANGE**
+- Remove Preact support (won't be an issue with Preact 10) **BREAKING CHANGE**
 - Use and expose `BreakpointsContext` instead of a class to store breakpoints
 - Remove `toCSS`, `toJSON` and `toMediaQuery` **BREAKING CHANGE**
 - Stop debouncing `isShown` because as it's a boolean, React isn't re-rendering if the same value is re-set
