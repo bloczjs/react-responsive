@@ -6,7 +6,7 @@
     "emotion": "^10.0.27",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-only": "link:packages/react-only",
+    "react-only": "2.3.3",
     "react-scripts": "3.4.1"
   },
   "scripts": {
