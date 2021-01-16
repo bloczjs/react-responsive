@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { useOnly } from "./useOnly";
-import { useQuery } from "./useQuery";
+import { useBreakpoint } from "./useBreakpoint";
+import { useMediaQuery } from "./useMediaQuery";
 
 export type OnlyProps<OtherProps = {}> = OtherProps & {
   strict?: boolean;
@@ -18,8 +18,8 @@ export function Only<OtherProps = {}>({
   children,
   ...props
 }: React.PropsWithChildren<OnlyProps<OtherProps>>) {
-  const matchOn = useOnly(on, strict);
-  const matchQuery = useQuery(matchMedia);
+  const matchOn = useBreakpoint(on, strict);
+  const matchQuery = useMediaQuery(matchMedia);
   const isShown = matchOn || matchQuery;
 
   if (!isShown) {
