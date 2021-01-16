@@ -1,7 +1,7 @@
 import { Breakpoints } from "./sanitize";
 import { fromBreakpointToMedia } from "./fromBreakpointToMedia";
 
-export const mediaQueryBuilder = (breakpoints: Breakpoints) => (on = "", strict?: boolean) => {
+export const mediaQueryBuilder = (breakpoints: Breakpoints) => (on = "", strict?: boolean): string => {
   if (!on) {
     return "";
   }

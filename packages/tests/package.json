@@ -20,7 +20,12 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "@typescript-eslint/consistent-type-assertions": "off",
+      "@typescript-eslint/no-redeclare": "off",
+      "@typescript-eslint/no-unused-expressions": "off"
+    }
   },
   "browserslist": {
     "production": [

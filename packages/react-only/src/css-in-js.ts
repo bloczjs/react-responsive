@@ -2,18 +2,19 @@ import { CSSProperties } from "react";
 import { Breakpoints } from "./sanitize";
 import { fromBreakpointToMedia } from "./fromBreakpointToMedia";
 
-type CSSinJS =
+type CSSinJSProperties =
   | CSSProperties
   | {
       [key: string]: CSSProperties;
     };
 
 interface Points {
-  [breakpoint: string]: CSSinJS;
+  [breakpoint: string]: CSSinJSProperties;
 }
 
-export const toJSON = (breakpoints: Breakpoints) => (points: Points) => {
-  const css: Record<string, CSSinJS> = {};
+type CSSinJS = Record<string, CSSinJSProperties>;
+export const toJSON = (breakpoints: Breakpoints) => (points: Points): CSSinJS => {
+  const css: CSSinJS = {};
   Object.keys(points).forEach((point) => {
     const breakpoint = breakpoints[point];
     if (!breakpoint) {
@@ -24,7 +25,7 @@ export const toJSON = (breakpoints: Breakpoints) => (points: Points) => {
   return css;
 };
 
-const stringify = (object: CSSinJS) => {
+const stringify = (object: CSSinJSProperties) => {
   let string = "";
   Object.entries(object).forEach(([key, value]) => {
     if (typeof value !== "object") {

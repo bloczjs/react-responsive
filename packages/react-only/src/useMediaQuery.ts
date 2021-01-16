@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const useMediaQuery = (mediaQuery?: string) => {
+export const useMediaQuery = (mediaQuery?: string): boolean => {
   const mediaQueryList = React.useMemo(() => matchMedia(mediaQuery || "-"), [mediaQuery]);
   const [isShown, setIsShown] = React.useState<boolean>(mediaQueryList.matches);
 

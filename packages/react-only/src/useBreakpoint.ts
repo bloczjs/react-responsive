@@ -6,7 +6,7 @@ import { mediaQueryBuilder } from "./mediaQueryBuilder";
 
 import { useMediaQuery } from "./useMediaQuery";
 
-export const useBreakpoint = (on?: string, strict?: boolean) => {
+export const useBreakpoint = (on?: string, strict?: boolean): boolean => {
   const breakpoints = React.useContext(BreakpointsContext);
   const toMediaQuery = React.useMemo(() => mediaQueryBuilder(breakpoints), [breakpoints]);
 

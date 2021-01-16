@@ -6,7 +6,7 @@ import {
   toJSON as toJSONBreapointless,
 } from "react-only";
 
-export default () => {
+export default function Sample() {
   const breakpoints = React.useContext(BreakpointsContext);
   const toCSS = toCSSBreapointless(breakpoints);
   const toJSON = toJSONBreapointless(breakpoints);
@@ -24,4 +24,4 @@ export default () => {
       {JSON.stringify(toJSON(styles), null, 4)}
     </pre>
   );
-};
+}
