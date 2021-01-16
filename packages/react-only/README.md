@@ -29,8 +29,8 @@ If you need a responsive layout and adaptive components, `react-only` is here fo
     4.  [Render as component](#render-as-component)
     5.  [Strict mode](#strict-mode)
 2.  [`Hooks`](#hooks)
-    1.  [`useOnly()`](#useonly)
-    2.  [`useQuery()`](#usequery)
+    1.  [`useBreakpoint()`](#usebreakpoint)
+    2.  [`useMediaQuery()`](#usemediaquery)
 3.  [`<Match>`](#match)
     1.  [`only` and `matchMedia` props](#only-and-matchmedia-props)
     2.  [Use a custom component in Match](#use-a-custom-component-in-match)
@@ -204,18 +204,18 @@ const App = () => (
 
 ### Hooks
 
-#### `useOnly()`
+#### `useBreakpoint()`
 
-`useOnly` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given breakpoint matches the current viewport.
+`useBreakpoint` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given breakpoint matches the current viewport.
 
 ```javascript
 import React from "react";
-import { useOnly } from "react-only";
+import { useBreakpoint } from "react-only";
 
 const App = () => {
-  const matchXl = useOnly("xl");
-  const matchMdDown = useOnly("mdDown");
-  const matchMdStrict = useOnly("md", true);
+  const matchXl = useBreakpoint("xl");
+  const matchMdDown = useBreakpoint("mdDown");
+  const matchMdStrict = useBreakpoint("md", true);
   return (
     <ul>
       {matchXl && <li>Visible on every "large" device</li>}
@@ -226,16 +226,16 @@ const App = () => {
 };
 ```
 
-#### `useQuery()`
+#### `useMediaQuery()`
 
-`useQuery` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given media query matches the current viewport.
+`useMediaQuery` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given media query matches the current viewport.
 
 ```javascript
 import React from "react";
-import { useQuery } from "react-only";
+import { useMediaQuery } from "react-only";
 
 const App = () => {
-  const matchMediaQuery = useQuery("(min-width:768px) and (max-width:992px),(max-width:576px)");
+  const matchMediaQuery = useMediaQuery("(min-width:768px) and (max-width:992px),(max-width:576px)");
   return <ul>{matchMediaQuery && <li>Visible at (min-width:768px) and (max-width:992px),(max-width:576px)</li>}</ul>;
 };
 ```
@@ -447,7 +447,7 @@ const styles = {
   },
 };
 
-const Panel = styled("div", props => ({
+const Panel = styled("div", (props) => ({
   ...props.$toJSON(styles),
 }));
 

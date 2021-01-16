@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { useOnly } from "react-only";
+import { useBreakpoint } from "react-only";
 
 const toString = (value: boolean | undefined) => {
   switch (value) {
@@ -14,19 +14,19 @@ const toString = (value: boolean | undefined) => {
 };
 
 const Height = () => {
-  const isThin = useOnly("thin");
-  const isNormal = useOnly("normal");
-  const isBig = useOnly("big");
-  const isThinUp = useOnly("thinUp");
-  const isNormalUp = useOnly("normalUp");
-  const isBigUp = useOnly("bigUp");
-  const isThinDown = useOnly("thinDown");
-  const isNormalDown = useOnly("normalDown");
-  const isBigDown = useOnly("bigDown");
+  const isThin = useBreakpoint("thin");
+  const isNormal = useBreakpoint("normal");
+  const isBig = useBreakpoint("big");
+  const isThinUp = useBreakpoint("thinUp");
+  const isNormalUp = useBreakpoint("normalUp");
+  const isBigUp = useBreakpoint("bigUp");
+  const isThinDown = useBreakpoint("thinDown");
+  const isNormalDown = useBreakpoint("normalDown");
+  const isBigDown = useBreakpoint("bigDown");
 
   return (
     <>
-      <h2>useOnly() with heights</h2>
+      <h2>useBreakpoint() with heights</h2>
       <p>
         <b>isThin: </b>
         <code>{toString(isThin)}</code>

@@ -15,7 +15,7 @@ const Custom: React.FunctionComponent<CustomProps> = ({
   </React.Fragment>
 );
 
-export default () => (
+export default function Sample() {return (
   <>
     <h2>Custom component used as Match's children</h2>
     <Match>
@@ -37,3 +37,4 @@ export default () => (
     </Match>
   </>
 );
+}

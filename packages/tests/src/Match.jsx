@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Match } from "react-only";
 
-export default () => (
+export default function Sample () {return (
   <>
     <h2>{"<Match>"}</h2>
     <Match>
@@ -29,3 +29,4 @@ export default () => (
     </Match>
   </>
 );
+}

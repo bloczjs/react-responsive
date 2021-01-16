@@ -52,7 +52,7 @@ export interface Breakpoints {
   [breakpoint: string]: Breakpoint;
 }
 
-export const sanitize = (inBreakpoints: ExposedBreakpoints) => {
+export const sanitize = (inBreakpoints: ExposedBreakpoints): Breakpoints => {
   return Object.keys(inBreakpoints).reduce<Breakpoints>((breakpoints, breakpointName) => {
     const breakpoint = inBreakpoints[breakpointName];
 

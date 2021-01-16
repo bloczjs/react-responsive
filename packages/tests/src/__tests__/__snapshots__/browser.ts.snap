@@ -29,7 +29,7 @@ xs
 
 xs
 
-useOnly()
+useBreakpoint()
 
 isXs: true
 
@@ -63,11 +63,11 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: undefined
+wrong breakpoint: false
 
 wrong media query: false
 
-useOnly() with heights
+useBreakpoint() with heights
 
 isThin: true
 
@@ -145,7 +145,7 @@ sm
 
 sm
 
-useOnly()
+useBreakpoint()
 
 isXs: false
 
@@ -179,11 +179,11 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: undefined
+wrong breakpoint: false
 
 wrong media query: false
 
-useOnly() with heights
+useBreakpoint() with heights
 
 isThin: false
 
@@ -257,7 +257,7 @@ md
 
 md
 
-useOnly()
+useBreakpoint()
 
 isXs: false
 
@@ -291,11 +291,11 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: undefined
+wrong breakpoint: false
 
 wrong media query: false
 
-useOnly() with heights
+useBreakpoint() with heights
 
 isThin: false
 
@@ -365,7 +365,7 @@ lg
 
 lg
 
-useOnly()
+useBreakpoint()
 
 isXs: false
 
@@ -399,11 +399,11 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: undefined
+wrong breakpoint: false
 
 wrong media query: false
 
-useOnly() with heights
+useBreakpoint() with heights
 
 isThin: false
 
@@ -477,7 +477,7 @@ xl
 
 xl
 
-useOnly()
+useBreakpoint()
 
 isXs: false
 
@@ -511,11 +511,11 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: undefined
+wrong breakpoint: false
 
 wrong media query: false
 
-useOnly() with heights
+useBreakpoint() with heights
 
 isThin: false
 

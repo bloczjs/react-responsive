@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { useOnly, useQuery } from "react-only";
+import { useBreakpoint, useMediaQuery } from "react-only";
 
 const toString = (value: boolean | undefined) => {
   switch (value) {
@@ -14,30 +14,30 @@ const toString = (value: boolean | undefined) => {
 };
 
 const Hook = () => {
-  const isXs = useOnly("xs");
-  const isSm = useOnly("sm");
-  const isMd = useOnly("md");
-  const isLg = useOnly("lg");
-  const isXl = useOnly("xl");
-  const isXsUp = useOnly("xsUp");
-  const isSmUp = useOnly("smUp");
-  const isMdUp = useOnly("mdUp");
-  const isLgUp = useOnly("lgUp");
-  const isXlUp = useOnly("xlUp");
-  const isXsDown = useOnly("xsDown");
-  const isSmDown = useOnly("smDown");
-  const isMdDown = useOnly("mdDown");
-  const isLgDown = useOnly("lgDown");
-  const isXlDown = useOnly("xlDown");
-  const isMedia = useQuery(
+  const isXs = useBreakpoint("xs");
+  const isSm = useBreakpoint("sm");
+  const isMd = useBreakpoint("md");
+  const isLg = useBreakpoint("lg");
+  const isXl = useBreakpoint("xl");
+  const isXsUp = useBreakpoint("xsUp");
+  const isSmUp = useBreakpoint("smUp");
+  const isMdUp = useBreakpoint("mdUp");
+  const isLgUp = useBreakpoint("lgUp");
+  const isXlUp = useBreakpoint("xlUp");
+  const isXsDown = useBreakpoint("xsDown");
+  const isSmDown = useBreakpoint("smDown");
+  const isMdDown = useBreakpoint("mdDown");
+  const isLgDown = useBreakpoint("lgDown");
+  const isXlDown = useBreakpoint("xlDown");
+  const isMedia = useMediaQuery(
     "(min-width:768px) and (max-width:992px),(max-width:576px)",
   );
-  const isWrongBreakpoint = useOnly("wrong");
-  const isWrongMedia = useQuery("wrong");
+  const isWrongBreakpoint = useBreakpoint("wrong");
+  const isWrongMedia = useMediaQuery("wrong");
 
   return (
     <>
-      <h2>useOnly()</h2>
+      <h2>useBreakpoint()</h2>
       <p>
         <b>isXs: </b>
         <code>{toString(isXs)}</code>

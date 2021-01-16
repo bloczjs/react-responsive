@@ -35,10 +35,10 @@
   },
   "homepage": "https://github.com/Ayc0/react-only#readme",
   "devDependencies": {
-    "@types/react": "^16.9.34",
-    "microbundle": "0.12.0-next.6"
+    "@types/react": "^17.0.0",
+    "microbundle": "0.13.0"
   },
   "peerDependencies": {
-    "react": "^16.8.0"
+    "react": "16.8.0 - 17.x.x"
   }
 }
