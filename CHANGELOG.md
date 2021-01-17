@@ -7,11 +7,31 @@
 - rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
 - `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid **BREAKING CHANGE**
 - Avoid sending a warning on react 17
+- Remove prop `strict`
 
 <details>
   <summary>See detailed changelog</summary>
 
 #### 3.0.0
+
+- rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
+  - Those were renamed for 2 reasons:
+    1. `useOnly` isn’t really explicit
+    2. `useQuery` can be confused with react-query’s or apollo’s useQuery hooks
+- `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid. Instead it will directly use the correct value, and if the media query is invalid, it’ll return `false`. **BREAKING CHANGE**
+- Bump peerDependencies to allow for react 17
+- Drop support for node 10
+- Remove prop `strict`:
+  - This feature was initially introduced to avoid collision between `mdUp` and `smDown` for instance. But since we avoid the overlapping of breakpoints in the v1.0.1 and as this is customizable, this prop doesn't make sense anymore.
+  - This prop relied on `calc(% + 1px)` and `calc(% - 1px)` which has 2 issues:
+    - difficult to be compatible with SSR as for instance css-mediaquery crashes when we use `calc()` (see [issue](https://github.com/ericf/css-mediaquery/issues/19)),
+    - `1px` is really arbitrary and not customizable so anyway if someone wanted to change that, they had to use custom breakpoints.
+
+#### 3.0.0.beta.1
+
+- Remove prop `strict`
+
+#### 3.0.0.beta.0
 
 - rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
   - Those were renamed for 2 reasons:
