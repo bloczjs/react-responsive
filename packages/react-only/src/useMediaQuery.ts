@@ -1,7 +1,7 @@
 import * as React from "react";
 
-export const useMediaQuery = (mediaQuery?: string): boolean => {
-  const mediaQueryList = React.useMemo(() => matchMedia(mediaQuery || "-"), [mediaQuery]);
+export const useMediaQuery = (mediaQuery: string): boolean => {
+  const mediaQueryList = React.useMemo(() => matchMedia(mediaQuery), [mediaQuery]);
   const [isShown, setIsShown] = React.useState<boolean>(mediaQueryList.matches);
 
   React.useLayoutEffect(() => {

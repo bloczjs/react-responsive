@@ -12,5 +12,5 @@ export const useBreakpoint = (on?: string, strict?: boolean): boolean => {
 
   const mediaQuery = React.useMemo(() => toMediaQuery(on, strict), [toMediaQuery, on, strict]);
 
-  return useMediaQuery(mediaQuery);
+  return useMediaQuery(mediaQuery || "-");
 };

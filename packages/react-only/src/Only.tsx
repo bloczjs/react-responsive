@@ -19,7 +19,7 @@ export function Only<OtherProps = Record<string, never>>({
   ...props
 }: React.PropsWithChildren<OnlyProps<OtherProps>>): React.ReactElement | null {
   const matchOn = useBreakpoint(on, strict);
-  const matchQuery = useMediaQuery(matchMedia);
+  const matchQuery = useMediaQuery(matchMedia || "-");
   const isShown = matchOn || matchQuery;
 
   if (!isShown) {
