@@ -37,4 +37,4 @@ const stringify = (object: CSSinJSProperties) => {
   return string;
 };
 
-export const toCSS = (breakpoints: Breakpoints) => (points: Points) => stringify(toJSON(breakpoints)(points));
+export const toCSS = (breakpoints: Breakpoints) => (points: Points): string => stringify(toJSON(breakpoints)(points));
