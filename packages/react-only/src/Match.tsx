@@ -3,7 +3,6 @@ import * as React from "react";
 import { Only } from "./Only";
 
 export interface MatchChildProps {
-  strict?: boolean;
   matchMedia?: string;
   only?: string;
 }
@@ -20,13 +19,13 @@ const parseChildren = (element: Element): Element => {
     return null;
   }
   const children = React.Children.map(_children, parseChildren);
-  const { only, matchMedia, strict, ...props } = element.props;
+  const { only, matchMedia, ...props } = element.props;
   const clone = React.createElement(element.type, props, children);
   if (!only && !matchMedia) {
     return clone;
   }
   return (
-    <Only on={only || ""} matchMedia={matchMedia || ""} strict={strict}>
+    <Only on={only || ""} matchMedia={matchMedia || ""}>
       {clone}
     </Only>
   );

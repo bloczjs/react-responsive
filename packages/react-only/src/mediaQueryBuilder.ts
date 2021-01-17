@@ -1,14 +1,14 @@
 import { Breakpoints } from "./sanitize";
 import { fromBreakpointToMedia } from "./fromBreakpointToMedia";
 
-export const mediaQueryBuilder = (breakpoints: Breakpoints) => (on = "", strict?: boolean): string => {
+export const mediaQueryBuilder = (breakpoints: Breakpoints) => (on = ""): string => {
   if (!on) {
     return "";
   }
   const rawBreakpointNames = on.split(" ");
   const filteredBreakpoints = rawBreakpointNames.map((breakpointName) => breakpoints[breakpointName]).filter(Boolean);
   const mediaQuery = filteredBreakpoints
-    .map((breakpoint) => fromBreakpointToMedia(breakpoint, strict))
+    .map((breakpoint) => fromBreakpointToMedia(breakpoint))
     .filter(Boolean)
     .join(",");
   if (!mediaQuery) {

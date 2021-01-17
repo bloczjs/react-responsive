@@ -27,7 +27,6 @@ If you need a responsive layout and adaptive components, `react-only` is here fo
     2.  [Additional `Up` and `Down`](#additional-up-and-down)
     3.  [Match Media Queries](#match-media-queries)
     4.  [Render as component](#render-as-component)
-    5.  [Strict mode](#strict-mode)
 2.  [`Hooks`](#hooks)
     1.  [`useBreakpoint()`](#usebreakpoint)
     2.  [`useMediaQuery()`](#usemediaquery)
@@ -184,24 +183,6 @@ const App = () => (
 
 Note that any props except for `matchMedia`, `as` and `on` will be forwarded to the `as` props.
 
-#### Strict mode
-
-When `strict` is set in the props, the margins are offset by 1 px:
-
-```javascript
-import React from "react";
-import { Only } from "react-only";
-
-const App = () => (
-  <React.Fragment>
-    <Only on="xs">Only visible for range: [576px, 768px]</Only>
-    <Only on="xs" strict>
-      Only visible for range: [577px, 767px]
-    </Only>
-  </React.Fragment>
-);
-```
-
 ### Hooks
 
 #### `useBreakpoint()`
@@ -215,12 +196,12 @@ import { useBreakpoint } from "react-only";
 const App = () => {
   const matchXl = useBreakpoint("xl");
   const matchMdDown = useBreakpoint("mdDown");
-  const matchMdStrict = useBreakpoint("md", true);
+  const matchMdOrLg = useBreakpoint("md lg");
   return (
     <ul>
       {matchXl && <li>Visible on every "large" device</li>}
       {matchMdDown && <li>Visible on every device smaller or equal than "medium"</li>}
-      {matchMdStrict && <li>Visible on every strict "medium" device</li>}
+      {matchMdOrLg && <li>Visible on every "medium" or "large" device</li>}
     </ul>
   );
 };
@@ -244,7 +225,7 @@ const App = () => {
 
 #### `only` and `matchMedia` props
 
-The `Match` will look into every props of its children (and event nested children) to detect `only`, `matchMedia` and `strict` props. If one of those is found, it will wrap this component inside a `Only` component will match `only` with `on` and `matchMedia` and `strict` to theirself.
+The `Match` will look into every props of its children (and event nested children) to detect `only` and `matchMedia` props. If one of those is found, it will wrap the child in a `Only` component will those props auto-set.
 
 ```javascript
 import React from "react";
@@ -255,8 +236,8 @@ const App = () => (
     <div only="xs">xs</div>
     <div only="sm">sm</div>
     <div only="md">md</div>
-    <div only="lg" strict>
-      strict lg
+    <div only="sm lg">
+      sm and lg
     </div>
     <div only="xl">xl</div>
     <div>
