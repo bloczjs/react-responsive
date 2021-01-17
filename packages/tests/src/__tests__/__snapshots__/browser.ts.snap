@@ -5,7 +5,7 @@ exports[`browser test 1`] = `
 
 Only visible for extra small devices (portrait phones)
 
-Only visible for large or less (strict [0, 1200px[)
+Only visible for large or less ([0, 1200px])
 
 Custom component
 
@@ -117,9 +117,9 @@ Only visible for small devices (landscape phones)
 
 Only visible for small AND extra large devices
 
-Only visible for small and more (strict ]576px, Infinity[)
+Only visible for small and more ([576px, Infinity[)
 
-Only visible for large or less (strict [0, 1200px[)
+Only visible for large or less ([0, 1200px])
 
 Custom component
 
@@ -231,11 +231,9 @@ exports[`browser test 3`] = `
 
 Only visible for medium devices (tablets)
 
-Only visible for small and more (strict ]576px, Infinity[)
+Only visible for small and more ([576px, Infinity[)
 
-Only visible for medium (strict ]768px, 992px[)
-
-Only visible for large or less (strict [0, 1200px[)
+Only visible for large or less ([0, 1200px])
 
 Custom component
 
@@ -343,9 +341,9 @@ exports[`browser test 4`] = `
 
 Only visible for large devices (desktops)
 
-Only visible for small and more (strict ]576px, Infinity[)
+Only visible for small and more ([576px, Infinity[)
 
-Only visible for large or less (strict [0, 1200px[)
+Only visible for large or less ([0, 1200px])
 
 Custom component
 
@@ -453,7 +451,7 @@ Only visible for extra large devices (large desktops)
 
 Only visible for small AND extra large devices
 
-Only visible for small and more (strict ]576px, Infinity[)
+Only visible for small and more ([576px, Infinity[)
 
 Custom component
 

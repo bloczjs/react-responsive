@@ -5,6 +5,8 @@ exports[`Should render in SSR 1`] = `
 
 Only visible for extra small devices (portrait phones)
 
+Only visible for large or less ([0, 1200px])
+
 Custom component
 
 xs
@@ -107,6 +109,10 @@ Only visible for small devices (landscape phones)
 
 Only visible for small AND extra large devices
 
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
 Custom component
 
 sm
@@ -206,6 +212,10 @@ isBigUp: false
 Only visible for small devices (landscape phones)
 
 Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
 
 Custom component
 
@@ -309,99 +319,9 @@ exports[`Should render in SSR 3`] = `
 
 Only visible for medium devices (tablets)
 
-Custom component
+Only visible for small and more ([576px, Infinity[)
 
-md
-
-Only visible for medium devices (tablets)
-
-<Match>
-
-md
-
-(min-width:768px) and (max-width:992px),(max-width:576px)
-
-mdUp
-
-Custom component used as Match's children
-
-md
-
-md
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: true
-
-isMdDown: true
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: true
-
-isLgUp: false
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): true
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-{
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
- }
- },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
- }
-}
-
-<Only>
-
-Only visible for medium devices (tablets)
+Only visible for large or less ([0, 1200px])
 
 Custom component
 
@@ -496,6 +416,108 @@ isBigUp: false
 <Only>
 
 Only visible for medium devices (tablets)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+md
+
+Only visible for medium devices (tablets)
+
+<Match>
+
+md
+
+(min-width:768px) and (max-width:992px),(max-width:576px)
+
+mdUp
+
+Custom component used as Match's children
+
+md
+
+md
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
+<Only>
+
+Only visible for medium devices (tablets)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
 
 Custom component
 
@@ -595,97 +617,9 @@ exports[`Should render in SSR 4`] = `
 
 Only visible for large devices (desktops)
 
-Custom component
+Only visible for small and more ([576px, Infinity[)
 
-lg
-
-Only visible for large devices (desktops)
-
-<Match>
-
-lg
-
-mdUp
-
-Custom component used as Match's children
-
-lg
-
-lg
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-{
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
- }
- },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
- }
-}
-
-<Only>
-
-Only visible for large devices (desktops)
+Only visible for large or less ([0, 1200px])
 
 Custom component
 
@@ -779,6 +713,10 @@ isBigUp: false
 
 Only visible for large devices (desktops)
 
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
 Custom component
 
 lg
@@ -870,6 +808,106 @@ isBigUp: false
 <Only>
 
 Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+<Match>
+
+lg
+
+mdUp
+
+Custom component used as Match's children
+
+lg
+
+lg
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
 
 Custom component
 
@@ -969,103 +1007,7 @@ Only visible for extra large devices (large desktops)
 
 Only visible for small AND extra large devices
 
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-<Match>
-
-xl
-
-mdUp
-
-Custom component used as Match's children
-
-xl
-
-xl
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-{
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
- }
- },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
- }
-}
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
+Only visible for small and more ([576px, Infinity[)
 
 Custom component
 
@@ -1165,103 +1107,7 @@ Only visible for extra large devices (large desktops)
 
 Only visible for small AND extra large devices
 
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-<Match>
-
-xl
-
-mdUp
-
-Custom component used as Match's children
-
-xl
-
-xl
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-{
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
- }
- },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
- }
-}
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
+Only visible for small and more ([576px, Infinity[)
 
 Custom component
 
@@ -1360,6 +1206,208 @@ isBigUp: true
 Only visible for extra large devices (large desktops)
 
 Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+
+xl
+
+mdUp
+
+Custom component used as Match's children
+
+xl
+
+xl
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+<Match>
+
+xl
+
+mdUp
+
+Custom component used as Match's children
+
+xl
+
+xl
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+{
+ \\"@media (max-width:991px)\\": {
+ \\"color\\": \\"red\\",
+ \\":hover\\": {
+ \\"color\\": \\"blue\\"
+ }
+ },
+ \\"@media (min-width:992px)\\": {
+ \\"color\\": \\"green\\"
+ }
+}
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
 
 Custom component
 

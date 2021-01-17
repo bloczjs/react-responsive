@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Only } from "react-only";
 
-export default function Sample () {
-  return  (
+export default function Sample() {
+  return (
     <>
       <h2>{"<Only>"}</h2>
       <ul>
@@ -26,15 +26,12 @@ export default function Sample () {
         <Only as="li" on="sm xl">
           Only visible for small AND extra large devices
         </Only>
-        <Only as="li" on="smUp" strict>
-          Only visible for small and more (strict ]576px,
+        <Only as="li" on="smUp">
+          Only visible for small and more ([576px,
           Infinity[)
         </Only>
-        <Only as="li" on="md" strict>
-          Only visible for medium (strict ]768px, 992px[)
-        </Only>
-        <Only as="li" on="lgDown" strict>
-          Only visible for large or less (strict [0, 1200px[)
+        <Only as="li" on="lgDown">
+          Only visible for large or less ([0, 1200px])
         </Only>
       </ul>
     </>
