@@ -7,6 +7,7 @@
 - rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
 - `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid **BREAKING CHANGE**
 - Avoid sending a warning on react 17
+- Fix `only` and `matchMedia` props on DOM elements for the `Match` component
 - Remove prop `strict`
 
 <details>
@@ -26,6 +27,12 @@
   - This prop relied on `calc(% + 1px)` and `calc(% - 1px)` which has 2 issues:
     - difficult to be compatible with SSR as for instance css-mediaquery crashes when we use `calc()` (see [issue](https://github.com/ericf/css-mediaquery/issues/19)),
     - `1px` is really arbitrary and not customizable so anyway if someone wanted to change that, they had to use custom breakpoints.
+- Fix `only` and `matchMedia` props on DOM elements for the `Match` component
+  - Inject `MatchChildProps` in `HTMLAttributes` from the global namespace `React`
+
+#### 3.0.0.beta.2
+
+- Fix `only` and `matchMedia` props on DOM elements for the `Match` component
 
 #### 3.0.0.beta.1
 
