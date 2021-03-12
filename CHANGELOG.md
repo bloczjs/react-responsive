@@ -4,6 +4,7 @@
 
 ### 3.0
 
+- The package was renamed `@blocz/react-responsive` instead of `react-only`
 - rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
 - `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid **BREAKING CHANGE**
 - Avoid sending a warning on react 17
@@ -15,6 +16,7 @@
 
 #### 3.0.0
 
+- The package was renamed `@blocz/react-responsive` instead of `react-only`
 - rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
   - Those were renamed for 2 reasons:
     1. `useOnly` isn’t really explicit
@@ -32,6 +34,7 @@
 
 #### 3.0.0.beta.2
 
+- The package was renamed `@blocz/react-responsive` instead of `react-only`
 - Fix `only` and `matchMedia` props on DOM elements for the `Match` component
 
 #### 3.0.0.beta.1
