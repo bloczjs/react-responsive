@@ -7,6 +7,14 @@ export interface MatchChildProps {
   only?: string;
 }
 
+/* eslint-disable */
+declare global {
+  namespace React {
+    interface HTMLAttributes<T> extends MatchChildProps {}
+  }
+}
+/* eslint-enable */
+
 type Element = React.ReactElement<MatchChildProps & any, string | React.ComponentType<MatchChildProps & any>> | null;
 
 const parseChildren = (element: Element): Element => {

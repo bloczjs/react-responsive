@@ -21,7 +21,8 @@
     "css",
     "media-query",
     "react",
-    "responsive"
+    "responsive",
+    "react-responsive"
   ],
   "author": "Ayc0",
   "license": "MIT",

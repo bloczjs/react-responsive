@@ -35,7 +35,6 @@ If you need a responsive layout and adaptive components, `@blocz/react-responsiv
       3. [`<Match>`](#match)
          1. [`only` and `matchMedia` props](#only-and-matchmedia-props)
          2. [Use a custom component in Match](#use-a-custom-component-in-match)
-         3. [TypeScript support](#typescript-support)
       4. [`<BreakpointsProvider>`](#breakpointsprovider)
          1. [Add more breakpoints](#add-more-breakpoints)
          2. [Change default breakpoints](#change-default-breakpoints)
@@ -276,12 +275,8 @@ const App = () => (
 );
 ```
 
-#### TypeScript support
-
-**This library is fully written in TypeScript.**
-
-⚠️ But there is currently no full TypeScript support for the `Match` component when it is used **with DOM elements**.
-For now you can only use `Match` with custom components as children:
+If you’re using TypeScript, `Match` will work out of the box for native DOM elements.
+But if you want to use it for custom components, you’ll have to use the type `MatchChildProps`:
 
 ```tsx
 import * as React from "react";
