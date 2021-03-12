@@ -1,7 +1,3 @@
-## Why the name `react-only`?
-
-This library was initially named like because its initial purpose was to render certain components **only** on specific screen sizes. I wanted to use the name `react-responsive` or something like this but it was already taken 🤷.
-
 ## Why isn’t there an option to retrieve the current breakpoint?
 
 This is a bit hard to do and also it doesn’t really match this lib’s philosophy because breakpoints overlap each other.\

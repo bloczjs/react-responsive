@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Only } from "react-only";
+import { Only } from "@blocz/react-responsive";
 
 export default function Sample() {
   return (

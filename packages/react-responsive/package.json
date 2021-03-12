@@ -1,20 +1,20 @@
 {
-  "name": "react-only",
+  "name": "@blocz/react-responsive",
   "version": "3.0.0-beta.1",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "source": "src/index.ts",
   "sideEffects": false,
-  "main": "lib/react-only.js",
-  "umd:main": "lib/react-only.umd.js",
-  "module": "lib/react-only.modern.js",
+  "main": "lib/react-responsive.js",
+  "umd:main": "lib/react-responsive.umd.js",
+  "module": "lib/react-responsive.modern.js",
   "types": "lib/index.d.ts",
   "exports": {
-    "require": "./dist/react-only.js",
-    "import": "./dist/react-only.modern.js",
-    "browser": "./dist/react-only.modern.js",
-    "umd": "./dist/react-only.umd.js"
+    "require": "./dist/react-responsive.js",
+    "import": "./dist/react-responsive.modern.js",
+    "browser": "./dist/react-responsive.modern.js",
+    "umd": "./dist/react-responsive.umd.js"
   },
-  "repository": "git@github.com:Ayc0/react-only.git",
+  "repository": "git@github.com:bloczjs/react-responsive.git",
   "keywords": [
     "adaptive",
     "breakpoint",
@@ -25,15 +25,15 @@
   ],
   "author": "Ayc0",
   "license": "MIT",
-  "bugs": "https://github.com/Ayc0/react-only/issues",
+  "bugs": "https://github.com/bloczjs/react-responsive/issues",
   "scripts": {
     "build": "yarn -s build:microbundle",
     "build:dev": "yarn -s build:microbundle --compress false",
     "build:microbundle": "microbundle --name $npm_package_name --globals react=React",
-    "link:readme": "rm ../../README.md && ln -s packages/react-only/README.md ../..",
+    "link:readme": "rm ../../README.md && ln -s packages/react-responsive/README.md ../..",
     "prepublishOnly": "rm -rf lib && yarn -s build"
   },
-  "homepage": "https://github.com/Ayc0/react-only#readme",
+  "homepage": "https://github.com/bloczjs/react-responsive#readme",
   "devDependencies": {
     "@types/react": "^17.0.0",
     "microbundle": "0.13.0"

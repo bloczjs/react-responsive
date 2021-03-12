@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Only } from "react-only";
+import { Only } from "@blocz/react-responsive";
 
 interface CustomProps {
   title: string;
@@ -20,7 +20,8 @@ export default function Sample() {
     <>
       <h2>Custom component</h2>
       <Only as={Custom} title="xs" on="xs">
-        Only visible for extra small devices (portrait phones)
+        Only visible for extra small devices (portrait
+        phones)
       </Only>
       <Only as={Custom} title="sm" on="sm">
         Only visible for small devices (landscape phones)
@@ -32,7 +33,8 @@ export default function Sample() {
         Only visible for large devices (desktops)
       </Only>
       <Only as={Custom} title="xl" on="xl">
-        Only visible for extra large devices (large desktops)
+        Only visible for extra large devices (large
+        desktops)
       </Only>
       <Only as={Custom} title="sm xl" on="sm xl">
         Only visible for small AND extra large devices

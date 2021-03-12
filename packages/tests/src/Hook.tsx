@@ -1,6 +1,9 @@
 import * as React from "react";
 
-import { useBreakpoint, useMediaQuery } from "react-only";
+import {
+  useBreakpoint,
+  useMediaQuery,
+} from "@blocz/react-responsive";
 
 const toString = (value: boolean | undefined) => {
   switch (value) {

@@ -1,4 +1,4 @@
-# react-only
+# @blocz/react-responsive
 
 <center>
 
@@ -12,48 +12,53 @@
 
 </center>
 
-`react-only` is inspired by the `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (or `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): only display a certain content for a precise screen size.
+`@blocz/react-responsive` is inspired by the `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (or `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): only display a certain content for a precise screen size.
 
 It allows you to display component only for particular screen sizes.
 
-If you need a responsive layout and adaptive components, `react-only` is here for you!
+If you need a responsive layout and adaptive components, `@blocz/react-responsive` is here for you!
 
-[See changelog](https://github.com/Ayc0/react-only/blob/master/CHANGELOG.md)
+[See changelog](https://github.com/bloczjs/react-responsive/blob/master/CHANGELOG.md)
 
 ## How to use
 
-1.  [`<Only>`](#only)
-    1.  [Default breakpoints](#default-breakpoints)
-    2.  [Additional `Up` and `Down`](#additional-up-and-down)
-    3.  [Match Media Queries](#match-media-queries)
-    4.  [Render as component](#render-as-component)
-2.  [`Hooks`](#hooks)
-    1.  [`useBreakpoint()`](#usebreakpoint)
-    2.  [`useMediaQuery()`](#usemediaquery)
-3.  [`<Match>`](#match)
-    1.  [`only` and `matchMedia` props](#only-and-matchmedia-props)
-    2.  [Use a custom component in Match](#use-a-custom-component-in-match)
-    3.  [TypeScript support](#typescript-support)
-4.  [`<BreakpointsProvider>`](#breakpointsprovider)
-    1.  [Add more breakpoints](#add-more-breakpoints)
-    2.  [Change default breakpoints](#change-default-breakpoints)
-    3.  [Units](#units)
-5.  [CSS in JS](#css-in-js)
-    1.  [`toJSON`](#tojson)
-    2.  [`toCSS`](#tocss)
-6.  [Comparison to other libraries](#comparison-to-other-libraries)
-7.  [`matchMedia` polyfill](#matchmedia-polyfill)
-8.  [FAQ](#faq)
+1. [@blocz/react-responsive](#bloczreact-responsive)
+   1. [How to use](#how-to-use)
+      1. [`<Only>`](#only)
+         1. [Default breakpoints](#default-breakpoints)
+         2. [Additional `Up` and `Down`](#additional-up-and-down)
+         3. [Match Media Queries](#match-media-queries)
+         4. [Render as component](#render-as-component)
+      2. [Hooks](#hooks)
+         1. [`useBreakpoint()`](#usebreakpoint)
+         2. [`useMediaQuery()`](#usemediaquery)
+      3. [`<Match>`](#match)
+         1. [`only` and `matchMedia` props](#only-and-matchmedia-props)
+         2. [Use a custom component in Match](#use-a-custom-component-in-match)
+         3. [TypeScript support](#typescript-support)
+      4. [`<BreakpointsProvider>`](#breakpointsprovider)
+         1. [Add more breakpoints](#add-more-breakpoints)
+         2. [Change default breakpoints](#change-default-breakpoints)
+         3. [Units](#units)
+         4. [Direction](#direction)
+      5. [CSS in JS](#css-in-js)
+         1. [`toJSON`](#tojson)
+         2. [`toCSS`](#tocss)
+      6. [Comparison to other libraries](#comparison-to-other-libraries)
+      7. [`matchMedia` polyfill](#matchmedia-polyfill)
+         1. [Browser](#browser)
+         2. [Node](#node)
+      8. [FAQ](#faq)
 
 ### `<Only>`
 
 #### Default breakpoints
 
-`react-only` is based on the classic bootstrap breakpoints: `xs`, `sm`, `md`, `lg` and `xl`.
+`@blocz/react-responsive` is based on the classic bootstrap breakpoints: `xs`, `sm`, `md`, `lg` and `xl`.
 
 ```javascript
 import React from "react";
-import { Only } from "react-only";
+import { Only } from "@blocz/react-responsive";
 
 const App = () => (
   <React.Fragment>
@@ -83,7 +88,7 @@ In addition to the regular breakpoints, you have another api defined `{breakpoin
 
 ```javascript
 import React from "react";
-import { Only } from "react-only";
+import { Only } from "@blocz/react-responsive";
 
 const App = () => (
   <React.Fragment>
@@ -99,7 +104,7 @@ For more advanced media queries, the prop `matchMedia` can be set to any regular
 
 ```javascript
 import React from "react";
-import { Only } from "react-only";
+import { Only } from "@blocz/react-responsive";
 
 const App = () => (
   <Only matchMedia="(min-device-width: 500px) and (orientation: landscape)">
@@ -118,7 +123,7 @@ If you want the `Only` components to render as another component, you can use th
 
 ```javascript
 import React from "react";
-import { Only } from "react-only";
+import { Only } from "@blocz/react-responsive";
 
 const App = () => (
   <ul>
@@ -148,7 +153,7 @@ The `as` props can take any DOM tag string (`div`, `ul`, `li`, ...) or any React
 
 ```javascript
 import React from "react";
-import { Only } from "react-only";
+import { Only } from "@blocz/react-responsive";
 
 const Custom = ({ title, children }) => (
   <React.Fragment>
@@ -191,7 +196,7 @@ Note that any props except for `matchMedia`, `as` and `on` will be forwarded to 
 
 ```javascript
 import React from "react";
-import { useBreakpoint } from "react-only";
+import { useBreakpoint } from "@blocz/react-responsive";
 
 const App = () => {
   const matchXl = useBreakpoint("xl");
@@ -213,7 +218,7 @@ const App = () => {
 
 ```javascript
 import React from "react";
-import { useMediaQuery } from "react-only";
+import { useMediaQuery } from "@blocz/react-responsive";
 
 const App = () => {
   const matchMediaQuery = useMediaQuery("(min-width:768px) and (max-width:992px),(max-width:576px)");
@@ -229,16 +234,14 @@ The `Match` will look into every props of its children (and event nested childre
 
 ```javascript
 import React from "react";
-import { Only, Match } from "react-only";
+import { Only, Match } from "@blocz/react-responsive";
 
 const App = () => (
   <Match>
     <div only="xs">xs</div>
     <div only="sm">sm</div>
     <div only="md">md</div>
-    <div only="sm lg">
-      sm and lg
-    </div>
+    <div only="sm lg">sm and lg</div>
     <div only="xl">xl</div>
     <div>
       <div>
@@ -260,7 +263,7 @@ You can also render the `Match` component as another one:
 
 ```javascript
 import React from "react";
-import { Only, Match } from "react-only";
+import { Only, Match } from "@blocz/react-responsive";
 
 const App = () => (
   <Match as="ul">
@@ -282,7 +285,7 @@ For now you can only use `Match` with custom components as children:
 
 ```tsx
 import * as React from "react";
-import { Match, MatchChildProps } from "react-only";
+import { Match, MatchChildProps } from "@blocz/react-responsive";
 
 // MatchChildProps includes the props `only` and `matchMedia`
 interface CustomProps extends MatchChildProps {
@@ -327,7 +330,7 @@ Use it to inject or modify the breakpoints (only use one `BreakpointsProvider` p
 
 ```javascript
 import React from "react";
-import { Only, BreakpointsProvider } from "react-only";
+import { Only, BreakpointsProvider } from "@blocz/react-responsive";
 
 const App = () => (
   <BreakpointsProvider additionalBreakpoints={{ customBrkPts: [263, 863] }}>
@@ -342,7 +345,7 @@ const App = () => (
 
 ```javascript
 import React from "react";
-import { Only, BreakpointsProvider } from "react-only";
+import { Only, BreakpointsProvider } from "@blocz/react-responsive";
 
 const App = () => (
   <BreakpointsProvider breakpoints={{ sm: [263, 863] }}>
@@ -363,7 +366,7 @@ By default, the unit is "px".
 
 ```javascript
 import React from "react";
-import { Only, BreakpointsProvider } from "react-only";
+import { Only, BreakpointsProvider } from "@blocz/react-responsive";
 
 const App = () => (
   <BreakpointsProvider
@@ -386,7 +389,7 @@ By default, "width" is the chosen direction.
 
 ```javascript
 import React from "react";
-import { Only, BreakpointsProvider } from "react-only";
+import { Only, BreakpointsProvider } from "@blocz/react-responsive";
 
 const App = () => (
   <BreakpointsProvider
@@ -407,7 +410,7 @@ The default unit is `px`.
 
 ### CSS in JS
 
-`react-only` includes 2 utility functions `toJSON` and `toCSS` so that you can re-use `react-only` breakpoints as media queries for `css-in-js` libraries.
+`@blocz/react-responsive` includes 2 utility functions `toJSON` and `toCSS` so that you can re-use `@blocz/react-responsive` breakpoints as media queries for `css-in-js` libraries.
 
 #### `toJSON`
 
@@ -415,7 +418,7 @@ Example with [`styletron`](https://github.com/styletron/styletron):
 
 ```jsx
 import React from "react";
-import { toJSON as createToJSON, BreakpointsContext } from "react-only";
+import { toJSON as createToJSON, BreakpointsContext } from "@blocz/react-responsive";
 import { styled } from "styletron-react";
 
 const styles = {
@@ -457,7 +460,7 @@ Example with [`emotion`](https://emotion.sh):
 
 ```jsx
 import React from "react";
-import { toCSS as createToCSS, BreakpointsContext } from "react-only";
+import { toCSS as createToCSS, BreakpointsContext } from "@blocz/react-responsive";
 import { css } from "emotion";
 
 const styles = {
@@ -491,7 +494,7 @@ const App = () => {
 
 | Lib                                                                                        | Breakpoints | Custom breakpoints | Media query | `matchMedia` listener' | hooks | SSR support |
 | ------------------------------------------------------------------------------------------ | ----------: | -----------------: | ----------: | ---------------------: | ----: | ----------: |
-| [react-only](https://www.npmjs.com/package/react-only)                                     |          ✅ |                 ✅ |          ✅ |                     ✅ |    ✅ |          ✅ |
+| [@blocz/react-responsive](https://www.npmjs.com/package/@blocz/react-responsive)           |          ✅ |                 ✅ |          ✅ |                     ✅ |    ✅ |          ✅ |
 | [react-responsive](https://www.npmjs.com/package/react-responsive)                         |          ❌ |                 ❌ |          ✅ |                     ✅ |    ✅ |          ✅ |
 | [react-breakpoints](https://www.npmjs.com/package/react-breakpoints)                       |          ✅ |                 ✅ |          ❌ |                     ❌ |    ❌ |          ✅ |
 | [react-responsive-breakpoints](https://www.npmjs.com/package/react-responsive-breakpoints) |          ✅ |                 ❌ |          ❌ |                     ❌ |    ❌ |          ❌ |
@@ -508,21 +511,21 @@ If you are on want to use matchMedia on browser that don’t support it, I’d r
 
 If you want to mock `matchMedia` on Node to execute tests for instance, you can use [`mock-match-media`](https://github.com/Ayc0/mock-match-media/).
 
-And if you need an example with `Jest`, `@testing-library/react`, `React` and `react-only`, you can take a look at [these tests](https://github.com/Ayc0/react-only/blob/master/packages/tests/src/__tests__/ssr.ts).
+And if you need an example with `Jest`, `@testing-library/react`, `React` and `@blocz/react-responsive`, you can take a look at [these tests](https://github.com/bloczjs/react-responsive/blob/master/packages/tests/src/__tests__/ssr.ts).
 
 ### FAQ
 
-For other questions, please take a look at our [FAQ document](https://github.com/Ayc0/react-only/blob/master/FAQ.md).
+For other questions, please take a look at our [FAQ document](https://github.com/bloczjs/react-responsive/blob/master/FAQ.md).
 
 [0]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
 [1]: https://nodejs.org/api/documentation.html#documentation_stability_index
-[2]: https://img.shields.io/npm/v/react-only.svg?style=flat-square
-[3]: https://npmjs.org/package/react-only
-[4]: http://img.shields.io/npm/dm/react-only.svg?style=flat-square
-[5]: https://npmjs.org/package/react-only
+[2]: https://img.shields.io/npm/v/@blocz/react-responsive.svg?style=flat-square
+[3]: https://npmjs.org/package/@blocz/react-responsive
+[4]: http://img.shields.io/npm/dm/@blocz/react-responsive.svg?style=flat-square
+[5]: https://npmjs.org/package/@blocz/react-responsive
 [6]: https://img.shields.io/badge/code%20style-prettier-brightgreen.svg?style=flat-square
 [7]: https://prettier.io/
 [8]: https://img.shields.io/badge/speed-blazingly%20fast-orange.svg?style=flat-square
 [9]: https://twitter.com/acdlite/status/974390255393505280
-[10]: http://img.badgesize.io/https://unpkg.com/react-only/lib/react-only.js?compression=gzip&style=flat-square
-[11]: https://unpkg.com/react-only/lib/
+[10]: http://img.badgesize.io/https://unpkg.com/@blocz/react-responsive/lib/@blocz/react-responsive.js?compression=gzip&style=flat-square
+[11]: https://unpkg.com/@blocz/react-responsive/lib/

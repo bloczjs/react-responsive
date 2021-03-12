@@ -4,7 +4,7 @@ import {
   BreakpointsContext,
   toCSS as toCSSBreapointless,
   toJSON as toJSONBreapointless,
-} from "react-only";
+} from "@blocz/react-responsive";
 
 export default function Sample() {
   const breakpoints = React.useContext(BreakpointsContext);

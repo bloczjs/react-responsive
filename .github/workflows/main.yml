@@ -22,7 +22,7 @@ jobs:
       - name: Build package
         run: |
           yarn build
-        working-directory: ./packages/react-only
+        working-directory: ./packages/react-responsive
       - name: Run tests
         run: |
           yarn test

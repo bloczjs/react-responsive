@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BreakpointsProvider } from "react-only";
+import { BreakpointsProvider } from "@blocz/react-responsive";
 
 import List from "./List";
 import Custom from "./Custom";

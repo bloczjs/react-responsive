@@ -1,12 +1,12 @@
 {
-  "name": "react-only-test",
+  "name": "react-responsive-test",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
     "emotion": "^10.0.27",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-only": "link:packages/react-only",
+    "@blocz/react-responsive": "link:packages/react-responsive",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },

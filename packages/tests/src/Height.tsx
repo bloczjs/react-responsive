@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { useBreakpoint } from "react-only";
+import { useBreakpoint } from "@blocz/react-responsive";
 
 const toString = (value: boolean | undefined) => {
   switch (value) {
