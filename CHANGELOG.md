@@ -9,7 +9,7 @@
 - `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid **BREAKING CHANGE**
 - Avoid sending a warning on react 17
 - Fix `only` and `matchMedia` props on DOM elements for the `Match` component
-- Remove prop `strict`
+- Remove prop `strict` **BREAKING CHANGE**
 
 <details>
   <summary>See detailed changelog</summary>
@@ -24,7 +24,7 @@
 - `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid. Instead it will directly use the correct value, and if the media query is invalid, it’ll return `false`. **BREAKING CHANGE**
 - Bump peerDependencies to allow for react 17
 - Drop support for node 10
-- Remove prop `strict`:
+- Remove prop `strict`: **BREAKING CHANGE**
   - This feature was initially introduced to avoid collision between `mdUp` and `smDown` for instance. But since we avoid the overlapping of breakpoints in the v1.0.1 and as this is customizable, this prop doesn't make sense anymore.
   - This prop relied on `calc(% + 1px)` and `calc(% - 1px)` which has 2 issues:
     - difficult to be compatible with SSR as for instance css-mediaquery crashes when we use `calc()` (see [issue](https://github.com/ericf/css-mediaquery/issues/19)),
