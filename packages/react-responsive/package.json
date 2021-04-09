@@ -15,8 +15,7 @@
       "browser": "./lib/react-responsive.modern.js",
       "umd": "./lib/react-responsive.umd.js"
     },
-    "./package.json": "./package.json",
-    "./": "./"
+    "./package.json": "./package.json"
   },
   "repository": "git@github.com:bloczjs/react-responsive.git",
   "keywords": [
