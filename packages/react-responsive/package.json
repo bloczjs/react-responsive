@@ -9,10 +9,13 @@
   "module": "lib/react-responsive.modern.js",
   "types": "lib/index.d.ts",
   "exports": {
-    "require": "./dist/react-responsive.js",
-    "import": "./dist/react-responsive.modern.js",
-    "browser": "./dist/react-responsive.modern.js",
-    "umd": "./dist/react-responsive.umd.js"
+    ".": {
+      "require": "./lib/react-responsive.js",
+      "import": "./lib/react-responsive.modern.mjs",
+      "browser": "./lib/react-responsive.modern.js",
+      "umd": "./lib/react-responsive.umd.js"
+    },
+    "./package.json": "./package.json"
   },
   "repository": "git@github.com:bloczjs/react-responsive.git",
   "keywords": [
@@ -28,7 +31,7 @@
   "license": "MIT",
   "bugs": "https://github.com/bloczjs/react-responsive/issues",
   "scripts": {
-    "build": "yarn -s build:microbundle",
+    "build": "yarn -s build:microbundle && cp lib/react-responsive.modern.js lib/react-responsive.modern.mjs",
     "build:dev": "yarn -s build:microbundle --compress false",
     "build:microbundle": "microbundle --name $npm_package_name --globals react=React",
     "link:readme": "rm ../../README.md && ln -s packages/react-responsive/README.md ../..",
