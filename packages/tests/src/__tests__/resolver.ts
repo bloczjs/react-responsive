@@ -1,7 +1,18 @@
 import { execSync } from "child_process";
 
-describe("ESM", () => {
-  it("should work in ESM context", () => {
+describe("Important files should be resolvable", () => {
+  it("should work in a CJS context", () => {
+    expect(
+      require.resolve("@blocz/react-responsive"),
+    ).not.toBeNull();
+    expect(
+      require.resolve(
+        "@blocz/react-responsive/package.json",
+      ),
+    ).not.toBeNull();
+  });
+
+  it("should work in a ESM context", () => {
     expect(
       execSync(
         "node --experimental-json-modules ./esm.mjs",
@@ -16,14 +27,6 @@ describe("ESM", () => {
 
 describe("built files", () => {
   it("should contain all necessary files", () => {
-    expect(
-      require.resolve("@blocz/react-responsive"),
-    ).not.toBeNull();
-    expect(
-      require.resolve(
-        "@blocz/react-responsive/package.json",
-      ),
-    ).not.toBeNull();
     expect(
       require.resolve(
         "@blocz/react-responsive/lib/react-responsive.js",
