@@ -6,12 +6,12 @@
   "sideEffects": false,
   "main": "lib/react-responsive.js",
   "umd:main": "lib/react-responsive.umd.js",
-  "module": "lib/react-responsive.modern.js",
+  "module": "lib/react-responsive.modern.mjs",
   "types": "lib/index.d.ts",
   "exports": {
     ".": {
       "require": "./lib/react-responsive.js",
-      "import": "./lib/react-responsive.modern.js",
+      "import": "./lib/react-responsive.modern.mjs",
       "browser": "./lib/react-responsive.modern.js",
       "umd": "./lib/react-responsive.umd.js"
     },
