@@ -11,6 +11,7 @@
 - Fix `only` and `matchMedia` props on DOM elements for the `Match` component
 - Remove prop `strict` **BREAKING CHANGE**
 - Fix `exports` field in package.json
+- Drop support for node 13
 
 <details>
   <summary>See detailed changelog</summary>
@@ -20,6 +21,7 @@
 - Fix `exports` field in package.json
   - use correct `lib/` folder instead of `dist/`
   - Use proper `.mjs` for node
+- Drop support for node 13
 
 #### 3.0.0
 
