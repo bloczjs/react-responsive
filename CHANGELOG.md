@@ -10,9 +10,16 @@
 - Avoid sending a warning on react 17
 - Fix `only` and `matchMedia` props on DOM elements for the `Match` component
 - Remove prop `strict` **BREAKING CHANGE**
+- Fix `exports` field in package.json
 
 <details>
   <summary>See detailed changelog</summary>
+
+### 3.0.1
+
+- Fix `exports` field in package.json
+  - use correct `lib/` folder instead of `dist/`
+  - Use proper `.mjs` for node
 
 #### 3.0.0
 
