@@ -9,10 +9,14 @@
   "module": "lib/react-responsive.modern.js",
   "types": "lib/index.d.ts",
   "exports": {
-    "require": "./lib/react-responsive.js",
-    "import": "./lib/react-responsive.modern.js",
-    "browser": "./lib/react-responsive.modern.js",
-    "umd": "./lib/react-responsive.umd.js"
+    ".": {
+      "require": "./lib/react-responsive.js",
+      "import": "./lib/react-responsive.modern.js",
+      "browser": "./lib/react-responsive.modern.js",
+      "umd": "./lib/react-responsive.umd.js"
+    },
+    "./package.json": "./package.json",
+    "./": "./"
   },
   "repository": "git@github.com:bloczjs/react-responsive.git",
   "keywords": [
