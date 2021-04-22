@@ -7,13 +7,9 @@ export interface MatchChildProps {
   only?: string;
 }
 
-/* eslint-disable */
-declare global {
-  namespace React {
-    interface HTMLAttributes<T> extends MatchChildProps {}
-  }
+declare module "react" {
+  interface HTMLAttributes<T> extends React.AriaAttributes, React.DOMAttributes<T>, MatchChildProps {}
 }
-/* eslint-enable */
 
 type Element = React.ReactElement<MatchChildProps & any, string | React.ComponentType<MatchChildProps & any>> | null;
 
