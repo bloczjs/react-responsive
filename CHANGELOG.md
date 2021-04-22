@@ -11,7 +11,7 @@
 - Fix `only` and `matchMedia` props on DOM elements for the `Match` component
 - Remove prop `strict` **BREAKING CHANGE**
 - Fix `exports` field in package.json
-- Drop support for node 13
+- Drop support for node 13 and add support for node 15 and 16
 
 <details>
   <summary>See detailed changelog</summary>
@@ -20,6 +20,7 @@
 
 - Better fix `only` and `matchMedia` props on DOM elements for the `Match` component
   - with the implementation of the v3.0.0, we were polluting the global scope, injecting the variable `React` everywhere. This version ships a better fix for both of them.
+- Add support for node 15 and 16
 
 ### 3.0.1
 
