@@ -16,6 +16,11 @@
 <details>
   <summary>See detailed changelog</summary>
 
+### 3.0.2
+
+- Better fix `only` and `matchMedia` props on DOM elements for the `Match` component
+  - with the implementation of the v3.0.0, we were polluting the global scope, injecting the variable `React` everywhere. This version ships a better fix for both of them.
+
 ### 3.0.1
 
 - Fix `exports` field in package.json
