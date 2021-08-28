@@ -31,11 +31,11 @@
   "license": "MIT",
   "bugs": "https://github.com/bloczjs/react-responsive/issues",
   "scripts": {
-    "build": "yarn -s build:microbundle && cp lib/react-responsive.modern.js lib/react-responsive.modern.mjs",
-    "build:dev": "yarn -s build:microbundle --compress false",
+    "build": "yarn build:microbundle && cp lib/react-responsive.modern.js lib/react-responsive.modern.mjs",
+    "build:dev": "yarn build:microbundle --compress false",
     "build:microbundle": "microbundle --name $npm_package_name --globals react=React",
     "link:readme": "rm ../../README.md && ln -s packages/react-responsive/README.md ../..",
-    "prepublishOnly": "rm -rf lib && yarn -s build"
+    "prepublishOnly": "rm -rf lib && yarn build"
   },
   "homepage": "https://github.com/bloczjs/react-responsive#readme",
   "devDependencies": {
