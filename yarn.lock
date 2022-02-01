@@ -10874,12 +10874,12 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mock-match-media@npm:0.1.4":
-  version: 0.1.4
-  resolution: "mock-match-media@npm:0.1.4"
+"mock-match-media@npm:0.3.0":
+  version: 0.3.0
+  resolution: "mock-match-media@npm:0.3.0"
   dependencies:
     css-mediaquery: ^0.1.2
-  checksum: 3786df0984af21252179325fafa432db21612581f33da73599a41ac51d571dbcb46ce979467e561c03b42aabbee2129ae59059cd4377ee9821afa8b537039213
+  checksum: b26768348b4c38f3ecaef30345370013965ea76638027dbe3275f405041ea068f994c9cd7a6b15094820809af9dab791e8f9409f98a874f70b59d538516ba569
   languageName: node
   linkType: hard
 
@@ -13489,7 +13489,7 @@ fsevents@~2.1.2:
     eslint-plugin-react-hooks: ^4.0.8
     jest: "*"
     jest-puppeteer: ^4.3.0
-    mock-match-media: 0.1.4
+    mock-match-media: 0.3.0
     puppeteer: ^2.1.1
     react: ^17.0.1
     react-dom: ^17.0.1
