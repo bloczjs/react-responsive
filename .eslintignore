@@ -1,4 +1,6 @@
+# Yarn
 node_modules/
+.yarn/
 
 # Misc
 .vscode
@@ -7,10 +9,13 @@ node_modules/
 
 # Build
 lib/
+dist/
 tmp/
 babel/
 pkg/
 
+.parcel-cache/
 .cache/
 cache/
 *_cache_*/
+.eslintcache
