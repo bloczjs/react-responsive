@@ -14,13 +14,10 @@ describe("Important files should be resolvable", () => {
 
   it("should work in a ESM context", () => {
     expect(
-      execSync(
-        "node --experimental-json-modules ./esm.mjs",
-        {
-          cwd: __dirname,
-          encoding: "utf-8",
-        },
-      ),
+      execSync("node ./esm.mjs", {
+        cwd: __dirname,
+        encoding: "utf-8",
+      }),
     ).toBe("Didn’t crash\n");
   });
 });
