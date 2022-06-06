@@ -1653,7 +1653,7 @@ __metadata:
     "@types/react": ^17.0.0
     microbundle: 0.13.0
   peerDependencies:
-    react: 16.8.0 - 17.x.x
+    react: 16.8.0 - 18.x.x
   languageName: unknown
   linkType: soft
 

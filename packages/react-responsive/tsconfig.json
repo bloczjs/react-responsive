@@ -16,6 +16,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    // "allowSyntheticDefaultImports": true,
     "moduleResolution": "node"
   },
   "include": ["src/*"]
