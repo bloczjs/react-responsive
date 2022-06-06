@@ -27,7 +27,7 @@ const prettify = (input: string) =>
 const wait = (ms: number) =>
   new Promise((res) => setTimeout(res, ms));
 
-it("Should render in SSR", async () => {
+it.each(sizes)("Should render in SSR %p", async () => {
   for (const size of sizes) {
     setMedia({
       width: `${size.width}px`,
@@ -39,7 +39,5 @@ it("Should render in SSR", async () => {
     expect(
       prettify(render(App).baseElement.outerHTML),
     ).toMatchSnapshot();
-
-    await wait(10);
   }
 });

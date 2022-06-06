@@ -25,7 +25,7 @@ jobs:
         working-directory: ./packages/react-responsive
       - name: Run tests
         run: |
-          yarn test
+          yarn test --runInBand
         working-directory: ./packages/tests
       - name: Check linting + types
         run: |
