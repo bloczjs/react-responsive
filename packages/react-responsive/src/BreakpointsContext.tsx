@@ -17,7 +17,7 @@ interface BreakpointsProviderProps {
   additionalBreakpoints?: ExposedBreakpoints;
 }
 
-export const BreakpointsProvider: React.FunctionComponent<BreakpointsProviderProps> = ({
+export const BreakpointsProvider: React.FunctionComponent<React.PropsWithChildren<BreakpointsProviderProps>> = ({
   breakpoints = defaultBreakpoints,
   additionalBreakpoints = {},
   children,

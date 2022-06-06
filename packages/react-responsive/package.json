@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/bloczjs/react-responsive#readme",
   "devDependencies": {
-    "@types/react": "^17.0.0",
+    "@types/react": "^18.0.12",
     "microbundle": "0.13.0"
   },
   "peerDependencies": {
