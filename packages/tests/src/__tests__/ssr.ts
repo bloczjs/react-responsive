@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { render, act } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 import "mock-match-media/polyfill";
 
@@ -29,19 +29,17 @@ const wait = (ms: number) =>
 
 it("Should render in SSR", async () => {
   for (const size of sizes) {
-    await act(async () => {
-      setMedia({
-        width: `${size.width}px`,
-        height: `${size.height}px`,
-      });
-
-      await wait(10);
-
-      expect(
-        prettify(render(App).baseElement.outerHTML),
-      ).toMatchSnapshot();
-
-      await wait(10);
+    setMedia({
+      width: `${size.width}px`,
+      height: `${size.height}px`,
     });
+
+    await wait(10);
+
+    expect(
+      prettify(render(App).baseElement.outerHTML),
+    ).toMatchSnapshot();
+
+    await wait(10);
   }
 });

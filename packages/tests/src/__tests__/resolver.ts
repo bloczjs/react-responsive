@@ -1,4 +1,6 @@
 import { execSync } from "child_process";
+import * as path from "path";
+import { existsSync } from "fs";
 
 describe("Important files should be resolvable", () => {
   it("should work in a CJS context", () => {
@@ -24,25 +26,37 @@ describe("Important files should be resolvable", () => {
 
 describe("built files", () => {
   it("should contain all necessary files", () => {
-    expect(
+    const BRRPath = path.dirname(
       require.resolve(
-        "@blocz/react-responsive/lib/react-responsive.js",
+        "@blocz/react-responsive/package.json",
       ),
-    ).not.toBeNull();
+    );
+
     expect(
-      require.resolve(
-        "@blocz/react-responsive/lib/react-responsive.modern.js",
+      existsSync(
+        path.join(BRRPath, "lib/react-responsive.js"),
       ),
-    ).not.toBeNull();
+    ).toBe(true);
     expect(
-      require.resolve(
-        "@blocz/react-responsive/lib/react-responsive.modern.mjs",
+      existsSync(
+        path.join(
+          BRRPath,
+          "lib/react-responsive.modern.js",
+        ),
       ),
-    ).not.toBeNull();
+    ).toBe(true);
     expect(
-      require.resolve(
-        "@blocz/react-responsive/lib/react-responsive.umd.js",
+      existsSync(
+        path.join(
+          BRRPath,
+          "lib/react-responsive.modern.mjs",
+        ),
       ),
-    ).not.toBeNull();
+    ).toBe(true);
+    expect(
+      existsSync(
+        path.join(BRRPath, "lib/react-responsive.umd.js"),
+      ),
+    ).toBe(true);
   });
 });
