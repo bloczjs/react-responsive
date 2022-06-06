@@ -456,7 +456,7 @@ Example with [`emotion`](https://emotion.sh):
 ```jsx
 import React from "react";
 import { toCSS as createToCSS, BreakpointsContext } from "@blocz/react-responsive";
-import { css } from "emotion";
+import { css } from "@emotion/css";
 
 const styles = {
   mdDown: {

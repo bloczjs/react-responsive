@@ -13,17 +13,19 @@ interface Points {
 }
 
 type CSSinJS = Record<string, CSSinJSProperties>;
-export const toJSON = (breakpoints: Breakpoints) => (points: Points): CSSinJS => {
-  const css: CSSinJS = {};
-  Object.keys(points).forEach((point) => {
-    const breakpoint = breakpoints[point];
-    if (!breakpoint) {
-      throw new Error(`${point} is not a valid breakpoint\nValid breakpoints are: ${Object.keys(breakpoints)}`);
-    }
-    css[`@media ${fromBreakpointToMedia(breakpoint)}`] = points[point];
-  });
-  return css;
-};
+export const toJSON =
+  (breakpoints: Breakpoints) =>
+  (points: Points): CSSinJS => {
+    const css: CSSinJS = {};
+    Object.keys(points).forEach((point) => {
+      const breakpoint = breakpoints[point];
+      if (!breakpoint) {
+        throw new Error(`${point} is not a valid breakpoint\nValid breakpoints are: ${Object.keys(breakpoints)}`);
+      }
+      css[`@media ${fromBreakpointToMedia(breakpoint)}`] = points[point];
+    });
+    return css;
+  };
 
 const stringify = (object: CSSinJSProperties) => {
   let string = "";
@@ -37,4 +39,7 @@ const stringify = (object: CSSinJSProperties) => {
   return string;
 };
 
-export const toCSS = (breakpoints: Breakpoints) => (points: Points): string => stringify(toJSON(breakpoints)(points));
+export const toCSS =
+  (breakpoints: Breakpoints) =>
+  (points: Points): string =>
+    stringify(toJSON(breakpoints)(points));
