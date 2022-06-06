@@ -1650,7 +1650,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@blocz/react-responsive@workspace:packages/react-responsive"
   dependencies:
-    "@types/react": ^17.0.0
+    "@types/react": ^18.0.12
     microbundle: 0.13.0
   peerDependencies:
     react: 16.8.0 - 18.x.x
@@ -2684,22 +2684,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17.0.0":
-  version: 17.0.0
-  resolution: "@types/react-dom@npm:17.0.0"
+"@types/react-dom@npm:^18.0.5":
+  version: 18.0.5
+  resolution: "@types/react-dom@npm:18.0.5"
   dependencies:
     "@types/react": "*"
-  checksum: d0f989e12fabb2572a38d79630c209499afa2edc865cc3ebc50333845715bd73d88ac88e24274977cd62433e46e91ddf94c30c2c12f89e427bbb739682caf677
+  checksum: cd48b81950f499b52a3f0c08261f00046f9b7c96699fa249c9664e257e820daf6ecac815cd1028cebc9d105094adc39d047d1efd79214394b8b2d515574c0787
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^17.0.0":
+"@types/react@npm:*":
   version: 17.0.0
   resolution: "@types/react@npm:17.0.0"
   dependencies:
     "@types/prop-types": "*"
     csstype: ^3.0.2
   checksum: 0767d1c635613cb08de1ad6b8f73e3ee01ae0069733fa56382c72a8dbed741849e74f62a17756c7b76ccd2b57dd9891d5767c3134f35788720c6bb9c186a933b
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^18.0.12":
+  version: 18.0.12
+  resolution: "@types/react@npm:18.0.12"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 526ea13b3adf7fe4b475e55b7426510a7861ef2910664a9014ef42cba0c699d5167dc378eb161e2ec26c07a3b6fde9b6bdcbbb6f4b5580612246bc289395ef03
   languageName: node
   linkType: hard
 
@@ -2718,6 +2729,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: dc6a6df507656004e242dcb02c784479deca516d5f4b58a1707e708022b269ae147e1da0521f3e8ad0d63638869d87e0adc023f0bd5454aa6f72ac66c7525cf5
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:*":
+  version: 0.16.2
+  resolution: "@types/scheduler@npm:0.16.2"
+  checksum: b6b4dcfeae6deba2e06a70941860fb1435730576d3689225a421280b7742318d1548b3d22c1f66ab68e414f346a9542f29240bc955b6332c5b11e561077583bc
   languageName: node
   linkType: hard
 
@@ -13474,8 +13492,8 @@ fsevents@~2.1.2:
     "@types/jest": ^26.0.15
     "@types/jest-environment-puppeteer": ^4.3.1
     "@types/node": ^14.14.21
-    "@types/react": ^17.0.0
-    "@types/react-dom": ^17.0.0
+    "@types/react": ^18.0.12
+    "@types/react-dom": ^18.0.5
     "@typescript-eslint/eslint-plugin": ^4.0.0
     "@typescript-eslint/parser": ^4.0.0
     babel-eslint: ^10.0.0
