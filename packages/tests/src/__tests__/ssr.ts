@@ -34,10 +34,12 @@ it.each(sizes)("Should render in SSR %p", async () => {
       height: `${size.height}px`,
     });
 
-    await wait(10);
+    await wait(20);
 
     expect(
       prettify(render(App).baseElement.outerHTML),
     ).toMatchSnapshot();
+
+    await wait(20);
   }
 });
