@@ -1,17 +1,5 @@
 # @blocz/react-responsive
 
-<center>
-
-[![npm version][2]][3]
-[![downloads][4]][5]
-[![js-standard-style][6]][7]
-
-[![gzipped size][10]][11]
-[![stability][0]][1]
-[![speed][8]][9]
-
-</center>
-
 `@blocz/react-responsive` is inspired by the `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (or `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): only display a certain content for a precise screen size.
 
 It allows you to display component only for particular screen sizes.
@@ -512,15 +500,4 @@ And if you need an example with `Jest`, `@testing-library/react`, `React` and `@
 
 For other questions, please take a look at our [FAQ document](https://github.com/bloczjs/react-responsive/blob/master/FAQ.md).
 
-[0]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
-[1]: https://nodejs.org/api/documentation.html#documentation_stability_index
-[2]: https://img.shields.io/npm/v/@blocz/react-responsive.svg?style=flat-square
-[3]: https://npmjs.org/package/@blocz/react-responsive
-[4]: http://img.shields.io/npm/dm/@blocz/react-responsive.svg?style=flat-square
-[5]: https://npmjs.org/package/@blocz/react-responsive
-[6]: https://img.shields.io/badge/code%20style-prettier-brightgreen.svg?style=flat-square
-[7]: https://prettier.io/
-[8]: https://img.shields.io/badge/speed-blazingly%20fast-orange.svg?style=flat-square
-[9]: https://twitter.com/acdlite/status/974390255393505280
-[10]: http://img.badgesize.io/https://unpkg.com/@blocz/react-responsive/lib/@blocz/react-responsive.js?compression=gzip&style=flat-square
-[11]: https://unpkg.com/@blocz/react-responsive/lib/
+
