@@ -8,7 +8,6 @@ node_modules/
 .pnp.*
 
 # Misc
-.vscode
 *.log
 .DS_Store
 
