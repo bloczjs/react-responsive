@@ -1,4 +1,4 @@
-# @blocz/react-responsive
+# @blocz/react-responsive <!-- omit in toc -->
 
 `@blocz/react-responsive` is inspired by the `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (or `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): only display a certain content for a precise screen size.
 
@@ -8,34 +8,37 @@ If you need a responsive layout and adaptive components, `@blocz/react-responsiv
 
 [See changelog](https://github.com/bloczjs/react-responsive/blob/master/CHANGELOG.md)
 
+## Table of contents <!-- omit in toc -->
+
+
+1. [How to use](#how-to-use)
+   1. [`<Only>`](#only)
+      1. [Default breakpoints](#default-breakpoints)
+      2. [Additional `Up` and `Down`](#additional-up-and-down)
+      3. [Match Media Queries](#match-media-queries)
+      4. [Render as component](#render-as-component)
+   2. [Hooks](#hooks)
+      1. [`useBreakpoint()`](#usebreakpoint)
+      2. [`useMediaQuery()`](#usemediaquery)
+   3. [`<Match>`](#match)
+      1. [`only` and `matchMedia` props](#only-and-matchmedia-props)
+      2. [Use a custom component in Match](#use-a-custom-component-in-match)
+   4. [`<BreakpointsProvider>`](#breakpointsprovider)
+      1. [Add more breakpoints](#add-more-breakpoints)
+      2. [Change default breakpoints](#change-default-breakpoints)
+      3. [Units](#units)
+      4. [Direction](#direction)
+   5. [CSS in JS](#css-in-js)
+      1. [`toJSON`](#tojson)
+      2. [`toCSS`](#tocss)
+   6. [Comparison to other libraries](#comparison-to-other-libraries)
+   7. [`matchMedia` polyfill](#matchmedia-polyfill)
+      1. [Browser](#browser)
+      2. [Node](#node)
+   8. [FAQ](#faq)
+
 ## How to use
 
-1. [@blocz/react-responsive](#bloczreact-responsive)
-   1. [How to use](#how-to-use)
-      1. [`<Only>`](#only)
-         1. [Default breakpoints](#default-breakpoints)
-         2. [Additional `Up` and `Down`](#additional-up-and-down)
-         3. [Match Media Queries](#match-media-queries)
-         4. [Render as component](#render-as-component)
-      2. [Hooks](#hooks)
-         1. [`useBreakpoint()`](#usebreakpoint)
-         2. [`useMediaQuery()`](#usemediaquery)
-      3. [`<Match>`](#match)
-         1. [`only` and `matchMedia` props](#only-and-matchmedia-props)
-         2. [Use a custom component in Match](#use-a-custom-component-in-match)
-      4. [`<BreakpointsProvider>`](#breakpointsprovider)
-         1. [Add more breakpoints](#add-more-breakpoints)
-         2. [Change default breakpoints](#change-default-breakpoints)
-         3. [Units](#units)
-         4. [Direction](#direction)
-      5. [CSS in JS](#css-in-js)
-         1. [`toJSON`](#tojson)
-         2. [`toCSS`](#tocss)
-      6. [Comparison to other libraries](#comparison-to-other-libraries)
-      7. [`matchMedia` polyfill](#matchmedia-polyfill)
-         1. [Browser](#browser)
-         2. [Node](#node)
-      8. [FAQ](#faq)
 
 ### `<Only>`
 
