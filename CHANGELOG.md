@@ -12,6 +12,7 @@
 - Remove prop `strict` **BREAKING CHANGE**
 - Fix `exports` field in package.json
 - Drop support for node 13 and add support for node 15 and 16
+- Mark React 18 as available + fix types for React 18.
 
 <details>
   <summary>See detailed changelog</summary>
@@ -19,6 +20,7 @@
 ### 3.0.3
 
 - Add `types` field in `exports` in package.json
+- Mark React 18 as available + fix types for React 18.
 
 ### 3.0.2
 
