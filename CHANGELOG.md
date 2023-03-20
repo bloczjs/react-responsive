@@ -16,6 +16,10 @@
 <details>
   <summary>See detailed changelog</summary>
 
+### 3.0.3
+
+- Add `types` field in `exports` in package.json
+
 ### 3.0.2
 
 - Better fix `only` and `matchMedia` props on DOM elements for the `Match` component

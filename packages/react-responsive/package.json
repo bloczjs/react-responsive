@@ -1,6 +1,6 @@
 {
   "name": "@blocz/react-responsive",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "source": "src/index.ts",
   "sideEffects": false,
