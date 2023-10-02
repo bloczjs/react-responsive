@@ -1,5 +1,4 @@
 export { BreakpointsProvider, BreakpointsContext } from "./BreakpointsContext";
-export { Match, MatchChildProps } from "./Match";
 export { Only } from "./Only";
 export { useBreakpoint } from "./useBreakpoint";
 export { useMediaQuery } from "./useMediaQuery";
