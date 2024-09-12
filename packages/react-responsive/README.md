@@ -10,7 +10,6 @@ If you need a responsive layout and adaptive components, `@blocz/react-responsiv
 
 ## Table of contents <!-- omit in toc -->
 
-
 1. [How to use](#how-to-use)
    1. [`<Only>`](#only)
       1. [Default breakpoints](#default-breakpoints)
@@ -20,25 +19,21 @@ If you need a responsive layout and adaptive components, `@blocz/react-responsiv
    2. [Hooks](#hooks)
       1. [`useBreakpoint()`](#usebreakpoint)
       2. [`useMediaQuery()`](#usemediaquery)
-   3. [`<Match>`](#match)
-      1. [`only` and `matchMedia` props](#only-and-matchmedia-props)
-      2. [Use a custom component in Match](#use-a-custom-component-in-match)
-   4. [`<BreakpointsProvider>`](#breakpointsprovider)
+   3. [`<BreakpointsProvider>`](#breakpointsprovider)
       1. [Add more breakpoints](#add-more-breakpoints)
       2. [Change default breakpoints](#change-default-breakpoints)
       3. [Units](#units)
       4. [Direction](#direction)
-   5. [CSS in JS](#css-in-js)
+   4. [CSS in JS](#css-in-js)
       1. [`toJSON`](#tojson)
       2. [`toCSS`](#tocss)
-   6. [Comparison to other libraries](#comparison-to-other-libraries)
-   7. [`matchMedia` polyfill](#matchmedia-polyfill)
+   5. [Comparison to other libraries](#comparison-to-other-libraries)
+   6. [`matchMedia` polyfill](#matchmedia-polyfill)
       1. [Browser](#browser)
       2. [Node](#node)
-   8. [FAQ](#faq)
+   7. [FAQ](#faq)
 
 ## How to use
-
 
 ### `<Only>`
 
@@ -214,96 +209,6 @@ const App = () => {
   const matchMediaQuery = useMediaQuery("(min-width:768px) and (max-width:992px),(max-width:576px)");
   return <ul>{matchMediaQuery && <li>Visible at (min-width:768px) and (max-width:992px),(max-width:576px)</li>}</ul>;
 };
-```
-
-### `<Match>`
-
-#### `only` and `matchMedia` props
-
-The `Match` will look into every props of its children (and event nested children) to detect `only` and `matchMedia` props. If one of those is found, it will wrap the child in a `Only` component will those props auto-set.
-
-```javascript
-import React from "react";
-import { Only, Match } from "@blocz/react-responsive";
-
-const App = () => (
-  <Match>
-    <div only="xs">xs</div>
-    <div only="sm">sm</div>
-    <div only="md">md</div>
-    <div only="sm lg">sm and lg</div>
-    <div only="xl">xl</div>
-    <div>
-      <div>
-        <div>
-          <div only="smDown">nested smDown</div>
-        </div>
-      </div>
-    </div>
-    <div matchMedia="(min-width:768px) and (max-width:992px),(max-width:576px)">
-      {"(min-width:768px) and (max-width:992px),(max-width:576px)"}
-    </div>
-  </Match>
-);
-```
-
-#### Use a custom component in Match
-
-You can also render the `Match` component as another one:
-
-```javascript
-import React from "react";
-import { Only, Match } from "@blocz/react-responsive";
-
-const App = () => (
-  <Match as="ul">
-    <li only="xs">xs</li>
-    <li only="sm">sm</li>
-    <li only="md">md</li>
-    <li only="lg">lg</li>
-    <li only="xl">xl</li>
-  </Match>
-);
-```
-
-If you’re using TypeScript, `Match` will work out of the box for native DOM elements.
-But if you want to use it for custom components, you’ll have to use the type `MatchChildProps`:
-
-```tsx
-import * as React from "react";
-import { Match, MatchChildProps } from "@blocz/react-responsive";
-
-// MatchChildProps includes the props `only` and `matchMedia`
-interface CustomProps extends MatchChildProps {
-  title: string;
-}
-
-const Custom: React.FunctionComponent<CustomProps> = ({ title, children }) => (
-  <React.Fragment>
-    <h3>{title}</h3>
-    <p>{children}</p>
-  </React.Fragment>
-);
-
-const App = () => (
-  <Match>
-    <Custom only="xs" title="xs">
-      xs
-    </Custom>
-    <Custom only="sm" title="sm">
-      sm
-    </Custom>
-    <Custom only="md" title="md">
-      md
-    </Custom>
-    <Custom only="lg" title="lg">
-      lg
-    </Custom>
-    <Custom only="xl" title="xl">
-      xl
-    </Custom>
-  </Match>
-);
 ```
 
 ### `<BreakpointsProvider>`
@@ -502,5 +407,3 @@ And if you need an example with `Jest`, `@testing-library/react`, `React` and `@
 ### FAQ
 
 For other questions, please take a look at our [FAQ document](https://github.com/bloczjs/react-responsive/blob/master/FAQ.md).
-
-
