@@ -3,8 +3,6 @@ import { BreakpointsProvider } from "@blocz/react-responsive";
 
 import List from "./List";
 import Custom from "./Custom";
-import Match from "./Match";
-import CustomMatch from "./MatchCustom";
 import Hook from "./Hook";
 import Height from "./Height";
 import CSSinJS from "./CSSinJS";
@@ -20,10 +18,6 @@ const App = (
     <List />
     <hr />
     <Custom />
-    <hr />
-    <Match />
-    <hr />
-    <CustomMatch />
     <hr />
     <Hook />
     <hr />
