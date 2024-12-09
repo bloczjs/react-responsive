@@ -24,14 +24,11 @@ If you need a responsive layout and adaptive components, `@blocz/react-responsiv
       2. [Change default breakpoints](#change-default-breakpoints)
       3. [Units](#units)
       4. [Direction](#direction)
-   4. [CSS in JS](#css-in-js)
-      1. [`toJSON`](#tojson)
-      2. [`toCSS`](#tocss)
-   5. [Comparison to other libraries](#comparison-to-other-libraries)
-   6. [`matchMedia` polyfill](#matchmedia-polyfill)
+   4. [Comparison to other libraries](#comparison-to-other-libraries)
+   5. [`matchMedia` polyfill](#matchmedia-polyfill)
       1. [Browser](#browser)
       2. [Node](#node)
-   7. [FAQ](#faq)
+   6. [FAQ](#faq)
 
 ## How to use
 
@@ -298,88 +295,6 @@ const App = () => (
 Every CSS units are supported.
 
 The default unit is `px`.
-
-### CSS in JS
-
-`@blocz/react-responsive` includes 2 utility functions `toJSON` and `toCSS` so that you can re-use `@blocz/react-responsive` breakpoints as media queries for `css-in-js` libraries.
-
-#### `toJSON`
-
-Example with [`styletron`](https://github.com/styletron/styletron):
-
-```jsx
-import React from "react";
-import { toJSON as createToJSON, BreakpointsContext } from "@blocz/react-responsive";
-import { styled } from "styletron-react";
-
-const styles = {
-  mdDown: {
-    color: "red",
-    ":hover": { color: "blue" },
-  },
-  lgUp: {
-    color: "green",
-  },
-};
-
-const Panel = styled("div", (props) => ({
-  ...props.$toJSON(styles),
-}));
-
-const App = () => {
-  const breakpoints = React.useContext(BreakpointsContext);
-  const toJSON = createToJSON(breakpoints);
-  // toJSON(styles) returns:
-  // {
-  //   "@media  (max-width:991px)": {
-  //     "color": "red",
-  //     ":hover": {
-  //       "color": "blue"
-  //     }
-  //   },
-  //   "@media  (min-width:992px)": {
-  //     "color": "green"
-  //   }
-  // }
-  return <Panel $toJSON={toJSON}>content</Panel>;
-};
-```
-
-#### `toCSS`
-
-Example with [`emotion`](https://emotion.sh):
-
-```jsx
-import React from "react";
-import { toCSS as createToCSS, BreakpointsContext } from "@blocz/react-responsive";
-import { css } from "@emotion/css";
-
-const styles = {
-  mdDown: {
-    color: "red",
-    ":hover": { color: "blue" },
-  },
-  lgUp: {
-    color: "green",
-  },
-};
-
-const App = () => {
-  const breakpoints = React.useContext(BreakpointsContext);
-  const toCSS = createToCSS(breakpoints);
-  // toCSS(styles) returns:
-  // `@media  (max-width:991px) {
-  //   color: red;
-  //   :hover {
-  //     color: blue;
-  //   }
-  // }
-  // @media  (min-width:992px) {
-  //   color: green;
-  // }`
-  return <div className={css(toCSS(styles))}>content</div>;
-};
-```
 
 ### Comparison to other libraries
 
