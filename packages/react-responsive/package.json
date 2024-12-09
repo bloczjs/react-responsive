@@ -40,10 +40,10 @@
   },
   "homepage": "https://github.com/bloczjs/react-responsive#readme",
   "devDependencies": {
-    "@types/react": "^18.0.12",
+    "@types/react": "^19.0.1",
     "microbundle": "^0.15.1"
   },
   "peerDependencies": {
-    "react": "16.8.0 - 18.x.x"
+    "react": "16.8.0 - 19.x.x"
   }
 }
