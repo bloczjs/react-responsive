@@ -1,6 +1,6 @@
 {
   "name": "@blocz/react-responsive",
-  "version": "3.0.3",
+  "version": "4.0.0-beta.0",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "source": "src/index.ts",
   "sideEffects": false,
@@ -18,7 +18,9 @@
     },
     "./package.json": "./package.json"
   },
-  "repository": "git@github.com:bloczjs/react-responsive.git",
+  "repository": {
+    "url": "git+ssh://git@github.com/bloczjs/react-responsive.git"
+  },
   "keywords": [
     "adaptive",
     "breakpoint",
