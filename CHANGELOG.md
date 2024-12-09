@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Drop support for `Math` as this is an anti pattern (leaking into the web TS globals) **BREAKING CHANGE**
+
 ## v3
 
 ### 3.0
