@@ -71,18 +71,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 "
 `;
 
@@ -165,18 +153,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for small devices (landscape phones)
@@ -255,18 +231,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 "
 `;
 
@@ -343,18 +307,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for medium devices (tablets)
@@ -427,18 +379,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for medium devices (tablets)
@@ -510,18 +450,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -599,17 +527,77 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
 
 <Only>
 
@@ -683,18 +671,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for large devices (desktops)
@@ -766,102 +742,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
-<Only>
-
-Only visible for large devices (desktops)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -943,17 +823,81 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
 
 <Only>
 
@@ -1031,18 +975,6 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for extra large devices (large desktops)
@@ -1119,18 +1051,6 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for extra large devices (large desktops)
@@ -1206,106 +1126,6 @@ isBig: true
 isBigDown: true
 
 isBigUp: true
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -1380,18 +1200,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -1475,18 +1283,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for small devices (landscape phones)
@@ -1565,18 +1361,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 "
 `;
 
@@ -1653,18 +1437,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for medium devices (tablets)
@@ -1737,18 +1509,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for medium devices (tablets)
@@ -1820,18 +1580,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -1909,17 +1657,77 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
 
 <Only>
 
@@ -1993,18 +1801,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for large devices (desktops)
@@ -2076,102 +1872,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
-<Only>
-
-Only visible for large devices (desktops)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -2253,17 +1953,81 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
 
 <Only>
 
@@ -2341,18 +2105,6 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for extra large devices (large desktops)
@@ -2429,18 +2181,6 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for extra large devices (large desktops)
@@ -2516,106 +2256,6 @@ isBig: true
 isBigDown: true
 
 isBigUp: true
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -2690,18 +2330,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -2785,18 +2413,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for small devices (landscape phones)
@@ -2875,18 +2491,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 "
 `;
 
@@ -2963,18 +2567,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for medium devices (tablets)
@@ -3047,18 +2639,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for medium devices (tablets)
@@ -3130,18 +2710,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -3219,17 +2787,77 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
 
 <Only>
 
@@ -3303,18 +2931,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for large devices (desktops)
@@ -3386,102 +3002,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
-<Only>
-
-Only visible for large devices (desktops)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -3563,17 +3083,81 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
 
 <Only>
 
@@ -3651,18 +3235,6 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for extra large devices (large desktops)
@@ -3739,18 +3311,6 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for extra large devices (large desktops)
@@ -3826,106 +3386,6 @@ isBig: true
 isBigDown: true
 
 isBigUp: true
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -4000,18 +3460,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -4095,18 +3543,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for small devices (landscape phones)
@@ -4185,18 +3621,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 "
 `;
 
@@ -4273,18 +3697,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for medium devices (tablets)
@@ -4357,18 +3769,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for medium devices (tablets)
@@ -4440,18 +3840,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -4529,17 +3917,77 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
 
 <Only>
 
@@ -4613,18 +4061,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for large devices (desktops)
@@ -4696,102 +4132,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
-<Only>
-
-Only visible for large devices (desktops)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -4873,17 +4213,81 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
 
 <Only>
 
@@ -4961,18 +4365,6 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for extra large devices (large desktops)
@@ -5049,18 +4441,6 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for extra large devices (large desktops)
@@ -5136,106 +4516,6 @@ isBig: true
 isBigDown: true
 
 isBigUp: true
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -5310,18 +4590,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -5405,18 +4673,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for small devices (landscape phones)
@@ -5495,18 +4751,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 "
 `;
 
@@ -5583,18 +4827,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for medium devices (tablets)
@@ -5667,18 +4899,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for medium devices (tablets)
@@ -5750,18 +4970,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -5839,17 +5047,77 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
 
 <Only>
 
@@ -5923,18 +5191,6 @@ isBigDown: true
 
 isBigUp: false
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for large devices (desktops)
@@ -6006,102 +5262,6 @@ isBig: false
 isBigDown: true
 
 isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
-<Only>
-
-Only visible for large devices (desktops)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;
@@ -6183,17 +5343,81 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
 
 <Only>
 
@@ -6271,18 +5495,6 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for extra large devices (large desktops)
@@ -6359,18 +5571,6 @@ isBigDown: true
 
 isBigUp: true
 
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
 <Only>
 
 Only visible for extra large devices (large desktops)
@@ -6446,106 +5646,6 @@ isBig: true
 isBigDown: true
 
 isBigUp: true
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
-
-useBreakpoint() with heights
-
-isThin: false
-
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-{
- "@media (max-width:991px)": {
- "color": "red",
- ":hover": {
- "color": "blue"
- }
- },
- "@media (min-width:992px)": {
- "color": "green"
- }
-}
 
 "
 `;

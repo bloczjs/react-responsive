@@ -6,7 +6,7 @@ const sleep = (ms: number) =>
   new Promise((res) => setTimeout(res, ms));
 
 const getText = async () => {
-  await sleep(50); // ensure that the hooks have time to update
+  await sleep(100); // ensure that the hooks have time to update
   return (
     (await page.$eval("body", (el) =>
       (el as HTMLElement).innerText
