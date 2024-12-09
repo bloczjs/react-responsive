@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Drop support for `Math` as this is an anti pattern (leaking into the web TS globals) **BREAKING CHANGE**
+- Drop support for node 16 & 18
 
 ## v3
 
