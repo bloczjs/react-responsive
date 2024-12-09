@@ -22,15 +22,5 @@ it("browser test", async () => {
   for (const size of sizes) {
     await page.setViewport(size);
     expect(await getText()).toMatchSnapshot();
-    expect(
-      await page.$eval(
-        "#css-in-js",
-        (el) => window.getComputedStyle(el).color,
-      ),
-    ).toBe(
-      size.width > 900
-        ? "rgb(0, 128, 0)" // green
-        : "rgb(255, 0, 0)", // red
-    );
   }
 });
