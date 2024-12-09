@@ -2,7 +2,7 @@
   "parser": "@typescript-eslint/parser",
   "extends": [
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
+    "plugin:@eslint-react/recommended-legacy",
     "prettier",
     "plugin:prettier/recommended"
   ],
