@@ -6,6 +6,7 @@
     "declaration": true,
     "jsx": "react",
     "jsxFactory": "React.createElement",
+    "isolatedDeclarations": true,
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
