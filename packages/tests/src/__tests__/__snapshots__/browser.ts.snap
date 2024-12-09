@@ -13,22 +13,6 @@ xs
 
 Only visible for extra small devices (portrait phones)
 
-<Match>
-
-xs
-
-nested smDown
-
-(min-width:768px) and (max-width:992px),(max-width:576px)
-
-smDown
-
-Custom component used as Match's children
-
-xs
-
-xs
-
 useBreakpoint()
 
 isXs: true
@@ -131,20 +115,6 @@ sm xl
 
 Only visible for small AND extra large devices
 
-<Match>
-
-sm
-
-nested smDown
-
-smDown
-
-Custom component used as Match's children
-
-sm
-
-sm
-
 useBreakpoint()
 
 isXs: false
@@ -241,20 +211,6 @@ md
 
 Only visible for medium devices (tablets)
 
-<Match>
-
-md
-
-(min-width:768px) and (max-width:992px),(max-width:576px)
-
-mdUp
-
-Custom component used as Match's children
-
-md
-
-md
-
 useBreakpoint()
 
 isXs: false
@@ -350,18 +306,6 @@ Custom component
 lg
 
 Only visible for large devices (desktops)
-
-<Match>
-
-lg
-
-mdUp
-
-Custom component used as Match's children
-
-lg
-
-lg
 
 useBreakpoint()
 
@@ -462,18 +406,6 @@ Only visible for extra large devices (large desktops)
 sm xl
 
 Only visible for small AND extra large devices
-
-<Match>
-
-xl
-
-mdUp
-
-Custom component used as Match's children
-
-xl
-
-xl
 
 useBreakpoint()
 
