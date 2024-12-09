@@ -72,14 +72,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -166,14 +166,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -256,14 +256,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -344,14 +344,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -428,14 +428,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -512,14 +512,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -600,14 +600,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -684,14 +684,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -768,14 +768,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -852,14 +852,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -944,14 +944,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1032,14 +1032,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1120,14 +1120,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1208,14 +1208,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1296,14 +1296,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1382,14 +1382,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1476,14 +1476,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1566,14 +1566,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1654,14 +1654,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1738,14 +1738,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1822,14 +1822,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1910,14 +1910,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -1994,14 +1994,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2078,14 +2078,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2162,14 +2162,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2254,14 +2254,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2342,14 +2342,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2430,14 +2430,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2518,14 +2518,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2606,14 +2606,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2692,14 +2692,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2786,14 +2786,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2876,14 +2876,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -2964,14 +2964,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3048,14 +3048,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3132,14 +3132,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3220,14 +3220,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3304,14 +3304,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3388,14 +3388,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3472,14 +3472,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3564,14 +3564,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3652,14 +3652,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3740,14 +3740,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3828,14 +3828,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -3916,14 +3916,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4002,14 +4002,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4096,14 +4096,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4186,14 +4186,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4274,14 +4274,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4358,14 +4358,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4442,14 +4442,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4530,14 +4530,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4614,14 +4614,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4698,14 +4698,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4782,14 +4782,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4874,14 +4874,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -4962,14 +4962,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5050,14 +5050,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5138,14 +5138,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5226,14 +5226,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5312,14 +5312,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5406,14 +5406,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5496,14 +5496,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5584,14 +5584,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5668,14 +5668,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5752,14 +5752,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5840,14 +5840,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -5924,14 +5924,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -6008,14 +6008,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -6092,14 +6092,14 @@ isBigDown: true
 isBigUp: false
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -6184,14 +6184,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -6272,14 +6272,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -6360,14 +6360,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -6448,14 +6448,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 
@@ -6536,14 +6536,14 @@ isBigDown: true
 isBigUp: true
 
 {
- \\"@media (max-width:991px)\\": {
- \\"color\\": \\"red\\",
- \\":hover\\": {
- \\"color\\": \\"blue\\"
+ "@media (max-width:991px)": {
+ "color": "red",
+ ":hover": {
+ "color": "blue"
  }
  },
- \\"@media (min-width:992px)\\": {
- \\"color\\": \\"green\\"
+ "@media (min-width:992px)": {
+ "color": "green"
  }
 }
 

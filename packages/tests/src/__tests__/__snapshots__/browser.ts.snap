@@ -73,21 +73,21 @@ isBigUp: false
 
 {
 
-    \\"@media  (max-width:991px)\\": {
+    "@media  (max-width:991px)": {
 
-        \\"color\\": \\"red\\",
+        "color": "red",
 
-        \\":hover\\": {
+        ":hover": {
 
-            \\"color\\": \\"blue\\"
+            "color": "blue"
 
         }
 
     },
 
-    \\"@media  (min-width:992px)\\": {
+    "@media  (min-width:992px)": {
 
-        \\"color\\": \\"green\\"
+        "color": "green"
 
     }
 
@@ -175,21 +175,21 @@ isBigUp: false
 
 {
 
-    \\"@media  (max-width:991px)\\": {
+    "@media  (max-width:991px)": {
 
-        \\"color\\": \\"red\\",
+        "color": "red",
 
-        \\":hover\\": {
+        ":hover": {
 
-            \\"color\\": \\"blue\\"
+            "color": "blue"
 
         }
 
     },
 
-    \\"@media  (min-width:992px)\\": {
+    "@media  (min-width:992px)": {
 
-        \\"color\\": \\"green\\"
+        "color": "green"
 
     }
 
@@ -271,21 +271,21 @@ isBigUp: false
 
 {
 
-    \\"@media  (max-width:991px)\\": {
+    "@media  (max-width:991px)": {
 
-        \\"color\\": \\"red\\",
+        "color": "red",
 
-        \\":hover\\": {
+        ":hover": {
 
-            \\"color\\": \\"blue\\"
+            "color": "blue"
 
         }
 
     },
 
-    \\"@media  (min-width:992px)\\": {
+    "@media  (min-width:992px)": {
 
-        \\"color\\": \\"green\\"
+        "color": "green"
 
     }
 
@@ -367,21 +367,21 @@ isBigUp: false
 
 {
 
-    \\"@media  (max-width:991px)\\": {
+    "@media  (max-width:991px)": {
 
-        \\"color\\": \\"red\\",
+        "color": "red",
 
-        \\":hover\\": {
+        ":hover": {
 
-            \\"color\\": \\"blue\\"
+            "color": "blue"
 
         }
 
     },
 
-    \\"@media  (min-width:992px)\\": {
+    "@media  (min-width:992px)": {
 
-        \\"color\\": \\"green\\"
+        "color": "green"
 
     }
 
@@ -467,21 +467,21 @@ isBigUp: true
 
 {
 
-    \\"@media  (max-width:991px)\\": {
+    "@media  (max-width:991px)": {
 
-        \\"color\\": \\"red\\",
+        "color": "red",
 
-        \\":hover\\": {
+        ":hover": {
 
-            \\"color\\": \\"blue\\"
+            "color": "blue"
 
         }
 
     },
 
-    \\"@media  (min-width:992px)\\": {
+    "@media  (min-width:992px)": {
 
-        \\"color\\": \\"green\\"
+        "color": "green"
 
     }
 
