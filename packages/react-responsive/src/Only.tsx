@@ -31,5 +31,3 @@ export function Only<OtherProps = Record<string, never>>({
     children,
   );
 }
-
-Only.displayName = "Only";

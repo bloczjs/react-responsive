@@ -10,7 +10,9 @@ const defaultBreakpoints: ExposedBreakpoints = {
   xl: [1200, Infinity, "px"], // Extra large devices (large desktops)
 };
 
-export const BreakpointsContext = React.createContext<Breakpoints>(sanitize(defaultBreakpoints));
+export const BreakpointsContext: React.Context<Breakpoints> = React.createContext<Breakpoints>(
+  sanitize(defaultBreakpoints),
+);
 
 interface BreakpointsProviderProps {
   breakpoints?: ExposedBreakpoints;
