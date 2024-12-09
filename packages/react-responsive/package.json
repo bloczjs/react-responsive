@@ -41,7 +41,7 @@
   "homepage": "https://github.com/bloczjs/react-responsive#readme",
   "devDependencies": {
     "@types/react": "^18.0.12",
-    "microbundle": "^0.15.0"
+    "microbundle": "^0.15.1"
   },
   "peerDependencies": {
     "react": "16.8.0 - 18.x.x"

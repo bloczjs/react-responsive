@@ -24,7 +24,12 @@ export function Only<OtherProps = Record<string, never>>({
     return null;
   }
 
-  return React.createElement(as || React.Fragment, as ? (props as OtherProps) : undefined, children);
+  return React.createElement(
+    // @ts-expect-error – this is a complex type
+    as || React.Fragment,
+    as ? (props as OtherProps) : undefined,
+    children,
+  );
 }
 
 Only.displayName = "Only";
