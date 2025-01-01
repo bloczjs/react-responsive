@@ -4,8 +4,8 @@
 
 ### 4.0
 
-- Drop support for `Match` as this is an anti pattern (crawling children + leaking into the web TS globals) **BREAKING CHANGE**
-- Drop support for `toJSON` & `toCSS` **BREAKING CHANGE**
+- Drop support for `Match` as this is an anti pattern (crawling children + leaking into the web TS globals) **[BREAKING CHANGE]**
+- Drop support for `toJSON` & `toCSS` **[BREAKING CHANGE]**
 - Drop support for node 16 & 18, and add for 20 & 22
 - Update support TS version to 5.7.2 (shouldn’t impact people depending on `@blocz/react-responsive`)
 - Mark React 19 as available
@@ -15,8 +15,8 @@
 
 ### 4.0.0
 
-- Drop support for `Match` as this is an anti pattern (crawling children + leaking into the web TS globals) **BREAKING CHANGE**
-- Drop support for `toJSON` & `toCSS` **BREAKING CHANGE**
+- Drop support for `Match` as this is an anti pattern (crawling children + leaking into the web TS globals) **[BREAKING CHANGE]**
+- Drop support for `toJSON` & `toCSS` **[BREAKING CHANGE]**
 - Drop support for node 16 & 18, and add for 20 & 22
 - Update support TS version to 5.7.2 (shouldn’t impact people depending on `@blocz/react-responsive`)
 - Mark React 19 as available
@@ -26,11 +26,11 @@
 
 ### 4.0.0-beta.1
 
-- Drop support for `toJSON` & `toCSS` **BREAKING CHANGE**
+- Drop support for `toJSON` & `toCSS` **[BREAKING CHANGE]**
 
 ### 4.0.0-beta.0
 
-- Drop support for `Match` as this is an anti pattern (leaking into the web TS globals) **BREAKING CHANGE**
+- Drop support for `Match` as this is an anti pattern (leaking into the web TS globals) **[BREAKING CHANGE]**
 - Drop support for node 16 & 18, and add for 20 & 22
 - Update support TS version to 5.7.2 (shouldn’t impact people depending on `@blocz/react-responsive`)
 - Mark React 19 as available
@@ -44,11 +44,11 @@
 ### 3.0
 
 - The package was renamed `@blocz/react-responsive` instead of `react-only`
-- rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
-- `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid **BREAKING CHANGE**
+- rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **[BREAKING CHANGE]**
+- `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid **[BREAKING CHANGE]**
 - Avoid sending a warning on react 17
 - Fix `only` and `matchMedia` props on DOM elements for the `Match` component
-- Remove prop `strict` **BREAKING CHANGE**
+- Remove prop `strict` **[BREAKING CHANGE]**
 - Fix `exports` field in package.json
 - Drop support for node 13 and add support for node 15 and 16
 - Mark React 18 as available + fix types for React 18.
@@ -77,14 +77,14 @@
 #### 3.0.0
 
 - The package was renamed `@blocz/react-responsive` instead of `react-only`
-- rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
+- rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **[BREAKING CHANGE]**
   - Those were renamed for 2 reasons:
     1. `useOnly` isn’t really explicit
     2. `useQuery` can be confused with react-query’s or apollo’s useQuery hooks
-- `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid. Instead it will directly use the correct value, and if the media query is invalid, it’ll return `false`. **BREAKING CHANGE**
+- `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid. Instead it will directly use the correct value, and if the media query is invalid, it’ll return `false`. **[BREAKING CHANGE]**
 - Bump peerDependencies to allow for react 17
 - Drop support for node 10
-- Remove prop `strict`: **BREAKING CHANGE**
+- Remove prop `strict`: **[BREAKING CHANGE]**
   - This feature was initially introduced to avoid collision between `mdUp` and `smDown` for instance. But since we avoid the overlapping of breakpoints in the v1.0.1 and as this is customizable, this prop doesn't make sense anymore.
   - This prop relied on `calc(% + 1px)` and `calc(% - 1px)` which has 2 issues:
     - difficult to be compatible with SSR as for instance css-mediaquery crashes when we use `calc()` (see [issue](https://github.com/ericf/css-mediaquery/issues/19)),
@@ -103,11 +103,11 @@
 
 #### 3.0.0.beta.0
 
-- rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **BREAKING CHANGE**
+- rename `useOnly` to `useBreakpoint` and `useQuery` to `useMediaQuery` **[BREAKING CHANGE]**
   - Those were renamed for 2 reasons:
     1. `useOnly` isn’t really explicit
     2. `useQuery` can be confused with react-query’s or apollo’s useQuery hooks
-- `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid. Instead it will directly use the correct value, and if the media query is invalid, it’ll return `false`. **BREAKING CHANGE**
+- `useBreakpoint` and `useMediaQuery` stop returning `undefined` during the initialization and if the media query is invalid. Instead it will directly use the correct value, and if the media query is invalid, it’ll return `false`. **[BREAKING CHANGE]**
 - Bump peerDependencies to allow for react 17
 - Drop support for node 10
 
@@ -119,7 +119,7 @@
 
 - remove polyfill for matchMedia **minor breaking change**
 - add `useQuery`
-- drop `media` in `useOnly` **BREAKING CHANGE**
+- drop `media` in `useOnly` **[BREAKING CHANGE]**
 - use Node 13 `exports` field
 - add `toJSON` and `toCSS` for CSS-in-JS support
 
@@ -142,7 +142,7 @@
 
 - remove polyfill for matchMedia (it should be define by the users) **minor breaking change**
 - add new hook `useQuery` and use it internally in `Only` for the prop `matchMedia`
-- drop `query` in `useOnly` **BREAKING CHANGE**
+- drop `query` in `useOnly` **[BREAKING CHANGE]**
   - as there is a new hook `useQuery` that deals with media queries, the 2nd argument of `useOnly` was redundant
   - new signature:
     - before: `useOnly = (on?: string, media?: string, strict?: boolean) => boolean | undefined`
@@ -210,8 +210,8 @@
 ### 2.0
 
 - Use React's context
-- Drop Preact support **BREAKING CHANGE**
-- Remove `toCSS`, `toJSON` and `toMediaQuery` **BREAKING CHANGE**
+- Drop Preact support **[BREAKING CHANGE]**
+- Remove `toCSS`, `toJSON` and `toMediaQuery` **[BREAKING CHANGE]**
 
 <details>
   <summary>See patches</summary>
@@ -222,9 +222,9 @@
 
 #### 2.0.0
 
-- Remove Preact support (won't be an issue with Preact 10) **BREAKING CHANGE**
+- Remove Preact support (won't be an issue with Preact 10) **[BREAKING CHANGE]**
 - Use and expose `BreakpointsContext` instead of a class to store breakpoints
-- Remove `toCSS`, `toJSON` and `toMediaQuery` **BREAKING CHANGE**
+- Remove `toCSS`, `toJSON` and `toMediaQuery` **[BREAKING CHANGE]**
 - Stop debouncing `isShown` because as it's a boolean, React isn't re-rendering if the same value is re-set
 - `Only` accepts other props when the prop `as` is used **type fix**
 
@@ -239,13 +239,13 @@
 #### 2.0.0-beta-1
 
 - Use `useLayoutEffect` in `useOnly` to reduce the delay before changing the DOM
-- Remove `toCSS`, `toJSON` and `toMediaQuery` **BREAKING CHANGE**
+- Remove `toCSS`, `toJSON` and `toMediaQuery` **[BREAKING CHANGE]**
 
 #### 2.0.0-beta
 
-- Remove Preact support (won't be an issue with Preact X) **BREAKING CHANGE**
+- Remove Preact support (won't be an issue with Preact X) **[BREAKING CHANGE]**
 - Use and expose `BreakpointsContext` instead of a class to store breakpoints
-- Change API of `toCSS`, `toJSON` and `toMediaQuery` (need to provide the breakpoints) **BREAKING CHANGE**
+- Change API of `toCSS`, `toJSON` and `toMediaQuery` (need to provide the breakpoints) **[BREAKING CHANGE]**
 
 </details>
 
@@ -271,7 +271,7 @@
 
 #### 1.0.1
 
-- Avoid overlapping breakpoints in defaults **BREAKING CHANGE**
+- Avoid overlapping breakpoints in defaults **[BREAKING CHANGE]**
 
 #### 1.0.0
 
