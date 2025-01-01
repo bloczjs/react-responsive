@@ -11,7 +11,7 @@
 - Mark React 19 as available
 
 <details>
-  <summary>See detailed changelog</summary>
+  <summary>See patches</summary>
 
 ### 4.0.0
 
@@ -54,7 +54,7 @@
 - Mark React 18 as available + fix types for React 18.
 
 <details>
-  <summary>See detailed changelog</summary>
+  <summary>See patches</summary>
 
 ### 3.0.3
 
@@ -124,7 +124,7 @@
 - add `toJSON` and `toCSS` for CSS-in-JS support
 
 <details>
-  <summary>See detailed changelog</summary>
+  <summary>See patches</summary>
 
 #### 2.3.3
 
@@ -166,7 +166,7 @@
 - change 3rd option in breakpoint to be an `option` instead of just the unit
 
 <details>
-  <summary>See detailed changelog</summary>
+  <summary>See patches</summary>
 
 #### 2.2.0
 
@@ -183,7 +183,7 @@
 - expose `MatchChildProps`
 
 <details>
-  <summary>See detailed changelog</summary>
+  <summary>See patches</summary>
 
 #### 2.1.4
 
@@ -214,7 +214,7 @@
 - Remove `toCSS`, `toJSON` and `toMediaQuery` **BREAKING CHANGE**
 
 <details>
-  <summary>See detailed changelog</summary>
+  <summary>See patches</summary>
 
 #### 2.0.1
 
@@ -259,7 +259,7 @@
 - Add `useOnly` hook
 
 <details>
-  <summary>See detailed changelog</summary>
+  <summary>See patches</summary>
 
 #### 1.0.3
 
@@ -288,7 +288,7 @@
 - Add strict mode
 
 <details>
-  <summary>See detailed changelog</summary>
+  <summary>See patches</summary>
 
 #### 0.8.3
 
@@ -306,7 +306,7 @@
 - Add support for Parcel
 
 <details>
-  <summary>See detailed changelog</summary>
+  <summary>See patches</summary>
 
 #### 0.7.3
 
@@ -332,7 +332,7 @@
 - Add `<Match>` component
 
 <details>
-  <summary>See detailed changelog</summary>
+  <summary>See patches</summary>
 
 #### 0.6.7
 
