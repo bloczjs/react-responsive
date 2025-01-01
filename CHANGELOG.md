@@ -25,6 +25,9 @@
 - Update support TS version to 5.7.2 (shouldn’t impact people depending on `@blocz/react-responsive`)
 - Mark React 19 as available
 
+<details>
+  <summary>Pre-releases</summary>
+
 ### 4.0.0-beta.1
 
 - Drop support for `toJSON` & `toCSS` **BREAKING CHANGE**
@@ -35,6 +38,8 @@
 - Drop support for node 16 & 18, and add for 20 & 22
 - Update support TS version to 5.7.2 (shouldn’t impact people depending on `@blocz/react-responsive`)
 - Mark React 19 as available
+
+</details>
 
 </details>
 
@@ -228,7 +233,7 @@
 - `Only` accepts other props when the prop `as` is used **type fix**
 
 <details>
-  <summary>Betas</summary>
+  <summary>Pre-releases</summary>
 
 #### 2.0.0-beta-2
 
