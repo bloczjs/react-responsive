@@ -17,6 +17,14 @@
 <details>
   <summary>See detailed changelog</summary>
 
+### 4.0.0
+
+- Drop support for `Match` as this is an anti pattern (crawling children + leaking into the web TS globals) **BREAKING CHANGE**
+- Drop support for `toJSON` & `toCSS` **BREAKING CHANGE**
+- Drop support for node 16 & 18, and add for 20 & 22
+- Update support TS version to 5.7.2 (shouldn’t impact people depending on `@blocz/react-responsive`)
+- Mark React 19 as available
+
 ### 4.0.0-beta.1
 
 - Drop support for `toJSON` & `toCSS` **BREAKING CHANGE**
