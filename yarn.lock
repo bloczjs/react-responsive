@@ -3217,6 +3217,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rolldown/binding-darwin-arm64@npm:^1.0.0-beta.34":
+  version: 1.0.0-beta.9-commit.d91dfb5
+  resolution: "@rolldown/binding-darwin-arm64@npm:1.0.0-beta.9-commit.d91dfb5"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@rolldown/binding-linux-x64-gnu@npm:^1.0.0-beta.34":
+  version: 1.0.0-beta.9-commit.d91dfb5
+  resolution: "@rolldown/binding-linux-x64-gnu@npm:1.0.0-beta.9-commit.d91dfb5"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-alias@npm:^3.1.1":
   version: 3.1.9
   resolution: "@rollup/plugin-alias@npm:3.1.9"
@@ -4957,13 +4971,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.0.9
   checksum: 10/06cbfd1f470b8accf5e235b0e658e2f82d33a1cea8c2a21b55dfef5280769b874a8979c50f2c035af9213836cf85fb7e4687748a9162d564d7638ed4a194888e
-  languageName: node
-  linkType: hard
-
-"css-mediaquery@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "css-mediaquery@npm:0.1.2"
-  checksum: 10/f2f7512daa015f98b82bd65bbdd7c2100b16dddf22784bde2a8085f10f11e8775da57108016fe767f5e400afe64581c15d4e649c47725af7eac5f4094fa7ae43
   languageName: node
   linkType: hard
 
@@ -8634,6 +8641,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"media-query-fns@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "media-query-fns@npm:2.1.2"
+  dependencies:
+    media-query-parser: "npm:3.0.0-beta.1"
+  checksum: 10/3ec68bfc4eb76b9dcbd85b1824f9d03df63906b2c1c2fe60b2965df3f1d068e08034eae8701367d275b4b63c81d9728d0ea7aa36323a1545b247d3819628bdad
+  languageName: node
+  linkType: hard
+
+"media-query-parser@npm:3.0.0-beta.1":
+  version: 3.0.0-beta.1
+  resolution: "media-query-parser@npm:3.0.0-beta.1"
+  checksum: 10/06727cdea4a26bf499163b762801e681a2262d72b82c259f98985ae4abd092073860520f664efed79f7f21679d01bf35f0473aadd0132e69a65638643186810d
+  languageName: node
+  linkType: hard
+
 "merge-stream@npm:^2.0.0":
   version: 2.0.0
   resolution: "merge-stream@npm:2.0.0"
@@ -8881,12 +8904,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mock-match-media@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "mock-match-media@npm:0.4.3"
+"mock-match-media@npm:^v1.0.0-alpha.5":
+  version: 1.0.0-alpha.5
+  resolution: "mock-match-media@npm:1.0.0-alpha.5"
   dependencies:
-    css-mediaquery: "npm:^0.1.2"
-  checksum: 10/aaebee33505e4035878caa4fb47dca55b40f8b498acf223acb747b26ac3b2292059f3fbf6e9a6949c7c3eedc07bfd36df8fa9210ff8a861e4b2a72b496e1d574
+    "@rolldown/binding-darwin-arm64": "npm:^1.0.0-beta.34"
+    "@rolldown/binding-linux-x64-gnu": "npm:^1.0.0-beta.34"
+    media-query-fns: "npm:^2.1.2"
+  dependenciesMeta:
+    "@rolldown/binding-darwin-arm64":
+      optional: true
+    "@rolldown/binding-linux-x64-gnu":
+      optional: true
+  checksum: 10/59b54f4548a5d2455a65da31369748635772984ee65debbe61d2953903adba53b42fcd01ec4ee2082160586055204aade31e6e7ebbc8371e6763ddf1563e35e1
   languageName: node
   linkType: hard
 
@@ -10265,7 +10295,7 @@ __metadata:
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
     jest-puppeteer: "npm:^10.1.4"
-    mock-match-media: "npm:^0.4.3"
+    mock-match-media: "npm:^v1.0.0-alpha.5"
     parcel: "npm:^2.13.2"
     process: "npm:^0.11.10"
     puppeteer: "npm:^23.10.2"
