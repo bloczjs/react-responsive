@@ -4,6 +4,10 @@
 
 import { render } from "@testing-library/react";
 
+import { TextEncoder } from "node:util";
+
+Object.assign(globalThis, { TextEncoder });
+
 import "mock-match-media/polyfill";
 
 import { setMedia } from "mock-match-media";
@@ -30,8 +34,8 @@ const wait = (ms: number) =>
 it.each(sizes)("Should render in SSR %p", async () => {
   for (const size of sizes) {
     setMedia({
-      width: `${size.width}px`,
-      height: `${size.height}px`,
+      width: size.width,
+      height: size.height,
     });
 
     await wait(20);
