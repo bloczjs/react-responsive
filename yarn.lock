@@ -8904,9 +8904,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mock-match-media@npm:^v1.0.0-alpha.5":
-  version: 1.0.0-alpha.5
-  resolution: "mock-match-media@npm:1.0.0-alpha.5"
+"mock-match-media@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "mock-match-media@npm:1.0.0"
   dependencies:
     "@rolldown/binding-darwin-arm64": "npm:^1.0.0-beta.34"
     "@rolldown/binding-linux-x64-gnu": "npm:^1.0.0-beta.34"
@@ -8916,7 +8916,7 @@ __metadata:
       optional: true
     "@rolldown/binding-linux-x64-gnu":
       optional: true
-  checksum: 10/59b54f4548a5d2455a65da31369748635772984ee65debbe61d2953903adba53b42fcd01ec4ee2082160586055204aade31e6e7ebbc8371e6763ddf1563e35e1
+  checksum: 10/d62c8ab830597152dcfd93f8fd7d9536b6571a80d4ec52aaaa98a60e76a6b4ed50ccbf4ee012ff26cc61980f1a7b9c361e58ab826f7d76ebf38612e0d1dbdae4
   languageName: node
   linkType: hard
 
@@ -10295,7 +10295,7 @@ __metadata:
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
     jest-puppeteer: "npm:^10.1.4"
-    mock-match-media: "npm:^v1.0.0-alpha.5"
+    mock-match-media: "npm:^1.0.0"
     parcel: "npm:^2.13.2"
     process: "npm:^0.11.10"
     puppeteer: "npm:^23.10.2"
