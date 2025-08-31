@@ -4,6 +4,7 @@ module.exports = {
   transform: {
     "^.+\\.[jt]sx?$": "ts-jest",
   },
+  setupFiles: ["mock-match-media/jest-setup"],
   testPathIgnorePatterns: [".*\\.util\\..*"],
   moduleDirectories: [
     "<rootDir>/node_modules",

@@ -4,12 +4,6 @@
 
 import { render } from "@testing-library/react";
 
-import { TextEncoder } from "node:util";
-
-Object.assign(globalThis, { TextEncoder });
-
-import "mock-match-media/polyfill";
-
 import { setMedia } from "mock-match-media";
 import { sizes } from "./sizes.util";
 
