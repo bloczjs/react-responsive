@@ -8874,10 +8874,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mock-match-media@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "mock-match-media@npm:1.0.2"
-  checksum: 10/c42302346820befa385b4cea4cd70d334c20a7da2e2c2866f2414c94e897a1bb0d978bea0210c392959f463bac23a85ea6c97f43f7b07ca2ca8df08ed409bbce
+"mock-match-media@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "mock-match-media@npm:1.0.3"
+  checksum: 10/210e4726541b85404834b2683e0ce514346995069b72f1c6363b9109ceea0ff98ece8d92a0cfdac84f22cfb59c75e3034230e4f31a306d7cda022d927525eb90
   languageName: node
   linkType: hard
 
@@ -10256,7 +10256,7 @@ __metadata:
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
     jest-puppeteer: "npm:^10.1.4"
-    mock-match-media: "npm:^1.0.2"
+    mock-match-media: "npm:^1.0.3"
     parcel: "npm:^2.13.2"
     process: "npm:^0.11.10"
     puppeteer: "npm:^23.10.2"
