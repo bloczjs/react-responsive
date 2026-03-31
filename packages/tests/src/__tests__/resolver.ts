@@ -8,9 +8,7 @@ describe("Important files should be resolvable", () => {
       require.resolve("@blocz/react-responsive"),
     ).not.toBeNull();
     expect(
-      require.resolve(
-        "@blocz/react-responsive/package.json",
-      ),
+      require.resolve("@blocz/react-responsive/package.json"),
     ).not.toBeNull();
   });
 
@@ -27,9 +25,7 @@ describe("Important files should be resolvable", () => {
 describe("built files", () => {
   it("should contain all necessary files", () => {
     const BRRPath = path.dirname(
-      require.resolve(
-        "@blocz/react-responsive/package.json",
-      ),
+      require.resolve("@blocz/react-responsive/package.json"),
     );
 
     expect(
