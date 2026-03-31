@@ -1,3 +1,4 @@
 {
-    "markdown.extension.toc.orderedList": true
+  "markdown.extension.toc.orderedList": true,
+  "js/ts.tsdk.path": "node_modules/typescript/lib"
 }

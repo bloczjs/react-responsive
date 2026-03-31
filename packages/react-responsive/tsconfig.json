@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "rootDir": "./src",
     "module": "esnext",
     "target": "es2019",
     "allowJs": false,
