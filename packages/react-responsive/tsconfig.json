@@ -2,6 +2,7 @@
   "compilerOptions": {
     "module": "esnext",
     "target": "es2019",
+    "moduleResolution": "bundler",
     "allowJs": false,
     "declaration": true,
     "jsx": "react",
@@ -18,7 +19,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     // "allowSyntheticDefaultImports": true,
-    "moduleResolution": "bundler",
     "rootDir": "./src"
   }
 }
