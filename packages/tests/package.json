@@ -24,7 +24,7 @@
     "jest-environment-jsdom": "^30.3.0",
     "jest-puppeteer": "^11.0.0",
     "mock-match-media": "^1.0.3",
-    "parcel": "^2.13.2",
+    "parcel": "^2.16.4",
     "process": "^0.11.10",
     "puppeteer": "^23.10.2",
     "ts-jest": "^29.4.6",
