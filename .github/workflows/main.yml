@@ -27,6 +27,9 @@ jobs:
         run: |
           yarn test --runInBand
         working-directory: ./packages/tests
-      - name: Check linting + types
+      - name: Check linting
         run: |
           yarn lint
+      - name: Typecheck
+        run: |
+          yarn typecheck

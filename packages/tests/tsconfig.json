@@ -12,11 +12,13 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "composite": true,
     "noEmit": true,
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
     "rootDir": ".",
     "ignoreDeprecations": "6.0",
-    "types": ["jest", "node"]
-  }
+    "types": ["jest", "node", "jest-environment-puppeteer"]
+  },
+  "exclude": ["dist"]
 }

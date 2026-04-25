@@ -8,6 +8,8 @@
     "jsx": "react",
     "jsxFactory": "React.createElement",
     "isolatedDeclarations": true,
+    "skipLibCheck": true,
+    "composite": true,
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
