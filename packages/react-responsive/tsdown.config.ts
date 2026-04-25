@@ -1,6 +1,6 @@
-import { defineConfig } from "tsdown";
+import { defineConfig, UserConfig } from "tsdown";
 
-export default defineConfig({
+const config: UserConfig = defineConfig({
   entry: { "react-responsive": "./src/index.ts" },
   outDir: "lib",
   format: ["esm", "cjs", "umd"],
@@ -18,3 +18,5 @@ export default defineConfig({
     return options;
   },
 });
+
+export default config;
