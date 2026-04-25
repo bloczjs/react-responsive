@@ -4,16 +4,14 @@
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "source": "src/index.ts",
   "sideEffects": false,
-  "main": "lib/react-responsive.js",
+  "main": "lib/react-responsive.cjs",
   "umd:main": "lib/react-responsive.umd.js",
-  "module": "lib/react-responsive.modern.js",
-  "types": "lib/index.d.ts",
+  "module": "lib/react-responsive.mjs",
   "exports": {
     ".": {
-      "types": "./lib/index.d.ts",
-      "require": "./lib/react-responsive.js",
-      "import": "./lib/react-responsive.modern.mjs",
-      "browser": "./lib/react-responsive.modern.js",
+      "require": "./lib/react-responsive.cjs",
+      "import": "./lib/react-responsive.mjs",
+      "browser": "./lib/react-responsive.mjs",
       "umd": "./lib/react-responsive.umd.js"
     },
     "./package.json": "./package.json"
@@ -34,16 +32,15 @@
   "license": "MIT",
   "bugs": "https://github.com/bloczjs/react-responsive/issues",
   "scripts": {
-    "build": "yarn build:microbundle && cp lib/react-responsive.modern.js lib/react-responsive.modern.mjs",
-    "build:dev": "yarn build:microbundle --compress false",
-    "build:microbundle": "microbundle --name $npm_package_name --globals react=React",
+    "build": "tsdown",
+    "build:dev": "tsdown --no-minify",
     "link:readme": "rm ../../README.md && ln -s packages/react-responsive/README.md ../..",
     "prepublishOnly": "rm -rf lib && yarn build"
   },
   "homepage": "https://github.com/bloczjs/react-responsive#readme",
   "devDependencies": {
     "@types/react": "^19.2.14",
-    "microbundle": "^0.15.1"
+    "tsdown": "^0.21.10"
   },
   "peerDependencies": {
     "react": "16.8.0 - 19.x.x"
