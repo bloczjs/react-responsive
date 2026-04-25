@@ -8,10 +8,8 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint packages/"
-  },
-  "resolutions": {
-    "rollup-plugin-typescript2": "0.37.0"
+    "lint": "eslint packages/",
+    "typecheck": "tsc -b --noEmit"
   },
   "devDependencies": {
     "@eslint-react/eslint-plugin": "^4.2.3",

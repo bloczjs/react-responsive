@@ -8,6 +8,8 @@
     "jsx": "react",
     "jsxFactory": "React.createElement",
     "isolatedDeclarations": true,
+    "skipLibCheck": true,
+    "composite": true,
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -19,6 +21,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     // "allowSyntheticDefaultImports": true,
-    "rootDir": "./src"
+    "rootDir": "."
   }
 }
