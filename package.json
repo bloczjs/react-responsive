@@ -10,6 +10,9 @@
   "scripts": {
     "lint": "eslint packages/"
   },
+  "resolutions": {
+    "rollup-plugin-typescript2": "0.37.0"
+  },
   "devDependencies": {
     "@eslint-react/eslint-plugin": "^4.2.3",
     "@typescript-eslint/parser": "^8.59.0",
