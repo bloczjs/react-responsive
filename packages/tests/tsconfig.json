@@ -15,7 +15,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
-    "rootDir": "./src"
-    
+    "rootDir": "./src",
+    "ignoreDeprecations": "6.0"
   }
 }
