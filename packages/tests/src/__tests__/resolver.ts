@@ -8,15 +8,13 @@ describe("Important files should be resolvable", () => {
       require.resolve("@blocz/react-responsive"),
     ).not.toBeNull();
     expect(
-      require.resolve(
-        "@blocz/react-responsive/package.json",
-      ),
+      require.resolve("@blocz/react-responsive/package.json"),
     ).not.toBeNull();
   });
 
   it("should work in a ESM context", () => {
     expect(
-      execSync("node ./esm.mjs", {
+      execSync("node ./esm.util.mjs", {
         cwd: __dirname,
         encoding: "utf-8",
       }),
@@ -27,9 +25,7 @@ describe("Important files should be resolvable", () => {
 describe("built files", () => {
   it("should contain all necessary files", () => {
     const BRRPath = path.dirname(
-      require.resolve(
-        "@blocz/react-responsive/package.json",
-      ),
+      require.resolve("@blocz/react-responsive/package.json"),
     );
 
     expect(
