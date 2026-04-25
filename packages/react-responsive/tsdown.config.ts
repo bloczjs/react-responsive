@@ -1,4 +1,4 @@
-import { defineConfig, UserConfig } from "tsdown";
+import { defineConfig, type UserConfig } from "tsdown";
 
 const config: UserConfig = defineConfig({
   entry: { "react-responsive": "./src/index.ts" },
