@@ -11,7 +11,7 @@ updates:
       - Ayc0
     schedule:
       interval: "weekly"
-  groups:
+    groups:
       typescript-eslint:
         patterns:
           - "typescript-eslint"
