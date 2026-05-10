@@ -7537,14 +7537,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.2.5":
-  version: 19.2.5
-  resolution: "react-dom@npm:19.2.5"
+"react-dom@npm:^19.2.6":
+  version: 19.2.6
+  resolution: "react-dom@npm:19.2.6"
   dependencies:
     scheduler: "npm:^0.27.0"
   peerDependencies:
-    react: ^19.2.5
-  checksum: 10/ba14b022c7191d27b723314b964a1a4d839832e6edd231294097e323973808f97ac647bcf182ab0104e20ae6532dbc36733aec3e8333a1446a7183099c96b255
+    react: ^19.2.6
+  checksum: 10/695122e37dec3460311231ff1f9a96368d74457d4ccf60010eaebc08c3e1c47b054c9267b40d98c689ae99d0c29a340acacfd405016a954a4f11613146191e68
   languageName: node
   linkType: hard
 
@@ -7605,7 +7605,7 @@ __metadata:
     process: "npm:^0.11.10"
     puppeteer: "npm:^24.42.0"
     react: "npm:^19.2.5"
-    react-dom: "npm:^19.2.5"
+    react-dom: "npm:^19.2.6"
     ts-jest: "npm:^29.4.9"
     typescript: "npm:^6.0.3"
   languageName: unknown
