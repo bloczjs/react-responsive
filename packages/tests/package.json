@@ -21,7 +21,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "jest": "^30.3.0",
-    "jest-environment-jsdom": "^30.3.0",
+    "jest-environment-jsdom": "^30.4.1",
     "jest-puppeteer": "^11.0.0",
     "mock-match-media": "^1.0.3",
     "parcel": "^2.16.4",
