@@ -5960,27 +5960,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-mock@npm:^27.5.1":
-  version: 27.5.1
-  resolution: "jest-mock@npm:27.5.1"
-  dependencies:
-    "@jest/types": "npm:^27.5.1"
-    "@types/node": "npm:*"
-  checksum: 10/be9a8777801659227d3bb85317a3aca617542779a290a6a45c9addec8bda29f494a524cb4af96c82b825ecb02171e320dfbfde3e3d9218672f9e38c9fac118f4
-  languageName: node
-  linkType: hard
-
-"jest-mock@npm:^29.7.0":
-  version: 29.7.0
-  resolution: "jest-mock@npm:29.7.0"
-  dependencies:
-    "@jest/types": "npm:^29.6.3"
-    "@types/node": "npm:*"
-    jest-util: "npm:^29.7.0"
-  checksum: 10/ae51d1b4f898724be5e0e52b2268a68fcd876d9b20633c864a6dd6b1994cbc48d62402b0f40f3a1b669b30ebd648821f086c26c08ffde192ced951ff4670d51c
-  languageName: node
-  linkType: hard
-
 "jest-pnp-resolver@npm:^1.2.3":
   version: 1.2.3
   resolution: "jest-pnp-resolver@npm:1.2.3"
