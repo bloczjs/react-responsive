@@ -3019,12 +3019,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^25.6.2":
+"@types/node@npm:*":
   version: 25.6.2
   resolution: "@types/node@npm:25.6.2"
   dependencies:
     undici-types: "npm:~7.19.0"
   checksum: 10/a8afba633f651c80ba3c77d711f1b9bde9cd85ba79f5031af18aa9f0f872e9348cc9e1048fd1b0092cb903f028a4ce505a11dac1205e6efff8b0224de3612028
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^25.8.0":
+  version: 25.8.0
+  resolution: "@types/node@npm:25.8.0"
+  dependencies:
+    undici-types: "npm:>=7.24.0 <7.24.7"
+  checksum: 10/1b1eb14c4f5294ff12de0c668c0ed786b377e2e878fe4c9f84e5219d06d0e2fbf9ea7d7a95077360d2ed1329f56e7a94afc65768fe9f3afdb6c95977f89eb2e2
   languageName: node
   linkType: hard
 
@@ -7475,7 +7484,7 @@ __metadata:
     "@testing-library/react": "npm:^16.3.2"
     "@types/jest": "npm:^30.0.0"
     "@types/jest-environment-puppeteer": "npm:^5.0.6"
-    "@types/node": "npm:^25.6.2"
+    "@types/node": "npm:^25.8.0"
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     jest: "npm:^30.4.2"
@@ -8361,6 +8370,13 @@ __metadata:
     "@quansync/fs": "npm:^1.0.0"
     quansync: "npm:^1.0.0"
   checksum: 10/2975b628788327c2dc42305b787622223b0c4afa8f9287f2ee13720bfbe6830ed8cb4751eeab9f2a7f399a2a8d6c062a304f940725451cb266641c068df226db
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:>=7.24.0 <7.24.7":
+  version: 7.24.6
+  resolution: "undici-types@npm:7.24.6"
+  checksum: 10/defc9538b952e3c15b8526596c591f7c1f0c7605ad27a2b7feddbea7ef2e3003f3eda2cdb051a3cb1a2185e3893100fd9cb925c799db99d48131ea63b5233d10
   languageName: node
   linkType: hard
 
