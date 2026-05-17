@@ -26,7 +26,7 @@
     "mock-match-media": "^1.0.3",
     "parcel": "^2.16.4",
     "process": "^0.11.10",
-    "puppeteer": "^24.43.0",
+    "puppeteer": "^25.0.2",
     "ts-jest": "^29.4.9",
     "typescript": "^6.0.3"
   }
