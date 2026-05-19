@@ -19,11 +19,11 @@ interface BreakpointsProviderProps {
   additionalBreakpoints?: ExposedBreakpoints;
 }
 
-export const BreakpointsProvider: React.FunctionComponent<React.PropsWithChildren<BreakpointsProviderProps>> = ({
+export function BreakpointsProvider({
   breakpoints = defaultBreakpoints,
   additionalBreakpoints,
   children,
-}) => {
+}: React.PropsWithChildren<BreakpointsProviderProps>): React.ReactElement {
   return (
     <BreakpointsContext.Provider
       value={sanitize({
@@ -34,6 +34,4 @@ export const BreakpointsProvider: React.FunctionComponent<React.PropsWithChildre
       {children}
     </BreakpointsContext.Provider>
   );
-};
-
-BreakpointsProvider.displayName = "BreakpointsProvider";
+}

@@ -1,9 +1,8 @@
 import { Breakpoints } from "./sanitize";
 import { fromBreakpointToMedia } from "./fromBreakpointToMedia";
 
-export const mediaQueryBuilder =
-  (breakpoints: Breakpoints) =>
-  (on = ""): string => {
+export function mediaQueryBuilder(breakpoints: Breakpoints) {
+  return function toMediaQuery(on = ""): string {
     if (!on) {
       return "";
     }
@@ -23,3 +22,4 @@ export const mediaQueryBuilder =
     }
     return mediaQuery;
   };
+}
