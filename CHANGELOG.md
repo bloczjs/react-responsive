@@ -1,6 +1,19 @@
 # Changelog
 
-## Unreleased
+## v4
+
+### 4.0
+
+- Drop support for `Match` as this is an anti pattern (crawling children + leaking into the web TS globals) **[BREAKING CHANGE]**
+- Drop support for `toJSON` & `toCSS` **[BREAKING CHANGE]**
+- Drop support for node 16 & 18, and add for 20 & 22
+- Update support TS version to 5.7.2 (shouldn’t impact people depending on `@blocz/react-responsive`)
+- Mark React 19 as available
+
+<details>
+  <summary>See patches</summary>
+
+### 4.0.1
 
 - Switch `useMediaQuery` to `useSyncExternalStore` to fix crashes in React 19 caused by re-renders on mount when there are many components **[customer-facing]** ([#171](https://github.com/bloczjs/react-responsive/pull/171), tests in [#172](https://github.com/bloczjs/react-responsive/pull/172))
 - Migrate build system from `microbundle` to `tsdown` **[internal, may impact devs]** ([#144](https://github.com/bloczjs/react-responsive/pull/144))
@@ -25,19 +38,6 @@
   - Bump `actions/setup-node` from 3 to 6, `actions/checkout` from 3 to 6 ([#114](https://github.com/bloczjs/react-responsive/pull/114), [#115](https://github.com/bloczjs/react-responsive/pull/115))
   - Add Node.js 24.x and 25.x to the CI matrix ([#113](https://github.com/bloczjs/react-responsive/pull/113), [#163](https://github.com/bloczjs/react-responsive/pull/163))
   - Add Dependabot configuration (npm, GitHub Actions, React and typescript-eslint groups) ([#112](https://github.com/bloczjs/react-responsive/pull/112), [#149](https://github.com/bloczjs/react-responsive/pull/149), [#158](https://github.com/bloczjs/react-responsive/pull/158))
-
-## v4
-
-### 4.0
-
-- Drop support for `Match` as this is an anti pattern (crawling children + leaking into the web TS globals) **[BREAKING CHANGE]**
-- Drop support for `toJSON` & `toCSS` **[BREAKING CHANGE]**
-- Drop support for node 16 & 18, and add for 20 & 22
-- Update support TS version to 5.7.2 (shouldn’t impact people depending on `@blocz/react-responsive`)
-- Mark React 19 as available
-
-<details>
-  <summary>See patches</summary>
 
 ### 4.0.0
 
