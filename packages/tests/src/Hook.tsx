@@ -37,6 +37,9 @@ const Hook = () => {
   );
   const isWrongBreakpoint = useBreakpoint("wrong");
   const isWrongMedia = useMediaQuery("wrong");
+  const isEmptyMedia = useMediaQuery("");
+  const isAlwaysFalseMedia = useMediaQuery("(max-width:0)");
+  const isAlwaysTrueMedia = useMediaQuery("all");
 
   return (
     <>
@@ -115,6 +118,18 @@ const Hook = () => {
       <p>
         <b>wrong media query: </b>
         <code>{toString(isWrongMedia)}</code>
+      </p>
+      <p>
+        <b>empty media query: </b>
+        <code>{toString(isEmptyMedia)}</code>
+      </p>
+      <p>
+        <b>(max-width:0): </b>
+        <code>{toString(isAlwaysFalseMedia)}</code>
+      </p>
+      <p>
+        <b>all: </b>
+        <code>{toString(isAlwaysTrueMedia)}</code>
       </p>
     </>
   );

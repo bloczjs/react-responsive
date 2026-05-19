@@ -51,6 +51,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: true
@@ -131,6 +137,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -205,6 +217,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -278,6 +296,12 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -356,6 +380,12 @@ isXlUp: true
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
