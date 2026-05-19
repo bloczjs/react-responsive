@@ -51,6 +51,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: true
@@ -133,6 +139,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -211,6 +223,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -287,77 +305,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-<Only>
-
-Only visible for medium devices (tablets)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-md
-
-Only visible for medium devices (tablets)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: true
-
-isMdDown: true
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: true
-
-isLgUp: false
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): true
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -430,6 +382,90 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for medium devices (tablets)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+md
+
+Only visible for medium devices (tablets)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -507,77 +543,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-<Only>
-
-Only visible for large devices (desktops)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -651,6 +621,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -722,6 +698,90 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -803,81 +863,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -955,81 +945,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -1106,6 +1026,176 @@ isXlUp: true
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -1180,6 +1270,12 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -1263,6 +1359,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -1341,6 +1443,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -1417,77 +1525,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-<Only>
-
-Only visible for medium devices (tablets)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-md
-
-Only visible for medium devices (tablets)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: true
-
-isMdDown: true
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: true
-
-isLgUp: false
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): true
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -1560,6 +1602,90 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for medium devices (tablets)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+md
+
+Only visible for medium devices (tablets)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -1637,77 +1763,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-<Only>
-
-Only visible for large devices (desktops)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -1781,6 +1841,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -1852,6 +1918,90 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -1933,81 +2083,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -2085,81 +2165,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -2236,6 +2246,176 @@ isXlUp: true
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -2310,6 +2490,12 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -2393,6 +2579,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -2471,6 +2663,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -2547,77 +2745,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-<Only>
-
-Only visible for medium devices (tablets)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-md
-
-Only visible for medium devices (tablets)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: true
-
-isMdDown: true
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: true
-
-isLgUp: false
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): true
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -2690,6 +2822,90 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for medium devices (tablets)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+md
+
+Only visible for medium devices (tablets)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -2767,77 +2983,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-<Only>
-
-Only visible for large devices (desktops)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -2911,6 +3061,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -2982,6 +3138,90 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -3063,81 +3303,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -3215,81 +3385,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -3366,6 +3466,176 @@ isXlUp: true
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -3440,6 +3710,12 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -3523,6 +3799,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -3601,6 +3883,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -3677,77 +3965,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-<Only>
-
-Only visible for medium devices (tablets)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-md
-
-Only visible for medium devices (tablets)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: true
-
-isMdDown: true
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: true
-
-isLgUp: false
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): true
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -3820,6 +4042,90 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for medium devices (tablets)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+md
+
+Only visible for medium devices (tablets)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -3897,77 +4203,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-<Only>
-
-Only visible for large devices (desktops)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -4041,6 +4281,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -4112,6 +4358,90 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -4193,81 +4523,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -4345,81 +4605,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -4496,6 +4686,176 @@ isXlUp: true
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -4570,6 +4930,12 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -4653,6 +5019,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -4731,6 +5103,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -4807,77 +5185,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-<Only>
-
-Only visible for medium devices (tablets)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-md
-
-Only visible for medium devices (tablets)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: true
-
-isMdDown: true
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: true
-
-isLgUp: false
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): true
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -4950,6 +5262,90 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for medium devices (tablets)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+md
+
+Only visible for medium devices (tablets)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: true
+
+isMdDown: true
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: true
+
+isLgUp: false
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): true
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -5027,77 +5423,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: true
-
-isNormalDown: true
-
-isNormalUp: true
-
-isBig: false
-
-isBigDown: true
-
-isBigUp: false
-
-<Only>
-
-Only visible for large devices (desktops)
-
-Only visible for small and more ([576px, Infinity[)
-
-Only visible for large or less ([0, 1200px])
-
-Custom component
-
-lg
-
-Only visible for large devices (desktops)
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: true
-
-isLgDown: true
-
-isLgUp: true
-
-isXl: false
-
-isXlDown: true
-
-isXlUp: false
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -5171,6 +5501,12 @@ wrong breakpoint: false
 
 wrong media query: false
 
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
 useBreakpoint() with heights
 
 isThin: false
@@ -5242,6 +5578,90 @@ isXlUp: false
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: true
+
+isNormalDown: true
+
+isNormalUp: true
+
+isBig: false
+
+isBigDown: true
+
+isBigUp: false
+
+<Only>
+
+Only visible for large devices (desktops)
+
+Only visible for small and more ([576px, Infinity[)
+
+Only visible for large or less ([0, 1200px])
+
+Custom component
+
+lg
+
+Only visible for large devices (desktops)
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: true
+
+isLgDown: true
+
+isLgUp: true
+
+isXl: false
+
+isXlDown: true
+
+isXlUp: false
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
@@ -5323,81 +5743,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -5475,81 +5825,11 @@ wrong breakpoint: false
 
 wrong media query: false
 
-useBreakpoint() with heights
+empty media query: true
 
-isThin: false
+(max-width:0): false
 
-isThinDown: false
-
-isThinUp: true
-
-isNormal: false
-
-isNormalDown: false
-
-isNormalUp: true
-
-isBig: true
-
-isBigDown: true
-
-isBigUp: true
-
-<Only>
-
-Only visible for extra large devices (large desktops)
-
-Only visible for small AND extra large devices
-
-Only visible for small and more ([576px, Infinity[)
-
-Custom component
-
-xl
-
-Only visible for extra large devices (large desktops)
-
-sm xl
-
-Only visible for small AND extra large devices
-
-useBreakpoint()
-
-isXs: false
-
-isXsDown: false
-
-isXsUp: true
-
-isSm: false
-
-isSmDown: false
-
-isSmUp: true
-
-isMd: false
-
-isMdDown: false
-
-isMdUp: true
-
-isLg: false
-
-isLgDown: false
-
-isLgUp: true
-
-isXl: true
-
-isXlDown: true
-
-isXlUp: true
-
-(min-width:768px) and (max-width:992px),(max-width:576px): false
-
-wrong breakpoint: false
-
-wrong media query: false
+all: true
 
 useBreakpoint() with heights
 
@@ -5626,6 +5906,176 @@ isXlUp: true
 wrong breakpoint: false
 
 wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
+
+useBreakpoint() with heights
+
+isThin: false
+
+isThinDown: false
+
+isThinUp: true
+
+isNormal: false
+
+isNormalDown: false
+
+isNormalUp: true
+
+isBig: true
+
+isBigDown: true
+
+isBigUp: true
+
+<Only>
+
+Only visible for extra large devices (large desktops)
+
+Only visible for small AND extra large devices
+
+Only visible for small and more ([576px, Infinity[)
+
+Custom component
+
+xl
+
+Only visible for extra large devices (large desktops)
+
+sm xl
+
+Only visible for small AND extra large devices
+
+useBreakpoint()
+
+isXs: false
+
+isXsDown: false
+
+isXsUp: true
+
+isSm: false
+
+isSmDown: false
+
+isSmUp: true
+
+isMd: false
+
+isMdDown: false
+
+isMdUp: true
+
+isLg: false
+
+isLgDown: false
+
+isLgUp: true
+
+isXl: true
+
+isXlDown: true
+
+isXlUp: true
+
+(min-width:768px) and (max-width:992px),(max-width:576px): false
+
+wrong breakpoint: false
+
+wrong media query: false
+
+empty media query: true
+
+(max-width:0): false
+
+all: true
 
 useBreakpoint() with heights
 
