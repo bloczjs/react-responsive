@@ -1,6 +1,6 @@
 import { Breakpoint } from "./sanitize";
 
-export const fromBreakpointToMedia = (breakpoint: Breakpoint): string => {
+export function fromBreakpointToMedia(breakpoint: Breakpoint): string {
   const mediaList: string[] = [];
   const [minValue, maxValue, unit, direction] = breakpoint;
   let str;
@@ -18,4 +18,4 @@ export const fromBreakpointToMedia = (breakpoint: Breakpoint): string => {
   }
 
   return " " + mediaList.join(" and ");
-};
+}
