@@ -1,5 +1,46 @@
 # Changelog
 
+## v5
+
+- Switch `useMediaQuery` to `useSyncExternalStore` to fix crashes in React 19 caused by re-renders on mount when there are many components **[customer-facing]** ([#171](https://github.com/bloczjs/react-responsive/pull/171))
+  As `useSyncExternalStore` is only available in React 18+, this is a **[BREAKING CHANGE]** as the `peerDependencies` had to be bumped
+
+### 5.0
+
+<details>
+  <summary>See patches</summary>
+
+### 5.0.0
+
+- Switch `useMediaQuery` to `useSyncExternalStore` to fix crashes in React 19 caused by re-renders on mount when there are many components **[customer-facing]** ([#171](https://github.com/bloczjs/react-responsive/pull/171), tests in [#172](https://github.com/bloczjs/react-responsive/pull/172))
+  If you are on React 16.8+ / React 17, you'll need to use [use-sync-external-store](https://npmx.dev/package/use-sync-external-store) to polyfill `useSyncExternalStore` added in React 18.
+  - Add `getServerSnapshot` to fix crashes on Node ([#174](https://github.com/bloczjs/react-responsive/pull/174))
+- Migrate build system from `microbundle` to `tsdown` **[internal, may impact devs]** ([#144](https://github.com/bloczjs/react-responsive/pull/144))
+- Update TypeScript config **[internal]**
+  - Change TypeScript target from ES5 to ESNext ([#135](https://github.com/bloczjs/react-responsive/pull/135))
+  - Change `moduleResolution` from `node` to `bundler` ([#134](https://github.com/bloczjs/react-responsive/pull/134))
+  - Add `rootDir` to `tsconfig.json` ([#133](https://github.com/bloczjs/react-responsive/pull/133))
+- Other internal dev / tests changes **[internal]**
+  - Update `mock-match-media` to v1 ([#95](https://github.com/bloczjs/react-responsive/pull/95))
+  - Bump `typescript` from 5.7.2 to 5.9.3 ([#120](https://github.com/bloczjs/react-responsive/pull/120))
+  - Bump `eslint` from 10.2.1 to 10.4.0 ([#145](https://github.com/bloczjs/react-responsive/pull/145), [#167](https://github.com/bloczjs/react-responsive/pull/167))
+  - Bump `@eslint-react/eslint-plugin` from 1.18.0 to 5.7.10 ([#119](https://github.com/bloczjs/react-responsive/pull/119), [#146](https://github.com/bloczjs/react-responsive/pull/146), [#154](https://github.com/bloczjs/react-responsive/pull/154), [#170](https://github.com/bloczjs/react-responsive/pull/170))
+  - Bump `@typescript-eslint/parser` from 8.18.0 to 8.58.0 and typescript-eslint group bumps ([#117](https://github.com/bloczjs/react-responsive/pull/117), [#131](https://github.com/bloczjs/react-responsive/pull/131), [#150](https://github.com/bloczjs/react-responsive/pull/150), [#153](https://github.com/bloczjs/react-responsive/pull/153), [#166](https://github.com/bloczjs/react-responsive/pull/166), [#149](https://github.com/bloczjs/react-responsive/pull/149))
+  - Bump `jest-environment-jsdom` from 29.7.0 to 30.4.1 + manual Jest update ([#125](https://github.com/bloczjs/react-responsive/pull/125), [#156](https://github.com/bloczjs/react-responsive/pull/156), [#164](https://github.com/bloczjs/react-responsive/pull/164))
+  - Bump `ts-jest` from 29.2.5 to 29.4.6 ([#116](https://github.com/bloczjs/react-responsive/pull/116))
+  - Bump `jest-puppeteer` from 10.1.4 to 11.0.0 ([#118](https://github.com/bloczjs/react-responsive/pull/118))
+  - Bump `puppeteer` from 24.42.0 to 25.0.2 ([#160](https://github.com/bloczjs/react-responsive/pull/160), [#169](https://github.com/bloczjs/react-responsive/pull/169))
+  - Bump `@testing-library/dom` from 10.4.0 to 10.4.1 ([#128](https://github.com/bloczjs/react-responsive/pull/128))
+  - Bump `parcel` from 2.13.2 to 2.16.4 ([#130](https://github.com/bloczjs/react-responsive/pull/130))
+  - Bump `tsdown` from 0.21.10 to 0.22.0 ([#161](https://github.com/bloczjs/react-responsive/pull/161))
+  - Bump `@types/node` from 25.6.0 to 25.8.0 ([#157](https://github.com/bloczjs/react-responsive/pull/157), [#168](https://github.com/bloczjs/react-responsive/pull/168))
+  - Bump `ws` from 8.20.0 to 8.20.1 ([#173](https://github.com/bloczjs/react-responsive/pull/173))
+  - Bump `actions/setup-node` from 3 to 6, `actions/checkout` from 3 to 6 ([#114](https://github.com/bloczjs/react-responsive/pull/114), [#115](https://github.com/bloczjs/react-responsive/pull/115))
+  - Add Node.js 24.x and 25.x and 26.x to the CI matrix ([#113](https://github.com/bloczjs/react-responsive/pull/113), [#163](https://github.com/bloczjs/react-responsive/pull/163), ([#165](<(https://github.com/bloczjs/react-responsive/pull/165)>)))
+  - Add Dependabot configuration (npm, GitHub Actions, React and typescript-eslint groups) ([#112](https://github.com/bloczjs/react-responsive/pull/112), [#149](https://github.com/bloczjs/react-responsive/pull/149), [#158](https://github.com/bloczjs/react-responsive/pull/158))
+
+</details>
+
 ## v4
 
 ### 4.0
@@ -13,7 +54,7 @@
 <details>
   <summary>See patches</summary>
 
-### 4.0.2
+### 4.0.2 – unpublished as 4.0.1 should have been been 5.0.0
 
 - Add `getServerSnapshot` to fix crashes on Node ([#174](https://github.com/bloczjs/react-responsive/pull/174))
 - Internal library updates
@@ -21,7 +62,7 @@
 - Other internal changes
   - Add Node.js 26.x in ([#165](<(https://github.com/bloczjs/react-responsive/pull/165)>))
 
-### 4.0.1
+### 4.0.1 – unpublished as 4.0.1 should have been been 5.0.0
 
 - Switch `useMediaQuery` to `useSyncExternalStore` to fix crashes in React 19 caused by re-renders on mount when there are many components **[customer-facing]** ([#171](https://github.com/bloczjs/react-responsive/pull/171), tests in [#172](https://github.com/bloczjs/react-responsive/pull/172))
   If you are on React 16.8+ / React 17, you'll need to use [use-sync-external-store](https://npmx.dev/package/use-sync-external-store) to polyfill `useSyncExternalStore` added in React 18.

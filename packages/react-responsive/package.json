@@ -1,6 +1,6 @@
 {
   "name": "@blocz/react-responsive",
-  "version": "4.0.2",
+  "version": "5.0.0",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
   "source": "src/index.ts",
   "sideEffects": false,
@@ -43,6 +43,6 @@
     "tsdown": "^0.22.0"
   },
   "peerDependencies": {
-    "react": "16.8.0 - 19.x.x"
+    "react": "18.0.0 - 19.x.x"
   }
 }
