@@ -14,6 +14,6 @@ export function useMediaQuery(mediaQuery: string): boolean {
       [mediaQueryList],
     ),
     () => mediaQueryList.matches,
-    // Don't add `() => false`, so that node implementations can define their own behavior for server-side rendering via `mock-match-media`
+    () => mediaQueryList.matches,
   );
 }
