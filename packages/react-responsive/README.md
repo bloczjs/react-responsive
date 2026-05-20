@@ -6,7 +6,7 @@ It allows you to display component only for particular screen sizes.
 
 If you need a responsive layout and adaptive components, `@blocz/react-responsive` is here for you!
 
-[See changelog](https://github.com/bloczjs/react-responsive/blob/master/CHANGELOG.md)
+[See changelog](https://github.com/bloczjs/react-responsive/blob/main/CHANGELOG.md)
 
 ## Table of contents <!-- omit in toc -->
 
@@ -28,7 +28,8 @@ If you need a responsive layout and adaptive components, `@blocz/react-responsiv
    5. [`matchMedia` polyfill](#matchmedia-polyfill)
       1. [Browser](#browser)
       2. [Node](#node)
-   6. [FAQ](#faq)
+   6. [React 16 / 17 support](#react-16--17-support)
+   7. [FAQ](#faq)
 
 ## How to use
 
@@ -317,8 +318,13 @@ If you are on want to use matchMedia on browser that don’t support it, I’d r
 
 If you want to mock `matchMedia` on Node to execute tests for instance, you can use [`mock-match-media`](https://github.com/Ayc0/mock-match-media/).
 
-And if you need an example with `Jest`, `@testing-library/react`, `React` and `@blocz/react-responsive`, you can take a look at [these tests](https://github.com/bloczjs/react-responsive/blob/master/packages/tests/src/__tests__/ssr.ts).
+And if you need an example with `Jest`, `@testing-library/react`, `React` and `@blocz/react-responsive`, you can take a look at [these tests](https://github.com/bloczjs/react-responsive/blob/main/packages/tests/src/__tests__/ssr.ts).
+
+### React 16 / 17 support
+
+`@blocz/react-responsive` relies on `useSyncExternalStore`. This function was added in React 18.
+If you are on React 16.8+ / React 17, you'll need to use [use-sync-external-store](https://npmx.dev/package/use-sync-external-store) to polyfill `useSyncExternalStore`.
 
 ### FAQ
 
-For other questions, please take a look at our [FAQ document](https://github.com/bloczjs/react-responsive/blob/master/FAQ.md).
+For other questions, please take a look at our [FAQ document](https://github.com/bloczjs/react-responsive/blob/main/FAQ.md).
