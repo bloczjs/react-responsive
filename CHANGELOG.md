@@ -13,6 +13,12 @@
 <details>
   <summary>See patches</summary>
 
+### 4.0.2
+
+- Add `getServerSnapshot` to fix crashes on Node ([#174](https://github.com/bloczjs/react-responsive/pull/174))
+- Internal library updates
+  - Bump `ws` from 8.20.0 to 8.20.1 ([#173](https://github.com/bloczjs/react-responsive/pull/173))
+
 ### 4.0.1
 
 - Switch `useMediaQuery` to `useSyncExternalStore` to fix crashes in React 19 caused by re-renders on mount when there are many components **[customer-facing]** ([#171](https://github.com/bloczjs/react-responsive/pull/171), tests in [#172](https://github.com/bloczjs/react-responsive/pull/172))
