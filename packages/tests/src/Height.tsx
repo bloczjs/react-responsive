@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { useBreakpoint } from "@blocz/react-responsive";
+import { useMediaRange } from "@blocz/react-responsive";
 
 const toString = (value: boolean | undefined) => {
   switch (value) {
@@ -14,19 +14,19 @@ const toString = (value: boolean | undefined) => {
 };
 
 const Height = () => {
-  const isThin = useBreakpoint("thin");
-  const isNormal = useBreakpoint("normal");
-  const isBig = useBreakpoint("big");
-  const isThinUp = useBreakpoint("thinUp");
-  const isNormalUp = useBreakpoint("normalUp");
-  const isBigUp = useBreakpoint("bigUp");
-  const isThinDown = useBreakpoint("thinDown");
-  const isNormalDown = useBreakpoint("normalDown");
-  const isBigDown = useBreakpoint("bigDown");
+  const isThin = useMediaRange("thin");
+  const isNormal = useMediaRange("normal");
+  const isBig = useMediaRange("big");
+  const isThinUp = useMediaRange("thinUp");
+  const isNormalUp = useMediaRange("normalUp");
+  const isBigUp = useMediaRange("bigUp");
+  const isThinDown = useMediaRange("thinDown");
+  const isNormalDown = useMediaRange("normalDown");
+  const isBigDown = useMediaRange("bigDown");
 
   return (
     <>
-      <h2>useBreakpoint() with heights</h2>
+      <h2>useMediaRange() with heights</h2>
       <p>
         <b>isThin: </b>
         <code>{toString(isThin)}</code>

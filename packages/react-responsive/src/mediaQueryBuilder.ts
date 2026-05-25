@@ -1,23 +1,23 @@
-import { Breakpoints } from "./sanitize";
-import { fromBreakpointToMedia } from "./fromBreakpointToMedia";
+import { MediaRanges } from "./sanitize";
+import { fromMediaRangeToMedia } from "./fromMediaRangeToMedia";
 
-export function mediaQueryBuilder(breakpoints: Breakpoints) {
+export function mediaQueryBuilder(mediaRanges: MediaRanges) {
   return function toMediaQuery(on = ""): string {
     if (!on) {
       return "";
     }
-    const rawBreakpointNames = on.split(" ");
-    const filteredBreakpoints = rawBreakpointNames.map((breakpointName) => breakpoints[breakpointName]).filter(Boolean);
-    const mediaQuery = filteredBreakpoints
-      .map((breakpoint) => fromBreakpointToMedia(breakpoint))
+    const rawMediaRangeNames = on.split(" ");
+    const filteredMediaRanges = rawMediaRangeNames.map((mediaRangeName) => mediaRanges[mediaRangeName]).filter(Boolean);
+    const mediaQuery = filteredMediaRanges
+      .map((mediaRange) => fromMediaRangeToMedia(mediaRange))
       .filter(Boolean)
       .join(",");
     if (!mediaQuery) {
-      const isUniqBreakpoint = rawBreakpointNames.length === 1;
+      const isUniqMediaRange = rawMediaRangeNames.length === 1;
       console.error(
-        `"${rawBreakpointNames.join('", "')}" ${isUniqBreakpoint ? "is" : "are"}n't ${
-          isUniqBreakpoint ? "a " : ""
-        }valid breakpoint${isUniqBreakpoint ? "" : "s"}`,
+        `"${rawMediaRangeNames.join('", "')}" ${isUniqMediaRange ? "is" : "are"}n't ${
+          isUniqMediaRange ? "a " : ""
+        }valid media range${isUniqMediaRange ? "" : "s"}`,
       );
     }
     return mediaQuery;

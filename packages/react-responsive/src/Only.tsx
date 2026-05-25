@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { useBreakpoint } from "./useBreakpoint";
+import { useMediaRange } from "./useMediaRange";
 import { useMediaQuery } from "./useMediaQuery";
 
 export type OnlyProps<OtherProps = Record<string, never>> = OtherProps & {
@@ -16,7 +16,7 @@ export function Only<OtherProps = Record<string, never>>({
   children,
   ...props
 }: React.PropsWithChildren<OnlyProps<OtherProps>>): React.ReactElement | null {
-  const matchOn = useBreakpoint(on);
+  const matchOn = useMediaRange(on);
   const matchQuery = useMediaQuery(matchMedia || "-");
   const isShown = matchOn || matchQuery;
 

@@ -13,7 +13,7 @@ xs
 
 Only visible for extra small devices (portrait phones)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: true
 
@@ -47,7 +47,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -57,7 +57,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: true
 
@@ -101,7 +101,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -135,7 +135,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -145,7 +145,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -185,7 +185,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -219,7 +219,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -229,7 +229,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -267,7 +267,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -301,7 +301,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -311,7 +311,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -345,7 +345,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -379,7 +379,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -389,7 +389,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -423,7 +423,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -457,7 +457,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -467,7 +467,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -505,7 +505,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -539,7 +539,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -549,7 +549,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -583,7 +583,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -617,7 +617,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -627,7 +627,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -661,7 +661,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -695,7 +695,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -705,7 +705,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -739,7 +739,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -773,7 +773,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -783,7 +783,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -825,7 +825,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -859,7 +859,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -869,7 +869,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -907,7 +907,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -941,7 +941,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -951,7 +951,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -989,7 +989,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1023,7 +1023,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1033,7 +1033,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1071,7 +1071,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1105,7 +1105,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1115,7 +1115,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1153,7 +1153,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1187,7 +1187,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1197,7 +1197,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1233,7 +1233,7 @@ xs
 
 Only visible for extra small devices (portrait phones)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: true
 
@@ -1267,7 +1267,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1277,7 +1277,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: true
 
@@ -1321,7 +1321,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1355,7 +1355,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1365,7 +1365,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1405,7 +1405,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1439,7 +1439,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1449,7 +1449,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1487,7 +1487,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1521,7 +1521,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1531,7 +1531,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1565,7 +1565,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1599,7 +1599,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1609,7 +1609,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1643,7 +1643,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1677,7 +1677,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1687,7 +1687,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1725,7 +1725,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1759,7 +1759,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1769,7 +1769,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1803,7 +1803,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1837,7 +1837,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1847,7 +1847,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1881,7 +1881,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1915,7 +1915,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -1925,7 +1925,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -1959,7 +1959,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -1993,7 +1993,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2003,7 +2003,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2045,7 +2045,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2079,7 +2079,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2089,7 +2089,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2127,7 +2127,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2161,7 +2161,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2171,7 +2171,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2209,7 +2209,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2243,7 +2243,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2253,7 +2253,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2291,7 +2291,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2325,7 +2325,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2335,7 +2335,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2373,7 +2373,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2407,7 +2407,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2417,7 +2417,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2453,7 +2453,7 @@ xs
 
 Only visible for extra small devices (portrait phones)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: true
 
@@ -2487,7 +2487,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2497,7 +2497,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: true
 
@@ -2541,7 +2541,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2575,7 +2575,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2585,7 +2585,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2625,7 +2625,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2659,7 +2659,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2669,7 +2669,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2707,7 +2707,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2741,7 +2741,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2751,7 +2751,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2785,7 +2785,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2819,7 +2819,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2829,7 +2829,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2863,7 +2863,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2897,7 +2897,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2907,7 +2907,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -2945,7 +2945,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -2979,7 +2979,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -2989,7 +2989,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3023,7 +3023,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3057,7 +3057,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3067,7 +3067,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3101,7 +3101,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3135,7 +3135,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3145,7 +3145,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3179,7 +3179,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3213,7 +3213,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3223,7 +3223,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3265,7 +3265,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3299,7 +3299,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3309,7 +3309,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3347,7 +3347,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3381,7 +3381,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3391,7 +3391,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3429,7 +3429,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3463,7 +3463,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3473,7 +3473,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3511,7 +3511,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3545,7 +3545,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3555,7 +3555,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3593,7 +3593,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3627,7 +3627,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3637,7 +3637,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3673,7 +3673,7 @@ xs
 
 Only visible for extra small devices (portrait phones)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: true
 
@@ -3707,7 +3707,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3717,7 +3717,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: true
 
@@ -3761,7 +3761,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3795,7 +3795,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3805,7 +3805,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3845,7 +3845,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3879,7 +3879,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3889,7 +3889,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -3927,7 +3927,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -3961,7 +3961,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -3971,7 +3971,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4005,7 +4005,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4039,7 +4039,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4049,7 +4049,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4083,7 +4083,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4117,7 +4117,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4127,7 +4127,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4165,7 +4165,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4199,7 +4199,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4209,7 +4209,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4243,7 +4243,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4277,7 +4277,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4287,7 +4287,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4321,7 +4321,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4355,7 +4355,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4365,7 +4365,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4399,7 +4399,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4433,7 +4433,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4443,7 +4443,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4485,7 +4485,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4519,7 +4519,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4529,7 +4529,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4567,7 +4567,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4601,7 +4601,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4611,7 +4611,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4649,7 +4649,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4683,7 +4683,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4693,7 +4693,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4731,7 +4731,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4765,7 +4765,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4775,7 +4775,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4813,7 +4813,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -4847,7 +4847,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4857,7 +4857,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -4893,7 +4893,7 @@ xs
 
 Only visible for extra small devices (portrait phones)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: true
 
@@ -4927,7 +4927,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -4937,7 +4937,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: true
 
@@ -4981,7 +4981,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5015,7 +5015,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5025,7 +5025,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5065,7 +5065,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5099,7 +5099,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5109,7 +5109,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5147,7 +5147,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5181,7 +5181,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5191,7 +5191,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5225,7 +5225,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5259,7 +5259,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5269,7 +5269,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5303,7 +5303,7 @@ md
 
 Only visible for medium devices (tablets)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5337,7 +5337,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): true
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5347,7 +5347,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5385,7 +5385,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5419,7 +5419,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5429,7 +5429,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5463,7 +5463,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5497,7 +5497,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5507,7 +5507,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5541,7 +5541,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5575,7 +5575,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5585,7 +5585,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5619,7 +5619,7 @@ lg
 
 Only visible for large devices (desktops)
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5653,7 +5653,7 @@ isXlUp: false
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5663,7 +5663,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5705,7 +5705,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5739,7 +5739,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5749,7 +5749,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5787,7 +5787,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5821,7 +5821,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5831,7 +5831,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5869,7 +5869,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5903,7 +5903,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5913,7 +5913,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -5951,7 +5951,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -5985,7 +5985,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -5995,7 +5995,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
@@ -6033,7 +6033,7 @@ sm xl
 
 Only visible for small AND extra large devices
 
-useBreakpoint()
+useMediaRange()
 
 isXs: false
 
@@ -6067,7 +6067,7 @@ isXlUp: true
 
 (min-width:768px) and (max-width:992px),(max-width:576px): false
 
-wrong breakpoint: false
+wrong media range: false
 
 wrong media query: false
 
@@ -6077,7 +6077,7 @@ empty media query: true
 
 all: true
 
-useBreakpoint() with heights
+useMediaRange() with heights
 
 isThin: false
 
