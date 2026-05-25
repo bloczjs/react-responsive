@@ -37,37 +37,37 @@ type Directions = "width" | "height";
 
 const listOfSupportedDirections: Directions[] = ["width", "height"];
 
-export type ExposedBreakpoint =
+export type ExposedMediaRange =
   | [number, number]
   | [number, number, Units]
   | [number, number, { unit?: Units; direction?: Directions }];
 
-export interface ExposedBreakpoints {
-  [key: string]: ExposedBreakpoint;
+export interface ExposedMediaRanges {
+  [key: string]: ExposedMediaRange;
 }
 
-export type Breakpoint = [number, number, Units, Directions];
+export type MediaRange = [number, number, Units, Directions];
 
-export interface Breakpoints {
-  [breakpoint: string]: Breakpoint;
+export interface MediaRanges {
+  [mediaRange: string]: MediaRange;
 }
 
-export function sanitize(inBreakpoints: ExposedBreakpoints): Breakpoints {
-  return Object.keys(inBreakpoints).reduce<Breakpoints>((breakpoints, breakpointName) => {
-    const breakpoint = inBreakpoints[breakpointName];
+export function sanitize(inMediaRanges: ExposedMediaRanges): MediaRanges {
+  return Object.keys(inMediaRanges).reduce<MediaRanges>((mediaRanges, mediaRangeName) => {
+    const mediaRange = inMediaRanges[mediaRangeName];
 
-    if (!Array.isArray(breakpoint) || breakpoint.length <= 1) {
-      return breakpoints;
+    if (!Array.isArray(mediaRange) || mediaRange.length <= 1) {
+      return mediaRanges;
     }
 
-    const [supposedMin, supposedMax, options, ...rest] = breakpoint;
+    const [supposedMin, supposedMax, options, ...rest] = mediaRange;
     if (rest.length > 0) {
       const error = new Error(`The following fields "${rest}" have been ignored`);
       console.error(error);
     }
 
     if (typeof supposedMin !== "number" || typeof supposedMax !== "number") {
-      return breakpoints;
+      return mediaRanges;
     }
 
     let supposedUnit: Units | undefined;
@@ -85,10 +85,19 @@ export function sanitize(inBreakpoints: ExposedBreakpoints): Breakpoints {
     const direction =
       supposedDirection && listOfSupportedDirections.includes(supposedDirection) ? supposedDirection : "width";
 
-    breakpoints[breakpointName] = [min, max, unit, direction];
-    breakpoints[`${breakpointName}Up`] = [min, Infinity, unit, direction];
-    breakpoints[`${breakpointName}Down`] = [0, max, unit, direction];
+    mediaRanges[mediaRangeName] = [min, max, unit, direction];
+    mediaRanges[`${mediaRangeName}Up`] = [min, Infinity, unit, direction];
+    mediaRanges[`${mediaRangeName}Down`] = [0, max, unit, direction];
 
-    return breakpoints;
+    return mediaRanges;
   }, {});
 }
+
+/** @deprecated Use {@link ExposedMediaRange} instead. */
+export type ExposedBreakpoint = ExposedMediaRange;
+/** @deprecated Use {@link ExposedMediaRanges} instead. */
+export type ExposedBreakpoints = ExposedMediaRanges;
+/** @deprecated Use {@link MediaRange} instead. */
+export type Breakpoint = MediaRange;
+/** @deprecated Use {@link MediaRanges} instead. */
+export type Breakpoints = MediaRanges;

@@ -1,8 +1,8 @@
-import { Breakpoint } from "./sanitize";
+import { MediaRange } from "./sanitize";
 
-export function fromBreakpointToMedia(breakpoint: Breakpoint): string {
+export function fromMediaRangeToMedia(mediaRange: MediaRange): string {
   const mediaList: string[] = [];
-  const [minValue, maxValue, unit, direction] = breakpoint;
+  const [minValue, maxValue, unit, direction] = mediaRange;
   let str;
 
   // Min value

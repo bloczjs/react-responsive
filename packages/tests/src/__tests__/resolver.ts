@@ -100,8 +100,14 @@ describe("built files", () => {
     ] as Record<string, unknown>;
     expect(exposed).toBeDefined();
     expect(typeof exposed.Only).toBe("function");
-    expect(typeof exposed.useBreakpoint).toBe("function");
+    expect(typeof exposed.useMediaRange).toBe("function");
     expect(typeof exposed.useMediaQuery).toBe("function");
+    expect(typeof exposed.MediaRangesProvider).toBe(
+      "function",
+    );
+    expect(exposed.MediaRangesContext).toBeDefined();
+    // Deprecated aliases must still be exposed for backward compatibility.
+    expect(typeof exposed.useBreakpoint).toBe("function");
     expect(typeof exposed.BreakpointsProvider).toBe(
       "function",
     );
