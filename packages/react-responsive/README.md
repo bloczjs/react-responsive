@@ -38,7 +38,7 @@ If you need a responsive layout and adaptive components, `@blocz/react-responsiv
 
 #### Default media ranges
 
-`@blocz/react-responsive` is based on the classic bootstrap media ranges: `xs`, `sm`, `md`, `lg` and `xl`.
+`@blocz/react-responsive` is based on the classic bootstrap breakpoints: `xs`, `sm`, `md`, `lg` and `xl`.
 
 ```javascript
 import React from "react";
@@ -56,19 +56,43 @@ const App = () => (
 );
 ```
 
+Terminology difference: In bootstrap, each name (`xs`, `sm`, …) refers to a single fixed point. But they don’t tell you whether the device is below or above it (is the device `xs` if you are below or above this point?). And no matter what the definition you make, it could be wrong: if it's above, then a `xl` device would also match a `lg` device; below is the same, an `xs` would match an `md`. Bootstrap works via implicit overrides, but we didn’t find this very easy to use.
+
+So `@blocz/react-responsive` uses **media ranges**: each name describes the interval _between_ two specific points:
+
 By default, the media ranges are:
 
 | Media range |   From |       To |
 | ----------- | -----: | -------: |
-| xs          |    0px |    575px |
-| sm          |  576px |    767px |
-| md          |  768px |    991px |
-| lg          |  992px |   1199px |
-| xl          | 1200px | Infinity |
+| `xs`        |    0px |    575px |
+| `sm`        |  576px |    767px |
+| `md`        |  768px |    991px |
+| `lg`        |  992px |   1199px |
+| `xl`        | 1200px | Infinity |
+
+This makes it fully explicit: a `lg` device is not `md` nor `xl`.
 
 #### Additional `Up` and `Down`
 
-In addition to the regular media ranges, you have another api defined `{mediaRange}Up` and `{mediaRange}Down`:
+To make those media ranges easier to use (and closer to what bootstrap does), we expose additional media ranges `{mediaRange}Up` and `{mediaRange}Down` – to understand all the way up/all the way down:
+
+| Media range |   From |       To |
+| ----------- | -----: | -------: |
+| `xsUp`      |    0px | Infinity |
+| `smUp`      |  576px | Infinity |
+| `mdUp`      |  768px | Infinity |
+| `lgUp`      |  992px | Infinity |
+| `xlUp`      | 1200px | Infinity |
+
+| Media range | From |       To |
+| ----------- | ---: | -------: |
+| `xsDown`    |  0px |    575px |
+| `smDown`    |  0px |    767px |
+| `mdDown`    |  0px |    991px |
+| `lgDown`    |  0px |   1199px |
+| `xlDown`    |  0px | Infinity |
+
+Note: this creates weird ranges, like `xlDown` & `xsUp` that match all; and `xsDown` that is the same as `xs`, and `xlUp` that is the same as `xl`. But those are here just for convenience.
 
 ```javascript
 import React from "react";
@@ -332,12 +356,12 @@ The terminology used by this library used to be "breakpoint". It was renamed to 
 
 For backward compatibility, the previous exports are still available but marked as `@deprecated`, and will be removed in the next major release:
 
-| Deprecated                | Replacement            |
-| ------------------------- | ---------------------- |
-| `useBreakpoint`           | `useMediaRange`        |
-| `BreakpointsProvider`     | `MediaRangesProvider`  |
-| `BreakpointsContext`      | `MediaRangesContext`   |
-| `breakpoints` prop        | `mediaRanges` prop     |
+| Deprecated                   | Replacement                  |
+| ---------------------------- | ---------------------------- |
+| `useBreakpoint`              | `useMediaRange`              |
+| `BreakpointsProvider`        | `MediaRangesProvider`        |
+| `BreakpointsContext`         | `MediaRangesContext`         |
+| `breakpoints` prop           | `mediaRanges` prop           |
 | `additionalBreakpoints` prop | `additionalMediaRanges` prop |
 
 ### FAQ
