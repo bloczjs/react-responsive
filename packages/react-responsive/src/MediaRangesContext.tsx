@@ -24,16 +24,11 @@ export function MediaRangesProvider({
   additionalMediaRanges,
   children,
 }: React.PropsWithChildren<MediaRangesProviderProps>): React.ReactElement {
-  return (
-    <MediaRangesContext.Provider
-      value={sanitize({
-        ...mediaRanges,
-        ...additionalMediaRanges,
-      })}
-    >
-      {children}
-    </MediaRangesContext.Provider>
+  const value = React.useMemo(
+    () => sanitize({ ...mediaRanges, ...additionalMediaRanges }),
+    [mediaRanges, additionalMediaRanges],
   );
+  return <MediaRangesContext.Provider value={value}>{children}</MediaRangesContext.Provider>;
 }
 
 /** @deprecated Use {@link MediaRangesContext} instead. */
