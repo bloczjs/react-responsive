@@ -1,6 +1,6 @@
 # Changelog
 
-### Unreleased
+## Unreleased
 
 - Rename "breakpoint" to "media range" across the library, tests and documentation to better reflect that each name describes a range between two breakpoints rather than a single breakpoint **[customer-facing]** ([#62](https://github.com/bloczjs/react-responsive/issues/62))
   - New exports: `useMediaRange`, `MediaRangesProvider`, `MediaRangesContext`
