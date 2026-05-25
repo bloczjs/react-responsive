@@ -2,11 +2,7 @@ import "../App";
 
 import { sizes } from "./sizes.util";
 
-const sleep = (ms: number) =>
-  new Promise((res) => setTimeout(res, ms));
-
 const getText = async () => {
-  await sleep(100); // ensure that the hooks have time to update
   return (
     (await page.$eval("body", (el) =>
       (el as HTMLElement).innerText
@@ -21,6 +17,24 @@ it("browser test", async () => {
 
   for (const size of sizes) {
     await page.setViewport(size);
+    // Wait until the page reports the new viewport, then for two
+    // animation frames so React effects triggered by the media-query
+    // change have a chance to commit before we snapshot the DOM.
+    await page.waitForFunction(
+      (w: number, h: number) =>
+        window.innerWidth === w && window.innerHeight === h,
+      {},
+      size.width,
+      size.height,
+    );
+    await page.evaluate(
+      () =>
+        new Promise<void>((res) =>
+          requestAnimationFrame(() =>
+            requestAnimationFrame(() => res()),
+          ),
+        ),
+    );
     expect(await getText()).toMatchSnapshot();
   }
 });
