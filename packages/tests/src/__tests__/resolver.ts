@@ -106,11 +106,11 @@ describe("built files", () => {
       "function",
     );
     expect(exposed.DEFAULT_MEDIA_RANGES).toBeDefined();
+    // Deprecated aliases must still be exposed for backward compatibility.
     expect(typeof exposed.MediaRangesProvider).toBe(
       "function",
     );
     expect(exposed.MediaRangesContext).toBeDefined();
-    // Deprecated aliases must still be exposed for backward compatibility.
     expect(typeof exposed.useBreakpoint).toBe("function");
     expect(typeof exposed.BreakpointsProvider).toBe(
       "function",
