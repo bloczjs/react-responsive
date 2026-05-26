@@ -1,18 +1,11 @@
 import * as React from "react";
 
 import { MediaRangesContext } from "./MediaRangesContext";
-
-import { mediaQueryBuilder } from "./mediaQueryBuilder";
-
-import { useMediaQuery } from "./useMediaQuery";
+import { useInternalMediaRange } from "./_useInternalMediaRange";
 
 export function useMediaRange(on?: string): boolean {
   const mediaRanges = React.useContext(MediaRangesContext);
-  const toMediaQuery = React.useMemo(() => mediaQueryBuilder(mediaRanges), [mediaRanges]);
-
-  const mediaQuery = React.useMemo(() => toMediaQuery(on), [toMediaQuery, on]);
-
-  return useMediaQuery(mediaQuery || "-");
+  return useInternalMediaRange(mediaRanges, on);
 }
 
 /** @deprecated Use {@link useMediaRange} instead. */
