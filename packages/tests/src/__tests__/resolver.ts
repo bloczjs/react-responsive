@@ -102,6 +102,10 @@ describe("built files", () => {
     expect(typeof exposed.Only).toBe("function");
     expect(typeof exposed.useMediaRange).toBe("function");
     expect(typeof exposed.useMediaQuery).toBe("function");
+    expect(typeof exposed.createMediaRanges).toBe(
+      "function",
+    );
+    expect(exposed.DEFAULT_MEDIA_RANGES).toBeDefined();
     expect(typeof exposed.MediaRangesProvider).toBe(
       "function",
     );
