@@ -8,4 +8,6 @@ export {
 export { Only } from "./Only";
 export { useMediaRange, useBreakpoint } from "./useMediaRange";
 export { useMediaQuery } from "./useMediaQuery";
-export { type Units } from "./sanitize";
+export { createMediaRanges } from "./createMediaRanges";
+export { DEFAULT_MEDIA_RANGES } from "./defaultMediaRanges";
+export type { Units } from "./sanitize";
