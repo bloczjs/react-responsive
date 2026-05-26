@@ -15,22 +15,26 @@ If you need a responsive layout and adaptive components, `@blocz/react-responsiv
       1. [Default media ranges](#default-media-ranges)
       2. [Additional `Up` and `Down`](#additional-up-and-down)
       3. [Match Media Queries](#match-media-queries)
-      4. [Render as component](#render-as-component)
+      4. [Render as component (deprecated)](#render-as-component-deprecated)
    2. [Hooks](#hooks)
       1. [`useMediaRange()`](#usemediarange)
       2. [`useMediaQuery()`](#usemediaquery)
-   3. [`<MediaRangesProvider>`](#mediarangesprovider)
+   3. [`createMediaRanges()`](#createmediaranges)
+      1. [Strictly typed](#strictly-typed)
+      2. [Stricter `Only`](#stricter-only)
+      3. [Units \& direction](#units--direction)
+   4. [`<MediaRangesProvider>` (deprecated)](#mediarangesprovider-deprecated)
       1. [Add more media ranges](#add-more-media-ranges)
       2. [Change default media ranges](#change-default-media-ranges)
       3. [Units](#units)
       4. [Direction](#direction)
-   4. [Comparison to other libraries](#comparison-to-other-libraries)
-   5. [`matchMedia` polyfill](#matchmedia-polyfill)
+   5. [Comparison to other libraries](#comparison-to-other-libraries)
+   6. [`matchMedia` polyfill](#matchmedia-polyfill)
       1. [Browser](#browser)
       2. [Node](#node)
-   6. [React 16 / 17 support](#react-16--17-support)
-   7. [Deprecated APIs](#deprecated-apis)
-   8. [FAQ](#faq)
+   7. [React 16 / 17 support](#react-16--17-support)
+   8. [Deprecated APIs](#deprecated-apis)
+   9. [FAQ](#faq)
 
 ## How to use
 
@@ -125,7 +129,10 @@ const App = () => (
 
 **Note:** If you use media ranges AND matchMedia, the component will be displayed if one of the media ranges is matched **OR** if the media query is fulfilled.
 
-#### Render as component
+#### Render as component (deprecated)
+
+> ⚠️ Using the `as` prop on `Only` is **deprecated** and will be removed in v6.0.0.
+> This is not considered as type-safe
 
 If you want the `Only` components to render as another component, you can use the `as` props:
 
@@ -234,7 +241,82 @@ const App = () => {
 };
 ```
 
-### `<MediaRangesProvider>`
+### `createMediaRanges()`
+
+`createMediaRanges` is the recommended way to customize the media ranges. It returns a pair of `useMediaRange` and `Only` bound to the ranges you pass in, with end-to-end TypeScript types.
+
+```javascript
+import { createMediaRanges, DEFAULT_MEDIA_RANGES } from "@blocz/react-responsive";
+
+const { useMediaRange, Only } = createMediaRanges({
+  ...DEFAULT_MEDIA_RANGES,
+  pxRange: [263, 863, { unit: "px" }],
+  emRange: [20, 40, { unit: "em" }],
+});
+```
+
+If you want to re-use the same defaults as the top-level `Only` & `useMediaRange`, you’ll need to import & use `DEFAULT_MEDIA_RANGES`
+
+#### Strictly typed
+
+The returned `useMediaRange` accepts only the names that match the ranges you declared (plus the auto-generated `Up` and `Down` aliases). The passed string can hold a single name or a space-separated list, every media range will be typechecked:
+
+```typescript
+useMediaRange("md"); // ✅
+useMediaRange("pxRangeUp"); // ✅
+useMediaRange("mdDown"); // ✅
+useMediaRange("md pxRange"); // ✅
+useMediaRange("invalid"); // ❌ TS error
+useMediaRange("md invalid"); // ❌ TS error – "md" is fine, "invalid" is not
+```
+
+This is also true for the returned `Only`:
+
+```tsx
+<>
+  <Only
+    // ✅
+    on="md pxRange"
+  >
+    …
+  </Only>
+
+  <Only
+    // ❌ TS error
+    on="lg invalid"
+  >
+    …
+  </Only>
+</>
+```
+
+#### Stricter `Only`
+
+Contrary to its top-level counterpart, `Only` returned from `createMediaRanges` only supports `on` and `matchMedia`, no `as` prop (and no drilling additional props to `as`):
+
+```javascript
+<ul>
+  <Only on="xs">
+    <li>Only visible for extra small devices</li>
+  </Only>
+</ul>
+```
+
+#### Units & direction
+
+Each entry accepts the same shape as before: `[min, max]`, `[min, max, unit]`, or `[min, max, { unit, direction }]`:
+
+```javascript
+const { Only } = createMediaRanges({
+  pxRange: [263, 863, { unit: "px" }],
+  emRange: [20, 40, { unit: "em" }],
+  yRange: [200, 400, { direction: "height" }],
+});
+```
+
+### `<MediaRangesProvider>` (deprecated)
+
+> ⚠️ `MediaRangesProvider` is **deprecated** and will be removed in v6.0.0. Use [`createMediaRanges()`](#createmediaranges) instead.
 
 `MediaRangesProvider` defines the values of every media ranges.
 
@@ -356,13 +438,15 @@ The terminology used by this library used to be "breakpoint". It was renamed to 
 
 For backward compatibility, the previous exports are still available but marked as `@deprecated`, and will be removed in the next major release:
 
-| Deprecated                   | Replacement                  |
-| ---------------------------- | ---------------------------- |
-| `useBreakpoint`              | `useMediaRange`              |
-| `BreakpointsProvider`        | `MediaRangesProvider`        |
-| `BreakpointsContext`         | `MediaRangesContext`         |
-| `breakpoints` prop           | `mediaRanges` prop           |
-| `additionalBreakpoints` prop | `additionalMediaRanges` prop |
+| Deprecated                   | Replacement                                 |
+| ---------------------------- | ------------------------------------------- |
+| `useBreakpoint`              | `useMediaRange`                             |
+| `BreakpointsProvider`        | `MediaRangesProvider`                       |
+| `BreakpointsContext`         | `MediaRangesContext`                        |
+| `breakpoints` prop           | `mediaRanges` prop                          |
+| `additionalBreakpoints` prop | `additionalMediaRanges` prop                |
+| `MediaRangesProvider`        | [`createMediaRanges()`](#createmediaranges) |
+| `MediaRangesContext`         | [`createMediaRanges()`](#createmediaranges) |
 
 ### FAQ
 
