@@ -4,6 +4,31 @@ import * as vm from "vm";
 import { existsSync, readFileSync } from "fs";
 import * as React from "react";
 
+// Shape every published build must expose: export name → `typeof` value.
+const EXPECTED_SHAPE: Record<string, string> = {
+  Only: "function",
+  useMediaRange: "function",
+  useMediaQuery: "function",
+  createMediaRanges: "function",
+  DEFAULT_MEDIA_RANGES: "object",
+  // Deprecated aliases must still be exposed for backward compatibility.
+  MediaRangesProvider: "function",
+  MediaRangesContext: "object",
+  useBreakpoint: "function",
+  BreakpointsProvider: "function",
+  BreakpointsContext: "object",
+};
+
+const toShape = (
+  exposed: Record<string, unknown>,
+): Record<string, string> => {
+  const shape: Record<string, string> = {};
+  for (const key of Object.keys(exposed)) {
+    shape[key] = typeof exposed[key];
+  }
+  return shape;
+};
+
 describe("Important files should be resolvable", () => {
   it("should work in a CJS context", () => {
     expect(
@@ -12,15 +37,6 @@ describe("Important files should be resolvable", () => {
     expect(
       require.resolve("@blocz/react-responsive/package.json"),
     ).not.toBeNull();
-  });
-
-  it("should work in a ESM context", () => {
-    expect(
-      execSync("node ./esm.util.mjs", {
-        cwd: __dirname,
-        encoding: "utf-8",
-      }),
-    ).toBe("Didn’t crash\n");
   });
 });
 
@@ -80,8 +96,33 @@ describe("built files", () => {
 
     expect(cts).toBe(mts);
   });
+});
 
-  it("should expose the UMD build as window['@blocz/react-responsive']", () => {
+describe("exposed exports", () => {
+  it("CJS build exposes all expected symbols", () => {
+    const cjs =
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      require("@blocz/react-responsive") as Record<
+        string,
+        unknown
+      >;
+    expect(toShape(cjs)).toEqual(EXPECTED_SHAPE);
+  });
+
+  it("ESM build exposes all expected symbols", () => {
+    const output = execSync("node ./esm.util.mjs", {
+      cwd: __dirname,
+      encoding: "utf-8",
+    });
+    const shape = JSON.parse(output) as Record<
+      string,
+      string
+    >;
+
+    expect(shape).toEqual(EXPECTED_SHAPE);
+  });
+
+  it("UMD build exposes all expected symbols as window['@blocz/react-responsive']", () => {
     const BRRPath = path.dirname(
       require.resolve("@blocz/react-responsive/package.json"),
     );
@@ -99,18 +140,6 @@ describe("built files", () => {
       "@blocz/react-responsive"
     ] as Record<string, unknown>;
     expect(exposed).toBeDefined();
-    expect(typeof exposed.Only).toBe("function");
-    expect(typeof exposed.useMediaRange).toBe("function");
-    expect(typeof exposed.useMediaQuery).toBe("function");
-    expect(typeof exposed.MediaRangesProvider).toBe(
-      "function",
-    );
-    expect(exposed.MediaRangesContext).toBeDefined();
-    // Deprecated aliases must still be exposed for backward compatibility.
-    expect(typeof exposed.useBreakpoint).toBe("function");
-    expect(typeof exposed.BreakpointsProvider).toBe(
-      "function",
-    );
-    expect(exposed.BreakpointsContext).toBeDefined();
+    expect(toShape(exposed)).toEqual(EXPECTED_SHAPE);
   });
 });

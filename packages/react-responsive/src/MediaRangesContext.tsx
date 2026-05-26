@@ -1,17 +1,14 @@
 import * as React from "react";
 
 import { sanitize, ExposedMediaRanges, MediaRanges } from "./sanitize";
+import { DEFAULT_MEDIA_RANGES } from "./defaultMediaRanges";
 
-const defaultMediaRanges: ExposedMediaRanges = {
-  xs: [0, 575, "px"], // Extra small devices (portrait phones)
-  sm: [576, 767, "px"], // Small devices (landscape phones)
-  md: [768, 991, "px"], // Medium devices (tablets)
-  lg: [992, 1199, "px"], // Large devices (desktops)
-  xl: [1200, Infinity, "px"], // Extra large devices (large desktops)
-};
-
+/**
+ * @deprecated Use {@link createMediaRanges} instead. `MediaRangesContext` will be removed in
+ * the next major together with {@link MediaRangesProvider}.
+ */
 export const MediaRangesContext: React.Context<MediaRanges> = React.createContext<MediaRanges>(
-  sanitize(defaultMediaRanges),
+  sanitize(DEFAULT_MEDIA_RANGES),
 );
 
 interface MediaRangesProviderProps {
@@ -19,8 +16,9 @@ interface MediaRangesProviderProps {
   additionalMediaRanges?: ExposedMediaRanges;
 }
 
+/** @deprecated Use {@link createMediaRanges} instead. `MediaRangesProvider` will be removed in the next major. */
 export function MediaRangesProvider({
-  mediaRanges = defaultMediaRanges,
+  mediaRanges = DEFAULT_MEDIA_RANGES,
   additionalMediaRanges,
   children,
 }: React.PropsWithChildren<MediaRangesProviderProps>): React.ReactElement {
