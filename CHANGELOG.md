@@ -2,10 +2,35 @@
 
 ## Unreleased
 
-- Rename "breakpoint" to "media range" across the library, tests and documentation to better reflect that each name describes a range between two breakpoints rather than a single breakpoint **[customer-facing]** ([#62](https://github.com/bloczjs/react-responsive/issues/62))
+Always keep those 4 sections. If empty, write `_Empty for now, to keep_`
+
+### Breaking changes
+
+_Empty for now, to keep_
+
+### Deprecations, will be removed in the next major
+
+- `MediaRangesProvider` and `MediaRangesContext` — use `createMediaRanges` instead ([#187](https://github.com/bloczjs/react-responsive/pull/187))
+- The `as` prop on the top-level `Only` ([#187](https://github.com/bloczjs/react-responsive/pull/187)) — wrap children in the element you need, or use `createMediaRanges`'s `Only`
+- The "breakpoint"-named aliases kept for backward compatibility after the rename ([#181](https://github.com/bloczjs/react-responsive/pull/181)):
+  - exports: `useBreakpoint`, `BreakpointsProvider`, `BreakpointsContext`
+  - props on `BreakpointsProvider`: `breakpoints`, `additionalBreakpoints`
+
+### Customer facing
+
+- Add `createMediaRanges` + `DEFAULT_MEDIA_RANGES`, a strongly-typed alternative to `MediaRangesProvider` ([#187](https://github.com/bloczjs/react-responsive/pull/187))
+  - `createMediaRanges(ranges)` returns a `{ useMediaRange, Only }` pair bound to the ranges you pass in — no React context, no `additionalMediaRanges` vs `mediaRanges` split
+  - The returned `useMediaRange` / `Only` validate the `on` string end-to-end: every space-separated token must match a declared range or its auto-generated `Up` / `Down` alias. Invalid input surfaces a readable TypeScript error like `Invalid media ranges: foo bar` instead of `never`
+  - The returned `Only` only forwards `children` — `as` and arbitrary forwarded props are not supported; wrap your children in whatever element you need
+  - Spread `DEFAULT_MEDIA_RANGES` when you want to keep the defaults (`xs`, `sm`, `md`, `lg`, `xl`)
+- Rename "breakpoint" to "media range" across the library, tests and documentation to better reflect that each name describes a range between two breakpoints rather than a single breakpoint ([#181](https://github.com/bloczjs/react-responsive/pull/181))
   - New exports: `useMediaRange`, `MediaRangesProvider`, `MediaRangesContext`
   - New props on `MediaRangesProvider`: `mediaRanges`, `additionalMediaRanges`
-  - The previous exports (`useBreakpoint`, `BreakpointsProvider`, `BreakpointsContext`) and props (`breakpoints`, `additionalBreakpoints`) are kept as `@deprecated` aliases for backward compatibility and will be removed in the next major
+  - Previous exports are kept but deprecated
+
+### Internal
+
+_Empty for now, to keep_
 
 ## v5
 
