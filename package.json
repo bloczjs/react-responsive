@@ -12,7 +12,7 @@
     "typecheck": "tsc -b --noEmit"
   },
   "devDependencies": {
-    "@eslint-react/eslint-plugin": "^5.8.4",
+    "@eslint-react/eslint-plugin": "^5.8.7",
     "@typescript-eslint/parser": "^8.59.4",
     "eslint": "^10.4.0",
     "eslint-config-prettier": "^10.1.8",
