@@ -41,7 +41,7 @@
   "homepage": "https://github.com/bloczjs/react-responsive#readme",
   "devDependencies": {
     "@types/react": "^19.2.15",
-    "tsdown": "^0.22.0"
+    "tsdown": "^0.22.1"
   },
   "peerDependencies": {
     "react": "18.0.0 - 19.x.x"
