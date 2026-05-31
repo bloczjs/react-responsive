@@ -1,22 +1,20 @@
 {
   "name": "react-responsive-main",
-  "private": true,
   "version": "0.0.0",
-  "author": "Ayc0",
+  "private": true,
   "license": "MIT",
+  "author": "Ayc0",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "lint": "oxlint",
-    "lint:fix": "oxlint  --fix",
+    "lint": "oxfmt --check && oxlint",
+    "lint:fix": "oxfmt && oxlint --fix",
     "typecheck": "tsc -b --noEmit"
   },
   "devDependencies": {
-    "eslint": "^10.4.1",
-    "eslint-plugin-prettier": "^5.5.6",
+    "oxfmt": "^0.52.0",
     "oxlint": "^1.67.0",
-    "prettier": "^3.8.3",
     "typescript": "^6.0.3"
   },
   "resolutions": {

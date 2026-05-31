@@ -1,7 +1,6 @@
 import { defineConfig } from "oxlint";
 
 export default defineConfig({
-  jsPlugins: ["eslint-plugin-prettier"],
   categories: {
     correctness: "error",
     nursery: "error",
@@ -54,7 +53,6 @@ export default defineConfig({
     "no-ternary": "off",
     "no-undef": "off",
     "no-undefined": "off",
-    "prettier/prettier": "error",
     "sort-imports": "off",
     "sort-keys": "off",
     "consistent-indexed-object-style": [

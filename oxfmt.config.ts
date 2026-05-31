@@ -1,0 +1,19 @@
+import { defineConfig } from "oxfmt";
+
+export default defineConfig({
+  singleQuote: false,
+  trailingComma: "all",
+  printWidth: 60,
+  tabWidth: 2,
+  overrides: [
+    {
+      files: ["*.md"],
+      options: {
+        singleQuote: false,
+        trailingComma: "all",
+        printWidth: 120,
+        tabWidth: 2,
+      },
+    },
+  ],
+});

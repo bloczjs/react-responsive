@@ -19,8 +19,8 @@ updates:
       linting:
         patterns:
           - "oxlint"
+          - "oxfmt"
           - "eslint"
-          - "eslint-plugin-prettier"
 
   - package-ecosystem: "github-actions"
     directory: "/"
