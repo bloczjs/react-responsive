@@ -20,5 +20,5 @@
   "resolutions": {
     "jest-mock": "npm:30.4.1"
   },
-  "packageManager": "yarn@4.15.0"
+  "packageManager": "pnpm@11.5.0"
 }

@@ -25,7 +25,6 @@ export default defineConfig({
   },
   ignorePatterns: [
     "**/node_modules/**",
-    ".yarn/**",
     ".vscode/**",
     "**/*.log",
     "**/*.DS_Store",
@@ -55,10 +54,7 @@ export default defineConfig({
     "no-undefined": "off",
     "sort-imports": "off",
     "sort-keys": "off",
-    "consistent-indexed-object-style": [
-      "error",
-      "index-signature",
-    ],
+    "consistent-indexed-object-style": ["error", "index-signature"],
   },
   overrides: [
     {
