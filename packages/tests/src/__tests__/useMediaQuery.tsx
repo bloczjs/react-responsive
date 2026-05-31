@@ -1,4 +1,10 @@
-import { describe, it, expect, afterEach, vi } from "vitest";
+import {
+  describe,
+  it,
+  expect,
+  afterEach,
+  vi,
+} from "vitest";
 import { act, render } from "@testing-library/react";
 import { cleanup, setMedia } from "mock-match-media";
 

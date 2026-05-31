@@ -1,7 +1,11 @@
 import { beforeAll, afterAll, it, expect } from "vitest";
 import * as path from "path";
 import { spawn, type ChildProcess } from "child_process";
-import { chromium, type Browser, type Page } from "playwright";
+import {
+  chromium,
+  type Browser,
+  type Page,
+} from "playwright";
 
 import { sizes } from "./sizes.util";
 
@@ -29,12 +33,10 @@ afterAll(async () => {
 });
 
 const getText = async () =>
-  (await page.$eval(
-    "body",
-    (el) =>
-      (el as HTMLElement).innerText
-        .replace(/\n/g, "\n\n")
-        .replace(/\n\n+/g, "\n\n"),
+  (await page.$eval("body", (el) =>
+    (el as HTMLElement).innerText
+      .replace(/\n/g, "\n\n")
+      .replace(/\n\n+/g, "\n\n"),
   )) || "";
 
 it("browser test", async () => {
@@ -47,13 +49,16 @@ it("browser test", async () => {
     // change have a chance to commit before we snapshot the DOM.
     await page.waitForFunction(
       (s) =>
-        window.innerWidth === s.width && window.innerHeight === s.height,
+        window.innerWidth === s.width &&
+        window.innerHeight === s.height,
       size,
     );
     await page.evaluate(
       () =>
         new Promise<void>((res) =>
-          requestAnimationFrame(() => requestAnimationFrame(() => res())),
+          requestAnimationFrame(() =>
+            requestAnimationFrame(() => res()),
+          ),
         ),
     );
     expect(await getText()).toMatchSnapshot();
