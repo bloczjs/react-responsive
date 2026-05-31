@@ -32,6 +32,7 @@ _Empty for now, to keep_
 
 - Migrate from yarn to pnpm ([#200](https://github.com/bloczjs/react-responsive/pull/200))
 - Replace eslint & prettier by oxlint & oxfmt ([#197](https://github.com/bloczjs/react-responsive/pull/197))
+- Replace jest & jest-dom & puppeteer & parcel with vite + vitest + playwright ([#201](https://github.com/bloczjs/react-responsive/pull/201))
 
 ## v5
 
