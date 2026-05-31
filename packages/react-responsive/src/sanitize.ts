@@ -70,8 +70,8 @@ export function sanitize(inMediaRanges: ExposedMediaRanges): MediaRanges {
       return mediaRanges;
     }
 
-    let supposedUnit: Units | undefined;
-    let supposedDirection: Directions | undefined;
+    let supposedUnit: Units | undefined = undefined;
+    let supposedDirection: Directions | undefined = undefined;
     if (typeof options === "string") {
       supposedUnit = options;
     } else if (typeof options === "object") {

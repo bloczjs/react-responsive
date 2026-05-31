@@ -20,7 +20,6 @@ updates:
         patterns:
           - "oxlint"
           - "eslint"
-          - "@eslint-react/eslint-plugin"
           - "eslint-plugin-prettier"
 
   - package-ecosystem: "github-actions"
