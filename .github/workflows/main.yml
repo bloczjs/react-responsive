@@ -12,24 +12,34 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+
       - name: Install packages
         run: |
           pnpm install
+
       - name: Build package
+        working-directory: ./packages/react-responsive
         run: |
           pnpm build
-        working-directory: ./packages/react-responsive
+
       - name: Run tests
+        working-directory: ./packages/tests
         run: |
           pnpm test --runInBand
-        working-directory: ./packages/tests
+
       - name: Check linting
         run: |
           pnpm lint
+
       - name: Typecheck
         run: |
           pnpm typecheck
