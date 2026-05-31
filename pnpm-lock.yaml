@@ -30,6 +30,9 @@ importers:
       tsdown:
         specifier: ^0.22.1
         version: 0.22.1(typescript@6.0.3)
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.4(@types/node@25.9.1)(@vitest/browser@3.2.4)
 
   packages/tests:
     dependencies:

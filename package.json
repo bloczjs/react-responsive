@@ -10,7 +10,8 @@
   "scripts": {
     "lint": "oxfmt --check && oxlint",
     "lint:fix": "oxfmt && oxlint --fix",
-    "typecheck": "tsc -b --noEmit"
+    "typecheck": "tsc -b --noEmit",
+    "test": "pnpm -r --if-present test"
   },
   "devDependencies": {
     "oxfmt": "^0.52.0",
