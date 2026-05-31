@@ -18,7 +18,7 @@ _Empty for now, to keep_
 
 ### Internal
 
-_Empty for now, to keep_
+- Remove `tsconfig.tsbuildinfo` & `tsdown.config.ts` from published files ([#205](https://github.com/bloczjs/react-responsive/pull/205))
 
 ## v5
 
