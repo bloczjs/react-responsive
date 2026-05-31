@@ -23,7 +23,7 @@ const wait = (ms: number) =>
   new Promise((res) => setTimeout(res, ms));
 
 it.each(sizes)(
-  "Should render in SSR %width x %height",
+  "Should render in SSR { $width x $height }",
   async (size) => {
     setMedia({
       width: size.width,
