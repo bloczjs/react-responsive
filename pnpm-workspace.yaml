@@ -6,7 +6,7 @@ allowBuilds:
   "@swc/core": false
   lmdb: false
   msgpackr-extract: false
-  puppeteer: false
+  puppeteer: true
   unrs-resolver: false
 
 overrides:
