@@ -11,58 +11,59 @@ If you need a responsive layout and adaptive components, `@blocz/react-responsiv
 ## Table of contents <!-- omit in toc -->
 
 1. [How to use](#how-to-use)
-   1. [`<Only>`](#only)
+   1. [`useMediaQuery()`](#usemediaquery)
+   2. [Media ranges](#media-ranges)
       1. [Default media ranges](#default-media-ranges)
       2. [Additional `Up` and `Down`](#additional-up-and-down)
-      3. [Match Media Queries](#match-media-queries)
-      4. [Render as component (deprecated)](#render-as-component-deprecated)
-   2. [Hooks](#hooks)
-      1. [`useMediaRange()`](#usemediarange)
-      2. [`useMediaQuery()`](#usemediaquery)
-   3. [`createMediaRanges()`](#createmediaranges)
-      1. [Strictly typed](#strictly-typed)
-      2. [Stricter `Only`](#stricter-only)
-      3. [Units \& direction](#units--direction)
-   4. [`<MediaRangesProvider>` (deprecated)](#mediarangesprovider-deprecated)
-      1. [Add more media ranges](#add-more-media-ranges)
-      2. [Change default media ranges](#change-default-media-ranges)
-      3. [Units](#units)
-      4. [Direction](#direction)
-   5. [Comparison to other libraries](#comparison-to-other-libraries)
-   6. [`matchMedia` polyfill](#matchmedia-polyfill)
+      3. [`useMediaRange()`](#usemediarange)
+      4. [`<Only>`](#only)
+         1. [`on` prop](#on-prop)
+         2. [`matchMedia`](#matchmedia)
+         3. [Render as component (deprecated)](#render-as-component-deprecated)
+      5. [Custom media ranges: `createMediaRanges()`](#custom-media-ranges-createmediaranges)
+         1. [Strictly typed](#strictly-typed)
+         2. [Stricter `Only`](#stricter-only)
+         3. [Units \& direction](#units--direction)
+      6. [`<MediaRangesProvider>` (deprecated)](#mediarangesprovider-deprecated)
+         1. [Add more media ranges](#add-more-media-ranges)
+         2. [Change default media ranges](#change-default-media-ranges)
+         3. [Units](#units)
+         4. [Direction](#direction)
+   3. [Comparison to other libraries](#comparison-to-other-libraries)
+   4. [`matchMedia` polyfill](#matchmedia-polyfill)
       1. [Browser](#browser)
       2. [Node](#node)
-   7. [React 16 / 17 support](#react-16--17-support)
-   8. [Deprecated APIs](#deprecated-apis)
-   9. [FAQ](#faq)
+   5. [React 16 / 17 support](#react-16--17-support)
+   6. [Deprecated APIs](#deprecated-apis)
+   7. [FAQ](#faq)
 
 ## How to use
 
-### `<Only>`
+### `useMediaQuery()`
 
-#### Default media ranges
-
-`@blocz/react-responsive` is based on the classic bootstrap breakpoints: `xs`, `sm`, `md`, `lg` and `xl`.
+`useMediaQuery` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given media query matches the current viewport.
 
 ```javascript
 import React from "react";
-import { Only } from "@blocz/react-responsive";
+import { useMediaQuery } from "@blocz/react-responsive";
 
-const App = () => (
-  <React.Fragment>
-    <Only on="xs">Only visible for extra small devices (portrait phones)</Only>
-    <Only on="sm">Only visible for small devices (landscape phones)</Only>
-    <Only on="md">Only visible for medium devices (tablets)</Only>
-    <Only on="lg">Only visible for large devices (desktops)</Only>
-    <Only on="xl">Only visible for extra large devices (large desktops)</Only>
-    <Only on="sm xl">Only visible for small AND extra large devices</Only>
-  </React.Fragment>
-);
+const App = () => {
+  const matchMediaQuery = useMediaQuery("(min-width:768px) and (max-width:992px),(max-width:576px)");
+  return <ul>{matchMediaQuery && <li>Visible at (min-width:768px) and (max-width:992px),(max-width:576px)</li>}</ul>;
+};
 ```
 
-Terminology difference: In bootstrap, each name (`xs`, `sm`, …) refers to a single fixed point. But they don’t tell you whether the device is below or above it (is the device `xs` if you are below or above this point?). And no matter what the definition you make, it could be wrong: if it's above, then a `xl` device would also match a `lg` device; below is the same, an `xs` would match an `md`. Bootstrap works via implicit overrides, but we didn’t find this very easy to use.
+[More infos about CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
-So `@blocz/react-responsive` uses **media ranges**: each name describes the interval _between_ two specific points:
+### Media ranges
+
+`@blocz/react-responsive` is based on the classic bootstrap breakpoints: `xs`, `sm`, `md`, `lg` and `xl`.
+
+Terminology difference: In bootstrap, each name (`xs`, `sm`, …) refers to a single fixed point. But they don't tell you whether the device is below or above it (is the device `xs` if you are below or above this point?). And no matter what the definition you make, it could be wrong: if it's above, then a `xl` device would also match a `lg` device; below is the same, an `xs` would match an `md`. Bootstrap works via implicit overrides, but we didn't find this very easy to use.
+
+So `@blocz/react-responsive` uses **media ranges**: each name describes the interval _between_ two specific points.
+
+#### Default media ranges
 
 By default, the media ranges are:
 
@@ -98,21 +99,55 @@ To make those media ranges easier to use (and closer to what bootstrap does), we
 
 Note: this creates weird ranges, like `xlDown` & `xsUp` that match all; and `xsDown` that is the same as `xs`, and `xlUp` that is the same as `xl`. But those are here just for convenience.
 
+#### `useMediaRange()`
+
+`useMediaRange` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given media range matches the current viewport.
+
+```javascript
+import React from "react";
+import { useMediaRange } from "@blocz/react-responsive";
+
+const App = () => {
+  const matchXl = useMediaRange("xl");
+  const matchMdDown = useMediaRange("mdDown");
+  const matchMdOrLg = useMediaRange("md lg");
+  return (
+    <ul>
+      {matchXl && <li>Visible on every "large" device</li>}
+      {matchMdDown && <li>Visible on every device smaller or equal than "medium"</li>}
+      {matchMdOrLg && <li>Visible on every "medium" or "large" device</li>}
+    </ul>
+  );
+};
+```
+
+#### `<Only>`
+
+`<Only>` is the component equivalent of `useMediaRange()` and `useMediaQuery()`: it renders its children only when the condition matches.
+
+##### `on` prop
+
+The `on` prop behaves like `useMediaRange()`: it accepts a media range name (or a space-separated list of names) and makes `<Only>` render its children when any of the media range matches.
+
 ```javascript
 import React from "react";
 import { Only } from "@blocz/react-responsive";
 
 const App = () => (
   <React.Fragment>
-    <Only on="smUp">Visible on every device bigger or equal than "small"</Only>
-    <Only on="mdDown">Visible on every device smaller or equal than "medium"</Only>
+    <Only on="xs">Only visible for extra small devices (portrait phones)</Only>
+    <Only on="sm">Only visible for small devices (landscape phones)</Only>
+    <Only on="md">Only visible for medium devices (tablets)</Only>
+    <Only on="lg">Only visible for large devices (desktops)</Only>
+    <Only on="xl">Only visible for extra large devices (large desktops)</Only>
+    <Only on="sm xl">Only visible for small AND extra large devices</Only>
   </React.Fragment>
 );
 ```
 
-#### Match Media Queries
+##### `matchMedia`
 
-For more advanced media queries, the prop `matchMedia` can be set to any regular query supported by [window.matchMedia](https://developer.mozilla.org/fr/docs/Web/API/Window/matchMedia).
+The `matchMedia` prop behaves like `useMediaQuery()`: it accepts any regular query supported by [window.matchMedia](https://developer.mozilla.org/fr/docs/Web/API/Window/matchMedia).
 
 ```javascript
 import React from "react";
@@ -125,13 +160,11 @@ const App = () => (
 );
 ```
 
-[More infos about CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+**Note:** If you use `on` AND `matchMedia` together, the component will be displayed if one of the media ranges is matched **OR** if the media query is fulfilled.
 
-**Note:** If you use media ranges AND matchMedia, the component will be displayed if one of the media ranges is matched **OR** if the media query is fulfilled.
+##### Render as component (deprecated)
 
-#### Render as component (deprecated)
-
-> ⚠️ Using the `as` prop on `Only` is **deprecated** and will be removed in v6.0.0.
+> ⚠️ Using the `as` prop on `<Only>` is **deprecated** and will be removed in v6.0.0.
 > This is not considered as type-safe
 
 If you want the `Only` components to render as another component, you can use the `as` props:
@@ -203,45 +236,7 @@ const App = () => (
 
 Note that any props except for `matchMedia`, `as` and `on` will be forwarded to the `as` props.
 
-### Hooks
-
-#### `useMediaRange()`
-
-`useMediaRange` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given media range matches the current viewport.
-
-```javascript
-import React from "react";
-import { useMediaRange } from "@blocz/react-responsive";
-
-const App = () => {
-  const matchXl = useMediaRange("xl");
-  const matchMdDown = useMediaRange("mdDown");
-  const matchMdOrLg = useMediaRange("md lg");
-  return (
-    <ul>
-      {matchXl && <li>Visible on every "large" device</li>}
-      {matchMdDown && <li>Visible on every device smaller or equal than "medium"</li>}
-      {matchMdOrLg && <li>Visible on every "medium" or "large" device</li>}
-    </ul>
-  );
-};
-```
-
-#### `useMediaQuery()`
-
-`useMediaQuery` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given media query matches the current viewport.
-
-```javascript
-import React from "react";
-import { useMediaQuery } from "@blocz/react-responsive";
-
-const App = () => {
-  const matchMediaQuery = useMediaQuery("(min-width:768px) and (max-width:992px),(max-width:576px)");
-  return <ul>{matchMediaQuery && <li>Visible at (min-width:768px) and (max-width:992px),(max-width:576px)</li>}</ul>;
-};
-```
-
-### `createMediaRanges()`
+#### Custom media ranges: `createMediaRanges()`
 
 `createMediaRanges` is the recommended way to customize the media ranges. It returns a pair of `useMediaRange` and `Only` bound to the ranges you pass in, with end-to-end TypeScript types.
 
@@ -255,9 +250,9 @@ const { useMediaRange, Only } = createMediaRanges({
 });
 ```
 
-If you want to re-use the same defaults as the top-level `Only` & `useMediaRange`, you’ll need to import & use `DEFAULT_MEDIA_RANGES`
+If you want to re-use the same defaults as the top-level `Only` & `useMediaRange`, you'll need to import & use `DEFAULT_MEDIA_RANGES`
 
-#### Strictly typed
+##### Strictly typed
 
 The returned `useMediaRange` accepts only the names that match the ranges you declared (plus the auto-generated `Up` and `Down` aliases). The passed string can hold a single name or a space-separated list, every media range will be typechecked:
 
@@ -290,7 +285,7 @@ This is also true for the returned `Only`:
 </>
 ```
 
-#### Stricter `Only`
+##### Stricter `Only`
 
 Contrary to its top-level counterpart, `Only` returned from `createMediaRanges` only supports `on` and `matchMedia`, no `as` prop (and no drilling additional props to `as`):
 
@@ -302,7 +297,7 @@ Contrary to its top-level counterpart, `Only` returned from `createMediaRanges` 
 </ul>
 ```
 
-#### Units & direction
+##### Units & direction
 
 Each entry accepts the same shape as before: `[min, max]`, `[min, max, unit]`, or `[min, max, { unit, direction }]`:
 
@@ -314,15 +309,15 @@ const { Only } = createMediaRanges({
 });
 ```
 
-### `<MediaRangesProvider>` (deprecated)
+#### `<MediaRangesProvider>` (deprecated)
 
-> ⚠️ `MediaRangesProvider` is **deprecated** and will be removed in v6.0.0. Use [`createMediaRanges()`](#createmediaranges) instead.
+> ⚠️ `MediaRangesProvider` is **deprecated** and will be removed in v6.0.0. Use [`createMediaRanges()`](#custom-media-ranges-createmediaranges) instead.
 
 `MediaRangesProvider` defines the values of every media ranges.
 
 Use it to inject or modify the media ranges (only use one `MediaRangesProvider` per build).
 
-#### Add more media ranges
+##### Add more media ranges
 
 ```javascript
 import React from "react";
@@ -337,7 +332,7 @@ const App = () => (
 );
 ```
 
-#### Change default media ranges
+##### Change default media ranges
 
 ```javascript
 import React from "react";
@@ -354,7 +349,7 @@ const App = () => (
 
 **Warning**: This **overrides completely** the default media ranges, in this example, the other media ranges `xs`, `md`, `lg` and `xl` **are no longer defined!**
 
-#### Units
+##### Units
 
 You can specify which unit is going to be used for the media range by specifying in the 3rd option a "unit" key.
 
@@ -377,7 +372,7 @@ const App = () => (
 );
 ```
 
-#### Direction
+##### Direction
 
 You can specify which direction is used for the media queries (height or width).
 
@@ -419,7 +414,7 @@ The default unit is `px`.
 
 #### Browser
 
-If you are on want to use matchMedia on browser that don’t support it, I’d recommend you to use [`matchmedia-polyfill`](https://github.com/paulirish/matchMedia.js/).
+If you are on want to use matchMedia on browser that don't support it, I'd recommend you to use [`matchmedia-polyfill`](https://github.com/paulirish/matchMedia.js/).
 
 #### Node
 
@@ -438,15 +433,15 @@ The terminology used by this library used to be "breakpoint". It was renamed to 
 
 For backward compatibility, the previous exports are still available but marked as `@deprecated`, and will be removed in the next major release:
 
-| Deprecated                   | Replacement                                 |
-| ---------------------------- | ------------------------------------------- |
-| `useBreakpoint`              | `useMediaRange`                             |
-| `BreakpointsProvider`        | `MediaRangesProvider`                       |
-| `BreakpointsContext`         | `MediaRangesContext`                        |
-| `breakpoints` prop           | `mediaRanges` prop                          |
-| `additionalBreakpoints` prop | `additionalMediaRanges` prop                |
-| `MediaRangesProvider`        | [`createMediaRanges()`](#createmediaranges) |
-| `MediaRangesContext`         | [`createMediaRanges()`](#createmediaranges) |
+| Deprecated                   | Replacement                                                     |
+| ---------------------------- | --------------------------------------------------------------- |
+| `useBreakpoint`              | `useMediaRange`                                                 |
+| `BreakpointsProvider`        | `MediaRangesProvider`                                           |
+| `BreakpointsContext`         | `MediaRangesContext`                                            |
+| `breakpoints` prop           | `mediaRanges` prop                                              |
+| `additionalBreakpoints` prop | `additionalMediaRanges` prop                                    |
+| `MediaRangesProvider`        | [`createMediaRanges()`](#custom-media-ranges-createmediaranges) |
+| `MediaRangesContext`         | [`createMediaRanges()`](#custom-media-ranges-createmediaranges) |
 
 ### FAQ
 
