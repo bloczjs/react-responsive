@@ -26,7 +26,9 @@ async function waitForServer(url: string, timeout = 20000) {
       await new Promise((res) => setTimeout(res, 200));
     }
   }
-  throw new Error(`Server at ${url} did not start within ${timeout}ms`);
+  throw new Error(
+    `Server at ${url} did not start within ${timeout}ms`,
+  );
 }
 
 beforeAll(async () => {
