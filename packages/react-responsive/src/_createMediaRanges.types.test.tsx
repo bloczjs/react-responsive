@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* oxlint-disable @typescript-eslint/no-unused-vars */
 
 // Type-level validation for `createMediaRanges`. The hook and components below are never
 // invoked at runtime — they exist so the typecheck pass fails if the typings drift. Each
@@ -19,10 +19,11 @@ const { useMediaRange, Only } = createMediaRanges({
 });
 
 // A second factory — its keys must not be accepted by the first factory's hook / component.
-const { useMediaRange: useOtherMediaRange } = createMediaRanges({
-  alpha: [0, 100],
-  beta: [100, 200],
-});
+const { useMediaRange: useOtherMediaRange } =
+  createMediaRanges({
+    alpha: [0, 100],
+    beta: [100, 200],
+  });
 
 function useTypeChecks(): boolean {
   useMediaRange("xs");

@@ -1,4 +1,4 @@
-import { ExposedMediaRange } from "./sanitize";
+import type { ExposedMediaRange } from "./sanitize";
 
 export const DEFAULT_MEDIA_RANGES: {
   xs: ExposedMediaRange;

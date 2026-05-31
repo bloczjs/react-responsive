@@ -9,4 +9,5 @@ export function useMediaRange(on?: string): boolean {
 }
 
 /** @deprecated Use {@link useMediaRange} instead. */
-export const useBreakpoint: (on?: string) => boolean = useMediaRange;
+export const useBreakpoint: (on?: string) => boolean =
+  useMediaRange;

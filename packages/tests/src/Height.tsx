@@ -10,6 +10,8 @@ const toString = (value: boolean | undefined) => {
       return "false";
     case undefined:
       return "undefined";
+    default:
+      return "unknown";
   }
 };
 

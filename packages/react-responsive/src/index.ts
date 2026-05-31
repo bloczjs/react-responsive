@@ -6,7 +6,10 @@ export {
   BreakpointsContext,
 } from "./MediaRangesContext";
 export { Only } from "./Only";
-export { useMediaRange, useBreakpoint } from "./useMediaRange";
+export {
+  useMediaRange,
+  useBreakpoint,
+} from "./useMediaRange";
 export { useMediaQuery } from "./useMediaQuery";
 export { createMediaRanges } from "./createMediaRanges";
 export { DEFAULT_MEDIA_RANGES } from "./defaultMediaRanges";

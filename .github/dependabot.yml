@@ -16,13 +16,11 @@ updates:
         patterns:
           - "react"
           - "react-dom"
-      eslint:
+      linting:
         patterns:
+          - "oxlint"
+          - "oxfmt"
           - "eslint"
-          - "@eslint-react/eslint-plugin"
-          - "eslint-plugin-prettier"
-          - "typescript-eslint"
-          - "@typescript-eslint/*"
 
   - package-ecosystem: "github-actions"
     directory: "/"

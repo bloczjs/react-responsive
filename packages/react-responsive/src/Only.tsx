@@ -3,19 +3,25 @@ import * as React from "react";
 import { useMediaRange } from "./useMediaRange";
 import { useMediaQuery } from "./useMediaQuery";
 
-export type OnlyProps<OtherProps = Record<string, never>> = OtherProps & {
+export type OnlyProps<
+  OtherProps = { [prop: string]: never },
+> = OtherProps & {
   matchMedia?: string;
   on?: string;
   as?: string | React.ComponentType<OtherProps>;
 };
 
-export function Only<OtherProps = Record<string, never>>({
+export function Only<
+  OtherProps = { [prop: string]: never },
+>({
   matchMedia,
   on,
   as,
   children,
   ...props
-}: React.PropsWithChildren<OnlyProps<OtherProps>>): React.ReactElement | null {
+}: React.PropsWithChildren<
+  OnlyProps<OtherProps>
+>): React.ReactElement | null {
   const matchOn = useMediaRange(on);
   const matchQuery = useMediaQuery(matchMedia || "-");
   const isShown = matchOn || matchQuery;
