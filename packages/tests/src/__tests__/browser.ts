@@ -16,11 +16,26 @@ let serverProcess: ChildProcess;
 let browser: Browser;
 let page: Page;
 
+async function waitForServer(url: string, timeout = 20000) {
+  const deadline = Date.now() + timeout;
+  while (Date.now() < deadline) {
+    try {
+      await fetch(url);
+      return;
+    } catch {
+      await new Promise((res) => setTimeout(res, 200));
+    }
+  }
+  throw new Error(`Server at ${url} did not start within ${timeout}ms`);
+}
+
 beforeAll(async () => {
   serverProcess = spawn("pnpm", ["start"], {
     cwd: root,
     shell: true,
   });
+
+  await waitForServer(`http://localhost:${PORT}`);
 
   browser = await chromium.launch();
   const context = await browser.newContext();
