@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Should render in SSR %width x %height { width: 500, height: 300 } 1`] = `
+exports[`Should render in SSR { 500 x 300 } 1`] = `
 "
  
 
@@ -83,7 +83,7 @@ isBigUp: false
 "
 `;
 
-exports[`Should render in SSR %width x %height { width: 750, height: 550 } 1`] = `
+exports[`Should render in SSR { 750 x 550 } 1`] = `
 "
  
 
@@ -250,7 +250,7 @@ isBigUp: false
 "
 `;
 
-exports[`Should render in SSR %width x %height { width: 900, height: 700 } 1`] = `
+exports[`Should render in SSR { 900 x 700 } 1`] = `
 "
  
 
@@ -495,7 +495,7 @@ isBigUp: false
 "
 `;
 
-exports[`Should render in SSR %width x %height { width: 1000, height: 800 } 1`] = `
+exports[`Should render in SSR { 1000 x 800 } 1`] = `
 "
  
 
@@ -818,7 +818,7 @@ isBigUp: false
 "
 `;
 
-exports[`Should render in SSR %width x %height { width: 1300, height: 1100 } 1`] = `
+exports[`Should render in SSR { 1300 x 1100 } 1`] = `
 "
  
 

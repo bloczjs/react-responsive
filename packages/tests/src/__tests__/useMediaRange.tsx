@@ -6,7 +6,7 @@ import {
   afterEach,
   vi,
 } from "vitest";
-import type { MockInstance } from "vitest";
+import type { Mock, MockInstance } from "vitest";
 import * as React from "react";
 import { render } from "@testing-library/react";
 import { cleanup, setMedia } from "mock-match-media";
@@ -19,7 +19,7 @@ import {
 let matchMediaSpy: MockInstance<
   (query: string) => MediaQueryList
 >;
-let addListener: ReturnType<typeof vi.fn>;
+let addListener: Mock;
 let originalMatchMedia: typeof window.matchMedia;
 
 beforeEach(() => {
