@@ -33,6 +33,7 @@ jobs:
 
       - name: Run tests
         run: |
+          pnpm exec playwright install --with-deps chromium
           pnpm test
 
       - name: Check linting
