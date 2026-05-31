@@ -16,6 +16,7 @@ tsconfig.json
 # Build
 tmp/
 babel/
+tsconfig.tsbuildinfo
 
 # Cache
 .cache/
@@ -27,3 +28,4 @@ src/
 test/
 tests/
 preact/
+tsdown.config.ts
