@@ -32,9 +32,9 @@ jobs:
           pnpm build
 
       - name: Run tests
-        working-directory: ./packages/tests
         run: |
-          pnpm test --runInBand
+          pnpm exec playwright install --with-deps chromium
+          pnpm test
 
       - name: Check linting
         run: |

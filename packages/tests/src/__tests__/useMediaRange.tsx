@@ -1,7 +1,12 @@
-/**
- * @jest-environment jsdom
- */
-
+import {
+  describe,
+  it,
+  expect,
+  beforeEach,
+  afterEach,
+  vi,
+} from "vitest";
+import type { MockInstance } from "vitest";
 import * as React from "react";
 import { render } from "@testing-library/react";
 import { cleanup, setMedia } from "mock-match-media";
@@ -11,30 +16,29 @@ import {
   useMediaRange,
 } from "@blocz/react-responsive";
 
-let matchMediaSpy: jest.SpyInstance<
-  MediaQueryList,
-  [query: string]
+let matchMediaSpy: MockInstance<
+  (query: string) => MediaQueryList
 >;
-let addListener: jest.Mock;
+let addListener: ReturnType<typeof vi.fn>;
 let originalMatchMedia: typeof window.matchMedia;
 
 beforeEach(() => {
-  matchMediaSpy = jest.spyOn(window, "matchMedia");
-  addListener = jest.fn();
   originalMatchMedia = window.matchMedia;
-  window.matchMedia = ((query: string) => {
-    const mql = originalMatchMedia(query);
-    const origAdd = mql.addListener.bind(mql);
-    mql.addListener = (cb) => {
-      addListener(cb);
-      return origAdd(cb);
-    };
-    return mql;
-  }) as typeof window.matchMedia;
+  addListener = vi.fn();
+  matchMediaSpy = vi
+    .spyOn(window, "matchMedia")
+    .mockImplementation((query) => {
+      const mql = originalMatchMedia(query);
+      const origAdd = mql.addListener.bind(mql);
+      mql.addListener = (cb) => {
+        addListener(cb);
+        return origAdd(cb);
+      };
+      return mql;
+    });
 });
 
 afterEach(() => {
-  window.matchMedia = originalMatchMedia;
   matchMediaSpy.mockRestore();
   cleanup();
 });
@@ -43,7 +47,7 @@ describe("useMediaRange", () => {
   it("does not re-evaluate or cause extra re-renders when the parent re-renders", () => {
     setMedia({ width: 1000 });
 
-    const probeRender = jest.fn();
+    const probeRender = vi.fn();
     const Probe = ({
       unrelated,
     }: {
@@ -54,7 +58,7 @@ describe("useMediaRange", () => {
       return null;
     };
 
-    const parentRender = jest.fn();
+    const parentRender = vi.fn();
     const Parent = ({ value }: { value: number }) => {
       parentRender();
       return <Probe unrelated={value} />;
@@ -89,7 +93,7 @@ describe("useMediaRange", () => {
   it("does not re-evaluate when the MediaRangesProvider re-renders with the same ranges", () => {
     setMedia({ width: 1000 });
 
-    const probeRender = jest.fn();
+    const probeRender = vi.fn();
     const Probe = () => {
       useMediaRange("md");
       probeRender();

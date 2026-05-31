@@ -1,7 +1,4 @@
-/**
- * @jest-environment jsdom
- */
-
+import { it, expect } from "vitest";
 import { render } from "@testing-library/react";
 
 import { setMedia } from "mock-match-media";
@@ -25,8 +22,9 @@ const prettify = (input: string) =>
 const wait = (ms: number) =>
   new Promise((res) => setTimeout(res, ms));
 
-it.each(sizes)("Should render in SSR %p", async () => {
-  for (const size of sizes) {
+it.each(sizes)(
+  "Should render in SSR %width x %height",
+  async (size) => {
     setMedia({
       width: size.width,
       height: size.height,
@@ -39,5 +37,5 @@ it.each(sizes)("Should render in SSR %p", async () => {
     ).toMatchSnapshot();
 
     await wait(20);
-  }
-});
+  },
+);

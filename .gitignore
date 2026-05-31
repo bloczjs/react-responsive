@@ -18,3 +18,7 @@ cache/
 *_cache_*/
 .eslintcache
 *.tsbuildinfo
+
+# Vitest
+# Ignore screenshots on failed tests
+packages/tests/src/__tests__/__screenshots__/

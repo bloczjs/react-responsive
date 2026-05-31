@@ -16,11 +16,23 @@ updates:
         patterns:
           - "react"
           - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
       linting:
         patterns:
           - "oxlint"
           - "oxfmt"
           - "eslint"
+      testing:
+        patterns:
+          - "@testing-library/dom"
+          - "@testing-library/react"
+          - "@types/node"
+          - "@vitest/browser"
+          - "mock-match-media"
+          - "playwright"
+          - "vite"
+          - "vitest"
 
   - package-ecosystem: "github-actions"
     directory: "/"
