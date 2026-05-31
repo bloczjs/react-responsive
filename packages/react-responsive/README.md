@@ -1,16 +1,13 @@
 # @blocz/react-responsive <!-- omit in toc -->
 
-`@blocz/react-responsive` is inspired by the `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (or `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): only display a certain content for a precise screen size.
-
-It allows you to display component only for particular screen sizes.
-
-If you need a responsive layout and adaptive components, `@blocz/react-responsive` is here for you!
+`@blocz/react-responsive` is inspired by the `.visible` classes from [bootstrap 4](https://getbootstrap.com/docs/4.0/migration/#responsive-utilities) (and `.hidden` classes from [bootstrap 3](https://getbootstrap.com/docs/3.3/css/#responsive-utilities-classes)): it lets you show or hide components based on the current screen size.
 
 [See changelog](https://github.com/bloczjs/react-responsive/blob/main/CHANGELOG.md)
 
 ## Table of contents <!-- omit in toc -->
 
-1. [How to use](#how-to-use)
+1. [Installation](#installation)
+2. [How to use](#how-to-use)
    1. [`useMediaQuery()`](#usemediaquery)
    2. [Media ranges](#media-ranges)
       1. [Default media ranges](#default-media-ranges)
@@ -29,19 +26,32 @@ If you need a responsive layout and adaptive components, `@blocz/react-responsiv
          2. [Change default media ranges](#change-default-media-ranges)
          3. [Units](#units)
          4. [Direction](#direction)
-   3. [Comparison to other libraries](#comparison-to-other-libraries)
-   4. [`matchMedia` polyfill](#matchmedia-polyfill)
-      1. [Browser](#browser)
-      2. [Node](#node)
-   5. [React 16 / 17 support](#react-16--17-support)
-   6. [Deprecated APIs](#deprecated-apis)
-   7. [FAQ](#faq)
+3. [Comparison to other libraries](#comparison-to-other-libraries)
+4. [`matchMedia` polyfill](#matchmedia-polyfill)
+   1. [Browser](#browser)
+   2. [Node](#node)
+5. [React 16 / 17 support](#react-16--17-support)
+6. [Deprecated APIs](#deprecated-apis)
+7. [FAQ](#faq)
+
+## Installation
+
+```sh
+# pnpm
+pnpm add @blocz/react-responsive
+
+# yarn
+yarn add @blocz/react-responsive
+
+# npm
+npm install @blocz/react-responsive
+```
 
 ## How to use
 
 ### `useMediaQuery()`
 
-`useMediaQuery()` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given media query matches the current viewport.
+`useMediaQuery()` is a [hook](https://react.dev/reference/react/hooks) that detects if the given media query matches the current viewport.
 
 ```javascript
 import React from "react";
@@ -53,7 +63,7 @@ const App = () => {
 };
 ```
 
-[More infos about CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+[Learn more about CSS media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 
 ### Media ranges
 
@@ -97,11 +107,11 @@ Each media range also comes with `{mediaRange}Up` and `{mediaRange}Down` variant
 | `lgDown`    |  0px |   1199px |
 | `xlDown`    |  0px | Infinity |
 
-Note: `xsDown` is equivalent to `xs`, `xlUp` is equivalent to `xl`, and `xlDown`/`xsUp` match all screen sizes — these exist only for convenience.
+> **Note:** `xsDown` is equivalent to `xs`, `xlUp` is equivalent to `xl`, and `xlDown`/`xsUp` match all screen sizes — these exist only for convenience.
 
 #### `useMediaRange()`
 
-`useMediaRange()` is a [hook](https://reactjs.org/docs/hooks-intro.html) that detects if the given media range matches the current viewport.
+`useMediaRange()` is a [hook](https://react.dev/reference/react/hooks) that detects if the given media range matches the current viewport.
 
 ```javascript
 import React from "react";
@@ -147,7 +157,7 @@ const App = () => (
 
 ##### `matchMedia`
 
-The `matchMedia` prop behaves like `useMediaQuery()`: it accepts any regular query supported by [window.matchMedia](https://developer.mozilla.org/fr/docs/Web/API/Window/matchMedia).
+The `matchMedia` prop behaves like `useMediaQuery()`: it accepts any regular query supported by [window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia).
 
 ```javascript
 import React from "react";
@@ -160,7 +170,7 @@ const App = () => (
 );
 ```
 
-**Note:** If you use `on` AND `matchMedia` together, the component will be displayed if one of the media ranges is matched **OR** if the media query is fulfilled.
+> **Note:** If you use `on` AND `matchMedia` together, the component renders if **any** of the media ranges matches **OR** if the media query is fulfilled (not AND).
 
 ##### Render as component (deprecated)
 
@@ -218,7 +228,7 @@ const App = () => (
 
 #### Custom media ranges: `createMediaRanges()`
 
-`createMediaRanges()` is the recommended way to customize the media ranges. It returns a pair of `useMediaRange()` and `<Only>` bound to the ranges you pass in, with end-to-end TypeScript types.
+`createMediaRanges()` is the recommended way to customize the media ranges. It returns an object `{ useMediaRange, Only }` bound to the ranges you pass in, with end-to-end TypeScript types.
 
 ```javascript
 import { createMediaRanges, DEFAULT_MEDIA_RANGES } from "@blocz/react-responsive";
@@ -271,7 +281,7 @@ Unlike the top-level `<Only>`, the `<Only>` returned from `createMediaRanges()` 
 
 ##### Units & direction
 
-Each range entry accepts one of these shapes: `[min, max]`, `[min, max, unit]`, or `[min, max, { unit, direction }]`:
+Each range entry accepts one of these shapes: `[min, max]`, or `[min, max, { unit?, direction? }]`:
 
 ```javascript
 const { Only } = createMediaRanges({
@@ -367,35 +377,35 @@ const App = () => (
 );
 ```
 
-### Comparison to other libraries
+## Comparison to other libraries
 
-| Lib                                                                                        | Media ranges | Custom media ranges | Media query | `matchMedia` listener' | hooks | SSR support |
-| ------------------------------------------------------------------------------------------ | -----------: | ------------------: | ----------: | ---------------------: | ----: | ----------: |
-| [@blocz/react-responsive](https://www.npmjs.com/package/@blocz/react-responsive)           |           ✅ |                  ✅ |          ✅ |                     ✅ |    ✅ |          ✅ |
-| [react-responsive](https://www.npmjs.com/package/react-responsive)                         |           ❌ |                  ❌ |          ✅ |                     ✅ |    ✅ |          ✅ |
-| [react-breakpoints](https://www.npmjs.com/package/react-breakpoints)                       |           ✅ |                  ✅ |          ❌ |                     ❌ |    ❌ |          ✅ |
-| [react-responsive-breakpoints](https://www.npmjs.com/package/react-responsive-breakpoints) |           ✅ |                  ❌ |          ❌ |                     ❌ |    ❌ |          ❌ |
+| Lib                                                                                   | Media ranges | Custom media ranges | Media query | `matchMedia` listener\* | hooks | SSR support |
+| ------------------------------------------------------------------------------------- | -----------: | ------------------: | ----------: | ----------------------: | ----: | ----------: |
+| [@blocz/react-responsive](https://npmx.dev/package/@blocz/react-responsive)           |           ✅ |                  ✅ |          ✅ |                      ✅ |    ✅ |          ✅ |
+| [react-responsive](https://npmx.dev/package/react-responsive)                         |           ❌ |                  ❌ |          ✅ |                      ✅ |    ✅ |          ✅ |
+| [react-breakpoints](https://npmx.dev/package/react-breakpoints)                       |           ✅ |                  ✅ |          ❌ |                      ❌ |    ❌ |          ✅ |
+| [react-responsive-breakpoints](https://npmx.dev/package/react-responsive-breakpoints) |           ✅ |                  ❌ |          ❌ |                      ❌ |    ❌ |          ❌ |
 
-': `matchMedia` listener event means that the library is built around `matchMedia.addListener(callback)` and not `window.addEventListener('resize', callback)` (which is faster because the callback is only triggered when the media query's state changes and not at every resize).
+\*: `matchMedia` listener event means that the library is built around `matchMedia.addListener(callback)` and not `window.addEventListener('resize', callback)` (which is faster because the callback is only triggered when the media query's state changes and not at every resize).
 
-### `matchMedia` polyfill
+## `matchMedia` polyfill
 
-#### Browser
+### Browser
 
 If you want to use `matchMedia` in browsers that don't support it, I'd recommend [`matchmedia-polyfill`](https://github.com/paulirish/matchMedia.js/).
 
-#### Node
+### Node
 
 If you want to mock `matchMedia` on Node to execute tests for instance, you can use [`mock-match-media`](https://github.com/Ayc0/mock-match-media/).
 
 And if you need an example with `Jest`, `@testing-library/react`, `React` and `@blocz/react-responsive`, you can take a look at [these tests](https://github.com/bloczjs/react-responsive/blob/main/packages/tests/src/__tests__/ssr.ts).
 
-### React 16 / 17 support
+## React 16 / 17 support
 
 `@blocz/react-responsive` relies on `useSyncExternalStore`. This function was added in React 18.
 If you are on React 16.8+ / React 17, you'll need to use [use-sync-external-store](https://npmx.dev/package/use-sync-external-store) to polyfill `useSyncExternalStore`.
 
-### Deprecated APIs
+## Deprecated APIs
 
 The terminology used by this library used to be "breakpoint". It was renamed to "media range" because each entry actually describes the range between two breakpoints rather than a single breakpoint.
 
@@ -411,6 +421,6 @@ For backward compatibility, the previous exports are still available but marked 
 | `<MediaRangesProvider>`      | [`createMediaRanges()`](#custom-media-ranges-createmediaranges) |
 | `<MediaRangesContext>`       | [`createMediaRanges()`](#custom-media-ranges-createmediaranges) |
 
-### FAQ
+## FAQ
 
 For other questions, please take a look at our [FAQ document](https://github.com/bloczjs/react-responsive/blob/main/FAQ.md).
