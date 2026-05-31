@@ -1,30 +1,31 @@
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["typescript"],
-  "jsPlugins": ["eslint-plugin-prettier"],
-  "categories": {
-    "correctness": "error",
-    "nursery": "error",
-    "pedantic": "error",
-    "perf": "error",
-    "restriction": "error",
-    "style": "error",
-    "suspicious": "error"
+import { defineConfig } from "oxlint";
+
+export default defineConfig({
+  plugins: ["typescript"],
+  jsPlugins: ["eslint-plugin-prettier"],
+  categories: {
+    correctness: "error",
+    nursery: "error",
+    pedantic: "error",
+    perf: "error",
+    restriction: "error",
+    style: "error",
+    suspicious: "error",
   },
-  "env": {
-    "builtin": true
+  env: {
+    builtin: true,
   },
-  "settings": {
+  settings: {
     "jsx-a11y": {
-      "polymorphicPropName": "as",
-      "components": {},
-      "attributes": {}
+      polymorphicPropName: "as",
+      components: {},
+      attributes: {},
     },
-    "react": {
-      "version": "18.2.0"
-    }
+    react: {
+      version: "18.2.0",
+    },
   },
-  "ignorePatterns": [
+  ignorePatterns: [
     "**/node_modules/**",
     ".yarn/**",
     ".vscode/**",
@@ -38,9 +39,9 @@
     ".parcel-cache/**",
     ".cache/**",
     "cache/**",
-    "*_cache_*/"
+    "*_cache_*/",
   ],
-  "rules": {
+  rules: {
     "arrow-body-style": "off",
     "capitalized-comments": "off",
     "func-style": "off",
@@ -59,13 +60,13 @@
     "sort-keys": "off",
     "consistent-indexed-object-style": [
       "error",
-      "index-signature"
-    ]
+      "index-signature",
+    ],
   },
-  "overrides": [
+  overrides: [
     {
-      "files": ["**/tests/**", "**/*.test.*"],
-      "rules": {
+      files: ["**/tests/**", "**/*.test.*"],
+      rules: {
         "explicit-function-return-type": "off",
         "explicit-module-boundary-types": "off",
         "init-declarations": "off",
@@ -73,8 +74,8 @@
         "no-non-null-assertion": "off",
         "no-promise-executor-return": "off",
         "no-var-requires": "off",
-        "require-unicode-regexp": "off"
-      }
-    }
-  ]
-}
+        "require-unicode-regexp": "off",
+      },
+    },
+  ],
+});
