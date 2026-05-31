@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "parcel src/index.html -p 3000",
-    "test": "jest --silent"
+    "start": "vite",
+    "test": "vitest run"
   },
   "dependencies": {
     "@blocz/react-responsive": "workspace:*",
@@ -15,19 +15,14 @@
   "devDependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.2",
-    "@types/jest": "^30.0.0",
-    "@types/jest-environment-puppeteer": "^5.0.6",
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
-    "jest": "^30.4.2",
-    "jest-environment-jsdom": "^30.4.1",
-    "jest-puppeteer": "^11.0.0",
+    "@vitest/browser": "^3.2.4",
     "mock-match-media": "^1.0.3",
-    "parcel": "^2.16.4",
-    "process": "^0.11.10",
-    "puppeteer": "^25.1.0",
-    "ts-jest": "^29.4.11",
-    "typescript": "^6.0.3"
+    "playwright": "^1.52.0",
+    "typescript": "^6.0.3",
+    "vite": "^7.0.0",
+    "vitest": "^3.2.4"
   }
 }

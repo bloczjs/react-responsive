@@ -1,7 +1,4 @@
-/**
- * @jest-environment jsdom
- */
-
+import { describe, it, expect, afterEach, vi } from "vitest";
 import { act, render } from "@testing-library/react";
 import { cleanup, setMedia } from "mock-match-media";
 
@@ -30,7 +27,7 @@ describe("useMediaQuery", () => {
   it("reacts to media changes after mount", async () => {
     setMedia({ width: 1000 });
 
-    const onRender = jest.fn();
+    const onRender = vi.fn();
     render(
       <Probe
         query="(min-width:1200px)"
@@ -51,7 +48,7 @@ describe("useMediaQuery", () => {
   it("re-subscribes when the query changes", async () => {
     setMedia({ width: 1000 });
 
-    const onRender = jest.fn();
+    const onRender = vi.fn();
     const { rerender } = render(
       <Probe
         query="(min-width:500px)"
@@ -81,8 +78,8 @@ describe("useMediaQuery", () => {
   it("removes the listener on unmount", () => {
     setMedia({ width: 1000 });
 
-    const addListener = jest.fn();
-    const removeListener = jest.fn();
+    const addListener = vi.fn();
+    const removeListener = vi.fn();
     const originalMatchMedia = window.matchMedia;
     window.matchMedia = ((query: string) => {
       const mql = originalMatchMedia(query);
@@ -100,7 +97,7 @@ describe("useMediaQuery", () => {
     }) as typeof window.matchMedia;
 
     try {
-      const onRender = jest.fn();
+      const onRender = vi.fn();
       const { unmount } = render(
         <Probe
           query="(min-width:500px)"

@@ -1,38 +1,59 @@
-import "../App";
+import { beforeAll, afterAll, it, expect } from "vitest";
+import * as path from "path";
+import { spawn, type ChildProcess } from "child_process";
+import { chromium, type Browser, type Page } from "playwright";
 
 import { sizes } from "./sizes.util";
 
-const getText = async () => {
-  return (
-    (await page.$eval("body", (el) =>
+const PORT = 3000;
+const root = path.resolve(__dirname, "../..");
+
+let serverProcess: ChildProcess;
+let browser: Browser;
+let page: Page;
+
+beforeAll(async () => {
+  serverProcess = spawn("pnpm", ["start"], {
+    cwd: root,
+    shell: true,
+  });
+
+  browser = await chromium.launch();
+  const context = await browser.newContext();
+  page = await context.newPage();
+}, 30000);
+
+afterAll(async () => {
+  await browser?.close();
+  serverProcess.kill("SIGTERM");
+});
+
+const getText = async () =>
+  (await page.$eval(
+    "body",
+    (el) =>
       (el as HTMLElement).innerText
         .replace(/\n/g, "\n\n")
         .replace(/\n\n+/g, "\n\n"),
-    )) || ""
-  );
-};
+  )) || "";
 
 it("browser test", async () => {
-  await page.goto("http://localhost:3000");
+  await page.goto(`http://localhost:${PORT}`);
 
   for (const size of sizes) {
-    await page.setViewport(size);
+    await page.setViewportSize(size);
     // Wait until the page reports the new viewport, then for two
     // animation frames so React effects triggered by the media-query
     // change have a chance to commit before we snapshot the DOM.
     await page.waitForFunction(
-      (w: number, h: number) =>
-        window.innerWidth === w && window.innerHeight === h,
-      {},
-      size.width,
-      size.height,
+      (s) =>
+        window.innerWidth === s.width && window.innerHeight === s.height,
+      size,
     );
     await page.evaluate(
       () =>
         new Promise<void>((res) =>
-          requestAnimationFrame(() =>
-            requestAnimationFrame(() => res()),
-          ),
+          requestAnimationFrame(() => requestAnimationFrame(() => res())),
         ),
     );
     expect(await getText()).toMatchSnapshot();

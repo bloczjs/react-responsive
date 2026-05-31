@@ -18,7 +18,7 @@
     "noFallthroughCasesInSwitch": true,
     "rootDir": ".",
     "ignoreDeprecations": "6.0",
-    "types": ["jest", "node", "jest-environment-puppeteer"]
+    "types": ["node"]
   },
   "exclude": ["dist"]
 }

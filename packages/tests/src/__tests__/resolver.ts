@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { execSync } from "child_process";
 import * as path from "path";
 import * as vm from "vm";
