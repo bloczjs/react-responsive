@@ -52,6 +52,12 @@ _Empty for now, to keep_
 <details>
   <summary>See patches</summary>
 
+### Internal
+
+- Migrate from yarn to pnpm ([#200](https://github.com/bloczjs/react-responsive/pull/200))
+- Replace eslint & prettier by oxlint & oxfmt ([#197](https://github.com/bloczjs/react-responsive/pull/197))
+- Replace jest & jest-dom & puppeteer & parcel with vite + vitest + playwright ([#201](https://github.com/bloczjs/react-responsive/pull/201) & [#203](https://github.com/bloczjs/react-responsive/pull/203))
+
 ### 5.1.0-alpha.0
 
 #### Deprecations, will be removed in the next major
@@ -74,7 +80,7 @@ _Empty for now, to keep_
   - New props on `MediaRangesProvider`: `mediaRanges`, `additionalMediaRanges`
   - Previous exports are kept but deprecated
 
-### Internal
+#### Internal
 
 - Migrate from yarn to pnpm ([#200](https://github.com/bloczjs/react-responsive/pull/200))
 - Replace eslint & prettier by oxlint & oxfmt ([#197](https://github.com/bloczjs/react-responsive/pull/197))
