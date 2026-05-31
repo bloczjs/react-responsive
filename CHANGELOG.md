@@ -10,13 +10,59 @@ _Empty for now, to keep_
 
 ### Deprecations, will be removed in the next major
 
+_Empty for now, to keep_
+
+### Customer facing
+
+_Empty for now, to keep_
+
+### Internal
+
+_Empty for now, to keep_
+
+## v5
+
+- Switch `useMediaQuery` to `useSyncExternalStore` to fix crashes in React 19 caused by re-renders on mount when there are many components **[customer-facing]** ([#171](https://github.com/bloczjs/react-responsive/pull/171))
+  As `useSyncExternalStore` is only available in React 18+, this is a **[BREAKING CHANGE]** as the `peerDependencies` had to be bumped
+- Rename `useBreakpoint`, `BreakpointsProvider`, `BreakpointsContext` -> `useMediaRange`, `MediaRangesProvider`, `MediaRangesContext` (+ deprecate old exports)
+- Add `createMediaRanges` & deprecate `MediaRangesProvider` and `MediaRangesContext`,
+
+### 5.1 (not released yet)
+
+#### Deprecations, will be removed in the next major
+
 - `MediaRangesProvider` and `MediaRangesContext` — use `createMediaRanges` instead ([#187](https://github.com/bloczjs/react-responsive/pull/187))
 - The `as` prop on the top-level `Only` ([#187](https://github.com/bloczjs/react-responsive/pull/187)) — wrap children in the element you need, or use `createMediaRanges`'s `Only`
 - The "breakpoint"-named aliases kept for backward compatibility after the rename ([#181](https://github.com/bloczjs/react-responsive/pull/181)):
   - exports: `useBreakpoint`, `BreakpointsProvider`, `BreakpointsContext`
   - props on `BreakpointsProvider`: `breakpoints`, `additionalBreakpoints`
 
-### Customer facing
+#### Customer facing
+
+- Add `createMediaRanges` + `DEFAULT_MEDIA_RANGES`, a strongly-typed alternative to `MediaRangesProvider` ([#187](https://github.com/bloczjs/react-responsive/pull/187))
+  - `createMediaRanges(ranges)` returns a `{ useMediaRange, Only }` pair bound to the ranges you pass in — no React context, no `additionalMediaRanges` vs `mediaRanges` split
+  - The returned `useMediaRange` / `Only` validate the `on` string end-to-end: every space-separated token must match a declared range or its auto-generated `Up` / `Down` alias. Invalid input surfaces a readable TypeScript error like `Invalid media ranges: foo bar` instead of `never`
+  - The returned `Only` only forwards `children` — `as` and arbitrary forwarded props are not supported; wrap your children in whatever element you need
+  - Spread `DEFAULT_MEDIA_RANGES` when you want to keep the defaults (`xs`, `sm`, `md`, `lg`, `xl`)
+- Rename "breakpoint" to "media range" across the library, tests and documentation to better reflect that each name describes a range between two breakpoints rather than a single breakpoint ([#181](https://github.com/bloczjs/react-responsive/pull/181))
+  - New exports: `useMediaRange`, `MediaRangesProvider`, `MediaRangesContext`
+  - New props on `MediaRangesProvider`: `mediaRanges`, `additionalMediaRanges`
+  - Previous exports are kept but deprecated
+
+<details>
+  <summary>See patches</summary>
+
+### 5.1.0-alpha.0
+
+#### Deprecations, will be removed in the next major
+
+- `MediaRangesProvider` and `MediaRangesContext` — use `createMediaRanges` instead ([#187](https://github.com/bloczjs/react-responsive/pull/187))
+- The `as` prop on the top-level `Only` ([#187](https://github.com/bloczjs/react-responsive/pull/187)) — wrap children in the element you need, or use `createMediaRanges`'s `Only`
+- The "breakpoint"-named aliases kept for backward compatibility after the rename ([#181](https://github.com/bloczjs/react-responsive/pull/181)):
+  - exports: `useBreakpoint`, `BreakpointsProvider`, `BreakpointsContext`
+  - props on `BreakpointsProvider`: `breakpoints`, `additionalBreakpoints`
+
+#### Customer facing
 
 - Add `createMediaRanges` + `DEFAULT_MEDIA_RANGES`, a strongly-typed alternative to `MediaRangesProvider` ([#187](https://github.com/bloczjs/react-responsive/pull/187))
   - `createMediaRanges(ranges)` returns a `{ useMediaRange, Only }` pair bound to the ranges you pass in — no React context, no `additionalMediaRanges` vs `mediaRanges` split
@@ -34,12 +80,12 @@ _Empty for now, to keep_
 - Replace eslint & prettier by oxlint & oxfmt ([#197](https://github.com/bloczjs/react-responsive/pull/197))
 - Replace jest & jest-dom & puppeteer & parcel with vite + vitest + playwright ([#201](https://github.com/bloczjs/react-responsive/pull/201) & [#203](https://github.com/bloczjs/react-responsive/pull/203))
 
-## v5
+</details>
+
+### 5.0
 
 - Switch `useMediaQuery` to `useSyncExternalStore` to fix crashes in React 19 caused by re-renders on mount when there are many components **[customer-facing]** ([#171](https://github.com/bloczjs/react-responsive/pull/171))
   As `useSyncExternalStore` is only available in React 18+, this is a **[BREAKING CHANGE]** as the `peerDependencies` had to be bumped
-
-### 5.0
 
 <details>
   <summary>See patches</summary>
