@@ -1,7 +1,6 @@
 import { defineConfig } from "oxlint";
 
 export default defineConfig({
-  plugins: ["typescript"],
   jsPlugins: ["eslint-plugin-prettier"],
   categories: {
     correctness: "error",
