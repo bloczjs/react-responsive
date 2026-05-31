@@ -25,7 +25,6 @@ export default defineConfig({
   },
   ignorePatterns: [
     "**/node_modules/**",
-    ".yarn/**",
     ".vscode/**",
     "**/*.log",
     "**/*.DS_Store",

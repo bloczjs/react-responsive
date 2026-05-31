@@ -1,0 +1,14 @@
+packages:
+  - packages/*
+
+allowBuilds:
+  "@parcel/watcher": false
+  "@swc/core": false
+  lmdb: false
+  msgpackr-extract: false
+  puppeteer: true
+  unrs-resolver: false
+
+overrides:
+  # Avoid "TypeError: this._moduleMocker.clearMocksOnScope is not a function"
+  "jest-mock": "npm:30.4.1"

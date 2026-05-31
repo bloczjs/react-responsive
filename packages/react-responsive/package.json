@@ -37,7 +37,7 @@
     "build": "tsdown",
     "build:dev": "tsdown --no-minify",
     "link:readme": "rm ../../README.md && ln -s packages/react-responsive/README.md ../..",
-    "prepublishOnly": "rm -rf lib && yarn build"
+    "prepublishOnly": "rm -rf lib && pnpm build"
   },
   "devDependencies": {
     "@types/react": "^19.2.15",
