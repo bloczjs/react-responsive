@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "vite",
-    "test": "vitest run"
+    "start": "vite"
   },
   "dependencies": {
     "@blocz/react-responsive": "workspace:*",
@@ -18,11 +17,7 @@
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
-    "@vitest/browser": "^3.2.4",
     "mock-match-media": "^1.0.3",
-    "playwright": "^1.52.0",
-    "typescript": "^6.0.3",
-    "vite": "^7.0.0",
-    "vitest": "^3.2.4"
+    "typescript": "^6.0.3"
   }
 }

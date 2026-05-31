@@ -5,7 +5,19 @@ export default defineConfig({
     projects: [
       {
         test: {
+          name: "@blocz/react-responsive",
+          root: "./packages/react-responsive",
+          typecheck: {
+            enabled: true,
+            include: ["src/**/*.types.test.{ts,tsx}"],
+          },
+          include: [],
+        },
+      },
+      {
+        test: {
           name: "components",
+          root: "./packages/tests",
           browser: {
             enabled: true,
             provider: "playwright",
@@ -25,6 +37,7 @@ export default defineConfig({
       {
         test: {
           name: "node",
+          root: "./packages/tests",
           environment: "node",
           include: ["src/__tests__/resolver.ts"],
         },
@@ -32,6 +45,7 @@ export default defineConfig({
       {
         test: {
           name: "e2e",
+          root: "./packages/tests",
           environment: "node",
           include: ["src/__tests__/browser.ts"],
           testTimeout: 30000,

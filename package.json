@@ -11,12 +11,16 @@
     "lint": "oxfmt --check && oxlint",
     "lint:fix": "oxfmt && oxlint --fix",
     "typecheck": "tsc -b --noEmit",
-    "test": "pnpm -r --if-present test"
+    "test": "vitest run"
   },
   "devDependencies": {
+    "@vitest/browser": "^3.2.4",
     "oxfmt": "^0.52.0",
     "oxlint": "^1.67.0",
-    "typescript": "^6.0.3"
+    "playwright": "^1.52.0",
+    "typescript": "^6.0.3",
+    "vite": "^7.0.0",
+    "vitest": "^3.2.4"
   },
   "packageManager": "pnpm@11.5.0"
 }

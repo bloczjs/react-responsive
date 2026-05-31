@@ -37,13 +37,11 @@
     "build": "tsdown",
     "build:dev": "tsdown --no-minify",
     "link:readme": "rm ../../README.md && ln -s packages/react-responsive/README.md ../..",
-    "prepublishOnly": "rm -rf lib && pnpm build",
-    "test": "vitest run"
+    "prepublishOnly": "rm -rf lib && pnpm build"
   },
   "devDependencies": {
     "@types/react": "^19.2.15",
-    "tsdown": "^0.22.1",
-    "vitest": "^3.2.4"
+    "tsdown": "^0.22.1"
   },
   "peerDependencies": {
     "react": "18.0.0 - 19.x.x"
