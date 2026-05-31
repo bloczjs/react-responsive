@@ -2,9 +2,11 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   root: "./src",
-  esbuild: {
-    jsx: "automatic",
-    jsxImportSource: "react",
+  oxc: {
+    jsx: {
+      runtime: "automatic",
+      importSource: "react",
+    },
   },
   server: {
     port: 3000,
