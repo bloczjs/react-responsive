@@ -16,8 +16,11 @@ updates:
         patterns:
           - "react"
           - "react-dom"
-      typescript-eslint:
+      eslint:
         patterns:
+          - "eslint"
+          - "@eslint-react/eslint-plugin"
+          - "eslint-plugin-prettier"
           - "typescript-eslint"
           - "@typescript-eslint/*"
 
