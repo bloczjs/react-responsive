@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  jest-mock: npm:30.4.1
+
 importers:
 
   .:
@@ -2467,14 +2470,6 @@ packages:
     resolution: {integrity: sha512-kwCKIvq0MCW1HzLoGola9Te6JUdzgV0loyKJ3Qghrkz9i5/RRIHsL95BMQc2HBBhlBKC4j22K9p11TGHH8RBpQ==}
     engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
 
-  jest-mock@27.5.1:
-    resolution: {integrity: sha512-K4jKbY1d4ENhbrG2zuPWaQBvDly+iZ2yAW+T1fATN78hc0sInwn7wZB8XtlNnvHug5RMwV897Xm4LqmPM4e2Og==}
-    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
-
-  jest-mock@29.7.0:
-    resolution: {integrity: sha512-ITOMZn+UkYS4ZFh83xYAOzWStloNzJFO2s8DWrE4lhtGD+AorgnbkiKERe4wQVBydIGPx059g6riW5Btp6Llnw==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-
   jest-mock@30.4.1:
     resolution: {integrity: sha512-/i8SVb8/NSB7RfNi8gfqu8gxLV23KaL5EpAttyb9iz8qWRIqXRLflycz/32wXsYkOnaUlx8NAKnJYtpsmXUmfw==}
     engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
@@ -3875,14 +3870,14 @@ snapshots:
       '@jest/fake-timers': 27.5.1
       '@jest/types': 27.5.1
       '@types/node': 25.9.1
-      jest-mock: 27.5.1
+      jest-mock: 30.4.1
 
   '@jest/environment@29.7.0':
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
       '@types/node': 25.9.1
-      jest-mock: 29.7.0
+      jest-mock: 30.4.1
 
   '@jest/environment@30.4.1':
     dependencies:
@@ -3908,7 +3903,7 @@ snapshots:
       '@sinonjs/fake-timers': 8.1.0
       '@types/node': 25.9.1
       jest-message-util: 27.5.1
-      jest-mock: 27.5.1
+      jest-mock: 30.4.1
       jest-util: 27.5.1
 
   '@jest/fake-timers@29.7.0':
@@ -3917,7 +3912,7 @@ snapshots:
       '@sinonjs/fake-timers': 10.3.0
       '@types/node': 25.9.1
       jest-message-util: 29.7.0
-      jest-mock: 29.7.0
+      jest-mock: 30.4.1
       jest-util: 29.7.0
 
   '@jest/fake-timers@30.4.1':
@@ -6018,7 +6013,7 @@ snapshots:
       '@jest/fake-timers': 27.5.1
       '@jest/types': 27.5.1
       '@types/node': 25.9.1
-      jest-mock: 27.5.1
+      jest-mock: 30.4.1
       jest-util: 27.5.1
 
   jest-environment-node@29.7.0:
@@ -6027,7 +6022,7 @@ snapshots:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
       '@types/node': 25.9.1
-      jest-mock: 29.7.0
+      jest-mock: 30.4.1
       jest-util: 29.7.0
 
   jest-environment-node@30.4.1:
@@ -6115,17 +6110,6 @@ snapshots:
       pretty-format: 30.4.1
       slash: 3.0.0
       stack-utils: 2.0.6
-
-  jest-mock@27.5.1:
-    dependencies:
-      '@jest/types': 27.5.1
-      '@types/node': 25.9.1
-
-  jest-mock@29.7.0:
-    dependencies:
-      '@jest/types': 29.6.3
-      '@types/node': 25.9.1
-      jest-util: 29.7.0
 
   jest-mock@30.4.1:
     dependencies:

@@ -8,3 +8,7 @@ allowBuilds:
   msgpackr-extract: false
   puppeteer: false
   unrs-resolver: false
+
+overrides:
+  # Avoid "TypeError: this._moduleMocker.clearMocksOnScope is not a function"
+  "jest-mock": "npm:30.4.1"
