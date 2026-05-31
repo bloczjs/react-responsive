@@ -5,7 +5,7 @@ import { existsSync, readFileSync } from "fs";
 import * as React from "react";
 
 // Shape every published build must expose: export name → `typeof` value.
-const EXPECTED_SHAPE: Record<string, string> = {
+const EXPECTED_SHAPE: { [key: string]: string } = {
   Only: "function",
   useMediaRange: "function",
   useMediaQuery: "function",
@@ -19,10 +19,10 @@ const EXPECTED_SHAPE: Record<string, string> = {
   BreakpointsContext: "object",
 };
 
-const toShape = (
-  exposed: Record<string, unknown>,
-): Record<string, string> => {
-  const shape: Record<string, string> = {};
+const toShape = (exposed: {
+  [key: string]: unknown;
+}): { [key: string]: string } => {
+  const shape: { [key: string]: string } = {};
   for (const key of Object.keys(exposed)) {
     shape[key] = typeof exposed[key];
   }
@@ -102,10 +102,9 @@ describe("exposed exports", () => {
   it("CJS build exposes all expected symbols", () => {
     const cjs =
       // eslint-disable-next-line @typescript-eslint/no-require-imports
-      require("@blocz/react-responsive") as Record<
-        string,
-        unknown
-      >;
+      require("@blocz/react-responsive") as {
+        [key: string]: unknown;
+      };
     expect(toShape(cjs)).toEqual(EXPECTED_SHAPE);
   });
 
@@ -114,10 +113,9 @@ describe("exposed exports", () => {
       cwd: __dirname,
       encoding: "utf-8",
     });
-    const shape = JSON.parse(output) as Record<
-      string,
-      string
-    >;
+    const shape = JSON.parse(output) as {
+      [key: string]: string;
+    };
 
     expect(shape).toEqual(EXPECTED_SHAPE);
   });
@@ -136,9 +134,9 @@ describe("exposed exports", () => {
     vm.createContext(sandbox);
     vm.runInContext(code, sandbox);
 
-    const exposed = sandbox[
-      "@blocz/react-responsive"
-    ] as Record<string, unknown>;
+    const exposed = sandbox["@blocz/react-responsive"] as {
+      [key: string]: unknown;
+    };
     expect(exposed).toBeDefined();
     expect(toShape(exposed)).toEqual(EXPECTED_SHAPE);
   });

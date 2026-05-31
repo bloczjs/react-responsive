@@ -1,4 +1,4 @@
-import { ExposedMediaRanges } from "./sanitize";
+import type { ExposedMediaRanges } from "./sanitize";
 
 type MediaRangeKey<T extends ExposedMediaRanges> = Extract<keyof T, string>;
 

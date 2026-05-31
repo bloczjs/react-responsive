@@ -1,6 +1,7 @@
 import * as React from "react";
 
-import { sanitize, ExposedMediaRanges, MediaRanges } from "./sanitize";
+import type { ExposedMediaRanges, MediaRanges } from "./sanitize";
+import { sanitize } from "./sanitize";
 import { DEFAULT_MEDIA_RANGES } from "./defaultMediaRanges";
 
 /**

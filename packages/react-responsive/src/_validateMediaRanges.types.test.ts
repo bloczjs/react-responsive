@@ -6,8 +6,8 @@
 // Symbols are exported only so `noUnusedLocals` is satisfied. Nothing here is re-exported
 // from `./index.ts`, so consumers cannot reach them.
 
-import { DEFAULT_MEDIA_RANGES } from "./defaultMediaRanges";
-import { type ValidatedMediaRangeString } from "./_validateMediaRanges";
+import type { DEFAULT_MEDIA_RANGES } from "./defaultMediaRanges";
+import type { ValidatedMediaRangeString } from "./_validateMediaRanges";
 
 type Ranges = typeof DEFAULT_MEDIA_RANGES & {
   pxRange: [263, 863, { unit: "px" }];

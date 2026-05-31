@@ -1,7 +1,8 @@
 import * as React from "react";
 
-import { ExposedMediaRanges, MediaRanges, sanitize } from "./sanitize";
-import { ValidatedMediaRangeString } from "./_validateMediaRanges";
+import type { ExposedMediaRanges, MediaRanges } from "./sanitize";
+import { sanitize } from "./sanitize";
+import type { ValidatedMediaRangeString } from "./_validateMediaRanges";
 import { useInternalMediaRange } from "./_useInternalMediaRange";
 import { useMediaQuery } from "./useMediaQuery";
 

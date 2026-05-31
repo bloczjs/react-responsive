@@ -1,4 +1,4 @@
-import { MediaRanges } from "./sanitize";
+import type { MediaRanges } from "./sanitize";
 import { fromMediaRangeToMedia } from "./fromMediaRangeToMedia";
 
 export function mediaQueryBuilder(mediaRanges: MediaRanges) {

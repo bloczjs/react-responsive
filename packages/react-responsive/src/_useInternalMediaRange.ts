@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { MediaRanges } from "./sanitize";
+import type { MediaRanges } from "./sanitize";
 import { mediaQueryBuilder } from "./mediaQueryBuilder";
 import { useMediaQuery } from "./useMediaQuery";
 
