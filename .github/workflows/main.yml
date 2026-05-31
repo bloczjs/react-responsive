@@ -34,7 +34,7 @@ jobs:
       - name: Run tests
         working-directory: ./packages/tests
         run: |
-          pnpm test --runInBand
+          pnpm test
 
       - name: Check linting
         run: |
