@@ -2,11 +2,28 @@
   "name": "@blocz/react-responsive",
   "version": "5.0.0",
   "description": "🔍 <Only /> displays some contents for a specific screen size",
+  "keywords": [
+    "adaptive",
+    "breakpoint",
+    "css",
+    "media-query",
+    "media-range",
+    "react",
+    "react-responsive",
+    "responsive"
+  ],
+  "homepage": "https://github.com/bloczjs/react-responsive#readme",
+  "bugs": "https://github.com/bloczjs/react-responsive/issues",
+  "license": "MIT",
+  "author": "Ayc0",
+  "repository": {
+    "url": "git+ssh://git@github.com/bloczjs/react-responsive.git"
+  },
   "source": "src/index.ts",
   "sideEffects": false,
   "main": "lib/react-responsive.cjs",
-  "umd:main": "lib/react-responsive.umd.js",
   "module": "lib/react-responsive.mjs",
+  "umd:main": "lib/react-responsive.umd.js",
   "exports": {
     ".": {
       "require": "./lib/react-responsive.cjs",
@@ -16,29 +33,12 @@
     },
     "./package.json": "./package.json"
   },
-  "repository": {
-    "url": "git+ssh://git@github.com/bloczjs/react-responsive.git"
-  },
-  "keywords": [
-    "adaptive",
-    "breakpoint",
-    "media-range",
-    "css",
-    "media-query",
-    "react",
-    "responsive",
-    "react-responsive"
-  ],
-  "author": "Ayc0",
-  "license": "MIT",
-  "bugs": "https://github.com/bloczjs/react-responsive/issues",
   "scripts": {
     "build": "tsdown",
     "build:dev": "tsdown --no-minify",
     "link:readme": "rm ../../README.md && ln -s packages/react-responsive/README.md ../..",
     "prepublishOnly": "rm -rf lib && yarn build"
   },
-  "homepage": "https://github.com/bloczjs/react-responsive#readme",
   "devDependencies": {
     "@types/react": "^19.2.15",
     "tsdown": "^0.22.1"

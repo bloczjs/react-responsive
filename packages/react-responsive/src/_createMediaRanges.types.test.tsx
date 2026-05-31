@@ -19,10 +19,11 @@ const { useMediaRange, Only } = createMediaRanges({
 });
 
 // A second factory — its keys must not be accepted by the first factory's hook / component.
-const { useMediaRange: useOtherMediaRange } = createMediaRanges({
-  alpha: [0, 100],
-  beta: [100, 200],
-});
+const { useMediaRange: useOtherMediaRange } =
+  createMediaRanges({
+    alpha: [0, 100],
+    beta: [100, 200],
+  });
 
 function useTypeChecks(): boolean {
   useMediaRange("xs");

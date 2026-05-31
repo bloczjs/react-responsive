@@ -12,10 +12,30 @@ import type { ValidatedMediaRangeString } from "./_validateMediaRanges";
 type Ranges = typeof DEFAULT_MEDIA_RANGES & {
   pxRange: [263, 863, { unit: "px" }];
 };
-type AssertEq<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2 ? true : false;
+type AssertEq<A, B> =
+  (<T>() => T extends A ? 1 : 2) extends <
+    T,
+  >() => T extends B ? 1 : 2
+    ? true
+    : false;
 
-const validSingle: AssertEq<ValidatedMediaRangeString<Ranges, "md">, "md"> = true;
-const validMulti: AssertEq<ValidatedMediaRangeString<Ranges, "md pxRange">, "md pxRange"> = true;
-const invalidSingle: AssertEq<ValidatedMediaRangeString<Ranges, "foo">, "Invalid media ranges: foo"> = true;
-const invalidMixed: AssertEq<ValidatedMediaRangeString<Ranges, "foo md bar">, "Invalid media ranges: foo bar"> = true;
-const invalidEmpty: AssertEq<ValidatedMediaRangeString<Ranges, "">, "Invalid media range: empty string"> = true;
+const validSingle: AssertEq<
+  ValidatedMediaRangeString<Ranges, "md">,
+  "md"
+> = true;
+const validMulti: AssertEq<
+  ValidatedMediaRangeString<Ranges, "md pxRange">,
+  "md pxRange"
+> = true;
+const invalidSingle: AssertEq<
+  ValidatedMediaRangeString<Ranges, "foo">,
+  "Invalid media ranges: foo"
+> = true;
+const invalidMixed: AssertEq<
+  ValidatedMediaRangeString<Ranges, "foo md bar">,
+  "Invalid media ranges: foo bar"
+> = true;
+const invalidEmpty: AssertEq<
+  ValidatedMediaRangeString<Ranges, "">,
+  "Invalid media range: empty string"
+> = true;

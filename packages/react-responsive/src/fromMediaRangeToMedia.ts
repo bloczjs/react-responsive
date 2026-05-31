@@ -1,6 +1,8 @@
 import type { MediaRange } from "./sanitize";
 
-export function fromMediaRangeToMedia(mediaRange: MediaRange): string {
+export function fromMediaRangeToMedia(
+  mediaRange: MediaRange,
+): string {
   const mediaList: string[] = [];
   const [minValue, maxValue, unit, direction] = mediaRange;
 

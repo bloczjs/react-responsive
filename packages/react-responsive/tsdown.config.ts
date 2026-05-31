@@ -13,7 +13,10 @@ const config: UserConfig = defineConfig({
   clean: true,
   outputOptions: (options, format) => {
     if (format === "umd" || format === "iife") {
-      options.globals = { ...options.globals, react: "React" };
+      options.globals = {
+        ...options.globals,
+        react: "React",
+      };
     }
     return options;
   },
