@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* oxlint-disable @typescript-eslint/no-unused-vars */
 
 // Type-level validation for `validateMediaRanges`. The assertions below lock the exact
 // error-message format so a regression in the typing surfaces here at typecheck time.

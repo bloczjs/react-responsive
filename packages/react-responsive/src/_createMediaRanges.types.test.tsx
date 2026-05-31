@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* oxlint-disable @typescript-eslint/no-unused-vars */
 
 // Type-level validation for `createMediaRanges`. The hook and components below are never
 // invoked at runtime — they exist so the typecheck pass fails if the typings drift. Each
