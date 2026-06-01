@@ -69,7 +69,7 @@ const App = () => {
 
 `@blocz/react-responsive` is based on the classic bootstrap breakpoints: `xs`, `sm`, `md`, `lg` and `xl`.
 
-Unlike Bootstrap — where `xs`, `sm`, etc. are single breakpoints — `@blocz/react-responsive` uses **media ranges**: each name describes the interval _between_ two breakpoints, making ranges explicit and non-overlapping.
+Unlike Bootstrap – where `xs`, `sm`, etc. are single breakpoints – `@blocz/react-responsive` uses **media ranges**: each name describes the interval _between_ two breakpoints, making ranges explicit and non-overlapping.
 
 See [Why media ranges instead of breakpoints?](https://github.com/bloczjs/react-responsive/blob/main/FAQ.md#why-media-ranges-instead-of-breakpoints) for more context.
 
@@ -89,7 +89,7 @@ This makes it fully explicit: a `lg` device is not `md` nor `xl`.
 
 #### Additional `Up` and `Down`
 
-Each media range also comes with `{mediaRange}Up` and `{mediaRange}Down` variants — covering everything above or below that breakpoint:
+Each media range also comes with `{mediaRange}Up` and `{mediaRange}Down` variants – covering everything above or below that breakpoint:
 
 | Media range |   From |       To |
 | ----------- | -----: | -------: |
@@ -107,7 +107,7 @@ Each media range also comes with `{mediaRange}Up` and `{mediaRange}Down` variant
 | `lgDown`    |  0px |   1199px |
 | `xlDown`    |  0px | Infinity |
 
-> **Note:** `xsDown` is equivalent to `xs`, `xlUp` is equivalent to `xl`, and `xlDown`/`xsUp` match all screen sizes — these exist only for convenience.
+> **Note:** `xsDown` is equivalent to `xs`, `xlUp` is equivalent to `xl`, and `xlDown`/`xsUp` match all screen sizes – these exist only for convenience.
 
 #### `useMediaRange()`
 
