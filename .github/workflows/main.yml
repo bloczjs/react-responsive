@@ -11,13 +11,13 @@ jobs:
         node-version: [22.x, 24.x, 25.x, 26.x]
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.3
 
       - name: Install pnpm
         uses: pnpm/action-setup@v6.0.8
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
