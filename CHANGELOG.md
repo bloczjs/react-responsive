@@ -27,7 +27,7 @@ _Empty for now, to keep_
 - Rename `useBreakpoint`, `BreakpointsProvider`, `BreakpointsContext` -> `useMediaRange`, `MediaRangesProvider`, `MediaRangesContext` (+ deprecate old exports)
 - Add `createMediaRanges` & deprecate `MediaRangesProvider` and `MediaRangesContext`,
 
-### 5.1 (not released yet)
+### 5.1
 
 #### Deprecations, will be removed in the next major
 
@@ -49,18 +49,19 @@ _Empty for now, to keep_
   - New props on `MediaRangesProvider`: `mediaRanges`, `additionalMediaRanges`
   - Previous exports are kept but deprecated
 
-<details>
-  <summary>See patches</summary>
-
 ### Internal
 
 - Migrate from yarn to pnpm ([#200](https://github.com/bloczjs/react-responsive/pull/200))
 - Replace eslint & prettier by oxlint & oxfmt ([#197](https://github.com/bloczjs/react-responsive/pull/197))
 - Replace jest & jest-dom & puppeteer & parcel with vite + vitest + playwright ([#201](https://github.com/bloczjs/react-responsive/pull/201) & [#203](https://github.com/bloczjs/react-responsive/pull/203))
+- Update `README.md` ([#207](https://github.com/bloczjs/react-responsive/pull/207))
+
+<details>
+  <summary>See patches</summary>
 
 ### 5.1.0-alpha.1
 
-### Internal
+#### Internal
 
 - Remove `tsconfig.tsbuildinfo` & `tsdown.config.ts` from published files ([#205](https://github.com/bloczjs/react-responsive/pull/205))
 - Update `README.md` ([#207](https://github.com/bloczjs/react-responsive/pull/207))
