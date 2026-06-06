@@ -416,8 +416,6 @@ For backward compatibility, the previous exports are still available but marked 
 | `useBreakpoint()`            | `useMediaRange()`                                               |
 | `<BreakpointsProvider>`      | `<MediaRangesProvider>`                                         |
 | `<BreakpointsContext>`       | `<MediaRangesContext>`                                          |
-| `breakpoints` prop           | `mediaRanges` prop                                              |
-| `additionalBreakpoints` prop | `additionalMediaRanges` prop                                    |
 | `<MediaRangesProvider>`      | [`createMediaRanges()`](#custom-media-ranges-createmediaranges) |
 | `<MediaRangesContext>`       | [`createMediaRanges()`](#custom-media-ranges-createmediaranges) |
 
