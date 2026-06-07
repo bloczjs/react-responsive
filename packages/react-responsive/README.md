@@ -411,13 +411,13 @@ The terminology used by this library used to be "breakpoint". It was renamed to 
 
 For backward compatibility, the previous exports are still available but marked as `@deprecated`, and will be removed in the next major release:
 
-| Deprecated                   | Replacement                                                     |
-| ---------------------------- | --------------------------------------------------------------- |
-| `useBreakpoint()`            | `useMediaRange()`                                               |
-| `<BreakpointsProvider>`      | `<MediaRangesProvider>`                                         |
-| `<BreakpointsContext>`       | `<MediaRangesContext>`                                          |
-| `<MediaRangesProvider>`      | [`createMediaRanges()`](#custom-media-ranges-createmediaranges) |
-| `<MediaRangesContext>`       | [`createMediaRanges()`](#custom-media-ranges-createmediaranges) |
+| Deprecated              | Replacement                                                     |
+| ----------------------- | --------------------------------------------------------------- |
+| `useBreakpoint()`       | `useMediaRange()`                                               |
+| `<BreakpointsProvider>` | `<MediaRangesProvider>`                                         |
+| `<BreakpointsContext>`  | `<MediaRangesContext>`                                          |
+| `<MediaRangesProvider>` | [`createMediaRanges()`](#custom-media-ranges-createmediaranges) |
+| `<MediaRangesContext>`  | [`createMediaRanges()`](#custom-media-ranges-createmediaranges) |
 
 ## FAQ
 
