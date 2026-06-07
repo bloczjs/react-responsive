@@ -16,8 +16,8 @@
   "devDependencies": {
     "@vitest/browser": "^4.1.7",
     "@vitest/browser-playwright": "^4.1.7",
-    "oxfmt": "^0.52.0",
-    "oxlint": "^1.67.0",
+    "oxfmt": "^0.53.0",
+    "oxlint": "^1.68.0",
     "playwright": "^1.52.0",
     "typescript": "^6.0.3",
     "vite": "^8.0.14",
