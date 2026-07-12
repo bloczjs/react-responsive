@@ -29,6 +29,7 @@ updates:
           - "@testing-library/react"
           - "@types/node"
           - "@vitest/browser"
+          - "@vitest/browser-playwright"
           - "mock-match-media"
           - "playwright"
           - "vite"
