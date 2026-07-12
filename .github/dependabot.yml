@@ -34,6 +34,10 @@ updates:
           - "playwright"
           - "vite"
           - "vitest"
+      bundling:
+        patterns:
+          - "typescript"
+          - "tsdown"
 
   - package-ecosystem: "github-actions"
     directory: "/"
